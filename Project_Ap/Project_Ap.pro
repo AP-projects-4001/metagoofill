@@ -16,14 +16,47 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    customerlogin.cpp \
+    forgetpasclient.cpp \
+    forgetpascustomer.cpp \
+    loginadmin.cpp \
+    loginclient.cpp \
     main.cpp \
-    loginpage.cpp
+    loginpage.cpp \
+    mainlogin.cpp \
+    recoverypasclient.cpp \
+    recoverypascustomer.cpp \
+    signup.cpp \
+    signupclient.cpp \
+    signupcustomer.cpp
 
 HEADERS += \
-    loginpage.h
+    customerlogin.h \
+    forgetpasclient.h \
+    forgetpascustomer.h \
+    loginadmin.h \
+    loginclient.h \
+    loginpage.h \
+    mainlogin.h \
+    recoverypasclient.h \
+    recoverypascustomer.h \
+    signup.h \
+    signupclient.h \
+    signupcustomer.h
 
 FORMS += \
-    loginpage.ui
+    customerlogin.ui \
+    forgetpasclient.ui \
+    forgetpascustomer.ui \
+    loginadmin.ui \
+    loginclient.ui \
+    loginpage.ui \
+    mainlogin.ui \
+    recoverypasclient.ui \
+    recoverypascustomer.ui \
+    signup.ui \
+    signupclient.ui \
+    signupcustomer.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
