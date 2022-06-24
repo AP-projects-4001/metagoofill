@@ -1,6 +1,7 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 build-Project_Ap-Desktop_Qt_5_14_2_MinGW_32_bit-Debug/*
+build-Project_Ap-Desktop_x86_windows_msys_pe_64bit-Debug/*
 *~
 *.autosave
 *.a
