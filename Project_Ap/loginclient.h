@@ -1,7 +1,15 @@
 #ifndef LOGINCLIENT_H
 #define LOGINCLIENT_H
-
 #include <QDialog>
+
+struct client{
+    char Name[16];
+    char User[16];
+    char CellPhoneNumber[12];
+    char Address[31];
+    char Password[31];
+    char city[11];
+};
 
 namespace Ui {
 class LoginClient;

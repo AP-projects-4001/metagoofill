@@ -2,13 +2,11 @@
 #define SIGNUPCLIENT_H
 #include <QVector>
 #include <QDialog>
+
 namespace Ui {
 class SignUpClient;
 }
 
-class SignUpClient : public QDialog
-{
-    Q_OBJECT
 struct Client
 {
       char Name[16];
@@ -18,6 +16,12 @@ struct Client
       char Password[31];
       char city[11];
 };
+
+class SignUpClient : public QDialog
+{
+    Q_OBJECT
+
+
 public:
     explicit SignUpClient(QWidget *parent = nullptr);
     ~SignUpClient();

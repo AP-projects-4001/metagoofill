@@ -28,6 +28,7 @@ void ForgetPasCustomer::on_pushButton_clicked()
     {
         RecoveryPasCustomer *p = new RecoveryPasCustomer(this);
         p->show();
+        //this->hide();
     }
     else
     {

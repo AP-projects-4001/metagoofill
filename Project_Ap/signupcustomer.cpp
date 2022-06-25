@@ -14,7 +14,7 @@ SignUpCUSTOMER::~SignUpCUSTOMER()
 {
     delete ui;
 }
-bool CheckUserNameCustomer()
+bool CheckUserNameCustomer()//تکراری بودن یوزر
 {
     return true;
 }
@@ -49,7 +49,8 @@ void SignUpCUSTOMER::on_pushButton_clicked()
 {
     if(ui->textEdit_9->toPlainText().toStdString()==""||ui->textEdit_10->toPlainText().toStdString()==""||
          ui->textEdit_8->toPlainText().toStdString()==""||ui->textEdit_7->toPlainText().toStdString()==""||
-         ui->textEdit_6->toPlainText().toStdString()==""||ui->textEdit_11->toPlainText().toStdString()==""||CheckRadio())
+         ui->textEdit_6->toPlainText().toStdString()==""||ui->textEdit_11->toPlainText().toStdString()==""||
+            CheckRadio())
 
     {
         QMessageBox::about(this,"توجه","یکی از فیلدها خالیست");
@@ -105,7 +106,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          customer.push_back(NewCustomer[0]);
 }
 
-void SignUpCUSTOMER::on_pushButton_2_clicked()
+void SignUpCUSTOMER::on_pushButton_2_clicked()//بازگشت به صفحه قبل
 {
     SignUp *p = new SignUp(this);
     p->show();

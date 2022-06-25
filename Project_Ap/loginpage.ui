@@ -14,81 +14,84 @@
    <string>LoginPage</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(191, 156, 142);</string>
+   <string notr="true">background-color: rgb(236, 229, 199);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>20</y>
-      <width>381</width>
-      <height>111</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 18pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>In The Name Of God</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>200</y>
+      <y>100</y>
       <width>681</width>
       <height>381</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Lalezar</family>
+      <pointsize>24</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
     <property name="styleSheet">
-     <string notr="true">font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 24pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);</string>
     </property>
     <property name="title">
      <string>صفحه اصلی</string>
     </property>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>120</y>
-       <width>401</width>
-       <height>131</height>
+       <x>200</x>
+       <y>100</y>
+       <width>271</width>
+       <height>242</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
-      <item>
-       <widget class="QPushButton" name="pushButton_7">
-        <property name="styleSheet">
-         <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>Exit</string>
-        </property>
-       </widget>
-      </item>
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QPushButton" name="pushButton_8">
         <property name="styleSheet">
-         <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+         <string notr="true">background-color: rgb(116, 141, 166);
+color: rgb(53, 66, 89);
+font: 20pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
-         <string>LogIn</string>
+         <string>ورود</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_9">
         <property name="styleSheet">
-         <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+         <string notr="true">background-color: rgb(116, 141, 166);
+color: rgb(53, 66, 89);
+font: 20pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
-         <string>SignUp</string>
+         <string>عضویت</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="font">
+         <font>
+          <family>Lalezar</family>
+          <pointsize>20</pointsize>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(53, 66, 89);
+background-color: rgb(116, 141, 166);
+font: 20pt &quot;Lalezar&quot;;</string>
+        </property>
+        <property name="text">
+         <string>خروج</string>
         </property>
        </widget>
       </item>
@@ -102,7 +105,7 @@ color: rgb(255, 255, 255);</string>
      <x>0</x>
      <y>0</y>
      <width>1022</width>
-     <height>26</height>
+     <height>29</height>
     </rect>
    </property>
   </widget>

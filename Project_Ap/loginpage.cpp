@@ -2,6 +2,7 @@
 #include "ui_loginpage.h"
 #include "signup.h"
 #include "mainlogin.h"
+
 LoginPage::LoginPage(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginPage)
@@ -13,7 +14,6 @@ LoginPage::~LoginPage()
 {
     delete ui;
 }
-
 
 void LoginPage::on_pushButton_7_clicked()
 {

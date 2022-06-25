@@ -15,7 +15,7 @@ SignUp::~SignUp()
     delete ui;
 }
 
-void SignUp::on_pushButton_clicked()
+void SignUp::on_pushButton_clicked()//صفحه ثبت نام فروشنده
 {
     SignUpCUSTOMER *p = new SignUpCUSTOMER(this);
     p->show();
@@ -29,7 +29,7 @@ void SignUp::on_pushButton_2_clicked()
     this->hide();
 }
 
-void SignUp::on_pushButton_3_clicked()
+void SignUp::on_pushButton_3_clicked()//برگشت به قبل
 {
     LoginPage *p = new LoginPage(this);
     p->show();

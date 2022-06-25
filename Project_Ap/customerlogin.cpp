@@ -42,7 +42,7 @@ void CustomerLogin::on_pushButton_2_clicked()
     this->hide();
 }
 
-void CustomerLogin::on_pushButton_3_clicked()
+void CustomerLogin::on_pushButton_3_clicked()//بازگشت به صفحه قبل
 {
     MainLogin *p = new MainLogin(this);
     p->show();
