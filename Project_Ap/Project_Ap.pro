@@ -16,6 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    client.cpp \
+    customer.cpp \
     customerlogin.cpp \
     forgetpasclient.cpp \
     forgetpascustomer.cpp \
@@ -31,6 +33,8 @@ SOURCES += \
     signupcustomer.cpp
 
 HEADERS += \
+    client.h \
+    customer.h \
     customerlogin.h \
     forgetpasclient.h \
     forgetpascustomer.h \

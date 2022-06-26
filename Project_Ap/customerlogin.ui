@@ -48,7 +48,7 @@ color: rgb(53, 66, 89);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;
 background-color: rgb(116, 141, 166);</string>
     </property>
    </widget>
@@ -106,12 +106,12 @@ font: 18pt &quot;Lalezar&quot;;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;
 background-color: rgb(116, 141, 166);</string>
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>330</x>

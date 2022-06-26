@@ -17,26 +17,14 @@ SignUpCUSTOMER::~SignUpCUSTOMER()
     delete ui;
 }
 
-void charArray_to_string(string &str, int len, char *array_char)
-{
-    str="";
-    int i=0;
-    for(i=0;i<len-1;i++){
-        if(array_char[i]=='\0'){
-            break;
-        }
-        str += array_char[i];
-    }
-}
-
 bool CheckUserNameCustomer(string username)//تکراری بودن یوزر
 {
-    struct Customer oldCustomer;
+    class customer oldCustomer;
     ifstream oldCustomers("customers.txt", ios::in | ios::binary);
     string temp_user;
     while(oldCustomers.read((char*)&oldCustomer, 118))
     {
-        charArray_to_string(temp_user, 16, oldCustomer.User);
+        oldCustomer.char_array_to_string(temp_user, 16, oldCustomer.User);
         if(username == temp_user)
         {
             oldCustomers.close();
@@ -61,18 +49,6 @@ bool SignUpCUSTOMER::CheckRadio()//چک کردن  رادیو باتون که ز�
 
 }
 
-void stringToCharArray(char *array_char, int len, string str)
-{
-    int i=0;
-    for(i=0;i<len-1;i++){
-        if(str[i]=='\0'){
-            break;
-        }
-        array_char[i]=str[i];
-    }
-    array_char[i]='\0';
-}
-
 void SignUpCUSTOMER::on_pushButton_clicked()
 {
     if(ui->textEdit_9->toPlainText().toStdString()==""||ui->textEdit_10->toPlainText().toStdString()==""||
@@ -84,12 +60,12 @@ void SignUpCUSTOMER::on_pushButton_clicked()
         return;
     }
 
-         struct Customer NewCustomer;
-         stringToCharArray(NewCustomer.Name, ui->textEdit_7->toPlainText().size()+1, ui->textEdit_7->toPlainText().toStdString());
-         stringToCharArray(NewCustomer.User, ui->textEdit_8->toPlainText().size()+1, ui->textEdit_8->toPlainText().toStdString());
-         stringToCharArray(NewCustomer.Password, ui->textEdit_9->toPlainText().size(), ui->textEdit_9->toPlainText().toStdString());
-         stringToCharArray(NewCustomer.PhoneNumber, ui->textEdit_10->toPlainText().size(), ui->textEdit_10->toPlainText().toStdString());
-         stringToCharArray(NewCustomer.city, ui->textEdit_11->toPlainText().size(), ui->textEdit_11->toPlainText().toStdString());
+         class customer NewCustomer;
+         NewCustomer.string_to_char_array(NewCustomer.Name, ui->textEdit_7->toPlainText().size()+1, ui->textEdit_7->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.User, ui->textEdit_8->toPlainText().size()+1, ui->textEdit_8->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.Password, ui->textEdit_9->toPlainText().size()+1, ui->textEdit_9->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.PhoneNumber, ui->textEdit_10->toPlainText().size()+1, ui->textEdit_10->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.city, ui->textEdit_11->toPlainText().size()+1, ui->textEdit_11->toPlainText().toStdString());
 
          if(ui->radioButton_3)
          {

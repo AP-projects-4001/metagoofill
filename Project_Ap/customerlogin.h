@@ -2,22 +2,11 @@
 #define CUSTOMERLOGIN_H
 
 #include <QDialog>
+#include "customer.h"
 
 namespace Ui {
 class CustomerLogin;
 }
-
-
-struct Customer
-{
-    char Name[16];
-    char User[16];
-    char PhoneNumber[12];
-    char Address[31];
-    char Password[31];
-    char city[11];
-    char ProductType;
-};
 
 class CustomerLogin : public QDialog
 {

@@ -2,6 +2,7 @@
 #define SIGNUPCUSTOMER_H
 #include <QDialog>
 #include <QVector>
+#include "customer.h"
 
 
 

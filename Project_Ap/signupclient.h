@@ -2,20 +2,11 @@
 #define SIGNUPCLIENT_H
 #include <QVector>
 #include <QDialog>
+#include "client.h"
 
 namespace Ui {
 class SignUpClient;
 }
-
-struct Client
-{
-      char Name[16];
-      char User[16];
-      char CellPhoneNumber[12];
-      char Address[31];
-      char Password[31];
-      char city[11];
-};
 
 class SignUpClient : public QDialog
 {
@@ -33,7 +24,7 @@ private slots:
 
 private:
     Ui::SignUpClient *ui;
-    QVector<Client>client;
+    QVector<client>client;
 };
 
 #endif // SIGNUPCLIENT_H

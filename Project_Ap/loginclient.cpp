@@ -5,7 +5,10 @@
 #include<QMessageBox>
 #include <fstream>
 #include <string>
+
+
 using namespace std;
+
 LoginClient::LoginClient(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginClient)
@@ -27,11 +30,10 @@ void char_array_to_string(string &str, int len, char *array_char)
 
 bool checkingUserAndPass(string username,string password)
 {
-    struct client Client;
+    class client Client;
     ifstream clientFile("clients.txt", ios::in | ios::binary);
     string user;
     string pass;
-    int flag = 0;
     while(clientFile.read((char*)&Client, 117))
     {
         char_array_to_string(user, 16, Client.User);
