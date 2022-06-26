@@ -216,7 +216,7 @@ color: rgb(255, 255, 255);</string>
 color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>City</string>
+       <string>address</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>

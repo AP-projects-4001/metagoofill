@@ -19,6 +19,7 @@ SOURCES += \
     client.cpp \
     customer.cpp \
     customerlogin.cpp \
+    customerprof.cpp \
     forgetpasclient.cpp \
     forgetpascustomer.cpp \
     loginadmin.cpp \
@@ -36,6 +37,7 @@ HEADERS += \
     client.h \
     customer.h \
     customerlogin.h \
+    customerprof.h \
     forgetpasclient.h \
     forgetpascustomer.h \
     loginadmin.h \
@@ -50,6 +52,7 @@ HEADERS += \
 
 FORMS += \
     customerlogin.ui \
+    customerprof.ui \
     forgetpasclient.ui \
     forgetpascustomer.ui \
     loginadmin.ui \

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "customer.h"
+#include "customerprof.h"
 
 namespace Ui {
 class CustomerLogin;
@@ -25,6 +26,7 @@ private slots:
 
 private:
     Ui::CustomerLogin *ui;
+    customerProf *dia2;
 };
 
 #endif // CUSTOMERLOGIN_H

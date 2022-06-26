@@ -12,6 +12,7 @@ public:
     char Password[31];
     char city[11];
     char ProductType;
+
 public:
     customer();
     void string_to_char_array(char *array_char, int len, std::string str);
