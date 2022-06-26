@@ -3,6 +3,8 @@
 #include "forgetpascustomer.h"
 #include "mainlogin.h"
 #include <QMessageBox>
+#include <fstream>
+
 using namespace std;
 CustomerLogin::CustomerLogin(QWidget *parent) :
     QDialog(parent),
@@ -15,16 +17,48 @@ CustomerLogin::~CustomerLogin()
 {
     delete ui;
 }
-bool CheckFileCus(string a , string b)
+
+void charArrayToString(string &str, int len, char *array_char)
 {
-    return true;//It must Change by Ali Yaghini
+    str="";
+    int i=0;
+    for(i=0;i<len-1;i++){
+        if(array_char[i]=='\0'){
+            break;
+        }
+        str += array_char[i];
+    }
 }
-void CustomerLogin::on_pushButton_clicked()
+
+bool checking_UserAndPass(string username,string password)
+{
+    struct Customer customerr;
+    ifstream CustomerFile("customers.txt", ios::in | ios::binary);
+    string user;
+    string pass;
+
+    while(CustomerFile.read((char*)&customerr, 118))
+    {
+        charArrayToString(user, 16, customerr.User);
+        charArrayToString(pass, 31, customerr.Password);
+        if(username == user)
+        {
+            if(password == pass)
+            {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+void CustomerLogin::on_pushButton_clicked()//we must add next page
 {
     string User = ui->textEdit->toPlainText().toStdString();
-    string Pas = ui->textEdit_2->toPlainText().toStdString();
-    if(CheckFileCus(User,Pas))//It must Change by Ali Yaghini
+    string Passwd = ui->textEdit_2->toPlainText().toStdString();
+    if(checking_UserAndPass(User,Passwd))
     {
+        QMessageBox::about(this, "توجه", "ورود موفقیت آمیز");
         //New Page
         //Complete by Ali yaghini
     }

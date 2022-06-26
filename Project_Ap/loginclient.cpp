@@ -25,7 +25,7 @@ void char_array_to_string(string &str, int len, char *array_char)
     }
 }
 
-bool MatchingUserAndPasClient(string username,string password)
+bool checkingUserAndPass(string username,string password)
 {
     struct client Client;
     ifstream clientFile("clients.txt", ios::in | ios::binary);
@@ -63,7 +63,7 @@ void LoginClient::on_pushButton_clicked()
 {
     string User = ui->textEdit->toPlainText().toStdString();
     string Pass = ui->textEdit_2->toPlainText().toStdString();
-    if(MatchingUserAndPasClient(User, Pass) && User != "" && Pass != "")
+    if(checkingUserAndPass(User, Pass) && User != "" && Pass != "")
     {
         QMessageBox::about(this, "توجه", "ورود موفقیت آمیز");
         //New Page

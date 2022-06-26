@@ -1,6 +1,5 @@
 #ifndef SIGNUP_H
 #define SIGNUP_H
-
 #include <QDialog>
 
 namespace Ui {

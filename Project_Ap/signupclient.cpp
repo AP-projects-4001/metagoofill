@@ -40,18 +40,16 @@ bool CheckUserNameClient(string username)//یوزر تکراری
         char_arrayToString(temp_user, 16, oldClient.User);
         if(username == temp_user)
         {
+            oldClients.close();
             return false;
         }
-        else
-        {
-            return true;
-        }
     }
+    oldClients.close();
+    return true;
 }
 
 void string_to_char_array(char *array_char, int len, string str)
 {
-    int k = str.size();
     int i=0;
     for(i=0;i<len-1;i++){
         if(str[i]=='\0'){
@@ -74,7 +72,7 @@ void SignUpClient::on_pushButton_clicked()
     }
 
 //    string newUser = ui->textEdit_14->toPlainText().toStdString();
-//    if(!CheckUserNameClient(newUser))
+//    if(CheckUserNameClient(newUser) == false)
 //    {
 //        QMessageBox::warning(this, "اخطار","نام کاربری تکراری است");
 //        return;
@@ -89,12 +87,17 @@ void SignUpClient::on_pushButton_clicked()
     string_to_char_array(NewClient.city, ui->textEdit_17->toPlainText().size()+1, ui->textEdit_17->toPlainText().toStdString());
     string_to_char_array(NewClient.CellPhoneNumber, ui->textEdit_15->toPlainText().size()+1, ui->textEdit_15->toPlainText().toStdString());
 
-
+    string newUser = ui->textEdit_14->toPlainText().toStdString();
+    if(CheckUserNameClient(newUser) == false)
+    {
+        QMessageBox::warning(this, "اخطار","نام کاربری تکراری است");
+        return;
+    }
 
     QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
 
-
     clientFile.write((char*)&NewClient, 117);//change block size
+    clientFile.close();
 }
 
 void SignUpClient::on_pushButton_3_clicked()//بازگشت به صصفحه قبل

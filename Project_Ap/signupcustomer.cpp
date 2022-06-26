@@ -1,8 +1,10 @@
 #include "signupcustomer.h"
 #include "ui_signupcustomer.h"
 #include <QMessageBox>
+#include <fstream>
 #include "signup.h"
 using namespace std;
+
 SignUpCUSTOMER::SignUpCUSTOMER(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignUpCUSTOMER)
@@ -14,10 +16,37 @@ SignUpCUSTOMER::~SignUpCUSTOMER()
 {
     delete ui;
 }
-bool CheckUserNameCustomer()//تکراری بودن یوزر
+
+void charArray_to_string(string &str, int len, char *array_char)
 {
+    str="";
+    int i=0;
+    for(i=0;i<len-1;i++){
+        if(array_char[i]=='\0'){
+            break;
+        }
+        str += array_char[i];
+    }
+}
+
+bool CheckUserNameCustomer(string username)//تکراری بودن یوزر
+{
+    struct Customer oldCustomer;
+    ifstream oldCustomers("customers.txt", ios::in | ios::binary);
+    string temp_user;
+    while(oldCustomers.read((char*)&oldCustomer, 118))
+    {
+        charArray_to_string(temp_user, 16, oldCustomer.User);
+        if(username == temp_user)
+        {
+            oldCustomers.close();
+            return false;
+        }
+    }
+    oldCustomers.close();
     return true;
 }
+
 bool SignUpCUSTOMER::CheckRadio()//چک کردن  رادیو باتون که زده شده یا زده نشده
 {
     if((((ui->radioButton_3->isChecked())||(ui->radioButton_4->isChecked())||
@@ -31,79 +60,73 @@ bool SignUpCUSTOMER::CheckRadio()//چک کردن  رادیو باتون که ز�
     return true;
 
 }
-void AddStringToCharCustomer(int  len,char *x,string  y)
-{
-    int i;
-    for(i=0;i<len-1;i++)
-    {
-        if(y.length()==i)
-        {
-            return;
-        }
-        x[i]=y[i];
-    }
 
-    x[i]='\0';
+void stringToCharArray(char *array_char, int len, string str)
+{
+    int i=0;
+    for(i=0;i<len-1;i++){
+        if(str[i]=='\0'){
+            break;
+        }
+        array_char[i]=str[i];
+    }
+    array_char[i]='\0';
 }
+
 void SignUpCUSTOMER::on_pushButton_clicked()
 {
     if(ui->textEdit_9->toPlainText().toStdString()==""||ui->textEdit_10->toPlainText().toStdString()==""||
          ui->textEdit_8->toPlainText().toStdString()==""||ui->textEdit_7->toPlainText().toStdString()==""||
-         ui->textEdit_6->toPlainText().toStdString()==""||ui->textEdit_11->toPlainText().toStdString()==""||
+         ui->textEdit_11->toPlainText().toStdString()==""||
             CheckRadio())
-
     {
         QMessageBox::about(this,"توجه","یکی از فیلدها خالیست");
         return;
     }
 
-         struct Customer NewCustomer[1];
-         int ProductType;
+         struct Customer NewCustomer;
+         stringToCharArray(NewCustomer.Name, ui->textEdit_7->toPlainText().size()+1, ui->textEdit_7->toPlainText().toStdString());
+         stringToCharArray(NewCustomer.User, ui->textEdit_8->toPlainText().size()+1, ui->textEdit_8->toPlainText().toStdString());
+         stringToCharArray(NewCustomer.Password, ui->textEdit_9->toPlainText().size(), ui->textEdit_9->toPlainText().toStdString());
+         stringToCharArray(NewCustomer.PhoneNumber, ui->textEdit_10->toPlainText().size(), ui->textEdit_10->toPlainText().toStdString());
+         stringToCharArray(NewCustomer.city, ui->textEdit_11->toPlainText().size(), ui->textEdit_11->toPlainText().toStdString());
+
          if(ui->radioButton_3)
          {
-             NewCustomer[0].ProductType=6;//پوشاک
+             NewCustomer.ProductType='6';//پوشاک
          }
          else if(ui->radioButton_4)
          {
-             NewCustomer[0].ProductType=1;//میوه و تره بار
+             NewCustomer.ProductType='1';//میوه و تره بار
          }
          else if(ui->radioButton_5)
          {
-             NewCustomer[0].ProductType=2;//لبنیات
+             NewCustomer.ProductType='2';//لبنیات
          }
          else if(ui->radioButton_6)
          {
-             NewCustomer[0].ProductType=4;//تکنولوژی
+             NewCustomer.ProductType='4';//تکنولوژی
          }
          else if(ui->radioButton_7)
          {
-             NewCustomer[0].ProductType=3;//آجیل
+             NewCustomer.ProductType='3';//آجیل
          }
          else
          {
-             NewCustomer[0].ProductType=5;//لوازم خانگی
+             NewCustomer.ProductType='5';//لوازم خانگی
          }
 
-         string Name= ui->textEdit_7->toPlainText(). toStdString();//
-         AddStringToCharCustomer(16,NewCustomer[0].Name,Name);
-         string UserName = ui->textEdit_8->toPlainText().toStdString();//
-         if(CheckUserNameCustomer())
-         {
-             AddStringToCharCustomer(16,NewCustomer[0].User,UserName);
-         }
-         else
+         ofstream CustomerFile("customers.txt", ios::app | ios::binary);
+         if(CheckUserNameCustomer(ui->textEdit_8->toPlainText().toStdString()) == false)
          {
              QMessageBox::about(this,"توجه","یوزرنیم تکراری است");
              return;
          }
-         AddStringToCharCustomer(16,NewCustomer[0].User,UserName);
-         string CellPhoneNumber = ui->textEdit_11->toPlainText().toStdString();//
-         AddStringToCharCustomer(16,NewCustomer[0].CellPhoneNumber,CellPhoneNumber);
-         string password = ui->textEdit_9->toPlainText().toStdString();//
-         AddStringToCharCustomer(16,NewCustomer[0].Password,password);
-         string City = ui->textEdit_6->toPlainText().toStdString();//
-         AddStringToCharCustomer(16,NewCustomer[0].city,City);
-         customer.push_back(NewCustomer[0]);
+
+         QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
+
+         CustomerFile.write((char*)&NewCustomer, 118);
+         CustomerFile.close();
 }
 
 void SignUpCUSTOMER::on_pushButton_2_clicked()//بازگشت به صفحه قبل
