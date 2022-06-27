@@ -48,6 +48,10 @@ private:
     int number_products;
     int ptr_file_this_myproduct;
     customer cust;
+
+    int ptr_start_file_product_type;
+    int ptr_end_file_product_type;
+    int number_product_type;
 private:
     void show_product();
     int go_to_product(int);
@@ -55,6 +59,7 @@ private:
     void add_product();
     void delete_product();
     void show_without_product();
+    void add_product_to_type();
 };
 
 #endif // STORECUSTOMER_H

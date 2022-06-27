@@ -19,6 +19,20 @@ storecustomer::storecustomer(customer cus_info,QWidget *parent) :
     number_myproducts=0;//موقتی
     number_products=0;//موقتی
 
+    fstream database_product(data_product,  ios::app | ios::binary);//
+    database_product.close();//
+
+    fstream database_product_type("database_product_type.txt",  ios::in | ios::binary);
+    if(!database_product_type){
+        database_product_type.close();
+        database_product_type.open("database_product_type.txt",  ios::out | ios::binary);
+        int a=0;
+        for(int i=0;i<18;i++){
+            database_product_type.write((char*)&a, sizeof(int));
+        }
+    }
+    database_product_type.close();
+
 
     if(number_myproducts>0){
         count_myproduct=1;
@@ -304,6 +318,46 @@ void storecustomer::show_without_product()
 
     ui->label_number->setText(QString::number(number_myproducts));
     ui->label_count->setText(QString::number(count_myproduct));
+}
+
+void storecustomer::add_product_to_type()
+{
+    fstream database_product_type("database_product_type.txt",  ios::in | ios::out | ios::binary);
+    database_product_type.seekg(cust.ProductType*3*sizeof(int));
+    database_product_type.read((char*)&ptr_start_file_product_type, sizeof(int));
+    database_product_type.read((char*)&ptr_end_file_product_type, sizeof(int));
+    database_product_type.read((char*)&number_product_type, sizeof(int));
+
+    fstream database_product(data_product,  ios::in | ios::out | ios::binary);
+
+
+    if(number_product_type!=0){
+
+        database_product.seekg(ptr_end_file_product_type);
+        database_product.read((char*)&product2, sizeof(Product));
+        product2.ptr_file_product_type_next=(number_products-1)*sizeof(Product);
+        database_product.seekp(ptr_end_file_product_type);
+        database_product.write((char *)&product2, sizeof(Product));
+
+        product.ptr_file_product_type_preview=ptr_end_file_product_type;
+    }
+    else{
+        ptr_start_file_product_type=(number_products-1)*sizeof(Product);
+        ptr_end_file_product_type=(number_products-1)*sizeof(Product);
+    }
+
+    database_product.seekp((number_products-1)*sizeof(Product));
+    database_product.write((char *)&product, sizeof(Product));
+
+    number_product_type++;
+
+    database_product_type.seekp(cust.ProductType*3*sizeof(int));
+    database_product_type.write((char*)&ptr_start_file_product_type, sizeof(int));
+    database_product_type.write((char*)&ptr_end_file_product_type, sizeof(int));
+    database_product_type.write((char*)&number_product_type, sizeof(int));
+
+    database_product.close();
+    database_product_type.close();
 }
 
 

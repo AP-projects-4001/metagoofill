@@ -25,8 +25,8 @@ public:
     bool flag_numerical;
     int ptr_file_myproduct_next;
     int ptr_file_myproduct_preview;
-    int ptr_file_product_next;
-    int ptr_file_product_preview;
+    int ptr_file_product_type_next;
+    int ptr_file_product_type_preview;
     bool flag_delete_product;
 };
 
