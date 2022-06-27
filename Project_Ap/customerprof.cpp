@@ -2,6 +2,7 @@
 #include "ui_customerprof.h"
 #include <fstream>
 #include <cstring>
+#include "storecustomer.h"
 using namespace std;
 
 customerProf::customerProf(customer cus_info, QWidget *parent) :
@@ -9,6 +10,7 @@ customerProf::customerProf(customer cus_info, QWidget *parent) :
     ui(new Ui::customerProf)
 {
     ui->setupUi(this);
+    cust=cus_info;
     string temp;
     cus_info.char_array_to_string(temp, 16, cus_info.Name);
     ui->plainTextEdit_2->setPlainText(QString::fromStdString(temp));
@@ -40,3 +42,20 @@ void customerProf::on_pushButton_4_clicked()
     //تغییر اطلاعات و ذخیره در فایل
 }
 
+
+void customerProf::on_pushButton_2_clicked()
+{
+    storecustomer *d=new storecustomer(cust);
+    d->show();
+    this->close();
+}
+
+void customerProf::on_pushButton_clicked()
+{
+    //صفحه سوایق فروش
+}
+
+void customerProf::on_pushButton_3_clicked()
+{
+    //طرح های تبلیغاتی
+}

@@ -20,6 +20,8 @@ SOURCES += \
     customer.cpp \
     customerlogin.cpp \
     customerprof.cpp \
+    dialog_add.cpp \
+    dialog_options.cpp \
     forgetpasclient.cpp \
     forgetpascustomer.cpp \
     loginadmin.cpp \
@@ -27,32 +29,40 @@ SOURCES += \
     main.cpp \
     loginpage.cpp \
     mainlogin.cpp \
+    product.cpp \
     recoverypasclient.cpp \
     recoverypascustomer.cpp \
     signup.cpp \
     signupclient.cpp \
-    signupcustomer.cpp
+    signupcustomer.cpp \
+    storecustomer.cpp
 
 HEADERS += \
     client.h \
     customer.h \
     customerlogin.h \
     customerprof.h \
+    dialog_add.h \
+    dialog_options.h \
     forgetpasclient.h \
     forgetpascustomer.h \
     loginadmin.h \
     loginclient.h \
     loginpage.h \
     mainlogin.h \
+    product.h \
     recoverypasclient.h \
     recoverypascustomer.h \
     signup.h \
     signupclient.h \
-    signupcustomer.h
+    signupcustomer.h \
+    storecustomer.h
 
 FORMS += \
     customerlogin.ui \
     customerprof.ui \
+    dialog_add.ui \
+    dialog_options.ui \
     forgetpasclient.ui \
     forgetpascustomer.ui \
     loginadmin.ui \
@@ -63,7 +73,8 @@ FORMS += \
     recoverypascustomer.ui \
     signup.ui \
     signupclient.ui \
-    signupcustomer.ui
+    signupcustomer.ui \
+    storecustomer.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
