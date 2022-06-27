@@ -2,15 +2,7 @@
 #define LOGINCLIENT_H
 #include <QDialog>
 #include "client.h"
-
-//struct client{
-//    char Name[16];
-//    char User[16];
-//    char CellPhoneNumber[12];
-//    char Address[31];
-//    char Password[31];
-//    char city[11];
-//};
+#include "clientprof.h"
 
 namespace Ui {
 class LoginClient;
@@ -33,6 +25,7 @@ private slots:
 
 private:
     Ui::LoginClient *ui;
+    clientProf *dia2;
 };
 
 #endif // LOGINCLIENT_H

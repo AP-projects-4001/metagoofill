@@ -65,11 +65,25 @@ void LoginClient::on_pushButton_clicked()
 {
     string User = ui->textEdit->toPlainText().toStdString();
     string Pass = ui->textEdit_2->toPlainText().toStdString();
+    string username_tmp = "";
     if(checkingUserAndPass(User, Pass) && User != "" && Pass != "")
     {
         QMessageBox::about(this, "توجه", "ورود موفقیت آمیز");
         //New Page
         //Complete by Ali Yaghini
+        class client cli_tmp;
+        ifstream cus_tmps("clients.txt", ios::in | ios::binary);
+        while(cus_tmps.read((char*)&cli_tmp, 117))
+        {
+            cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.User);
+            if(username_tmp == User)
+            {
+                //cus_tmps.close();
+                dia2 = new clientProf(cli_tmp, this);
+                this->hide();
+                dia2->show();
+            }
+        }
     }
     else
     {

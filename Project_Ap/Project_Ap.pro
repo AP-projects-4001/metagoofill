@@ -17,6 +17,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     client.cpp \
+    clientprof.cpp \
     customer.cpp \
     customerlogin.cpp \
     customerprof.cpp \
@@ -39,6 +40,7 @@ SOURCES += \
 
 HEADERS += \
     client.h \
+    clientprof.h \
     customer.h \
     customerlogin.h \
     customerprof.h \
@@ -59,6 +61,7 @@ HEADERS += \
     storecustomer.h
 
 FORMS += \
+    clientprof.ui \
     customerlogin.ui \
     customerprof.ui \
     dialog_add.ui \

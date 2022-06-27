@@ -35,15 +35,6 @@ bool checking_UserAndPass(string username,string password)
         {
             if(password == pass)
             {
-//                class customer cus_tmp;
-//                strcpy(cus_tmp.Name, customerr.Name);
-//                strcpy(cus_tmp.Address, customerr.Address);
-//                strcpy(cus_tmp.User, customerr.User);
-//                strcpy(cus_tmp.Password, customerr.Password);
-//                strcpy(cus_tmp.PhoneNumber, customerr.PhoneNumber);
-//                strcpy(cus_tmp.city, customerr.city);
-//                cus_tmp.ProductType = customerr.ProductType;
-////                customerProf *dia2 = new customerProf(cus_tmp, this);
                 CustomerFile.close();
                 return true;
             }
@@ -53,7 +44,7 @@ bool checking_UserAndPass(string username,string password)
     return false;
 }
 
-void CustomerLogin::on_pushButton_clicked()//we must add next page
+void CustomerLogin::on_pushButton_clicked()
 {
     string User = ui->textEdit->toPlainText().toStdString();
     string Passwd = ui->textEdit_2->toPlainText().toStdString();
@@ -68,17 +59,12 @@ void CustomerLogin::on_pushButton_clicked()//we must add next page
             cus_tmp.char_array_to_string(username_tmp, 16, cus_tmp.User);
             if(username_tmp == User)
             {
-                QMessageBox::about(this, "توجه", "آمیز");
                 //cus_tmps.close();
                 dia2 = new customerProf(cus_tmp, this);
                 this->hide();
                 dia2->show();
             }
         }
-
-
-        //New Page
-        //Complete by ahmad samadani(add next page = customerprofile)
     }
 
     else

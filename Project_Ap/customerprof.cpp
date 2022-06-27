@@ -10,7 +10,7 @@ customerProf::customerProf(customer cus_info, QWidget *parent) :
     ui(new Ui::customerProf)
 {
     ui->setupUi(this);
-    cust=cus_info;
+    cust = cus_info;// ذخیره شی در کلاس
     string temp;
     cus_info.char_array_to_string(temp, 16, cus_info.Name);
     ui->plainTextEdit_2->setPlainText(QString::fromStdString(temp));
