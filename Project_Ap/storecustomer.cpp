@@ -16,11 +16,12 @@ storecustomer::storecustomer(customer cus_info,QWidget *parent) :
     ui->setupUi(this);
 
     cust=cus_info;
+
     number_myproducts=0;//موقتی
     number_products=0;//موقتی
 
-    fstream database_product(data_product,  ios::app | ios::binary);//
-    database_product.close();//
+    fstream database_product(data_product,  ios::app | ios::binary);
+    database_product.close();
 
     fstream database_product_type("database_product_type.txt",  ios::in | ios::binary);
     if(!database_product_type){
@@ -142,6 +143,7 @@ void storecustomer::item_added2(QString type,QString price,QString berand,QStrin
     product.ID=number_products+1;
 
     add_product();
+    add_product_to_type();
     count_myproduct=number_myproducts;
     ptr_file_this_myproduct=go_to_product(count_myproduct);
     show_product();
@@ -338,8 +340,8 @@ void storecustomer::add_product_to_type()
         product2.ptr_file_product_type_next=(number_products-1)*sizeof(Product);
         database_product.seekp(ptr_end_file_product_type);
         database_product.write((char *)&product2, sizeof(Product));
-
         product.ptr_file_product_type_preview=ptr_end_file_product_type;
+        ptr_end_file_product_type=(number_products-1)*sizeof(Product);
     }
     else{
         ptr_start_file_product_type=(number_products-1)*sizeof(Product);

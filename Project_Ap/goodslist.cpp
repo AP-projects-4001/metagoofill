@@ -5,12 +5,17 @@
 #include "clothes_filter.h"
 #include "fruitandveg_filter.h"
 #include "super_filter.h"
-
+#include <fstream>
+#define data_product "database_products.txt"
+using namespace std;
 goodsList::goodsList(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::goodsList)
 {
     ui->setupUi(this);
+
+    fstream database_search("database_search.txt",ios::app | ios::binary);
+    database_search.close();
 }
 
 goodsList::~goodsList()
@@ -22,10 +27,15 @@ void goodsList::recG_type(int G_type)
 {
     type = G_type;
     this->show();
+    search_by_filter();
+    next_to_search(9);
+    show_list_products();
+
 }
 
 void goodsList::on_pushButton_filter_clicked()
 {
+
    if(type == 0)
    {
        tech_filter *filter_0 = new tech_filter(this);//add product class array to constructor.
@@ -108,15 +118,157 @@ void goodsList::rec_other_info(others_filter_info other_info)
     //کار با فایل
 }
 
+void goodsList::search_by_filter()//
+{
+    int ptr_start_file_product_type;
+    int ptr_end_file_product_type;
+    int number_product_type;
+    int ptr_file;
 
-//void goodsList::on_pushButton_next_clicked()
-//{
 
-//}
+    fstream  database_product_type("database_product_type.txt",ios::in | ios::out | ios::binary);
+    database_product_type.seekg(type*3*sizeof(int));
+    database_product_type.read((char*)&ptr_start_file_product_type,sizeof(int));
+    database_product_type.read((char*)&ptr_end_file_product_type, sizeof(int));
+    database_product_type.read((char*)&number_product_type, sizeof(int));
 
 
-//void goodsList::on_pushButton_prev_clicked()
-//{
+    fstream database_product(data_product,ios::in | ios::out | ios::binary);
+    fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
-//}
+    len_search=0;
+    database_search.seekp(0);
+    ptr_file=ptr_start_file_product_type;
+    for(int i=0;i<number_product_type;i++){
+        database_product.seekg(ptr_file);
+        database_product.read((char*)&product, sizeof(Product));
+        if(filter()==1){
+            database_search.write((char *)&ptr_file, sizeof(int));
+            len_search++;
+        }
+        ptr_file=product.ptr_file_product_type_next;
+    }
+
+}
+
+void goodsList::next_to_search(int part)
+{
+    int ptr_file;
+    int count=0;
+    if(count!=len_search){
+        fstream database_product(data_product,ios::in | ios::out | ios::binary);
+        fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
+
+        database_search.seekg((count)*sizeof(int));
+        end_part_products=len_search-count;
+        if(end_part_products>=part-1){end_part_products=part;}
+        for(int i=0;i<end_part_products;i++){
+            database_search.read((char *)&ptr_file, sizeof(int));
+            database_product.seekg(ptr_file);
+            database_product.read((char*)&products[i], sizeof(Product));
+        }
+        count+=end_part_products;
+    }
+}
+
+void goodsList::preview_to_search(int part)
+{
+    int ptr_file;
+
+    if(count>=(end_part_products+part)){
+        count-=end_part_products;
+        count-=part;
+        end_part_products=part;
+        fstream database_product(data_product,ios::in | ios::out | ios::binary);
+        fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
+
+        database_search.seekg((count)*sizeof(int));
+
+        for(int i=0;i<part;i++){
+            database_search.read((char *)&ptr_file, sizeof(int));
+            database_product.seekg(ptr_file);
+            database_product.read((char*)&products[i], sizeof(Product));
+        }
+        count+=part;
+    }
+}
+
+bool goodsList::filter()
+{
+
+    if(type==0){
+
+    }
+    else if(type==1){
+
+    }
+    else if(type==2){
+
+    }
+    else if(type==3){
+
+    }
+    else if(type==4){
+
+    }
+    else if(type==5){
+
+    }
+    return 1;
+}
+
+void goodsList::show_list_products()
+{
+    string str;
+    product.char_array_to_string(str,16,products[0].type);
+    ui->label_type_0->setText(QString::fromStdString(str));
+    ui->label_price_0->setText(QString::number(products[0].price));
+
+    product.char_array_to_string(str,16,products[1].type);
+    ui->label_type_1->setText(QString::fromStdString(str));
+    ui->label_price_1->setText(QString::number(products[1].price));
+
+    product.char_array_to_string(str,16,products[2].type);
+    ui->label_type_2->setText(QString::fromStdString(str));
+    ui->label_price_2->setText(QString::number(products[2].price));
+
+    product.char_array_to_string(str,16,products[3].type);
+    ui->label_type_3->setText(QString::fromStdString(str));
+    ui->label_price_3->setText(QString::number(products[3].price));
+
+    product.char_array_to_string(str,16,products[4].type);
+    ui->label_type_4->setText(QString::fromStdString(str));
+    ui->label_price_4->setText(QString::number(products[4].price));
+
+    product.char_array_to_string(str,16,products[5].type);
+    ui->label_type_5->setText(QString::fromStdString(str));
+    ui->label_price_5->setText(QString::number(products[5].price));
+
+    product.char_array_to_string(str,16,products[6].type);
+    ui->label_type_6->setText(QString::fromStdString(str));
+    ui->label_price_6->setText(QString::number(products[6].price));
+
+    product.char_array_to_string(str,16,products[7].type);
+    ui->label_type_7->setText(QString::fromStdString(str));
+    ui->label_price_7->setText(QString::number(products[7].price));
+
+    product.char_array_to_string(str,16,products[8].type);
+    ui->label_type_8->setText(QString::fromStdString(str));
+    ui->label_price_8->setText(QString::number(products[8].price));
+
+}
+
+
+void goodsList::on_pushButton_next_clicked()
+{
+    next_to_search(9);
+    show_list_products();
+}
+
+
+void goodsList::on_pushButton_prev_clicked()
+{
+    preview_to_search(9);
+    show_list_products();
+}
 

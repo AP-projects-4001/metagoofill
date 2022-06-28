@@ -69,27 +69,27 @@ void SignUpCUSTOMER::on_pushButton_clicked()
 
          if(ui->radioButton_3)
          {
-             NewCustomer.ProductType='6';//پوشاک
+             NewCustomer.ProductType=2;//پوشاک
          }
          else if(ui->radioButton_4)
          {
-             NewCustomer.ProductType='1';//میوه و تره بار
+             NewCustomer.ProductType=3;//میوه و تره بار
          }
          else if(ui->radioButton_5)
          {
-             NewCustomer.ProductType='2';//لبنیات
+             NewCustomer.ProductType=4;//لبنیات
          }
          else if(ui->radioButton_6)
          {
-             NewCustomer.ProductType='4';//تکنولوژی
+             NewCustomer.ProductType=0;//تکنولوژی
          }
          else if(ui->radioButton_7)
          {
-             NewCustomer.ProductType='3';//آجیل
+             NewCustomer.ProductType=5;//آجیل
          }
          else
          {
-             NewCustomer.ProductType='5';//لوازم خانگی
+             NewCustomer.ProductType=1;//لوازم خانگی
          }
 
          ofstream CustomerFile("customers.txt", ios::app | ios::binary);
