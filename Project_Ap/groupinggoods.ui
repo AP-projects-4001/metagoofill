@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>groupingGoods</class>
+ <widget class="QDialog" name="groupingGoods">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>616</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(236, 229, 199);
+</string>
+  </property>
+  <widget class="QPushButton" name="cart">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>111</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+</string>
+   </property>
+   <property name="text">
+    <string>سبد خرید</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="profile">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>111</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 10pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+</string>
+   </property>
+   <property name="text">
+    <string>پروفایل کاربری</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>110</y>
+     <width>391</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 14pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+</string>
+   </property>
+   <property name="title">
+    <string>دسته بندی کالاها</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="technology">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>تکنولوژی</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="homeApp">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>لوازم خانگی</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="clothes">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>پوشاک</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="fruit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>میوه و تره بار</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="supermarket">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>سوپری</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="nuts">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>آجیل</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="popular">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>پرفروش ترین ها</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

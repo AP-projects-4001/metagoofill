@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>goodsList</class>
+ <widget class="QDialog" name="goodsList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(236, 229, 199);
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0" colspan="4">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);</string>
+     </property>
+     <property name="title">
+      <string>لیست کالا ها</string>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>450</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره نه</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>445</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>44</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>258</x>
+        <y>50</y>
+        <width>501</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره یک</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>258</x>
+        <y>100</y>
+        <width>501</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره دو</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>94</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_7">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>144</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>150</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره سه</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>200</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره چهار</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_8">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>194</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>244</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>250</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره پنج</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>300</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره شش</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>295</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_11">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>345</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>350</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره هفت</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>395</y>
+        <width>71</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>جزئیات</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>128</x>
+        <y>400</y>
+        <width>631</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>کالا شماره هشت</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>140</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>190</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>240</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>290</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>340</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_8">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>390</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>440</y>
+        <width>59</width>
+        <height>35</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_14">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>91</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_16">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>41</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_13">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>191</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_15">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>141</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_12">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>241</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>290</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_18">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>340</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_19">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>390</y>
+        <width>80</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_20">
+      <property name="geometry">
+       <rect>
+        <x>101</x>
+        <y>440</y>
+        <width>80</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="text">
+       <string>خرید</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>539</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_next">
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+background-color: rgb(236, 229, 199);
+</string>
+     </property>
+     <property name="text">
+      <string>صفحه بعدی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_prev">
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+background-color: rgb(236, 229, 199);
+</string>
+     </property>
+     <property name="text">
+      <string>صفحه قبلی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton_filter">
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+background-color: rgb(236, 229, 199);
+</string>
+     </property>
+     <property name="text">
+      <string>فیلتر</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

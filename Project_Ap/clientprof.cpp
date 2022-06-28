@@ -1,6 +1,7 @@
 #include "clientprof.h"
 #include "ui_clientprof.h"
 
+
 using namespace std;
 clientProf::clientProf(client cli_info, QWidget *parent) :
     QMainWindow(parent),
@@ -50,6 +51,13 @@ void clientProf::on_pushButton_8_clicked()
 void clientProf::on_pushButton_7_clicked()
 {
     //رفتن به فروشگاه
+    goodslist = new goodsList(this);
+    this->hide();
+    goodslist->hide();
+    goodsGroup = new groupingGoods(goodslist);
+    connect(goodsGroup, SIGNAL(close_page()), this, SLOT(showw()));
+    connect(goodsGroup, SIGNAL(G_type(int)), goodslist, SLOT(recG_type(int)));
+    goodsGroup->show();
 }
 
 
@@ -62,5 +70,10 @@ void clientProf::on_pushButton_6_clicked()
 void clientProf::on_pushButton_4_clicked()
 {
     //بازگشت به صفحه قبل
+}
+
+void clientProf::showw()
+{
+    this->show();
 }
 

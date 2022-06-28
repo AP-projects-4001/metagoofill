@@ -10,10 +10,12 @@ ForgetPasClient::ForgetPasClient(QWidget *parent) :
 {
     ui->setupUi(this);
 }
+
 bool MatchingUserAndCellClient(string User,string Cell)
 {
-    return true;//Complete By Ali yaghini
+    return true;
 }
+
 ForgetPasClient::~ForgetPasClient()
 {
     delete ui;

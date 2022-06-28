@@ -18,6 +18,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     client.cpp \
     clientprof.cpp \
+    clothes_filter.cpp \
+    clothes_filter_info.cpp \
     customer.cpp \
     customerlogin.cpp \
     customerprof.cpp \
@@ -25,22 +27,32 @@ SOURCES += \
     dialog_options.cpp \
     forgetpasclient.cpp \
     forgetpascustomer.cpp \
+    fruitandveg_filter.cpp \
+    fruitandveg_filter_info.cpp \
+    goodslist.cpp \
+    groupinggoods.cpp \
+    homeapps_filter.cpp \
     loginadmin.cpp \
     loginclient.cpp \
     main.cpp \
     loginpage.cpp \
     mainlogin.cpp \
+    others_filter_info.cpp \
     product.cpp \
     recoverypasclient.cpp \
     recoverypascustomer.cpp \
     signup.cpp \
     signupclient.cpp \
     signupcustomer.cpp \
-    storecustomer.cpp
+    storecustomer.cpp \
+    super_filter.cpp \
+    tech_filter.cpp
 
 HEADERS += \
     client.h \
     clientprof.h \
+    clothes_filter.h \
+    clothes_filter_info.h \
     customer.h \
     customerlogin.h \
     customerprof.h \
@@ -48,26 +60,39 @@ HEADERS += \
     dialog_options.h \
     forgetpasclient.h \
     forgetpascustomer.h \
+    fruitandveg_filter.h \
+    fruitandveg_filter_info.h \
+    goodslist.h \
+    groupinggoods.h \
+    homeapps_filter.h \
     loginadmin.h \
     loginclient.h \
     loginpage.h \
     mainlogin.h \
+    others_filter_info.h \
     product.h \
     recoverypasclient.h \
     recoverypascustomer.h \
     signup.h \
     signupclient.h \
     signupcustomer.h \
-    storecustomer.h
+    storecustomer.h \
+    super_filter.h \
+    tech_filter.h
 
 FORMS += \
     clientprof.ui \
+    clothes_filter.ui \
     customerlogin.ui \
     customerprof.ui \
     dialog_add.ui \
     dialog_options.ui \
     forgetpasclient.ui \
     forgetpascustomer.ui \
+    fruitandveg_filter.ui \
+    goodslist.ui \
+    groupinggoods.ui \
+    homeapps_filter.ui \
     loginadmin.ui \
     loginclient.ui \
     loginpage.ui \
@@ -77,7 +102,9 @@ FORMS += \
     signup.ui \
     signupclient.ui \
     signupcustomer.ui \
-    storecustomer.ui
+    storecustomer.ui \
+    super_filter.ui \
+    tech_filter.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

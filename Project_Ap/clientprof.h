@@ -5,6 +5,8 @@
 #include <fstream>
 #include <cstring>
 #include "client.h"
+#include "goodslist.h"
+#include "groupinggoods.h"
 
 namespace Ui {
 class clientProf;
@@ -27,8 +29,12 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void showw();
+
 private:
     Ui::clientProf *ui;
+    goodsList *goodslist;
+    groupingGoods *goodsGroup;
     client clie;
 };
 
