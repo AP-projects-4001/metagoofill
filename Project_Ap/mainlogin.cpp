@@ -42,5 +42,4 @@ void MainLogin::on_pushButton_4_clicked()
     Loginadmin *p = new Loginadmin(this);
     p->show();
     this->hide();
-
 }

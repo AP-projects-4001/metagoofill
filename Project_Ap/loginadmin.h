@@ -2,7 +2,7 @@
 #define LOGINADMIN_H
 
 #include <QDialog>
-
+#include "adminpage.h"
 namespace Ui {
 class Loginadmin;
 }

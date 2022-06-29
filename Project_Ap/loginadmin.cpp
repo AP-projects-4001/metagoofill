@@ -29,7 +29,9 @@ void Loginadmin::on_pushButton_clicked()
     if(User=="Admin"&&pas=="Admin")
     {
         //New Page
-        //Complete by Ali yaghini
+        close();
+        AdminPage *p =  new AdminPage(this);
+        p->show();
     }
     else
     {

@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adminpage.cpp \
     cart.cpp \
     client.cpp \
     clientprof.cpp \
@@ -34,6 +35,8 @@ SOURCES += \
     goodslist.cpp \
     groupinggoods.cpp \
     homeapps_filter.cpp \
+    listofcustomersforadmin.cpp \
+    listoftransactions.cpp \
     loginadmin.cpp \
     loginclient.cpp \
     main.cpp \
@@ -51,6 +54,7 @@ SOURCES += \
     tech_filter.cpp
 
 HEADERS += \
+    adminpage.h \
     cart.h \
     client.h \
     clientprof.h \
@@ -69,6 +73,8 @@ HEADERS += \
     goodslist.h \
     groupinggoods.h \
     homeapps_filter.h \
+    listofcustomersforadmin.h \
+    listoftransactions.h \
     loginadmin.h \
     loginclient.h \
     loginpage.h \
@@ -85,6 +91,7 @@ HEADERS += \
     tech_filter.h
 
 FORMS += \
+    adminpage.ui \
     cart.ui \
     clientprof.ui \
     clothes_filter.ui \
@@ -99,6 +106,8 @@ FORMS += \
     goodslist.ui \
     groupinggoods.ui \
     homeapps_filter.ui \
+    listofcustomersforadmin.ui \
+    listoftransactions.ui \
     loginadmin.ui \
     loginclient.ui \
     loginpage.ui \
