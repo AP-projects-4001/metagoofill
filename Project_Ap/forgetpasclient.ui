@@ -19,8 +19,8 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>170</y>
+     <x>140</x>
+     <y>80</y>
      <width>518</width>
      <height>221</height>
     </rect>
@@ -88,6 +88,7 @@ color: rgb(53, 66, 89);</string>
      <font>
       <family>Lalezar</family>
       <pointsize>14</pointsize>
+      <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
@@ -101,11 +102,11 @@ color: rgb(53, 66, 89);</string>
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>420</y>
+     <x>260</x>
+     <y>330</y>
      <width>269</width>
      <height>112</height>
     </rect>

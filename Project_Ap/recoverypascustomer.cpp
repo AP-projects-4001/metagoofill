@@ -15,7 +15,7 @@ RecoveryPasCustomer::~RecoveryPasCustomer()
 
 void RecoveryPasCustomer::on_pushButton_clicked()
 {
-    //Must complete by Ali Yaghini
+    emit PassingTheCustomerPassword(ui->textEdit->toPlainText());
 }
 
 void RecoveryPasCustomer::on_pushButton_2_clicked()
