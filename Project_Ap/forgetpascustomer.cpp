@@ -40,9 +40,9 @@ void ForgetPasCustomer::on_pushButton_clicked()
     string username_tmp = "";
     if(MatchingUserAndCellCustomer(User, Number) && User != "" && Number != "")
     {
-        QMessageBox::about(this, "توجه", "ورود موفقیت آمیز");
+
         fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
-        while(cus_tmps.read((char*)&Cus_tmp, 118))
+        while(cus_tmps.read((char*)&Cus_tmp,118))
         {
             Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.User);
 
@@ -69,16 +69,17 @@ void ForgetPasCustomer::on_pushButton_2_clicked()
 
 void ForgetPasCustomer::GetNewPasCus(QString m)
 {
+    qDebug("Failed to write the data to port");
     string User = Cus_tmp.User;
     string username_tmp = "";
     fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
-    while(cus_tmps.read((char*)&Cus_tmp, 117))
+    while(cus_tmps.read((char*)&Cus_tmp, 118))
     {
         Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.User);
         if(username_tmp == User)
         {
             Cus_tmp.string_to_char_array(Cus_tmp.Password,16,m.toStdString());
-            cus_tmps.seekp(-117,ios::cur);
+            cus_tmps.seekp(-118,ios::cur);
             cus_tmps.write((char*)&Cus_tmp,118);//جایگزین کردن اطلاعات
             break;
         }

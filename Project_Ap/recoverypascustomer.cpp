@@ -16,6 +16,8 @@ RecoveryPasCustomer::~RecoveryPasCustomer()
 void RecoveryPasCustomer::on_pushButton_clicked()
 {
     emit PassingTheCustomerPassword(ui->textEdit->toPlainText());
+    QMessageBox::information(this, "توجه", "رمز تغییر یافت");
+    close();
 }
 
 void RecoveryPasCustomer::on_pushButton_2_clicked()
