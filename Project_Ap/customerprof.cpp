@@ -26,7 +26,7 @@ customerProf::customerProf(customer cus_info, QWidget *parent) :
 
 //    cus_info.char_array_to_string(temp, 11, cus_info.Password);
     temp = "*********";//ستاره به جای نمایش پسورد که بعدا باید تعدادش برابر با تعداد استرینگ پسورد باشد
-    ui->plainTextEdit_3->setPlainText(QString::fromStdString(temp));
+    ui->label_2->setText(QString::fromStdString(temp));
 
     cus_info.char_array_to_string(temp, 16, cus_info.User);
     ui->plainTextEdit_5->setPlainText(QString::fromStdString(temp));

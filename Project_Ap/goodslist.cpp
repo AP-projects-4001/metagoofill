@@ -5,6 +5,8 @@
 #include "clothes_filter.h"
 #include "fruitandveg_filter.h"
 #include "super_filter.h"
+#include "groupinggoods.h"
+#include "cart.h"
 #include <fstream>
 #define data_product "database_products.txt"
 using namespace std;
@@ -222,39 +224,39 @@ void goodsList::show_list_products()
     string str;
     product.char_array_to_string(str,16,products[0].type);
     ui->label_type_0->setText(QString::fromStdString(str));
-    ui->label_price_0->setText(QString::number(products[0].price));
+    ui->label_price_10->setText(QString::number(products[0].price));
 
     product.char_array_to_string(str,16,products[1].type);
     ui->label_type_1->setText(QString::fromStdString(str));
-    ui->label_price_1->setText(QString::number(products[1].price));
+    ui->label_price_11->setText(QString::number(products[1].price));
 
     product.char_array_to_string(str,16,products[2].type);
     ui->label_type_2->setText(QString::fromStdString(str));
-    ui->label_price_2->setText(QString::number(products[2].price));
+    ui->label_price_12->setText(QString::number(products[2].price));
 
     product.char_array_to_string(str,16,products[3].type);
     ui->label_type_3->setText(QString::fromStdString(str));
-    ui->label_price_3->setText(QString::number(products[3].price));
+    ui->label_price_13->setText(QString::number(products[3].price));
 
     product.char_array_to_string(str,16,products[4].type);
     ui->label_type_4->setText(QString::fromStdString(str));
-    ui->label_price_4->setText(QString::number(products[4].price));
+    ui->label_price_14->setText(QString::number(products[4].price));
 
     product.char_array_to_string(str,16,products[5].type);
     ui->label_type_5->setText(QString::fromStdString(str));
-    ui->label_price_5->setText(QString::number(products[5].price));
+    ui->label_price_15->setText(QString::number(products[5].price));
 
     product.char_array_to_string(str,16,products[6].type);
     ui->label_type_6->setText(QString::fromStdString(str));
-    ui->label_price_6->setText(QString::number(products[6].price));
+    ui->label_price_16->setText(QString::number(products[6].price));
 
     product.char_array_to_string(str,16,products[7].type);
     ui->label_type_7->setText(QString::fromStdString(str));
-    ui->label_price_7->setText(QString::number(products[7].price));
+    ui->label_price_17->setText(QString::number(products[7].price));
 
     product.char_array_to_string(str,16,products[8].type);
     ui->label_type_8->setText(QString::fromStdString(str));
-    ui->label_price_8->setText(QString::number(products[8].price));
+    ui->label_price_18->setText(QString::number(products[8].price));
 
 }
 
@@ -270,5 +272,81 @@ void goodsList::on_pushButton_prev_clicked()
 {
     preview_to_search(9);
     show_list_products();
+}
+
+
+
+void goodsList::on_pushButton_g1_clicked()
+{
+    details = new goodDetails(products[0], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g2_clicked()
+{
+    details = new goodDetails(products[1], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g3_clicked()
+{
+    details = new goodDetails(products[2], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g4_clicked()
+{
+    details = new goodDetails(products[3], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g5_clicked()
+{
+    details = new goodDetails(products[4], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g6_clicked()
+{
+    details = new goodDetails(products[5], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g7_clicked()
+{
+    details = new goodDetails(products[6], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g8_clicked()
+{
+    details = new goodDetails(products[7], this);
+    details->show();
+}
+
+void goodsList::on_pushButton_g9_clicked()
+{
+    details = new goodDetails(products[8], this);
+    details->show();
+}
+
+
+
+void goodsList::on_pushButton_filter_3_clicked()//for return from goodslist to groupinggoods
+{
+//    this->hide();
+//    groupingGoods *groups = new groupingGoods(this);
+//    groups->show();
+}
+
+
+void goodsList::on_pushButton_filter_2_clicked()
+{
+    //go to cart(sabad kharid)
+    this->hide();
+    cart *_cart = new cart(this);
+    _cart->show();
+    //باید بعد از ایجاد ساختار سبد خرید تغییر کند. زیرا با این روش فقط پتانسیل خرید یک دسته بندی از کالا وجود دارد
+
 }
 

@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    cart.cpp \
     client.cpp \
     clientprof.cpp \
     clothes_filter.cpp \
@@ -29,6 +30,7 @@ SOURCES += \
     forgetpascustomer.cpp \
     fruitandveg_filter.cpp \
     fruitandveg_filter_info.cpp \
+    gooddetails.cpp \
     goodslist.cpp \
     groupinggoods.cpp \
     homeapps_filter.cpp \
@@ -49,6 +51,7 @@ SOURCES += \
     tech_filter.cpp
 
 HEADERS += \
+    cart.h \
     client.h \
     clientprof.h \
     clothes_filter.h \
@@ -62,6 +65,7 @@ HEADERS += \
     forgetpascustomer.h \
     fruitandveg_filter.h \
     fruitandveg_filter_info.h \
+    gooddetails.h \
     goodslist.h \
     groupinggoods.h \
     homeapps_filter.h \
@@ -81,6 +85,7 @@ HEADERS += \
     tech_filter.h
 
 FORMS += \
+    cart.ui \
     clientprof.ui \
     clothes_filter.ui \
     customerlogin.ui \
@@ -90,6 +95,7 @@ FORMS += \
     forgetpasclient.ui \
     forgetpascustomer.ui \
     fruitandveg_filter.ui \
+    gooddetails.ui \
     goodslist.ui \
     groupinggoods.ui \
     homeapps_filter.ui \

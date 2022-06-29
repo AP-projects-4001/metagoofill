@@ -38,7 +38,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(53, 66, 89);
-background-color: rgb(116, 141, 166);</string>
+</string>
        </property>
        <property name="text">
         <string>بازگشت</string>
@@ -54,8 +54,7 @@ background-color: rgb(116, 141, 166);</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);
-color: rgb(53, 66, 89);</string>
+        <string notr="true">color: rgb(53, 66, 89);</string>
        </property>
        <property name="text">
         <string>سوابق خرید</string>
@@ -71,8 +70,7 @@ color: rgb(53, 66, 89);</string>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);
-color: rgb(53, 66, 89);</string>
+        <string notr="true">color: rgb(53, 66, 89);</string>
        </property>
        <property name="text">
         <string>فروشگاه</string>
