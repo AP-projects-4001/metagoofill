@@ -1,5 +1,6 @@
 #include "clientprof.h"
 #include "ui_clientprof.h"
+#include <cstring>
 
 
 using namespace std;
@@ -45,6 +46,37 @@ clientProf::~clientProf()
 void clientProf::on_pushButton_8_clicked()
 {
     //تغییر اطلاعات و ذخیره در فایل
+    client cli_changes;
+    client tmp;
+    cli_changes.string_to_char_array(cli_changes.Name, ui->plainTextEdit_13->toPlainText().toStdString().size()+1, ui->plainTextEdit_13->toPlainText().toStdString());
+    cli_changes.string_to_char_array(cli_changes.CellPhoneNumber, ui->plainTextEdit_5->toPlainText().toStdString().size()+1, ui->plainTextEdit_5->toPlainText().toStdString());
+    cli_changes.string_to_char_array(cli_changes.city, ui->plainTextEdit_15->toPlainText().toStdString().size()+1, ui->plainTextEdit_15->toPlainText().toStdString());
+    cli_changes.string_to_char_array(cli_changes.Address, ui->plainTextEdit_14->toPlainText().toStdString().size()+1, ui->plainTextEdit_14->toPlainText().toStdString());
+    cli_changes.string_to_char_array(cli_changes.User, ui->plainTextEdit_16->toPlainText().toStdString().size()+1, ui->plainTextEdit_16->toPlainText().toStdString());
+    strcpy(cli_changes.Password, clie.Password);
+
+    ifstream oldFile("clients.txt", ios::in | ios::binary);
+    ofstream newChanges("tmpFile.txt", ios::app | ios::binary);
+    int flag;
+
+    while(!oldFile.eof())
+        {
+            oldFile.read((char*)&tmp, 117);
+            if(oldFile)
+            {
+                if(strcmp(clie.User, tmp.User))
+                {
+                    newChanges.write((char*)&tmp, 117);
+                }
+            }
+        }
+    newChanges.write((char *)&cli_changes, 117);
+
+        newChanges.close();
+        oldFile.close();
+
+        remove("clients.txt");
+        rename("tmpFile.txt", "clients.txt");
 }
 
 

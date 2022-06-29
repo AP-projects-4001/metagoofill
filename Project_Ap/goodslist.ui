@@ -759,9 +759,9 @@ color: rgb(53, 66, 89);</string>
      <widget class="QLabel" name="label_type_15">
       <property name="geometry">
        <rect>
-        <x>720</x>
+        <x>700</x>
         <y>300</y>
-        <width>31</width>
+        <width>51</width>
         <height>24</height>
        </rect>
       </property>
@@ -876,9 +876,9 @@ color: rgb(53, 66, 89);</string>
      <widget class="QLabel" name="label_price_15">
       <property name="geometry">
        <rect>
-        <x>420</x>
+        <x>400</x>
         <y>300</y>
-        <width>31</width>
+        <width>51</width>
         <height>24</height>
        </rect>
       </property>
