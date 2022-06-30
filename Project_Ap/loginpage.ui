@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1022</width>
-    <height>763</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,10 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>120</y>
+      <x>60</x>
+      <y>50</y>
       <width>681</width>
-      <height>381</height>
+      <height>501</height>
      </rect>
     </property>
     <property name="font">
@@ -44,10 +44,10 @@ color: rgb(53, 66, 89);</string>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>200</x>
-       <y>100</y>
-       <width>271</width>
-       <height>242</height>
+       <x>140</x>
+       <y>190</y>
+       <width>381</width>
+       <height>171</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">

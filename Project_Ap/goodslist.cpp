@@ -219,45 +219,125 @@ bool goodsList::filter()
     return 1;
 }
 
-void goodsList::show_list_products()
+void goodsList::show_list_products()//first index is 1;
 {
     string str;
-    product.char_array_to_string(str,16,products[0].type);
-    ui->label_type_0->setText(QString::fromStdString(str));
-    ui->label_price_10->setText(QString::number(products[0].price));
+    if(end_part_products >= 1) {
+        product.char_array_to_string(str,16,products[0].berand);
+        ui->label_type_10->setText(QString::fromStdString(str));
+        ui->label_price_10->setText(QString::number(products[0].price));
+    }
+    else {
+        ui->label_type_10->hide();
+        ui->label_price_10->hide();
+        ui->pushButton_16->hide();
+        ui->pushButton_g1->hide();
+        ui->spinBox->hide();
+    }
 
-    product.char_array_to_string(str,16,products[1].type);
-    ui->label_type_1->setText(QString::fromStdString(str));
-    ui->label_price_11->setText(QString::number(products[1].price));
+    if(end_part_products >= 2) {
+        product.char_array_to_string(str,16,products[1].berand);
+        ui->label_type_11->setText(QString::fromStdString(str));
+        ui->label_price_11->setText(QString::number(products[1].price));
+    }
+    else {
+        ui->label_type_11->hide();
+        ui->label_price_11->hide();
+        ui->pushButton_14->hide();
+        ui->pushButton_g2->hide();
+        ui->spinBox_2->hide();
+    }
 
-    product.char_array_to_string(str,16,products[2].type);
-    ui->label_type_2->setText(QString::fromStdString(str));
-    ui->label_price_12->setText(QString::number(products[2].price));
+    if(end_part_products >= 3) {
+        product.char_array_to_string(str,16,products[2].berand);
+        ui->label_type_12->setText(QString::fromStdString(str));
+        ui->label_price_12->setText(QString::number(products[2].price));
+    }
+    else {
+        ui->label_type_12->hide();
+        ui->label_price_12->hide();
+        ui->pushButton_15->hide();
+        ui->pushButton_g3->hide();
+        ui->spinBox_3->hide();
+    }
 
-    product.char_array_to_string(str,16,products[3].type);
-    ui->label_type_3->setText(QString::fromStdString(str));
-    ui->label_price_13->setText(QString::number(products[3].price));
+    if(end_part_products >= 4) {
+        product.char_array_to_string(str,16,products[3].berand);
+        ui->label_type_13->setText(QString::fromStdString(str));
+        ui->label_price_13->setText(QString::number(products[3].price));
+    }
+    else {
+        ui->label_type_13->hide();
+        ui->label_price_13->hide();
+        ui->pushButton_13->hide();
+        ui->pushButton_g4->hide();
+        ui->spinBox_4->hide();
+    }
 
-    product.char_array_to_string(str,16,products[4].type);
-    ui->label_type_4->setText(QString::fromStdString(str));
-    ui->label_price_14->setText(QString::number(products[4].price));
+    if(end_part_products >= 5) {
+        product.char_array_to_string(str,16,products[4].berand);
+        ui->label_type_14->setText(QString::fromStdString(str));
+        ui->label_price_14->setText(QString::number(products[4].price));
+    }
+    else {
+        ui->label_type_14->hide();
+        ui->label_price_14->hide();
+        ui->pushButton_12->hide();
+        ui->pushButton_g5->hide();
+        ui->spinBox_5->hide();
+    }
 
-    product.char_array_to_string(str,16,products[5].type);
-    ui->label_type_5->setText(QString::fromStdString(str));
-    ui->label_price_15->setText(QString::number(products[5].price));
+    if(end_part_products >= 6) {
+        product.char_array_to_string(str,16,products[5].berand);
+        ui->label_type_15->setText(QString::fromStdString(str));
+        ui->label_price_15->setText(QString::number(products[5].price));
+    }
+    else {
+        ui->label_type_15->hide();
+        ui->label_price_15->hide();
+        ui->pushButton_17->hide();
+        ui->pushButton_g6->hide();
+        ui->spinBox_6->hide();
+    }
 
-    product.char_array_to_string(str,16,products[6].type);
-    ui->label_type_6->setText(QString::fromStdString(str));
-    ui->label_price_16->setText(QString::number(products[6].price));
+    if(end_part_products >= 7) {
+        product.char_array_to_string(str,16,products[6].berand);
+        ui->label_type_16->setText(QString::fromStdString(str));
+        ui->label_price_16->setText(QString::number(products[6].price));
+    }
+    else {
+        ui->label_type_16->hide();
+        ui->label_price_16->hide();
+        ui->pushButton_18->hide();
+        ui->pushButton_g7->hide();
+        ui->spinBox_7->hide();
+    }
 
-    product.char_array_to_string(str,16,products[7].type);
-    ui->label_type_7->setText(QString::fromStdString(str));
-    ui->label_price_17->setText(QString::number(products[7].price));
+    if(end_part_products >= 8) {
+        product.char_array_to_string(str,16,products[7].berand);
+        ui->label_type_17->setText(QString::fromStdString(str));
+        ui->label_price_17->setText(QString::number(products[7].price));
+    }
+    else {
+        ui->label_type_17->hide();
+        ui->label_price_17->hide();
+        ui->pushButton_19->hide();
+        ui->pushButton_g8->hide();
+        ui->spinBox_8->hide();
+    }
 
-    product.char_array_to_string(str,16,products[8].type);
-    ui->label_type_8->setText(QString::fromStdString(str));
-    ui->label_price_18->setText(QString::number(products[8].price));
-
+    if(end_part_products >= 9) {
+        product.char_array_to_string(str,16,products[8].berand);
+        ui->label_type_18->setText(QString::fromStdString(str));
+        ui->label_price_18->setText(QString::number(products[8].price));
+    }
+    else {
+        ui->label_type_18->hide();
+        ui->label_price_18->hide();
+        ui->pushButton_20->hide();
+        ui->pushButton_g9->hide();
+        ui->spinBox_9->hide();
+    }
 }
 
 

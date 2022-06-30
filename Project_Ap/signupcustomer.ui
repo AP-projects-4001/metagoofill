@@ -6,155 +6,242 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>721</height>
+    <width>859</width>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(170, 170, 170);</string>
+   <string notr="true">background-color: rgb(236, 229, 199);
+</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>1070</x>
-     <y>90</y>
-     <width>261</width>
-     <height>121</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(0, 152, 0);
-selection-background-color: rgb(255, 1, 99);
-border-bottom-color: rgb(255, 170, 127);
-border-color: rgb(85, 255, 255);
-font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <property name="text">
-    <string>ثبت نام نهایی</string>
-   </property>
-   <property name="default">
-    <bool>true</bool>
-   </property>
-   <property name="flat">
-    <bool>false</bool>
-   </property>
-  </widget>
-  <widget class="QGroupBox" name="groupBox_2">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>50</y>
-     <width>1001</width>
-     <height>211</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 24pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-   </property>
-   <property name="title">
-    <string>زمینه کاری شما</string>
-   </property>
-   <widget class="QWidget" name="layoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>100</y>
-      <width>981</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QRadioButton" name="radioButton_6">
-       <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Nirmala UI&quot;;
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="text">
-        <string>تکنولوژی</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_8">
-       <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Nirmala UI&quot;;
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="text">
-        <string>لوازم خانگی</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_3">
-       <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Nirmala UI&quot;;
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="text">
-        <string>پوشاک</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_7">
-       <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Nirmala UI&quot;;
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="text">
-        <string>آجیل</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_5">
-       <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Nirmala UI&quot;;
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="text">
-        <string>لبنیات</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QRadioButton" name="radioButton_4">
-       <property name="styleSheet">
-        <string notr="true">font: 9pt &quot;Nirmala UI&quot;;
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-       <property name="text">
-        <string>میوه و تره بار</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>300</y>
-     <width>345</width>
-     <height>331</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label_2">
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(53, 66, 89);
+
+font: 14pt &quot;Lalezar&quot;;</string>
+     </property>
+     <property name="text">
+      <string>بازگشت</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(53, 66, 89);
+font: 12pt &quot;Lalezar&quot;;</string>
+     </property>
+     <property name="title">
+      <string>عضویت</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>811</width>
+        <height>171</height>
+       </rect>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
+       <string notr="true">color: rgb(53, 66, 89);
+font: 10pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="title">
+       <string>نوع محصول</string>
+      </property>
+      <widget class="QWidget" name="layoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>60</y>
+         <width>771</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QRadioButton" name="radioButton_6">
+          <property name="styleSheet">
+           <string notr="true">
+font: 11pt &quot;Lalezar&quot;;</string>
+          </property>
+          <property name="text">
+           <string>تکنولوژی</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_8">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+          </property>
+          <property name="text">
+           <string>لوازم خانگی</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_3">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+          </property>
+          <property name="text">
+           <string>پوشاک</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_7">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+          </property>
+          <property name="text">
+           <string>آجیل</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_5">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+          </property>
+          <property name="text">
+           <string>سوپری</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_4">
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+          </property>
+          <property name="text">
+           <string>میوه و تره بار</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>400</y>
+        <width>291</width>
+        <height>56</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
-       <string>Name</string>
+       <string>ثبت نام نهایی</string>
+      </property>
+      <property name="default">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>240</y>
+        <width>311</width>
+        <height>49</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(53, 66, 89);
+font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lalezar'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>239</y>
+        <width>71</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>رمز عبور:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_7">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>239</y>
+        <width>271</width>
+        <height>49</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(53, 66, 89);
+font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lalezar'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>240</y>
+        <width>71</width>
+        <height>47</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>نام کامل:</string>
       </property>
       <property name="textFormat">
        <enum>Qt::RichText</enum>
@@ -163,15 +250,83 @@ color: rgb(255, 255, 255);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label">
+     <widget class="QTextEdit" name="textEdit_10">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>300</y>
+        <width>311</width>
+        <height>49</height>
+       </rect>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);s</string>
+       <string notr="true">color: rgb(53, 66, 89);
+font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lalezar'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>300</y>
+        <width>91</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>User Name</string>
+       <string>شماره تلفن:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEdit_8">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>299</y>
+        <width>271</width>
+        <height>49</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(53, 66, 89);
+font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(116, 141, 166);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lalezar'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>300</y>
+        <width>91</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>نام کاربری:</string>
       </property>
       <property name="textFormat">
        <enum>Qt::AutoText</enum>
@@ -180,155 +335,51 @@ color: rgb(255, 255, 255);s</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_4">
-      <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>password</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_5">
-      <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Cell Phone Number</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_7">
-      <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>address</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>1070</x>
-     <y>20</y>
-     <width>161</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(55, 166, 81);</string>
-   </property>
-   <property name="text">
-    <string>صفحه قبل</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>410</x>
-     <y>330</y>
-     <width>741</width>
-     <height>271</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QTextEdit" name="textEdit_7">
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTextEdit" name="textEdit_8">
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTextEdit" name="textEdit_9">
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTextEdit" name="textEdit_10">
-      <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QTextEdit" name="textEdit_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>360</y>
+        <width>311</width>
+        <height>141</height>
+       </rect>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
+       <string notr="true">color: rgb(53, 66, 89);
+font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(116, 141, 166);
+</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lalezar'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:7.8pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-    </item>
-   </layout>
-  </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>360</y>
+        <width>51</width>
+        <height>45</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>آدرس:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
