@@ -8,6 +8,7 @@
 #include "groupinggoods.h"
 #include "cart.h"
 #include <fstream>
+#include <QMessageBox>
 #define data_product "database_products.txt"
 using namespace std;
 goodsList::goodsList(QWidget *parent) :
@@ -461,3 +462,83 @@ bool goodsList::add_to_cart(int andis,int number_orders)
     database_cart.write((char*)&len, sizeof(int));
 }
 
+void goodsList::on_pushButton_b1_clicked()
+{
+    int andis = count - (end_part_products-0);
+    if(add_to_cart(andis,ui->spinBox->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کارا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_2_clicked()
+{
+    int andis = count - (end_part_products-1);
+    if(add_to_cart(andis,ui->spinBox_2->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_3_clicked()
+{
+    int andis = count - (end_part_products-2);
+    if(add_to_cart(andis,ui->spinBox_3->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_4_clicked()
+{
+    int andis = count - (end_part_products-3);
+    if(add_to_cart(andis,ui->spinBox_4->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_5_clicked()
+{
+    int andis = count - (end_part_products-4);
+    if(add_to_cart(andis,ui->spinBox_5->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_6_clicked()
+{
+    int andis = count - (end_part_products-5);
+    if(add_to_cart(andis,ui->spinBox_6->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_7_clicked()
+{
+    int andis = count - (end_part_products-6);
+    if(add_to_cart(andis,ui->spinBox_7->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_8_clicked()
+{
+    int andis = count - (end_part_products-7);
+    if(add_to_cart(andis,ui->spinBox_8->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_b9_clicked()
+{
+    int andis = count - (end_part_products-8);
+    if(add_to_cart(andis,ui->spinBox_9->value())==0)
+        QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
+    else
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+}

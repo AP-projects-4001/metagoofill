@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>581</height>
+    <width>841</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -326,13 +326,13 @@ color: rgb(53, 66, 89);</string>
        <string/>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>40</y>
         <width>741</width>
-        <height>45</height>
+        <height>75</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout">
@@ -347,9 +347,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_16">
+        <widget class="QPushButton" name="pushButton_b1">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -357,7 +367,7 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox"/>
+        <widget class="QSpinBox" name="spinBox_1"/>
        </item>
        <item>
         <spacer name="horizontalSpacer_2">
@@ -404,13 +414,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>90</y>
         <width>741</width>
-        <height>45</height>
+        <height>55</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -425,9 +435,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_14">
+        <widget class="QPushButton" name="pushButton_2">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -479,13 +499,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>140</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -500,9 +520,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_15">
+        <widget class="QPushButton" name="pushButton_3">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -554,13 +584,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>190</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -575,9 +605,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_13">
+        <widget class="QPushButton" name="pushButton_4">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -629,13 +669,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>240</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
@@ -650,9 +690,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_12">
+        <widget class="QPushButton" name="pushButton_5">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -704,13 +754,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>290</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -725,9 +775,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_17">
+        <widget class="QPushButton" name="pushButton_6">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -779,13 +839,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>340</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_7">
@@ -800,9 +860,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_18">
+        <widget class="QPushButton" name="pushButton_7">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -854,13 +924,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>390</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -875,9 +945,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_19">
+        <widget class="QPushButton" name="pushButton_8">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>
@@ -929,13 +1009,13 @@ color: rgb(53, 66, 89);</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>17</x>
         <y>440</y>
         <width>741</width>
-        <height>45</height>
+        <height>49</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_9">
@@ -950,9 +1030,19 @@ color: rgb(53, 66, 89);</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_20">
+        <widget class="QPushButton" name="pushButton_b9">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 7px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 12px;</string>
          </property>
          <property name="text">
           <string>خرید</string>

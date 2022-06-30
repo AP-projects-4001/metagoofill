@@ -71,6 +71,22 @@ private slots:
 
     bool add_to_cart(int ,int);
 
+    void on_pushButton_b1_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_b9_clicked();
+
 private:
     Ui::goodsList *ui;
     clothes_filter_info clothes_info_2;
