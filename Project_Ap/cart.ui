@@ -524,9 +524,9 @@ color: rgb(53, 66, 89);</string>
      <widget class="QLabel" name="label_type_10">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>450</x>
         <y>50</y>
-        <width>291</width>
+        <width>301</width>
         <height>24</height>
        </rect>
       </property>

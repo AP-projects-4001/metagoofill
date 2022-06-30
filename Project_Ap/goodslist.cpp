@@ -186,12 +186,12 @@ void goodsList::preview_to_search(int part)
 
         database_search.seekg((count)*sizeof(int));
 
-        for(int i=0;i<part;i++){
+        for(int i=0;i<end_part_products;i++){
             database_search.read((char *)&ptr_file, sizeof(int));
             database_product.seekg(ptr_file);
             database_product.read((char*)&products[i], sizeof(Product));
         }
-        count+=part;
+        count+=end_part_products;
     }
 }
 
@@ -223,7 +223,7 @@ void goodsList::show_list_products()//first index is 1;
 {
     string str;
     if(end_part_products >= 1) {
-        product.char_array_to_string(str,16,products[0].berand);
+        product.char_array_to_string(str,16,products[0].type);
         ui->label_type_10->setText(QString::fromStdString(str));
         ui->label_price_10->setText(QString::number(products[0].price));
     }
@@ -236,7 +236,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 2) {
-        product.char_array_to_string(str,16,products[1].berand);
+        product.char_array_to_string(str,16,products[1].type);
         ui->label_type_11->setText(QString::fromStdString(str));
         ui->label_price_11->setText(QString::number(products[1].price));
     }
@@ -249,7 +249,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 3) {
-        product.char_array_to_string(str,16,products[2].berand);
+        product.char_array_to_string(str,16,products[2].type);
         ui->label_type_12->setText(QString::fromStdString(str));
         ui->label_price_12->setText(QString::number(products[2].price));
     }
@@ -262,7 +262,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 4) {
-        product.char_array_to_string(str,16,products[3].berand);
+        product.char_array_to_string(str,16,products[3].type);
         ui->label_type_13->setText(QString::fromStdString(str));
         ui->label_price_13->setText(QString::number(products[3].price));
     }
@@ -275,7 +275,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 5) {
-        product.char_array_to_string(str,16,products[4].berand);
+        product.char_array_to_string(str,16,products[4].type);
         ui->label_type_14->setText(QString::fromStdString(str));
         ui->label_price_14->setText(QString::number(products[4].price));
     }
@@ -288,7 +288,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 6) {
-        product.char_array_to_string(str,16,products[5].berand);
+        product.char_array_to_string(str,16,products[5].type);
         ui->label_type_15->setText(QString::fromStdString(str));
         ui->label_price_15->setText(QString::number(products[5].price));
     }
@@ -301,7 +301,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 7) {
-        product.char_array_to_string(str,16,products[6].berand);
+        product.char_array_to_string(str,16,products[6].type);
         ui->label_type_16->setText(QString::fromStdString(str));
         ui->label_price_16->setText(QString::number(products[6].price));
     }
@@ -314,7 +314,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 8) {
-        product.char_array_to_string(str,16,products[7].berand);
+        product.char_array_to_string(str,16,products[7].type);
         ui->label_type_17->setText(QString::fromStdString(str));
         ui->label_price_17->setText(QString::number(products[7].price));
     }
@@ -327,7 +327,7 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 9) {
-        product.char_array_to_string(str,16,products[8].berand);
+        product.char_array_to_string(str,16,products[8].type);
         ui->label_type_18->setText(QString::fromStdString(str));
         ui->label_price_18->setText(QString::number(products[8].price));
     }
@@ -428,5 +428,36 @@ void goodsList::on_pushButton_filter_2_clicked()
     _cart->show();
     //باید بعد از ایجاد ساختار سبد خرید تغییر کند. زیرا با این روش فقط پتانسیل خرید یک دسته بندی از کالا وجود دارد
 
+}
+
+bool goodsList::add_to_cart(int andis,int number_orders)
+{
+    int ID;
+    int len;
+    int ptr_product;
+
+    fstream database_product(data_product,ios::in | ios::out | ios::binary);
+    fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
+
+
+    fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
+    database_cart.seekg((ID-1)*(3*20+1)*sizeof(int));
+    database_cart.read((char*)&len, sizeof(int));
+
+    if(len!=20){
+        database_search.seekg((andis)*sizeof(int));
+        database_search.read((char*)&ptr_product,sizeof(int));
+        database_cart.seekp(len*3,ios::cur);
+        database_cart.write((char*)&type, sizeof(int));
+        database_cart.write((char*)&ptr_product, sizeof(int));
+        database_cart.write((char*)&number_orders, sizeof(int));
+        return 1;
+    }
+    else{
+        return 0;
+    }
+    len++;
+    database_cart.seekp((ID-1)*(3*20+1)*sizeof(int));
+    database_cart.write((char*)&len, sizeof(int));
 }
 
