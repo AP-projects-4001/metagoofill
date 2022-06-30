@@ -43,6 +43,7 @@ SOURCES += \
     loginpage.cpp \
     mainlogin.cpp \
     others_filter_info.cpp \
+    paymentgateway.cpp \
     product.cpp \
     recoverypasclient.cpp \
     recoverypascustomer.cpp \
@@ -80,6 +81,7 @@ HEADERS += \
     loginpage.h \
     mainlogin.h \
     others_filter_info.h \
+    paymentgateway.h \
     product.h \
     recoverypasclient.h \
     recoverypascustomer.h \
@@ -112,6 +114,7 @@ FORMS += \
     loginclient.ui \
     loginpage.ui \
     mainlogin.ui \
+    paymentgateway.ui \
     recoverypasclient.ui \
     recoverypascustomer.ui \
     signup.ui \
