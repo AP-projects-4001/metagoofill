@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     adminpage.cpp \
     cart.cpp \
+    choosepay.cpp \
     client.cpp \
     clientprof.cpp \
     clothes_filter.cpp \
@@ -57,6 +58,7 @@ SOURCES += \
 HEADERS += \
     adminpage.h \
     cart.h \
+    choosepay.h \
     client.h \
     clientprof.h \
     clothes_filter.h \
@@ -95,6 +97,7 @@ HEADERS += \
 FORMS += \
     adminpage.ui \
     cart.ui \
+    choosepay.ui \
     clientprof.ui \
     clothes_filter.ui \
     customerlogin.ui \

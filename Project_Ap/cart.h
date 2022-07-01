@@ -2,6 +2,8 @@
 #define CART_H
 
 #include <QDialog>
+#include "choosepay.h"
+#include "paymentgateway.h"
 
 namespace Ui {
 class cart;
@@ -15,8 +17,15 @@ public:
     explicit cart(QWidget *parent = nullptr);
     ~cart();
 
+private slots:
+    void on_pushButton_filter_clicked();
+
+    void rec_method(bool);
+
 private:
     Ui::cart *ui;
+    choosepay *payMethod;
+    int numOfProducts;
 };
 
 #endif // CART_H

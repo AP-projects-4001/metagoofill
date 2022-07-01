@@ -79,38 +79,6 @@ color: rgb(53, 66, 89);</string>
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_g9">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>445</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_g1">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>44</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_type_0">
       <property name="geometry">
        <rect>
@@ -135,38 +103,6 @@ color: rgb(53, 66, 89);</string>
       </property>
       <property name="text">
        <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_g2">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>94</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_g3">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>144</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_type_2">
@@ -195,38 +131,6 @@ color: rgb(53, 66, 89);</string>
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_g4">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>194</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_g5">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>244</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_type_4">
       <property name="geometry">
        <rect>
@@ -253,38 +157,6 @@ color: rgb(53, 66, 89);</string>
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_g6">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>295</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_g7">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>345</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_type_6">
       <property name="geometry">
        <rect>
@@ -298,22 +170,6 @@ color: rgb(53, 66, 89);</string>
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_g8">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>395</y>
-        <width>71</width>
-        <height>35</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
-      </property>
-      <property name="text">
-       <string>جزئیات</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_type_7">
       <property name="geometry">
        <rect>
@@ -325,96 +181,6 @@ color: rgb(53, 66, 89);</string>
       </property>
       <property name="text">
        <string/>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>40</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_2">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>90</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_3">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>140</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_4">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>190</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_5">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>240</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_6">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>290</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_7">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>340</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_8">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>390</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QSpinBox" name="spinBox_9">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>440</y>
-        <width>59</width>
-        <height>35</height>
-       </rect>
       </property>
      </widget>
      <widget class="QLabel" name="label_price_0">
@@ -521,239 +287,680 @@ color: rgb(53, 66, 89);</string>
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="label_type_10">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>50</y>
-        <width>301</width>
-        <height>24</height>
+        <x>17</x>
+        <y>39</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_g1">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g1_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_10">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_10">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_11">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>100</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>89</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton_g2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g2_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_2"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_11">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_11">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_12">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>150</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>139</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPushButton" name="pushButton_g3">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g3_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_3"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_12">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_7">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_12">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_13">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>200</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>189</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="pushButton_g4">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g4_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_4"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_13">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_13">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_14">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>250</y>
-        <width>301</width>
-        <height>24</height>
+        <x>17</x>
+        <y>239</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="pushButton_g5">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g5_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_5"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_10">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_14">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_11">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_14">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_15">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>300</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>290</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QPushButton" name="pushButton_g6">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g6_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_6"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_12">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_15">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_13">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_15">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_16">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>350</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>340</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QPushButton" name="pushButton_g7">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g7_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_7"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_14">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_16">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_15">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_16">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_17">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>400</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>390</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QPushButton" name="pushButton_g8">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g8_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_8"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_17">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_17">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_16">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_17">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
-     <widget class="QLabel" name="label_type_18">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>450</y>
-        <width>291</width>
-        <height>24</height>
+        <x>17</x>
+        <y>440</y>
+        <width>751</width>
+        <height>45</height>
        </rect>
       </property>
-      <property name="text">
-       <string>نام کالا:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_10">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>50</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_11">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>100</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_12">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>150</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_13">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>200</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_14">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>250</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_15">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>300</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_16">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>350</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_17">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>400</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_price_18">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>450</y>
-        <width>191</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>قیمت:</string>
-      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QPushButton" name="pushButton_g9">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>جزئیات</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_g9_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(116, 141, 166);</string>
+         </property>
+         <property name="text">
+          <string>حذف</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBox_9"/>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_19">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_price_18">
+         <property name="text">
+          <string>قیمت:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_18">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_type_18">
+         <property name="text">
+          <string>نام کالا:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

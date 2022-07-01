@@ -33,7 +33,6 @@ void goodsList::recG_type(int G_type)
     search_by_filter();
     next_to_search(9);
     show_list_products();
-
 }
 
 void goodsList::on_pushButton_filter_clicked()

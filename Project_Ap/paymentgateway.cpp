@@ -1,11 +1,12 @@
 #include "paymentgateway.h"
 #include "ui_paymentgateway.h"
 #include <QMessageBox>
-PaymentGateWay::PaymentGateWay(QWidget *parent) :
+PaymentGateWay::PaymentGateWay(int price, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::PaymentGateWay)
 {
     ui->setupUi(this);
+    prc = price;
 }
 
 PaymentGateWay::~PaymentGateWay()

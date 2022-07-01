@@ -12,7 +12,7 @@ class PaymentGateWay : public QDialog
     Q_OBJECT
 
 public:
-    explicit PaymentGateWay(QWidget *parent = nullptr);
+    explicit PaymentGateWay(int price, QWidget *parent = nullptr);
     ~PaymentGateWay();
 
 private slots:
@@ -20,6 +20,7 @@ private slots:
 
 private:
     Ui::PaymentGateWay *ui;
+    int prc;
 };
 
 #endif // PAYMENTGATEWAY_H
