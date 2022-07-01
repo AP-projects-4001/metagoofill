@@ -10,7 +10,7 @@ ListOfCustomersForAdmin::ListOfCustomersForAdmin(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("لیست فروشندگان");
-    /*QString content = "نمایش فروشندگان";
+    QString content = "Name\tUser\tAddress\tPhoneNumber";
     QListWidgetItem *m_textEdit = new QListWidgetItem(content);
     ui->listWidget->addItem(m_textEdit);
     fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
@@ -29,17 +29,16 @@ ListOfCustomersForAdmin::ListOfCustomersForAdmin(QWidget *parent) :
     {
         string Name = Cus_Show[i].get_Name();
         string User = Cus_Show[i].get_User();
-        string City = Cus_Show[i].get_city();
-        string
-        string Address;
-        Cus_Show[i].char_array_to_string(Address,31,Cus_Show[i].get_Address());
-        string phoneNumber = Cus_Show[i].get_phoneNumber();
-        string x = Name+"\t" + User+"\t" + City+"\t" + Address+"\t" + phoneNumber+"\n";
+        string Address = Cus_Show[i].get_city();//اسم ها بعدا باید تغییر کند و به شهر تبدیل شود به سیتی
+        string phoneNumber;
+        Cus_Show[i].char_array_to_string(Address,11,Cus_Show[i].get_city());
+        Cus_Show[i].char_array_to_string(phoneNumber,12,Cus_Show[i].get_phoneNumber());
+        string x = Name+"\t" + User+"\t" + Address+"\t" + phoneNumber+"\n";
         QListWidgetItem *m_textEdit = new QListWidgetItem();
         m_textEdit->setText(QString::fromStdString(x));
-        ui->listWidget->addItem(m_textEdit);*/
+        ui->listWidget->addItem(m_textEdit);
     }
-//}
+}
 
 ListOfCustomersForAdmin::~ListOfCustomersForAdmin()
 {

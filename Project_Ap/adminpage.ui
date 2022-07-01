@@ -89,6 +89,26 @@ QPushButton:hover { color: yellow; }</string>
       </widget>
      </item>
      <item>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: red;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+}
+QPushButton:hover { color: yellow; }</string>
+       </property>
+       <property name="text">
+        <string>لیست خریدار</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="pushButton_3">
        <property name="styleSheet">
         <string notr="true">QPushButton {

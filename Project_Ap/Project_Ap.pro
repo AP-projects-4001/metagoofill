@@ -36,6 +36,7 @@ SOURCES += \
     goodslist.cpp \
     groupinggoods.cpp \
     homeapps_filter.cpp \
+    listofclientforadmin.cpp \
     listofcustomersforadmin.cpp \
     listoftransactions.cpp \
     loginadmin.cpp \
@@ -46,8 +47,10 @@ SOURCES += \
     others_filter_info.cpp \
     paymentgateway.cpp \
     product.cpp \
+    purchaserecords.cpp \
     recoverypasclient.cpp \
     recoverypascustomer.cpp \
+    salesrecords.cpp \
     signup.cpp \
     signupclient.cpp \
     signupcustomer.cpp \
@@ -76,6 +79,7 @@ HEADERS += \
     goodslist.h \
     groupinggoods.h \
     homeapps_filter.h \
+    listofclientforadmin.h \
     listofcustomersforadmin.h \
     listoftransactions.h \
     loginadmin.h \
@@ -85,8 +89,10 @@ HEADERS += \
     others_filter_info.h \
     paymentgateway.h \
     product.h \
+    purchaserecords.h \
     recoverypasclient.h \
     recoverypascustomer.h \
+    salesrecords.h \
     signup.h \
     signupclient.h \
     signupcustomer.h \
@@ -111,6 +117,7 @@ FORMS += \
     goodslist.ui \
     groupinggoods.ui \
     homeapps_filter.ui \
+    listofclientforadmin.ui \
     listofcustomersforadmin.ui \
     listoftransactions.ui \
     loginadmin.ui \
@@ -118,8 +125,10 @@ FORMS += \
     loginpage.ui \
     mainlogin.ui \
     paymentgateway.ui \
+    purchaserecords.ui \
     recoverypasclient.ui \
     recoverypascustomer.ui \
+    salesrecords.ui \
     signup.ui \
     signupclient.ui \
     signupcustomer.ui \
