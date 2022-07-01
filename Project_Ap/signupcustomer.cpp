@@ -22,7 +22,7 @@ bool CheckUserNameCustomer(string username)//تکراری بودن یوزر
     class customer oldCustomer;
     ifstream oldCustomers("customers.txt", ios::in | ios::binary);
     string temp_user;
-    while(oldCustomers.read((char*)&oldCustomer, 118))
+    while(oldCustomers.read((char*)&oldCustomer, 138))
     {
         oldCustomer.char_array_to_string(temp_user, 16, oldCustomer.User);
         if(username == temp_user)
@@ -93,24 +93,26 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          }
 
          fstream test_file("infos.txt",  ios::in | ios::binary);
-             if(!test_file) {
-                 test_file.close();
-                 test_file.open("infos.txt",  ios::out | ios::binary);
-                 int a=0;
-                 test_file.seekp(4);
-                 test_file.write((char*)&a, sizeof(int));
-             }
+         if(!test_file) {
              test_file.close();
+             test_file.open("infos.txt",  ios::out | ios::binary);
+             int a=0;
+             for(int i=0; i<2; i++)
+             {
+                 test_file.write((char*)&a, 4);
+             }
+         }
+         test_file.close();
 
          int tmp_id;
          fstream spec_info("infos.txt", ios::in | ios::out | ios::binary);
          spec_info.seekg(4);
          spec_info.read((char*)&tmp_id, 4);
          tmp_id++;
-         NewCustomer.string_to_char_array(NewCustomer.ID, to_string(tmp_id).size(), to_string(tmp_id));
          spec_info.seekp(4);
          spec_info.write((char*)&tmp_id, 4);
          spec_info.close();
+         NewCustomer.string_to_char_array(NewCustomer.ID, to_string(tmp_id).size(), to_string(tmp_id));
 
          ofstream CustomerFile("customers.txt", ios::app | ios::binary);
          if(CheckUserNameCustomer(ui->textEdit_8->toPlainText().toStdString()) == false)
@@ -121,7 +123,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
 
          QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
 
-         CustomerFile.write((char*)&NewCustomer, 118);
+         CustomerFile.write((char*)&NewCustomer, 138);
          CustomerFile.close();
 }
 

@@ -55,16 +55,16 @@ void customerProf::on_pushButton_4_clicked()
 
     while(!oldFile.eof())
         {
-            oldFile.read((char*)&tmp, 118);
+            oldFile.read((char*)&tmp, 138);
             if(oldFile)
             {
                 if(strcmp(cust.User, tmp.User))
                 {
-                    newChanges.write((char*)&tmp, 118);
+                    newChanges.write((char*)&tmp, 138);
                 }
             }
         }
-    newChanges.write((char *)&cus_changes, 118);
+    newChanges.write((char *)&cus_changes, 138);
 
         newChanges.close();
         oldFile.close();

@@ -23,7 +23,7 @@ bool CheckUserNameClient(string username)//یوزر تکراری
     class client oldClient;
     ifstream oldClients("clients.txt", ios::in | ios::binary);
     string temp_user;
-    while(oldClients.read((char*)&oldClient, 117))
+    while(oldClients.read((char*)&oldClient, 137))
     {
         oldClient.char_array_to_string(temp_user, 16, oldClient.User);
         if(username == temp_user)
@@ -56,13 +56,17 @@ void SignUpClient::on_pushButton_clicked()
     NewClient.string_to_char_array(NewClient.CellPhoneNumber, ui->textEdit_15->toPlainText().size()+1, ui->textEdit_15->toPlainText().toStdString());
 
     fstream test_file("infos.txt",  ios::in | ios::binary);
-        if(!test_file) {
-            test_file.close();
-            test_file.open("infos.txt",  ios::out | ios::binary);
-            int a=0;
-            test_file.write((char*)&a, sizeof(int));
-        }
+    if(!test_file)
+    {
         test_file.close();
+        test_file.open("infos.txt",  ios::out | ios::binary);
+        int a=0;
+        for(int i=0; i<2; i++)
+        {
+            test_file.write((char*)&a, 4);
+        }
+    }
+    test_file.close();
 
     int tmp_id;
     fstream spec_info("infos.txt", ios::in | ios::out | ios::binary);
@@ -83,7 +87,7 @@ void SignUpClient::on_pushButton_clicked()
 
     QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
 
-    clientFile.write((char*)&NewClient, 118);//change block size
+    clientFile.write((char*)&NewClient, 137);//change block size
     clientFile.close();
 }
 

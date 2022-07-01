@@ -13,7 +13,7 @@ clientProf::clientProf(client cli_info, QWidget *parent) :
     string temp;
 
     //set name.
-    cli_info.char_array_to_string(temp, 16, cli_info.Name);
+    cli_info.char_array_to_string(temp, 16, cli_info.ID);
     ui->plainTextEdit_13->setPlainText(QString::fromStdString(temp));
 
     //set phonenumber.
@@ -61,16 +61,16 @@ void clientProf::on_pushButton_8_clicked()
 
     while(!oldFile.eof())
         {
-            oldFile.read((char*)&tmp, 117);
+            oldFile.read((char*)&tmp, 137);
             if(oldFile)
             {
                 if(strcmp(clie.User, tmp.User))
                 {
-                    newChanges.write((char*)&tmp, 117);
+                    newChanges.write((char*)&tmp, 137);
                 }
             }
         }
-    newChanges.write((char *)&cli_changes, 117);
+    newChanges.write((char *)&cli_changes, 137);
 
         newChanges.close();
         oldFile.close();
