@@ -12,6 +12,7 @@ public:
     char Address[31];
     char Password[31];
     char city[11];
+    char ID[20];
 
 public:
     client();

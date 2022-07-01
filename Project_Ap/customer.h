@@ -12,6 +12,7 @@ public:
     char Password[31];
     char city[11];
     char ProductType;
+    char ID[20];
 
 public:
     customer();

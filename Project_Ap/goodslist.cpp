@@ -233,7 +233,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->label_price_10->hide();
         ui->pushButton_16->hide();
         ui->pushButton_g1->hide();
-        ui->spinBox->hide();
+        ui->spinBox_1->hide();
     }
 
     if(end_part_products >= 2) {
@@ -465,7 +465,7 @@ bool goodsList::add_to_cart(int andis,int number_orders)
 void goodsList::on_pushButton_b1_clicked()
 {
     int andis = count - (end_part_products-0);
-    if(add_to_cart(andis,ui->spinBox->value())==0)
+    if(add_to_cart(andis,ui->spinBox_1->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کارا با موفقیت اضافه شد");
