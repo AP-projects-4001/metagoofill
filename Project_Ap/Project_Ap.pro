@@ -56,7 +56,8 @@ SOURCES += \
     signupcustomer.cpp \
     storecustomer.cpp \
     super_filter.cpp \
-    tech_filter.cpp
+    tech_filter.cpp \
+    topupwallet.cpp
 
 HEADERS += \
     adminpage.h \
@@ -98,7 +99,8 @@ HEADERS += \
     signupcustomer.h \
     storecustomer.h \
     super_filter.h \
-    tech_filter.h
+    tech_filter.h \
+    topupwallet.h
 
 FORMS += \
     adminpage.ui \
@@ -134,7 +136,8 @@ FORMS += \
     signupcustomer.ui \
     storecustomer.ui \
     super_filter.ui \
-    tech_filter.ui
+    tech_filter.ui \
+    topupwallet.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
