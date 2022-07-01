@@ -2,7 +2,7 @@
 #define LISTOFCUSTOMERSFORADMIN_H
 
 #include <QDialog>
-
+#include "customer.h"
 namespace Ui {
 class ListOfCustomersForAdmin;
 }
