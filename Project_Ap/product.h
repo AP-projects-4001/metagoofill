@@ -28,6 +28,7 @@ public:
     int ptr_file_product_type_next;
     int ptr_file_product_type_preview;
     bool flag_delete_product;
+    int ID_customer;
 };
 
 #endif // PRODUCT_H

@@ -28,6 +28,7 @@ SOURCES += \
     customerprof.cpp \
     dialog_add.cpp \
     dialog_options.cpp \
+    factor.cpp \
     forgetpasclient.cpp \
     forgetpascustomer.cpp \
     fruitandveg_filter.cpp \
@@ -74,6 +75,7 @@ HEADERS += \
     customerprof.h \
     dialog_add.h \
     dialog_options.h \
+    factor.h \
     forgetpasclient.h \
     forgetpascustomer.h \
     fruitandveg_filter.h \

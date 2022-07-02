@@ -433,7 +433,7 @@ void goodsList::on_pushButton_filter_2_clicked()
 bool goodsList::add_to_cart(int andis,int number_orders)
 {
     int ID;
-    int len;
+    int len_cart;
     int ptr_product;
 
     fstream database_product(data_product,ios::in | ios::out | ios::binary);
@@ -442,23 +442,24 @@ bool goodsList::add_to_cart(int andis,int number_orders)
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekg((ID-1)*(3*20+1)*sizeof(int));
-    database_cart.read((char*)&len, sizeof(int));
+    database_cart.read((char*)&len_cart, sizeof(int));
 
-    if(len!=20){
+    if(len_cart!=20){
         database_search.seekg((andis)*sizeof(int));
         database_search.read((char*)&ptr_product,sizeof(int));
-        database_cart.seekp(len*3,ios::cur);
+        database_cart.seekp(len_cart*3,ios::cur);
         database_cart.write((char*)&type, sizeof(int));
         database_cart.write((char*)&ptr_product, sizeof(int));
         database_cart.write((char*)&number_orders, sizeof(int));
+
+        len_cart++;
+        database_cart.seekp((ID-1)*(3*20+1)*sizeof(int));
+        database_cart.write((char*)&len_cart, sizeof(int));
         return 1;
     }
     else{
         return 0;
     }
-    len++;
-    database_cart.seekp((ID-1)*(3*20+1)*sizeof(int));
-    database_cart.write((char*)&len, sizeof(int));
 }
 
 void goodsList::on_pushButton_b1_clicked()
