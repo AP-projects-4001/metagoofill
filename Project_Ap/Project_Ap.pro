@@ -36,6 +36,8 @@ SOURCES += \
     goodslist.cpp \
     groupinggoods.cpp \
     homeapps_filter.cpp \
+    infofclie.cpp \
+    infofcus.cpp \
     listofclientforadmin.cpp \
     listofcustomersforadmin.cpp \
     listoftransactions.cpp \
@@ -80,6 +82,8 @@ HEADERS += \
     goodslist.h \
     groupinggoods.h \
     homeapps_filter.h \
+    infofclie.h \
+    infofcus.h \
     listofclientforadmin.h \
     listofcustomersforadmin.h \
     listoftransactions.h \
@@ -119,6 +123,8 @@ FORMS += \
     goodslist.ui \
     groupinggoods.ui \
     homeapps_filter.ui \
+    infofclie.ui \
+    infofcus.ui \
     listofclientforadmin.ui \
     listofcustomersforadmin.ui \
     listoftransactions.ui \

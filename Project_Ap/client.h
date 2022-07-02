@@ -13,6 +13,7 @@ public:
     char Password[31];
     char city[11];
     char ID[20];
+    char access;
 
 public:
     client();

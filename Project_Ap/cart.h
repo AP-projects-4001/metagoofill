@@ -4,6 +4,7 @@
 #include <QDialog>
 #include "choosepay.h"
 #include "paymentgateway.h"
+#include "topupwallet.h"
 
 namespace Ui {
 class cart;

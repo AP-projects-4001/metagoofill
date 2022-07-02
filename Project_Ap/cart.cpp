@@ -82,7 +82,7 @@ void cart::on_pushButton_filter_clicked()
 void cart::rec_method(bool method)
 {
     bool meth = method;
-    int price;// این متغیر بعدا با خواندن فایل کالاها بدست خواهد آمد.
+    int price = 0;// این متغیر بعدا با خواندن فایل کالاها بدست خواهد آمد.
     if(meth == true)
     {
         PaymentGateWay *directpay = new PaymentGateWay(price, this);
@@ -92,6 +92,8 @@ void cart::rec_method(bool method)
     else
     {
         //show new page of charging wallet.
+        TopUpWallet *fromWallet = new TopUpWallet(price, this);
+        fromWallet->show();
     }
 }
 

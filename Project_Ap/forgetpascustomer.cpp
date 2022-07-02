@@ -14,7 +14,7 @@ bool MatchingUserAndCellCustomer(string Username,string Number)
     ifstream CustomerFile("customers.txt", ios::in | ios::binary);
     string user;
     string number;
-    while(CustomerFile.read((char*)&Customer, 118))
+    while(CustomerFile.read((char*)&Customer, 139))
     {
         Customer.char_array_to_string(user, 16, Customer.User);
         Customer.char_array_to_string(number, 31, Customer.PhoneNumber);
@@ -42,7 +42,7 @@ void ForgetPasCustomer::on_pushButton_clicked()
     {
 
         fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
-        while(cus_tmps.read((char*)&Cus_tmp,118))
+        while(cus_tmps.read((char*)&Cus_tmp,139))
         {
             Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.User);
 
@@ -73,14 +73,14 @@ void ForgetPasCustomer::GetNewPasCus(QString m)
     string User = Cus_tmp.User;
     string username_tmp = "";
     fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
-    while(cus_tmps.read((char*)&Cus_tmp, 118))
+    while(cus_tmps.read((char*)&Cus_tmp, 139))
     {
         Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.User);
         if(username_tmp == User)
         {
             Cus_tmp.string_to_char_array(Cus_tmp.Password,16,m.toStdString());
-            cus_tmps.seekp(-118,ios::cur);
-            cus_tmps.write((char*)&Cus_tmp,118);//جایگزین کردن اطلاعات
+            cus_tmps.seekp(-139,ios::cur);
+            cus_tmps.write((char*)&Cus_tmp,139);//جایگزین کردن اطلاعات
             break;
         }
     }

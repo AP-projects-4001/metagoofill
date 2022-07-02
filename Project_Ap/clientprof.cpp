@@ -61,16 +61,16 @@ void clientProf::on_pushButton_8_clicked()
 
     while(!oldFile.eof())
         {
-            oldFile.read((char*)&tmp, 137);
+            oldFile.read((char*)&tmp, 138);
             if(oldFile)
             {
                 if(strcmp(clie.User, tmp.User))
                 {
-                    newChanges.write((char*)&tmp, 137);
+                    newChanges.write((char*)&tmp, 138);
                 }
             }
         }
-    newChanges.write((char *)&cli_changes, 137);
+    newChanges.write((char *)&cli_changes, 138);
 
         newChanges.close();
         oldFile.close();

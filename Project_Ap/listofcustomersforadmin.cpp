@@ -3,6 +3,8 @@
 #include "adminpage.h"
 #include <iostream>
 #include <fstream>
+#include <QMessageBox>
+
 using namespace std;
 ListOfCustomersForAdmin::ListOfCustomersForAdmin(QWidget *parent) :
     QDialog(parent),
@@ -16,13 +18,13 @@ ListOfCustomersForAdmin::ListOfCustomersForAdmin(QWidget *parent) :
     fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
     class customer cus_tmp;
     int Count_Customer = 0;
-    while(cus_tmps.read((char*)&cus_tmp,138))
+    while(cus_tmps.read((char*)&cus_tmp,139))
         Count_Customer++;
     cus_tmps.close();
     fstream cus_tmps2("customers.txt", ios::in | ios::out | ios::binary);
     class customer Cus_Show[Count_Customer];
     int i=0;
-    while(cus_tmps2.read((char*)&Cus_Show[i],138))
+    while(cus_tmps2.read((char*)&Cus_Show[i],139))
         i++;
     cus_tmps2.close();
     for(i=0;i<Count_Customer;i++)
@@ -51,3 +53,24 @@ void ListOfCustomersForAdmin::on_pushButton_2_clicked()
     AdminPage *p = new AdminPage(this);
     p->show();
 }
+
+void ListOfCustomersForAdmin::on_pushButton_clicked()
+{
+    customer cus_forChange;
+    ifstream finder_file("customers.txt", ios::in | ios::binary);
+    string tmp;
+    while(finder_file.read((char*)&cus_forChange, 139))
+    {
+        cus_forChange.char_array_to_string(tmp, 16, cus_forChange.User);
+        if(ui->textEdit->toPlainText().toStdString() == tmp)
+        {
+            cus_inf = new infofcus(cus_forChange, this);
+            this->hide();
+            cus_inf->show();
+            return;
+        }
+    }
+    QMessageBox::about(this, "توجه", "کاربر یافت نشد");
+
+}
+

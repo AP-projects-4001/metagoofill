@@ -6,7 +6,7 @@ PurchaseRecords::PurchaseRecords(QWidget *parent) :
     ui(new Ui::PurchaseRecords)
 {
     ui->setupUi(this);
-    QString content = "اسم کالا\tتعداد\tقیمت";
+    QString content = "ردیف\tاسم کالا\tتعداد\tقیمت";
     QListWidgetItem *m_textEdit = new QListWidgetItem(content);
     ui->listWidget->addItem(m_textEdit);
 }

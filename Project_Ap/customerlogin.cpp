@@ -27,16 +27,19 @@ bool checking_UserAndPass(string username,string password)
     string user;
     string pass;
 
-    while(CustomerFile.read((char*)&customerr, 138))
+    while(CustomerFile.read((char*)&customerr, 139))
     {
         customerr.char_array_to_string(user, 16, customerr.User);
         customerr.char_array_to_string(pass, 31, customerr.Password);
-        if(username == user)
+        if(customerr.access == '1')
         {
-            if(password == pass)
+            if(username == user)
             {
-                CustomerFile.close();
-                return true;
+                if(password == pass)
+                {
+                    CustomerFile.close();
+                    return true;
+                }
             }
         }
     }
@@ -54,7 +57,7 @@ void CustomerLogin::on_pushButton_clicked()
         QMessageBox::about(this, "توجه", "ورود موفقیت آمیز");
         class customer cus_tmp;
         ifstream cus_tmps("customers.txt", ios::in | ios::binary);
-        while(cus_tmps.read((char*)&cus_tmp, 138))
+        while(cus_tmps.read((char*)&cus_tmp, 139))
         {
             cus_tmp.char_array_to_string(username_tmp, 16, cus_tmp.User);
             if(username_tmp == User)

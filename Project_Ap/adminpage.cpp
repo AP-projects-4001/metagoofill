@@ -38,7 +38,8 @@ void AdminPage::on_pushButton_3_clicked()
 
 void AdminPage::on_pushButton_4_clicked()
 {
+    close();
     ListOFClientForAdmin *p = new ListOFClientForAdmin(this);
     p->show();
-    this->hide();
+//    this->hide();
 }

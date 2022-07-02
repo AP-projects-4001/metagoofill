@@ -13,6 +13,7 @@ public:
     char city[11];
     char ProductType;
     char ID[20];
+    char access;
 
 public:
     customer();

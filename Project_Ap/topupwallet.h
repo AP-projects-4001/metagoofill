@@ -12,7 +12,7 @@ class TopUpWallet : public QDialog
     Q_OBJECT
 
 public:
-    explicit TopUpWallet(QWidget *parent = nullptr);
+    explicit TopUpWallet(int price, QWidget *parent = nullptr);
     ~TopUpWallet();
 
 private:

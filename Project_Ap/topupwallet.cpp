@@ -1,7 +1,7 @@
 #include "topupwallet.h"
 #include "ui_topupwallet.h"
 
-TopUpWallet::TopUpWallet(QWidget *parent) :
+TopUpWallet::TopUpWallet(int price, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::TopUpWallet)
 {

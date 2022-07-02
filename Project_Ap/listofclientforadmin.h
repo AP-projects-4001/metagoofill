@@ -2,6 +2,7 @@
 #define LISTOFCLIENTFORADMIN_H
 
 #include <QDialog>
+#include "infofclie.h"
 
 namespace Ui {
 class ListOFClientForAdmin;
@@ -18,8 +19,11 @@ public:
 private slots:
     void on_pushButton_2_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::ListOFClientForAdmin *ui;
+    infofclie *clie_inf;
 };
 
 #endif // LISTOFCLIENTFORADMIN_H
