@@ -31,11 +31,11 @@ private slots:
 
     void rec_other_info(others_filter_info);
 
-    void search_by_filter();//
+    void search_by_filter_in_products();
 
-    void next_to_search(int);//
+    void next_to_search(int);
 
-    void preview_to_search(int);//
+    void preview_to_search(int);
 
     bool filter();//
 
@@ -98,7 +98,7 @@ private:
     Product product;//
     int end_part_products;//
     int len_search;//
-    int count=0;
+    int count;
 };
 
 #endif // GOODSLIST_H

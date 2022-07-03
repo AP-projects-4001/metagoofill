@@ -81,7 +81,7 @@ color: rgb(0, 0, 0);</string>
        <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
-       <string>شماره تراکنش</string>
+       <string>شماره فاکتور فروش:</string>
       </property>
      </widget>
     </item>

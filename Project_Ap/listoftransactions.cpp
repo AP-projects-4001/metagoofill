@@ -17,6 +17,11 @@ listoftransactions::~listoftransactions()
     delete ui;
 }
 
+void listoftransactions::search_in_transactions()
+{
+
+}
+
 void listoftransactions::on_pushButton_clicked()
 {
     close();

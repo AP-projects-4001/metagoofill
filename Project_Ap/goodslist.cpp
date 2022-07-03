@@ -30,7 +30,7 @@ void goodsList::recG_type(int G_type)
 {
     type = G_type;
     this->show();
-    search_by_filter();
+    search_by_filter_in_products();
     next_to_search(9);
     show_list_products();
 }
@@ -120,7 +120,7 @@ void goodsList::rec_other_info(others_filter_info other_info)
     //کار با فایل
 }
 
-void goodsList::search_by_filter()//
+void goodsList::search_by_filter_in_products()
 {
     int ptr_start_file_product_type;
     int ptr_end_file_product_type;
@@ -150,13 +150,12 @@ void goodsList::search_by_filter()//
         }
         ptr_file=product.ptr_file_product_type_next;
     }
-
+    count=0;
 }
 
 void goodsList::next_to_search(int part)
 {
     int ptr_file;
-    int count=0;
     if(count!=len_search){
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);

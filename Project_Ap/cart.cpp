@@ -115,8 +115,8 @@ void cart::add_to_factor()
     int ptr_product;
     int number_orders;
 
-    fstream  database_buy_and_sell("database_buy_and_sell.txt",ios::in | ios::out | ios::binary);
-    database_buy_and_sell.seekg( number_factors*sizeof(Factor));
+    fstream  database_factor("database_factors.txt",ios::in | ios::out | ios::binary);
+    database_factor.seekg( number_factors*sizeof(Factor));
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
@@ -137,14 +137,14 @@ void cart::add_to_factor()
         factor.ID_customer=product.ID_customer;
         factor.ID_client=clie.ID;
 
-        database_buy_and_sell.write((char*)&factor,sizeof(Factor));
+        database_factor.write((char*)&factor,sizeof(Factor));
         number_factors++;
     }
 
 
     //save number_factors
 
-    database_buy_and_sell.close();
+    database_factor.close();
     database_cart.close();
     database_product.close();
 }

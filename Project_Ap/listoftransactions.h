@@ -15,6 +15,8 @@ public:
     explicit listoftransactions(QWidget *parent = nullptr);
     ~listoftransactions();
 
+    void search_in_transactions();
+
 private slots:
     void on_pushButton_clicked();
 
