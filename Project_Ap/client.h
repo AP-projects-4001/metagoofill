@@ -12,8 +12,11 @@ public:
     char Address[31];
     char Password[31];
     char city[11];
-    char ID[20];
     char access;
+    int ID;
+    int ptr_start_mybuys;
+    int ptr_end_mybuys;
+    int member_mybuys;
 
 public:
     client();

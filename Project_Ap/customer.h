@@ -12,8 +12,14 @@ public:
     char Password[31];
     char city[11];
     char ProductType;
-    char ID[20];
     char access;
+    int ID;
+    int ptr_file_myproduct;
+    int ptr_start_mysells;
+    int ptr_end_mysells;
+    int number_myproducts;
+    int number_mysells;
+
 
 public:
     customer();

@@ -67,6 +67,12 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          NewCustomer.string_to_char_array(NewCustomer.PhoneNumber, ui->textEdit_10->toPlainText().size()+1, ui->textEdit_10->toPlainText().toStdString());
          NewCustomer.string_to_char_array(NewCustomer.city, ui->textEdit_11->toPlainText().size()+1, ui->textEdit_11->toPlainText().toStdString());
          NewCustomer.access = '1';
+         NewCustomer.ptr_end_mysells = 0;
+         NewCustomer.ptr_start_mysells = 0;
+         NewCustomer.number_mysells = 0;
+         NewCustomer.ptr_file_myproduct = 0;
+         NewCustomer.number_myproducts = 0;
+
 
          if(ui->radioButton_3)
          {
@@ -93,10 +99,10 @@ void SignUpCUSTOMER::on_pushButton_clicked()
              NewCustomer.ProductType=1;//لوازم خانگی
          }
 
-         fstream test_file("infos.txt",  ios::in | ios::binary);
+         fstream test_file("numbers.txt",  ios::in | ios::binary);
          if(!test_file) {
              test_file.close();
-             test_file.open("infos.txt",  ios::out | ios::binary);
+             test_file.open("numbers.txt",  ios::out | ios::binary);
              int a=0;
              for(int i=0; i<2; i++)
              {
@@ -113,7 +119,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          spec_info.seekp(4);
          spec_info.write((char*)&tmp_id, 4);
          spec_info.close();
-         NewCustomer.string_to_char_array(NewCustomer.ID, to_string(tmp_id).size(), to_string(tmp_id));
+         NewCustomer.ID = tmp_id;
 
          ofstream CustomerFile("customers.txt", ios::app | ios::binary);
          if(CheckUserNameCustomer(ui->textEdit_8->toPlainText().toStdString()) == false)

@@ -55,12 +55,15 @@ void SignUpClient::on_pushButton_clicked()
     NewClient.string_to_char_array(NewClient.city, ui->textEdit_17->toPlainText().size()+1, ui->textEdit_17->toPlainText().toStdString());
     NewClient.string_to_char_array(NewClient.CellPhoneNumber, ui->textEdit_15->toPlainText().size()+1, ui->textEdit_15->toPlainText().toStdString());
     NewClient.access = '1';
+    NewClient.ptr_start_mybuys = 0;
+    NewClient.ptr_end_mybuys = 0;
+    NewClient.member_mybuys = 0;
 
-    fstream test_file("infos.txt",  ios::in | ios::binary);
+    fstream test_file("numbers.txt",  ios::in | ios::binary);
     if(!test_file)
     {
         test_file.close();
-        test_file.open("infos.txt",  ios::out | ios::binary);
+        test_file.open("numbers.txt",  ios::out | ios::binary);
         int a=0;
         for(int i=0; i<2; i++)
         {
@@ -70,11 +73,12 @@ void SignUpClient::on_pushButton_clicked()
     test_file.close();
 
     int tmp_id;
-    fstream spec_info("infos.txt", ios::in | ios::out | ios::binary);
+    fstream spec_info("numbers.txt", ios::in | ios::out | ios::binary);
     spec_info.seekg(0);
     spec_info.read((char*)&tmp_id, 4);
     tmp_id++;
-    NewClient.string_to_char_array(NewClient.ID, to_string(tmp_id).size(), to_string(tmp_id));
+    NewClient.ID = tmp_id;
+    //NewClient.string_to_char_array(NewClient.ID, to_string(tmp_id).size(), to_string(tmp_id));
     spec_info.seekp(0);
     spec_info.write((char*)&tmp_id, 4);
     spec_info.close();
