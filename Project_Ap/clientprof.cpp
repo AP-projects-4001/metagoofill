@@ -1,7 +1,7 @@
 #include "clientprof.h"
 #include "ui_clientprof.h"
 #include <cstring>
-
+#include "goodslist.h"
 
 using namespace std;
 clientProf::clientProf(client cli_info, QWidget *parent) :
@@ -13,7 +13,7 @@ clientProf::clientProf(client cli_info, QWidget *parent) :
     string temp;
 
     //set name.
-    cli_info.char_array_to_string(temp, 16, cli_info.ID);
+    cli_info.char_array_to_string(temp, 16, cli_info.Name);
     ui->plainTextEdit_13->setPlainText(QString::fromStdString(temp));
 
     //set phonenumber.
@@ -66,11 +66,11 @@ void clientProf::on_pushButton_8_clicked()
             {
                 if(strcmp(clie.User, tmp.User))
                 {
-                    newChanges.write((char*)&tmp, 138);
+                    newChanges.write((char*)&tmp, sizeof(client));
                 }
             }
         }
-    newChanges.write((char *)&cli_changes, 138);
+    newChanges.write((char *)&cli_changes, sizeof(client));
 
         newChanges.close();
         oldFile.close();
@@ -83,13 +83,8 @@ void clientProf::on_pushButton_8_clicked()
 void clientProf::on_pushButton_7_clicked()
 {
     //رفتن به فروشگاه
-    goodslist = new goodsList(this);
+    goodsList *goodslist= new goodsList(this);
     this->hide();
-    goodslist->hide();
-    goodsGroup = new groupingGoods(goodslist);
-    connect(goodsGroup, SIGNAL(close_page()), this, SLOT(showw()));
-    connect(goodsGroup, SIGNAL(G_type(int)), goodslist, SLOT(recG_type(int)));
-    goodsGroup->show();
 }
 
 
@@ -104,8 +99,4 @@ void clientProf::on_pushButton_4_clicked()
     //بازگشت به صفحه قبل
 }
 
-void clientProf::showw()
-{
-    this->show();
-}
 

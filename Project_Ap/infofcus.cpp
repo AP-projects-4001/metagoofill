@@ -63,7 +63,7 @@ void infofcus::on_pushButton_4_clicked()
 
     while(!oldFile.eof())
         {
-            oldFile.read((char*)&tmp, 139);
+            oldFile.read((char*)&tmp,sizeof(customer));
             if(oldFile)
             {
                 if(strcmp(cus_info.User, tmp.User))
@@ -72,7 +72,7 @@ void infofcus::on_pushButton_4_clicked()
                 }
             }
         }
-    newChanges.write((char *)&cus_changes, 139);
+    newChanges.write((char *)&cus_changes, sizeof(customer));
 
     newChanges.close();
     oldFile.close();

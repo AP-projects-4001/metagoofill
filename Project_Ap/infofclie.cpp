@@ -65,16 +65,16 @@ void infofclie::on_pushButton_4_clicked()
     ofstream newChanges("tmpFile.txt", ios::app | ios::binary);
     while(!oldFile.eof())
         {
-            oldFile.read((char*)&tmp, 138);
+            oldFile.read((char*)&tmp, sizeof(client));
             if(oldFile)
             {
                 if(strcmp(clie_inf.User, tmp.User))
                 {
-                    newChanges.write((char*)&tmp, 138);
+                    newChanges.write((char*)&tmp, sizeof(client));
                 }
             }
         }
-    newChanges.write((char *)&cli_changes, 138);
+    newChanges.write((char *)&cli_changes, sizeof(client));
 
         newChanges.close();
         oldFile.close();

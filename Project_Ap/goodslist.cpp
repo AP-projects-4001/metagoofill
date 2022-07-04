@@ -9,6 +9,7 @@
 #include "cart.h"
 #include <fstream>
 #include <QMessageBox>
+#include "groupinggoods.h"
 #define data_product "database_products.txt"
 using namespace std;
 goodsList::goodsList(QWidget *parent) :
@@ -16,6 +17,12 @@ goodsList::goodsList(QWidget *parent) :
     ui(new Ui::goodsList)
 {
     ui->setupUi(this);
+
+    groupingGoods *goodsGroup = new groupingGoods(this);
+    connect(goodsGroup, SIGNAL(G_type(int)), this, SLOT(recG_type(int)));
+    goodsGroup->show();
+    this->hide();
+
 
     fstream database_search("database_search.txt",ios::app | ios::binary);
     database_search.close();
@@ -52,8 +59,6 @@ void goodsList::on_pushButton_filter_clicked()
         filter_1->show();
         this->hide();
         connect(filter_1, SIGNAL(send_homeapp_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
-
-
    }
 
    else if(type == 2)
@@ -98,10 +103,10 @@ void goodsList::on_pushButton_filter_clicked()
 
 void goodsList::rec_clothes_info(clothes_filter_info clothes_info)
 {
-       clothes_info_2 = clothes_info;
-       this->show();
+     clothes_info_2 = clothes_info;
+     this->show();
 
-       //کار با فایل
+     //کار با فایل
 }
 
 void goodsList::rec_fruit_info(fruitandveg_filter_info fruit_info)
@@ -222,6 +227,11 @@ void goodsList::show_list_products()//first index is 1;
 {
     string str;
     if(end_part_products >= 1) {
+        ui->label_type_10->show();
+        ui->label_price_10->show();
+        ui->pushButton_16->show();
+        ui->pushButton_g1->show();
+        ui->spinBox_1->show();
         product.char_array_to_string(str,16,products[0].type);
         ui->label_type_10->setText(QString::fromStdString(str));
         ui->label_price_10->setText(QString::number(products[0].price));
@@ -235,6 +245,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 2) {
+        ui->label_type_11->show();
+        ui->label_price_11->show();
+        ui->pushButton_14->show();
+        ui->pushButton_g2->show();
+        ui->spinBox_2->show();
         product.char_array_to_string(str,16,products[1].type);
         ui->label_type_11->setText(QString::fromStdString(str));
         ui->label_price_11->setText(QString::number(products[1].price));
@@ -248,6 +263,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 3) {
+        ui->label_type_12->show();
+        ui->label_price_12->show();
+        ui->pushButton_15->show();
+        ui->pushButton_g3->show();
+        ui->spinBox_3->show();
         product.char_array_to_string(str,16,products[2].type);
         ui->label_type_12->setText(QString::fromStdString(str));
         ui->label_price_12->setText(QString::number(products[2].price));
@@ -261,6 +281,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 4) {
+        ui->label_type_13->show();
+        ui->label_price_13->show();
+        ui->pushButton_13->show();
+        ui->pushButton_g4->show();
+        ui->spinBox_4->show();
         product.char_array_to_string(str,16,products[3].type);
         ui->label_type_13->setText(QString::fromStdString(str));
         ui->label_price_13->setText(QString::number(products[3].price));
@@ -274,6 +299,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 5) {
+        ui->label_type_14->show();
+        ui->label_price_14->show();
+        ui->pushButton_12->show();
+        ui->pushButton_g5->show();
+        ui->spinBox_5->show();
         product.char_array_to_string(str,16,products[4].type);
         ui->label_type_14->setText(QString::fromStdString(str));
         ui->label_price_14->setText(QString::number(products[4].price));
@@ -287,6 +317,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 6) {
+        ui->label_type_15->show();
+        ui->label_price_15->show();
+        ui->pushButton_17->show();
+        ui->pushButton_g6->show();
+        ui->spinBox_6->show();
         product.char_array_to_string(str,16,products[5].type);
         ui->label_type_15->setText(QString::fromStdString(str));
         ui->label_price_15->setText(QString::number(products[5].price));
@@ -300,6 +335,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 7) {
+        ui->label_type_16->show();
+        ui->label_price_16->show();
+        ui->pushButton_18->show();
+        ui->pushButton_g7->show();
+        ui->spinBox_7->show();
         product.char_array_to_string(str,16,products[6].type);
         ui->label_type_16->setText(QString::fromStdString(str));
         ui->label_price_16->setText(QString::number(products[6].price));
@@ -313,6 +353,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 8) {
+        ui->label_type_17->show();
+        ui->label_price_17->show();
+        ui->pushButton_19->show();
+        ui->pushButton_g8->show();
+        ui->spinBox_8->show();
         product.char_array_to_string(str,16,products[7].type);
         ui->label_type_17->setText(QString::fromStdString(str));
         ui->label_price_17->setText(QString::number(products[7].price));
@@ -326,6 +371,11 @@ void goodsList::show_list_products()//first index is 1;
     }
 
     if(end_part_products >= 9) {
+        ui->label_type_18->show();
+        ui->label_price_18->show();
+        ui->pushButton_20->show();
+        ui->pushButton_g9->show();
+        ui->spinBox_9->show();
         product.char_array_to_string(str,16,products[8].type);
         ui->label_type_18->setText(QString::fromStdString(str));
         ui->label_price_18->setText(QString::number(products[8].price));

@@ -20,10 +20,10 @@ SignUpClient::~SignUpClient()
 
 bool CheckUserNameClient(string username)//یوزر تکراری
 {
-    class client oldClient;
+    client oldClient;
     ifstream oldClients("clients.txt", ios::in | ios::binary);
     string temp_user;
-    while(oldClients.read((char*)&oldClient, 138))
+    while(oldClients.read((char*)&oldClient, sizeof(client)))
     {
         oldClient.char_array_to_string(temp_user, 16, oldClient.User);
         if(username == temp_user)
@@ -38,6 +38,7 @@ bool CheckUserNameClient(string username)//یوزر تکراری
 
 void SignUpClient::on_pushButton_clicked()
 {
+
     if(ui->textEdit_12->toPlainText().toStdString()=="" || ui->textEdit_13->toPlainText().toStdString()==""
           || ui->textEdit_14->toPlainText().toStdString()=="" || ui->textEdit_15->toPlainText().toStdString()=="" ||
          ui->textEdit_16->toPlainText().toStdString()=="" || ui->textEdit_17->toPlainText().toStdString()=="")
@@ -46,7 +47,7 @@ void SignUpClient::on_pushButton_clicked()
          return;
     }
 
-    class client NewClient;
+    client NewClient;
     ofstream clientFile("clients.txt", ios::app | ios::binary);
     NewClient.string_to_char_array(NewClient.Name, ui->textEdit_12->toPlainText().size()+1, ui->textEdit_12->toPlainText().toStdString());
     NewClient.string_to_char_array(NewClient.User, ui->textEdit_14->toPlainText().size()+1, ui->textEdit_14->toPlainText().toStdString());
@@ -57,7 +58,7 @@ void SignUpClient::on_pushButton_clicked()
     NewClient.access = '1';
     NewClient.ptr_start_mybuys = 0;
     NewClient.ptr_end_mybuys = 0;
-    NewClient.member_mybuys = 0;
+    NewClient.number_mybuys = 0;
 
     fstream test_file("numbers.txt",  ios::in | ios::binary);
     if(!test_file)
@@ -92,7 +93,7 @@ void SignUpClient::on_pushButton_clicked()
 
     QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
 
-    clientFile.write((char*)&NewClient, 138);//change block size
+    clientFile.write((char*)&NewClient, sizeof(client));//change block size
     clientFile.close();
 }
 

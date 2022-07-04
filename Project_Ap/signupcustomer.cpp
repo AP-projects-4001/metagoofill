@@ -22,7 +22,7 @@ bool CheckUserNameCustomer(string username)//تکراری بودن یوزر
     class customer oldCustomer;
     ifstream oldCustomers("customers.txt", ios::in | ios::binary);
     string temp_user;
-    while(oldCustomers.read((char*)&oldCustomer, 139))
+    while(oldCustomers.read((char*)&oldCustomer, sizeof(customer)))
     {
         oldCustomer.char_array_to_string(temp_user, 16, oldCustomer.User);
         if(username == temp_user)
@@ -130,7 +130,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
 
          QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
 
-         CustomerFile.write((char*)&NewCustomer, 139);
+         CustomerFile.write((char*)&NewCustomer, sizeof(customer));
          CustomerFile.close();
 }
 

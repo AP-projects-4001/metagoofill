@@ -16,7 +16,7 @@ public:
     int ID;
     int ptr_start_mybuys;
     int ptr_end_mybuys;
-    int member_mybuys;
+    int number_mybuys;
 
 public:
     client();

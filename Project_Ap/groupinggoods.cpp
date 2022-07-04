@@ -14,12 +14,6 @@ groupingGoods::~groupingGoods()
     delete ui;
 }
 
-void groupingGoods::on_profile_clicked()
-{
-    emit close_page();
-    this->close();
-}
-
 void groupingGoods::on_technology_clicked()
 {
     //استخراج و ارسال اطلاعات کالاهای تکنولوژی

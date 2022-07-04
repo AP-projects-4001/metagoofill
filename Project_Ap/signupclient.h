@@ -24,7 +24,7 @@ private slots:
 
 private:
     Ui::SignUpClient *ui;
-    QVector<client>client;
+    //QVector<client>client;
 };
 
 #endif // SIGNUPCLIENT_H

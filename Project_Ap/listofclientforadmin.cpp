@@ -17,7 +17,7 @@ ListOFClientForAdmin::ListOFClientForAdmin(QWidget *parent) :
     fstream cli_tmps("clients.txt", ios::in | ios::out | ios::binary);
     class client cli_tmp;
     int Count_Client = 0;
-    while(cli_tmps.read((char*)&cli_tmp,138))
+    while(cli_tmps.read((char*)&cli_tmp,sizeof(client)))
         Count_Client++;
     cli_tmps.close();
     fstream cli_tmps2("clients.txt", ios::in | ios::out | ios::binary);
@@ -58,7 +58,7 @@ void ListOFClientForAdmin::on_pushButton_clicked()
     client clie_forChange;
     ifstream finder_file("clients.txt", ios::in | ios::binary);
     string tmp;
-    while(finder_file.read((char*)&clie_forChange, 138))
+    while(finder_file.read((char*)&clie_forChange, sizeof(client)))
     {
         clie_forChange.char_array_to_string(tmp, 16, clie_forChange.User);
         if(ui->textEdit->toPlainText().toStdString() == tmp)

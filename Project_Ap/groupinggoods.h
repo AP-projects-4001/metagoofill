@@ -2,7 +2,6 @@
 #define GROUPINGGOODS_H
 
 #include <QDialog>
-#include "goodslist.h"
 
 namespace Ui {
 class groupingGoods;
@@ -17,12 +16,9 @@ public:
     ~groupingGoods();
 
 signals:
-    void close_page();
     void G_type(int);
 
 private slots:
-    void on_profile_clicked();
-
     void on_technology_clicked();
 
     void on_homeApp_clicked();
@@ -39,7 +35,6 @@ private slots:
 
 private:
     Ui::groupingGoods *ui;
-    goodsList *gList;
 
 };
 

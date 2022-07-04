@@ -9,15 +9,14 @@
 
 using namespace std;
 
-storecustomer::storecustomer(customer cus_info,QWidget *parent) :
+storecustomer::storecustomer(customer _cust,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::storecustomer)
 {
     ui->setupUi(this);
 
-    cust=cus_info;
+    cust=_cust;
 
-    number_myproducts=0;//موقتی
     number_products=0;//موقتی
 
     fstream database_product(data_product,  ios::app | ios::binary);
@@ -298,6 +297,11 @@ void storecustomer::delete_product()
     }
 
     number_myproducts--;
+
+    //database_cust.seekp((cust.ID-1)*sizeof(customer));
+   // database_product_type.write((char*)&ptr_start_file_product_type, sizeof(int));
+    //database_product_type.write((char*)&ptr_end_file_product_type, sizeof(int));
+    //database_product_type.write((char*)&number_product_type, sizeof(int));
 
     database_product.close();
 }

@@ -5,30 +5,30 @@
 #include "storecustomer.h"
 using namespace std;
 
-customerProf::customerProf(customer cus_info, QWidget *parent) :
+customerProf::customerProf(customer _cust, QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::customerProf)
 {
     ui->setupUi(this);
-    cust = cus_info;// ذخیره شی در کلاس
+    cust = _cust;// ذخیره شی در کلاس
     string temp;
-    cus_info.char_array_to_string(temp, 16, cus_info.Name);
+    cust.char_array_to_string(temp, 16, cust.Name);
     ui->plainTextEdit_2->setPlainText(QString::fromStdString(temp));
 
-    cus_info.char_array_to_string(temp, 12, cus_info.PhoneNumber);
+    cust.char_array_to_string(temp, 12, cust.PhoneNumber);
     ui->plainTextEdit->setPlainText(QString::fromStdString(temp));
 
-    cus_info.char_array_to_string(temp, 31, cus_info.city);//در فیلد آدرس وارد می شود
+    cust.char_array_to_string(temp, 31, cust.city);//در فیلد آدرس وارد می شود
     ui->plainTextEdit_6->setPlainText(QString::fromStdString(temp));
 
 //    std::string tmp(1, cus_info.ProductType);
-    ui->plainTextEdit_7->setPlainText(QString::number(cus_info.ProductType));
+    ui->plainTextEdit_7->setPlainText(QString::number(cust.ProductType));
 
 //    cus_info.char_array_to_string(temp, 11, cus_info.Password);
     temp = "*********";//ستاره به جای نمایش پسورد که بعدا باید تعدادش برابر با تعداد استرینگ پسورد باشد
     ui->label_2->setText(QString::fromStdString(temp));
 
-    cus_info.char_array_to_string(temp, 16, cus_info.User);
+    cust.char_array_to_string(temp, 16, cust.User);
     ui->plainTextEdit_5->setPlainText(QString::fromStdString(temp));
 }
 
@@ -56,16 +56,16 @@ void customerProf::on_pushButton_4_clicked()
 
     while(!oldFile.eof())
         {
-            oldFile.read((char*)&tmp, 139);
+            oldFile.read((char*)&tmp, sizeof(customer));
             if(oldFile)
             {
                 if(strcmp(cust.User, tmp.User))
                 {
-                    newChanges.write((char*)&tmp, 139);
+                    newChanges.write((char*)&tmp, sizeof(customer));
                 }
             }
         }
-    newChanges.write((char *)&cus_changes, 139);
+    newChanges.write((char *)&cus_changes,sizeof(customer));
 
     newChanges.close();
     oldFile.close();
