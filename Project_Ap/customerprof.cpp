@@ -3,6 +3,7 @@
 #include <fstream>
 #include <cstring>
 #include "storecustomer.h"
+#include "salesrecords.h"
 using namespace std;
 
 customerProf::customerProf(customer _cust, QWidget *parent) :
@@ -85,7 +86,9 @@ void customerProf::on_pushButton_2_clicked()
 
 void customerProf::on_pushButton_clicked()
 {
-    //صفحه سوایق فروش
+    SalesRecords *salesrecords=new SalesRecords(cust,this);
+    salesrecords->show();
+    this->hide();
 }
 
 void customerProf::on_pushButton_3_clicked()

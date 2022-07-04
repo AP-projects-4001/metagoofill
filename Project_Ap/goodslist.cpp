@@ -503,7 +503,7 @@ bool goodsList::add_to_cart(int andis,int number_orders)
     if(len_cart<20){
         database_search.seekg((andis)*sizeof(int));
         database_search.read((char*)&ptr_product,sizeof(int));
-        database_cart.seekp(len_cart*3,ios::cur);
+        database_cart.seekp(len_cart*3*sizeof(int),ios::cur);
         database_cart.write((char*)&type, sizeof(int));
         database_cart.write((char*)&ptr_product, sizeof(int));
         database_cart.write((char*)&number_orders, sizeof(int));

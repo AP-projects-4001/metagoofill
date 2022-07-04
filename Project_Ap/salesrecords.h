@@ -3,6 +3,7 @@
 #include "customer.h"
 #include <QDialog>
 #include "factor.h"
+using namespace std;
 namespace Ui {
 class SalesRecords;
 }
@@ -12,23 +13,15 @@ class SalesRecords : public QDialog
     Q_OBJECT
 
 public:
-    explicit SalesRecords(QWidget *parent = nullptr);
+    explicit SalesRecords(customer,QWidget *parent = nullptr);
     ~SalesRecords();
-    void search_in_sells();
+    void search_in_sells(string&);
+
+    void show_sells(string&);
 private:
     Ui::SalesRecords *ui;
     customer cust;
-    Factor factors[9];
-
-    int number_mysells;
-
-    int ptr_start_mysells;
-
-    int len_search;
-
-    int end_part_sells;
-
-    int count;
+    Factor factor;
 };
 
 #endif // SALESRECORDS_H

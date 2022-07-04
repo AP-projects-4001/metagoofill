@@ -8,6 +8,7 @@
 #include "factor.h"
 #include "product.h"
 #include "client.h"
+#include "customer.h"
 
 namespace Ui {
 class cart;
@@ -27,34 +28,39 @@ public:
 
     void  add_to_sells();
 
+    void start_cart();
+
     void next_to_cart(int);
 
     void preview_to_cart(int);
 
     void show_cart();
 
-private slots:
-    void rec_method(bool);
+    void transaction();
 
+private slots:
     void on_pushButton_filter_clicked();
+
+    void on_pushButton_next_clicked();
+
+    void on_pushButton_prev_clicked();
+
+    void rec_method(bool);
 
 private:
     Ui::cart *ui;
     choosepay *payMethod;
+    customer cust;
     client clie;
-    int numOfProducts;
     Factor factor;
-    Factor factors[9];
     Product product;
+    Product products[9];
+    int number[9];
+    int numOfProducts;
     int number_factors;
-    int number_mybuys;
-    int number_mysells;
     int number_buys;
     int number_sells;
-    int ptr_start_mybuys;
-    int ptr_end_mybuys;
-    int ptr_start_mysells;
-    int ptr_end_mysells;
+
     int end_part_cart;
     int count;
     int len_cart;

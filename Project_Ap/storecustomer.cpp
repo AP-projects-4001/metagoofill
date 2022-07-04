@@ -125,6 +125,7 @@ void storecustomer::item_added2(QString type,QString price,QString berand,QStrin
     product.flag_numerical=flag_numerical;
     product.flag_delete_product=0;
     product.ID=number_products+1;
+    product.ID_customer=cust.ID;
 
     add_product();
     add_product_to_type();

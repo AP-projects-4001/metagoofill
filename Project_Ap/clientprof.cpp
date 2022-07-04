@@ -2,7 +2,7 @@
 #include "ui_clientprof.h"
 #include <cstring>
 #include "goodslist.h"
-
+#include "purchaserecords.h"
 using namespace std;
 clientProf::clientProf(client cli_info, QWidget *parent) :
     QMainWindow(parent),
@@ -90,7 +90,9 @@ void clientProf::on_pushButton_7_clicked()
 
 void clientProf::on_pushButton_6_clicked()
 {
-    //مشاهده سوابق خرید
+    PurchaseRecords *purchaserecords= new PurchaseRecords(clie,this);
+    purchaserecords->show();
+    this->hide();
 }
 
 

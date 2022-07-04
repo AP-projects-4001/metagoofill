@@ -37,12 +37,14 @@ LoginPage::LoginPage(QWidget *parent)
     fstream  database_cart("database_cart.txt",ios::app | ios::binary);
     database_cart.close();
 
+    fstream  database_factor("database_factors.txt", ios::app | ios::binary);
+    database_factor.close();
+
     fstream  database_buys("database_buys.txt",ios::app | ios::binary);
     database_buys.close();
 
     fstream  database_sells("database_sells.txt",ios::app | ios::binary);
     database_sells.close();
-
 
     fstream numbers("numbers.txt",  ios::in | ios::binary);
     if(!numbers)
