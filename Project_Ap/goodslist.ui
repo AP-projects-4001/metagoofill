@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>841</width>
-    <height>629</height>
+    <width>840</width>
+    <height>630</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,32 +28,6 @@ background-color: rgb(236, 229, 199);
      </property>
      <property name="text">
       <string>سبد خرید</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="5">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>539</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="pushButton_filter">
-     <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-     </property>
-     <property name="text">
-      <string>فیلتر</string>
      </property>
     </widget>
    </item>
@@ -80,6 +54,32 @@ background-color: rgb(236, 229, 199);
      </property>
      <property name="text">
       <string>صفحه بعدی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>539</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton_filter">
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+background-color: rgb(236, 229, 199);
+</string>
+     </property>
+     <property name="text">
+      <string>فیلتر</string>
      </property>
     </widget>
    </item>

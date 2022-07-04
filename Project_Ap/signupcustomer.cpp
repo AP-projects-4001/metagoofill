@@ -99,18 +99,6 @@ void SignUpCUSTOMER::on_pushButton_clicked()
              NewCustomer.ProductType=1;//لوازم خانگی
          }
 
-         fstream test_file("numbers.txt",  ios::in | ios::binary);
-         if(!test_file) {
-             test_file.close();
-             test_file.open("numbers.txt",  ios::out | ios::binary);
-             int a=0;
-             for(int i=0; i<2; i++)
-             {
-                 test_file.write((char*)&a, 4);
-             }
-         }
-         test_file.close();
-
          int tmp_id;
          fstream spec_info("infos.txt", ios::in | ios::out | ios::binary);
          spec_info.seekg(4);

@@ -12,20 +12,19 @@
 #include "groupinggoods.h"
 #define data_product "database_products.txt"
 using namespace std;
-goodsList::goodsList(QWidget *parent) :
+goodsList::goodsList(client _clie ,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::goodsList)
 {
     ui->setupUi(this);
+
+    clie=_clie;
 
     groupingGoods *goodsGroup = new groupingGoods(this);
     connect(goodsGroup, SIGNAL(G_type(int)), this, SLOT(recG_type(int)));
     goodsGroup->show();
     this->hide();
 
-
-    fstream database_search("database_search.txt",ios::app | ios::binary);
-    database_search.close();
 }
 
 goodsList::~goodsList()
@@ -232,6 +231,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_16->show();
         ui->pushButton_g1->show();
         ui->spinBox_1->show();
+        ui->spinBox_1->setValue(0);
         product.char_array_to_string(str,16,products[0].type);
         ui->label_type_10->setText(QString::fromStdString(str));
         ui->label_price_10->setText(QString::number(products[0].price));
@@ -250,6 +250,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_14->show();
         ui->pushButton_g2->show();
         ui->spinBox_2->show();
+        ui->spinBox_2->setValue(0);
         product.char_array_to_string(str,16,products[1].type);
         ui->label_type_11->setText(QString::fromStdString(str));
         ui->label_price_11->setText(QString::number(products[1].price));
@@ -268,6 +269,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_15->show();
         ui->pushButton_g3->show();
         ui->spinBox_3->show();
+        ui->spinBox_3->setValue(0);
         product.char_array_to_string(str,16,products[2].type);
         ui->label_type_12->setText(QString::fromStdString(str));
         ui->label_price_12->setText(QString::number(products[2].price));
@@ -286,6 +288,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_13->show();
         ui->pushButton_g4->show();
         ui->spinBox_4->show();
+        ui->spinBox_4->setValue(0);
         product.char_array_to_string(str,16,products[3].type);
         ui->label_type_13->setText(QString::fromStdString(str));
         ui->label_price_13->setText(QString::number(products[3].price));
@@ -304,6 +307,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_12->show();
         ui->pushButton_g5->show();
         ui->spinBox_5->show();
+        ui->spinBox_5->setValue(0);
         product.char_array_to_string(str,16,products[4].type);
         ui->label_type_14->setText(QString::fromStdString(str));
         ui->label_price_14->setText(QString::number(products[4].price));
@@ -322,6 +326,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_17->show();
         ui->pushButton_g6->show();
         ui->spinBox_6->show();
+        ui->spinBox_6->setValue(0);
         product.char_array_to_string(str,16,products[5].type);
         ui->label_type_15->setText(QString::fromStdString(str));
         ui->label_price_15->setText(QString::number(products[5].price));
@@ -340,6 +345,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_18->show();
         ui->pushButton_g7->show();
         ui->spinBox_7->show();
+        ui->spinBox_7->setValue(0);
         product.char_array_to_string(str,16,products[6].type);
         ui->label_type_16->setText(QString::fromStdString(str));
         ui->label_price_16->setText(QString::number(products[6].price));
@@ -358,6 +364,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_19->show();
         ui->pushButton_g8->show();
         ui->spinBox_8->show();
+        ui->spinBox_8->setValue(0);
         product.char_array_to_string(str,16,products[7].type);
         ui->label_type_17->setText(QString::fromStdString(str));
         ui->label_price_17->setText(QString::number(products[7].price));
@@ -376,6 +383,7 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_20->show();
         ui->pushButton_g9->show();
         ui->spinBox_9->show();
+        ui->spinBox_9->setValue(0);
         product.char_array_to_string(str,16,products[8].type);
         ui->label_type_18->setText(QString::fromStdString(str));
         ui->label_price_18->setText(QString::number(products[8].price));
@@ -473,7 +481,7 @@ void goodsList::on_pushButton_filter_2_clicked()
 {
     //go to cart(sabad kharid)
     this->hide();
-    cart *_cart = new cart(this);
+    cart *_cart = new cart(clie,this);
     _cart->show();
     //باید بعد از ایجاد ساختار سبد خرید تغییر کند. زیرا با این روش فقط پتانسیل خرید یک دسته بندی از کالا وجود دارد
 
@@ -481,7 +489,6 @@ void goodsList::on_pushButton_filter_2_clicked()
 
 bool goodsList::add_to_cart(int andis,int number_orders)
 {
-    int ID;
     int len_cart;
     int ptr_product;
 
@@ -490,10 +497,10 @@ bool goodsList::add_to_cart(int andis,int number_orders)
 
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
-    if(len_cart!=20){
+    if(len_cart<20){
         database_search.seekg((andis)*sizeof(int));
         database_search.read((char*)&ptr_product,sizeof(int));
         database_cart.seekp(len_cart*3,ios::cur);
@@ -502,7 +509,7 @@ bool goodsList::add_to_cart(int andis,int number_orders)
         database_cart.write((char*)&number_orders, sizeof(int));
 
         len_cart++;
-        database_cart.seekp((ID-1)*(3*20+1)*sizeof(int));
+        database_cart.seekp((clie.ID-1)*(3*20+1)*sizeof(int));
         database_cart.write((char*)&len_cart, sizeof(int));
         return 1;
     }
@@ -511,82 +518,91 @@ bool goodsList::add_to_cart(int andis,int number_orders)
     }
 }
 
-void goodsList::on_pushButton_b1_clicked()
+void goodsList::on_pushButton_16_clicked()
 {
     int andis = count - (end_part_products-0);
-    if(add_to_cart(andis,ui->spinBox_1->value())==0)
+    if(ui->spinBox_1->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_1->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کارا با موفقیت اضافه شد");
+        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_2_clicked()
+void goodsList::on_pushButton_14_clicked()
 {
     int andis = count - (end_part_products-1);
-    if(add_to_cart(andis,ui->spinBox_2->value())==0)
+    if(ui->spinBox_2->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_2->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_3_clicked()
+void goodsList::on_pushButton_15_clicked()
 {
     int andis = count - (end_part_products-2);
-    if(add_to_cart(andis,ui->spinBox_3->value())==0)
+    if(ui->spinBox_3->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_3->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_4_clicked()
+void goodsList::on_pushButton_13_clicked()
 {
     int andis = count - (end_part_products-3);
-    if(add_to_cart(andis,ui->spinBox_4->value())==0)
+    if(ui->spinBox_4->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_4->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_5_clicked()
+void goodsList::on_pushButton_12_clicked()
 {
     int andis = count - (end_part_products-4);
-    if(add_to_cart(andis,ui->spinBox_5->value())==0)
+    if(ui->spinBox_5->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_5->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_6_clicked()
+void goodsList::on_pushButton_17_clicked()
 {
     int andis = count - (end_part_products-5);
-    if(add_to_cart(andis,ui->spinBox_6->value())==0)
+    if(ui->spinBox_6->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_6->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_7_clicked()
+void goodsList::on_pushButton_18_clicked()
 {
     int andis = count - (end_part_products-6);
-    if(add_to_cart(andis,ui->spinBox_7->value())==0)
+    if(ui->spinBox_7->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_7->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_8_clicked()
+void goodsList::on_pushButton_19_clicked()
 {
     int andis = count - (end_part_products-7);
-    if(add_to_cart(andis,ui->spinBox_8->value())==0)
+    if(ui->spinBox_8->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_8->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
-void goodsList::on_pushButton_b9_clicked()
+void goodsList::on_pushButton_20_clicked()
 {
     int andis = count - (end_part_products-8);
-    if(add_to_cart(andis,ui->spinBox_9->value())==0)
+    if(ui->spinBox_9->value()==0){}
+    else if(add_to_cart(andis,ui->spinBox_9->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");

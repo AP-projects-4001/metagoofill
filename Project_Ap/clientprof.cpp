@@ -83,7 +83,7 @@ void clientProf::on_pushButton_8_clicked()
 void clientProf::on_pushButton_7_clicked()
 {
     //رفتن به فروشگاه
-    goodsList *goodslist= new goodsList(this);
+    goodsList *goodslist= new goodsList(clie,this);
     this->hide();
 }
 

@@ -18,13 +18,8 @@ class cart : public QDialog
     Q_OBJECT
 
 public:
-    explicit cart(QWidget *parent = nullptr);
+    explicit cart(client,QWidget *parent = nullptr);
     ~cart();
-
-private slots:
-    void on_pushButton_filter_clicked();
-
-    void rec_method(bool);
 
     void  add_to_factor();
 
@@ -32,13 +27,25 @@ private slots:
 
     void  add_to_sells();
 
+    void next_to_cart(int);
+
+    void preview_to_cart(int);
+
+    void show_cart();
+
+private slots:
+    void rec_method(bool);
+
+    void on_pushButton_filter_clicked();
+
 private:
     Ui::cart *ui;
     choosepay *payMethod;
+    client clie;
     int numOfProducts;
     Factor factor;
+    Factor factors[9];
     Product product;
-    client clie;
     int number_factors;
     int number_mybuys;
     int number_mysells;
@@ -48,6 +55,9 @@ private:
     int ptr_end_mybuys;
     int ptr_start_mysells;
     int ptr_end_mysells;
+    int end_part_cart;
+    int count;
+    int len_cart;
 };
 
 #endif // CART_H

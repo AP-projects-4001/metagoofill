@@ -7,7 +7,7 @@
 #include "others_filter_info.h"
 #include "product.h"//
 #include "gooddetails.h"
-
+#include "client.h"
 namespace Ui {
 class goodsList;
 }
@@ -17,8 +17,21 @@ class goodsList : public QDialog
     Q_OBJECT
 
 public:
-    explicit goodsList(QWidget *parent = nullptr);
+    explicit goodsList(client,QWidget *parent = nullptr);
     ~goodsList();
+
+    void search_by_filter_in_products();
+
+    void next_to_search(int);
+
+    void preview_to_search(int);
+
+    bool filter();
+
+    void show_list_products();
+
+    bool add_to_cart(int ,int);
+
 
 private slots:
     void recG_type(int);
@@ -31,21 +44,9 @@ private slots:
 
     void rec_other_info(others_filter_info);
 
-    void search_by_filter_in_products();
-
-    void next_to_search(int);
-
-    void preview_to_search(int);
-
-    bool filter();//
-
-    void show_list_products();
-
     void on_pushButton_next_clicked();
 
     void on_pushButton_prev_clicked();
-
-    void on_pushButton_5_clicked();
 
     void on_pushButton_g1_clicked();
 
@@ -69,26 +70,27 @@ private slots:
 
     void on_pushButton_filter_2_clicked();
 
-    bool add_to_cart(int ,int);
+    void on_pushButton_16_clicked();
 
-    void on_pushButton_b1_clicked();
+    void on_pushButton_14_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_15_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_pushButton_13_clicked();
 
-    void on_pushButton_4_clicked();
+    void on_pushButton_12_clicked();
 
-    void on_pushButton_6_clicked();
+    void on_pushButton_17_clicked();
 
-    void on_pushButton_7_clicked();
+    void on_pushButton_18_clicked();
 
-    void on_pushButton_8_clicked();
+    void on_pushButton_19_clicked();
 
-    void on_pushButton_b9_clicked();
+    void on_pushButton_20_clicked();
 
 private:
     Ui::goodsList *ui;
+    client clie;
     clothes_filter_info clothes_info_2;
     fruitandveg_filter_info fruit_info_2;
     others_filter_info other_info_2;

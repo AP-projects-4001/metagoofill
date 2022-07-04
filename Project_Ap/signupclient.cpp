@@ -60,19 +60,6 @@ void SignUpClient::on_pushButton_clicked()
     NewClient.ptr_end_mybuys = 0;
     NewClient.number_mybuys = 0;
 
-    fstream test_file("numbers.txt",  ios::in | ios::binary);
-    if(!test_file)
-    {
-        test_file.close();
-        test_file.open("numbers.txt",  ios::out | ios::binary);
-        int a=0;
-        for(int i=0; i<2; i++)
-        {
-            test_file.write((char*)&a, 4);
-        }
-    }
-    test_file.close();
-
     int tmp_id;
     fstream spec_info("numbers.txt", ios::in | ios::out | ios::binary);
     spec_info.seekg(0);
@@ -92,6 +79,14 @@ void SignUpClient::on_pushButton_clicked()
     }
 
     QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
+
+
+    fstream database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
+    database_cart.seekp((NewClient.ID-1)*(3*20+1)*sizeof(int));
+    int len_cart=0;
+    database_cart.write((char*)&len_cart, sizeof(int));
+    database_cart.close();
+
 
     clientFile.write((char*)&NewClient, sizeof(client));//change block size
     clientFile.close();
