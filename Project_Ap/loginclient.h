@@ -1,3 +1,4 @@
+
 #ifndef LOGINCLIENT_H
 #define LOGINCLIENT_H
 #include <QDialog>
@@ -29,3 +30,4 @@ private:
 };
 
 #endif // LOGINCLIENT_H
+

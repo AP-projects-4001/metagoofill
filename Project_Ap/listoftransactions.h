@@ -2,6 +2,8 @@
 #define LISTOFTRANSACTIONS_H
 
 #include <QDialog>
+#include "customer.h"
+#include "client.h"
 
 namespace Ui {
 class listoftransactions;
