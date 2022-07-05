@@ -124,7 +124,6 @@ void storecustomer::item_added2(QString type,QString price,QString berand,QStrin
     product.flag_weight=flag_weight;
     product.flag_numerical=flag_numerical;
     product.flag_delete_product=0;
-    product.ID=number_products+1;
     product.ID_customer=cust.ID;
 
     add_product();
@@ -199,7 +198,7 @@ int storecustomer::go_to_product(int count)
 
     fstream database_product(data_product,  ios::in | ios::out | ios::binary);
 
-    product.ptr_file_myproduct_next=ptr_file_myproduct;
+    product.ptr_file_myproduct_next=cust.ptr_start_myproducts;
     for(int i=0;i<count;i++){
         ptr_file=product.ptr_file_myproduct_next;
         database_product.seekg(ptr_file);
@@ -220,10 +219,14 @@ void storecustomer::save_product()
 void storecustomer::add_product()
 {
     int ptr_file;
+
+    fstream database_numbers("numbers.txt", ios::in | ios::out | ios::binary);
+    database_numbers.seekg((3-1)*sizeof(int));
+    database_numbers.read((char*)&number_products, sizeof(int));
+
     fstream database_product(data_product,  ios::in | ios::out | ios::binary);
 
-
-    product2.ptr_file_myproduct_next=ptr_file_myproduct;
+    product2.ptr_file_myproduct_next=cust.ptr_start_myproducts;
     for(int i=0;i<cust.number_myproducts;i++){
         ptr_file=product2.ptr_file_myproduct_next;
         database_product.seekg(ptr_file);
@@ -238,16 +241,25 @@ void storecustomer::add_product()
         product.ptr_file_myproduct_preview=ptr_file;
     }
     else{
-        ptr_file_myproduct=number_products*sizeof(Product);
+        cust.ptr_start_myproducts=number_products*sizeof(Product);
     }
-
+    product.ID=number_products+1;
     database_product.seekp(number_products*sizeof(Product));
     database_product.write((char *)&product, sizeof(Product));
 
     number_products++;
     cust.number_myproducts++;
 
+    fstream database_cust("customers.txt",  ios::in | ios::out | ios::binary);
+    database_cust.seekp((cust.ID-1)*sizeof(customer));
+    database_cust.write((char *)&cust, sizeof(customer));
+    database_cust.close();
+
+    database_numbers.seekp((3-1)*sizeof(int));
+    database_numbers.write((char*)&number_products, sizeof(int));
+
     database_product.close();
+    database_numbers.close();
 }
 
 void storecustomer::delete_product()
@@ -271,7 +283,7 @@ void storecustomer::delete_product()
         database_product.write((char *)&product, sizeof(Product));
     }
     else{
-        ptr_file_myproduct=temp_ptr_file;
+        cust.ptr_start_myproducts=temp_ptr_file;
     }
 
     if(count_myproduct<cust.number_myproducts){
@@ -284,10 +296,10 @@ void storecustomer::delete_product()
 
     cust.number_myproducts--;
 
-    //database_cust.seekp((cust.ID-1)*sizeof(customer));
-   // database_product_type.write((char*)&ptr_start_file_product_type, sizeof(int));
-    //database_product_type.write((char*)&ptr_end_file_product_type, sizeof(int));
-    //database_product_type.write((char*)&number_product_type, sizeof(int));
+    fstream database_cust("customers.txt",  ios::in | ios::out | ios::binary);
+    database_cust.seekp((cust.ID-1)*sizeof(customer));
+    database_cust.write((char *)&cust, sizeof(customer));
+    database_cust.close();
 
     database_product.close();
 }

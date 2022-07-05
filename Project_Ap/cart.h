@@ -48,11 +48,13 @@ public:
 
 
 private slots:
-    void on_pushButton_filter_clicked();
-
     void on_pushButton_next_clicked();
 
     void on_pushButton_prev_clicked();
+
+    void on_pushButton_filter_3_clicked();
+
+    void on_pushButton_filter_clicked();
 
     void on_pushButton_filter_2_clicked();
 
@@ -71,8 +73,6 @@ private:
     int flag_status[9];
     int prices[20];
     int number_factors;
-    int number_buys;
-    int number_sells;
 
     int end_part_cart;
     int count;

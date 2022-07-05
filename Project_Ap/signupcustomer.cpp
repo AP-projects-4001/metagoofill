@@ -70,27 +70,27 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          NewCustomer.ptr_end_mysells = 0;
          NewCustomer.ptr_start_mysells = 0;
          NewCustomer.number_mysells = 0;
-         NewCustomer.ptr_file_myproduct = 0;
+         NewCustomer.ptr_start_myproducts = 0;
          NewCustomer.number_myproducts = 0;
 
 
-         if(ui->radioButton_3)
+         if(ui->radioButton_3->isChecked())
          {
              NewCustomer.ProductType=2;//پوشاک
          }
-         else if(ui->radioButton_4)
+         else if(ui->radioButton_4->isChecked())
          {
              NewCustomer.ProductType=3;//میوه و تره بار
          }
-         else if(ui->radioButton_5)
+         else if(ui->radioButton_5->isChecked())
          {
              NewCustomer.ProductType=4;//لبنیات
          }
-         else if(ui->radioButton_6)
+         else if(ui->radioButton_6->isChecked())
          {
              NewCustomer.ProductType=0;//تکنولوژی
          }
-         else if(ui->radioButton_7)
+         else if(ui->radioButton_7->isChecked())
          {
              NewCustomer.ProductType=5;//آجیل
          }

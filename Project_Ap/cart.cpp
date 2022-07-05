@@ -29,7 +29,9 @@ void cart::add_to_factor()
     int ptr_product;
     int number_orders;
 
-    number_factors=0;
+    fstream database_numbers("numbers.txt", ios::in | ios::out | ios::binary);
+    database_numbers.seekg((4-1)*sizeof(int));
+    database_numbers.read((char*)&number_factors, sizeof(int));
 
     fstream  database_factor("database_factors.txt",ios::in | ios::out | ios::binary);
     database_factor.seekg( number_factors*sizeof(Factor));
@@ -48,8 +50,9 @@ void cart::add_to_factor()
         factor.ptr_product=ptr_product;
         factor.number=number_orders;
 
+        database_product.seekg(ptr_product*sizeof(Product));
         database_product.read((char*)&product, sizeof(int));
-        factor.price=product.price;
+        factor.price=prices[i];
         factor.ID_customer=product.ID_customer;
         factor.ID_client=clie.ID;
 
@@ -57,12 +60,13 @@ void cart::add_to_factor()
         number_factors++;
     }
 
-
-    //save number_factors
+    database_numbers.seekp((4-1)*sizeof(int));
+    database_numbers.write((char*)&number_factors, sizeof(int));
 
     database_factor.close();
     database_cart.close();
     database_product.close();
+    database_numbers.close();
 }
 
 
@@ -72,15 +76,13 @@ void cart::add_to_buys()
     int ptr_factor;
     int ptr_next_buy;
 
-    number_buys=0;
-
     fstream  database_buys("database_buys.txt",ios::in | ios::out | ios::binary);
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
-    ptr_next_buy=number_buys*sizeof(int)*2;
+    ptr_next_buy=(number_factors-len_cart)*sizeof(int)*2;
     if(clie.number_mybuys!=0){
         database_buys.seekp(clie.ptr_end_mybuys+sizeof(int));
         database_buys.write((char*)&ptr_next_buy,sizeof(int));
@@ -89,15 +91,14 @@ void cart::add_to_buys()
         clie.ptr_start_mybuys=ptr_next_buy;
         clie.ptr_end_mybuys= ptr_next_buy;
     }
-    database_buys.seekg( number_buys*sizeof(int)*2);
+    database_buys.seekg((number_factors-len_cart)*sizeof(int)*2);
     for(int i=0;i<len_cart;i++){
-        ptr_factor=(number_factors-len_cart+i)* sizeof(Factor);
+        ptr_factor=((number_factors-len_cart)+i)* sizeof(Factor);
         ptr_next_buy+=(sizeof(int)*2);
         database_buys.write((char*)&ptr_factor,sizeof(int));
         database_buys.write((char*)&ptr_next_buy,sizeof(int));
 
         clie.number_mybuys++;
-        number_buys++;
     }
     clie.ptr_end_mybuys= ptr_next_buy-(sizeof(int)*2);
 
@@ -105,8 +106,6 @@ void cart::add_to_buys()
     database_clients.seekp((clie.ID-1)*sizeof(client));
     database_clients.write((char*)&clie,sizeof(client));
     database_clients.close();
-
-    //save number_buys
 
     database_buys.close();
     database_cart.close();
@@ -118,8 +117,6 @@ void cart::add_to_sells()
     int ptr_factor;
     int ptr_next_sell;
 
-    number_sells=0;
-
     fstream database_customers("customers.txt", ios::in | ios::out | ios::binary);
     fstream  database_factor("database_factors.txt",ios::in | ios::out | ios::binary);
     fstream  database_sells("database_sells.txt",ios::in | ios::out | ios::binary);
@@ -130,7 +127,7 @@ void cart::add_to_sells()
 
     for(int i=0;i<len_cart;i++){
         ptr_factor=(number_factors-len_cart+i)*sizeof(Factor);
-        database_sells.seekg( number_sells*sizeof(int)*2);
+        database_sells.seekg((number_factors-len_cart+i)*sizeof(int)*2);
         database_sells.write((char*)&ptr_factor,sizeof(int));
 
         database_factor.seekg(ptr_factor);
@@ -139,7 +136,7 @@ void cart::add_to_sells()
         database_customers.seekg((factor.ID_customer-1)*sizeof(customer));
         database_customers.read((char*)&cust,sizeof(customer));
 
-        ptr_next_sell=number_sells*sizeof(int)*2;
+        ptr_next_sell=(number_factors-len_cart)*sizeof(int)*2;
         if(cust.number_mysells!=0){
             database_sells.seekp(cust.ptr_end_mysells+sizeof(int));
             database_sells.write((char*)&ptr_next_sell,sizeof(int));
@@ -151,11 +148,7 @@ void cart::add_to_sells()
         cust.number_mysells++;
         database_customers.seekp((factor.ID_customer-1)*sizeof(customer));
         database_customers.write((char*)&cust,sizeof(customer));
-
-        number_sells++;
     }
-
-    //save number_sells
 
     database_sells.close();
     database_cart.close();
@@ -554,17 +547,6 @@ void cart::transaction()
     */
 }
 
-
-void cart::on_pushButton_filter_clicked()
-{ 
-    int sum=0;
-    if(status_cart(sum)==1){
-        flag_cart=1;
-        show_cart();
-    }
-    else{}
-}
-
 void cart::on_pushButton_next_clicked()
 {
     next_to_cart(9);
@@ -575,6 +557,21 @@ void cart::on_pushButton_prev_clicked()
 {
     preview_to_cart(9);
     show_cart();
+}
+
+void cart::on_pushButton_filter_3_clicked()
+{
+    int sum=0;
+    if(status_cart(sum)==1){
+        flag_cart=1;
+        show_cart();
+    }
+    else{}
+}
+
+void cart::on_pushButton_filter_clicked()
+{
+    //delete
 }
 
 void cart::on_pushButton_filter_2_clicked()
@@ -613,3 +610,4 @@ void cart::status_payment(bool m)
 
     }
 }
+

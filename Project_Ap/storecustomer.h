@@ -42,7 +42,6 @@ private:
     Ui::storecustomer *ui;
 
     int count_myproduct;
-    int ptr_file_myproduct;
     Product product;
     Product product2;
     int number_products;

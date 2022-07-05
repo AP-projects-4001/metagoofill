@@ -14,7 +14,7 @@ public:
     char ProductType;
     char access;
     int ID;
-    int ptr_file_myproduct;
+    int ptr_start_myproducts;
     int ptr_start_mysells;
     int ptr_end_mysells;
     int number_myproducts;
