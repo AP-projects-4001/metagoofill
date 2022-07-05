@@ -7,6 +7,7 @@ PaymentGateWay::PaymentGateWay(int price, QWidget *parent) :
 {
     ui->setupUi(this);
     prc = price;
+    ui->label_6->setText(QString::number(prc));
 }
 
 PaymentGateWay::~PaymentGateWay()
@@ -16,9 +17,22 @@ PaymentGateWay::~PaymentGateWay()
 
 void PaymentGateWay::on_pushButton_clicked()
 {
-    if(ui->textEdit->toPlainText().toStdString().length()!=16)
+    if(ui->textEdit->toPlainText().toStdString().length()!=16||ui->spinBox->value()==0||ui->spinBox_2==0)
     {
         QMessageBox::warning(this,"توجه","شماره کارت باید 16 رقم باشد");
         return;
     }
+    else//پرداخت موفقیت آمیز
+    {
+        QMessageBox::information(this,"توجه","پرداخت موفقیت آمیز");
+        this->close();
+        emit PaymentStatusOnThePaymentGateWayPage(1);
+    }
+}
+
+void PaymentGateWay::on_pushButton_2_clicked()//دکمه انصراف از پرداخت
+{
+    QMessageBox::information(this,"توجه","عملیات پرداخت لغو شد");
+    this->close();
+    emit PaymentStatusOnThePaymentGateWayPage(0);
 }

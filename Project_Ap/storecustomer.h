@@ -40,7 +40,7 @@ private slots:
 
 private:
     Ui::storecustomer *ui;
-    int number_myproducts;
+
     int count_myproduct;
     int ptr_file_myproduct;
     Product product;

@@ -19,7 +19,7 @@ storecustomer::storecustomer(customer _cust,QWidget *parent) :
 
     number_products=0;//موقتی
 
-    if(number_myproducts>0){
+    if(cust.number_myproducts>0){
         count_myproduct=1;
         ptr_file_this_myproduct=go_to_product(count_myproduct);
         show_product();
@@ -50,7 +50,7 @@ void storecustomer::on_pushButten_delete_clicked()
         ptr_file_this_myproduct=go_to_product(count_myproduct);
         show_product();
     }
-    else if(number_myproducts==1){
+    else if(cust.number_myproducts==1){
         delete_product();
         count_myproduct=0;
         show_without_product();
@@ -76,7 +76,7 @@ void storecustomer::on_pushButton_save_clicked()
 void storecustomer::on_pushButton_next_clicked()
 {
     fstream database_product(data_product, ios::in | ios::out | ios::binary);
-    if(count_myproduct<number_myproducts){
+    if(count_myproduct<cust.number_myproducts){
         database_product.seekg(product.ptr_file_myproduct_next);
         ptr_file_this_myproduct=product.ptr_file_myproduct_next;
         database_product.read((char*)&product,sizeof(Product));
@@ -129,7 +129,7 @@ void storecustomer::item_added2(QString type,QString price,QString berand,QStrin
 
     add_product();
     add_product_to_type();
-    count_myproduct=number_myproducts;
+    count_myproduct=cust.number_myproducts;
     ptr_file_this_myproduct=go_to_product(count_myproduct);
     show_product();
 }
@@ -188,7 +188,7 @@ void storecustomer::show_product()
 
     ui->label_count->setText(QString::number(count_myproduct));
 
-    ui->label_number->setText(QString::number(number_myproducts));
+    ui->label_number->setText(QString::number(cust.number_myproducts));
 
     ui->label_id->setText(QString::number(product.ID));
 }
@@ -224,13 +224,13 @@ void storecustomer::add_product()
 
 
     product2.ptr_file_myproduct_next=ptr_file_myproduct;
-    for(int i=0;i<number_myproducts;i++){
+    for(int i=0;i<cust.number_myproducts;i++){
         ptr_file=product2.ptr_file_myproduct_next;
         database_product.seekg(ptr_file);
         database_product.read((char*)&product2, sizeof(Product));
     }
 
-    if(number_myproducts!=0){
+    if(cust.number_myproducts!=0){
         product2.ptr_file_myproduct_next=number_products*sizeof(Product);
         database_product.seekp(ptr_file);
         database_product.write((char *)&product2, sizeof(Product));
@@ -245,7 +245,7 @@ void storecustomer::add_product()
     database_product.write((char *)&product, sizeof(Product));
 
     number_products++;
-    number_myproducts++;
+    cust.number_myproducts++;
 
     database_product.close();
 }
@@ -274,7 +274,7 @@ void storecustomer::delete_product()
         ptr_file_myproduct=temp_ptr_file;
     }
 
-    if(count_myproduct<number_myproducts){
+    if(count_myproduct<cust.number_myproducts){
         database_product.seekg(temp_ptr_file);
         database_product.read((char*)&product, sizeof(Product));
         product.ptr_file_myproduct_preview=temp_ptr_file2;
@@ -282,7 +282,7 @@ void storecustomer::delete_product()
         database_product.write((char *)&product, sizeof(Product));
     }
 
-    number_myproducts--;
+    cust.number_myproducts--;
 
     //database_cust.seekp((cust.ID-1)*sizeof(customer));
    // database_product_type.write((char*)&ptr_start_file_product_type, sizeof(int));
@@ -308,7 +308,7 @@ void storecustomer::show_without_product()
     ui->plainTextEdit_descript->setPlainText("");
     ui->lineEdit_available->setText("");
 
-    ui->label_number->setText(QString::number(number_myproducts));
+    ui->label_number->setText(QString::number(cust.number_myproducts));
     ui->label_count->setText(QString::number(count_myproduct));
 }
 

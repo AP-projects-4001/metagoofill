@@ -591,13 +591,14 @@ void cart::rec_method(bool method)
 {
     if(method == 1)
     {
+        //Show Payment GateWay Page
         PaymentGateWay *directpay = new PaymentGateWay(sum, this);
         this->hide();
-        //connect(directpay, SIGNAL(status_payment(bool)), this, SLOT(status_payment(bool)));
+        connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage(bool)), this, SLOT(status_payment(bool)));
         directpay->show();
     }
 
-    else
+    else//بر روی دکمه شارژ کیف پول کلیک شده
     {
         //show new page of charging wallet.
         TopUpWallet *fromWallet = new TopUpWallet(clie, this);

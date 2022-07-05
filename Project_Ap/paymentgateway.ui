@@ -13,63 +13,11 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>167</y>
-     <width>92</width>
-     <height>67</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-border-radius:12px;</string>
-   </property>
-   <property name="text">
-    <string>پرداخت</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>412</y>
-     <width>99</width>
-     <height>67</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">  background-color: red; /* Green */
-  border: none;
-  color: white;
-  padding: 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-border-radius:12px;</string>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>331</y>
+     <x>850</x>
+     <y>390</y>
      <width>63</width>
      <height>33</height>
     </rect>
@@ -85,7 +33,7 @@ border-radius:12px;</string>
    <property name="geometry">
     <rect>
      <x>840</x>
-     <y>253</y>
+     <y>280</y>
      <width>134</width>
      <height>33</height>
     </rect>
@@ -100,8 +48,8 @@ border-radius:12px;</string>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>292</y>
+     <x>850</x>
+     <y>350</y>
      <width>53</width>
      <height>33</height>
     </rect>
@@ -116,10 +64,10 @@ border-radius:12px;</string>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>407</y>
-     <width>149</width>
-     <height>33</height>
+     <x>820</x>
+     <y>460</y>
+     <width>171</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -132,8 +80,8 @@ border-radius:12px;</string>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>840</x>
-     <y>370</y>
+     <x>850</x>
+     <y>420</y>
      <width>79</width>
      <height>31</height>
     </rect>
@@ -145,13 +93,13 @@ border-radius:12px;</string>
     <string>رمز دوم</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>240</x>
      <y>260</y>
      <width>571</width>
-     <height>181</height>
+     <height>227</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -174,10 +122,63 @@ border-radius:12px;</string>
     <item>
      <widget class="QLabel" name="label_6">
       <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+background-color: rgb(230, 255, 255);</string>
       </property>
       <property name="text">
-       <string>توسط افراد بعدی پر میشود</string>
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>161</width>
+     <height>241</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string notr="true">  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius:12px;</string>
+      </property>
+      <property name="text">
+       <string>پرداخت</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true">  background-color: red; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+border-radius:12px;</string>
+      </property>
+      <property name="text">
+       <string>بازگشت</string>
       </property>
      </widget>
     </item>
