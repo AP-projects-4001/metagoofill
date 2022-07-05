@@ -58,7 +58,7 @@ private slots:
 
     void rec_method(bool);
 
-    void status_payment();
+    void status_payment(bool );
 
 private:
     Ui::cart *ui;

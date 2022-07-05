@@ -18,7 +18,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
-    void Charging_success();
+    void Charging_success(bool);
     void on_pushButton_refuse_clicked();
 
 private:

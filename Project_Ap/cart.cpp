@@ -584,7 +584,7 @@ void cart::on_pushButton_filter_2_clicked()
 
     connect(payMethod, SIGNAL(send_method(bool)), this, SLOT(rec_method(bool)));//پرداخت مستقیم یا کیف پول شارژ
     connect(payMethod, SIGNAL(send_status_payment_from_wallet()), this, SLOT(status_payment()));//پرداخت از کیف پول
-    transaction();
+    //transaction();
 }
 
 void cart::rec_method(bool method)
@@ -594,7 +594,7 @@ void cart::rec_method(bool method)
         //Show Payment GateWay Page
         PaymentGateWay *directpay = new PaymentGateWay(sum, this);
         this->hide();
-        connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage()), this, SLOT(status_payment()));
+        connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage(bool)), this, SLOT(status_payment(bool)));
         directpay->show();
     }
 
@@ -605,7 +605,11 @@ void cart::rec_method(bool method)
     }
 }
 
-void cart::status_payment()
+void cart::status_payment(bool m)
 {
     this->show();
+    if( m==1)//موفقیت
+    {
+
+    }
 }

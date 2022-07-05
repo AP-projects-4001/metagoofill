@@ -46,7 +46,7 @@ color: rgb(0, 117, 3);</string>
 font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
         </property>
         <property name="text">
-         <string>انصراف</string>
+         <string>برگشت</string>
         </property>
        </widget>
       </item>

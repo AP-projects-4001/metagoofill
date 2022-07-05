@@ -29,8 +29,7 @@ void choosepay::on_pushButton_wallet_clicked()
         emit send_status_payment_from_wallet();
     else
     {
-        QMessageBox::about(this,"توجه","یوزرنیم تکراری است");
-
+        QMessageBox::about(this,"توجه","کیف پول خودرا شارژ کنید");
     }
 }
 
@@ -39,4 +38,9 @@ void choosepay::on_pushButton_wallet_2_clicked()
 {
     method = false;
     emit send_method(method);
+}
+
+void choosepay::on_pushButton_refuse_clicked()
+{
+    this->close();
 }

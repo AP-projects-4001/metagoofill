@@ -22,13 +22,16 @@ void TopUpWallet::on_pushButton_clicked()
     AmountOfInventoryincrease = ui->spinBox->value();
     PaymentGateWay *p = new PaymentGateWay(AmountOfInventoryincrease,this);
     this->hide();
-    connect(p, SIGNAL(PaymentStatusOnThePaymentGateWayPage()), this, SLOT(Charging_success()));
+    connect(p, SIGNAL(PaymentStatusOnThePaymentGateWayPage(bool)), this, SLOT(Charging_success(bool)));
     p->show();
 }
-void TopUpWallet::Charging_success()
+void TopUpWallet::Charging_success(bool m)
 {
     this->show();
-    clie.Wallet_balance=clie.Wallet_balance + AmountOfInventoryincrease;
+    if(m==1)
+    {
+        clie.Wallet_balance=clie.Wallet_balance + AmountOfInventoryincrease;
+    }
 }
 void TopUpWallet::on_pushButton_refuse_clicked()
 {

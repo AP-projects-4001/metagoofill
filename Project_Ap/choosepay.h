@@ -26,6 +26,8 @@ private slots:
 
     void on_pushButton_wallet_2_clicked();
 
+    void on_pushButton_refuse_clicked();
+
 private:
     Ui::choosepay *ui;
     bool method;
