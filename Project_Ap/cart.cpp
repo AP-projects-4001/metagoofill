@@ -169,6 +169,7 @@ void cart::start_cart()
     database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
     count=0;
+    flag_cart=0;
     database_cart.close();
 }
 
@@ -192,6 +193,7 @@ void cart::next_to_cart(int part)
             database_product.seekg(ptr_product);
             database_product.read((char*)&products[i], sizeof(Product));
             number[i]=number_orders;
+            flag_status[i]=status_product(products[i],number[i]);
         }
         count+=end_part_cart;
     }
@@ -218,13 +220,38 @@ void cart::preview_to_cart(int part)
             database_product.seekg(ptr_product);
             database_product.read((char*)&products[i], sizeof(Product));
             number[i]=number_orders;
+            flag_status[i]=status_product(products[i],number[i]);
         }
         count+=end_part_cart;
     }
 }
 
+int cart::status_product(Product &product, int number)
+{
+    if(product.flag_delete_product==1){return 0;}
+    else if(product.available==0){return 1;}
+    else if(product.available<number){return 2;}
+    else{return 3;}
+}
+
 void cart::show_cart()
 {
+    if(flag_cart==0){
+        ui->pushButton_filter_2->hide();
+        ui->pushButton_filter_4->hide();
+        ui->label_type_28->hide();
+        ui->label_type_29->hide();
+        ui->pushButton_filter->show();
+        ui->pushButton_filter_3->show();
+    }
+    else{
+        ui->pushButton_filter_2->show();
+        ui->pushButton_filter_4->show();
+        ui->label_type_28->show();
+        ui->label_type_29->show();
+        ui->pushButton_filter->hide();
+        ui->pushButton_filter_3->hide();
+    }
     string str;
     if(end_part_cart >= 1) {
         ui->label_type_10->show();
@@ -232,10 +259,18 @@ void cart::show_cart()
         ui->pushButton_16->show();
         ui->pushButton_g1->show();
         ui->spinBox_1->show();
+        ui->label_type_19->show();
         ui->spinBox_1->setValue(number[0]);
         product.char_array_to_string(str,16,products[0].type);
         ui->label_type_10->setText(QString::fromStdString(str));
-        ui->label_price_10->setText(QString::number(products[0].price));
+        if(flag_cart==0){
+            ui->label_price_10->setText(QString::number(products[0].price));
+            show_status(ui->label_type_19,flag_status[0]);
+        }
+        else{
+            ui->label_price_10->setText(QString::number(prices[count - (end_part_cart-0)]));
+            ui->label_type_19->setText("موجود");
+        }
     }
     else {
         ui->label_type_10->hide();
@@ -243,6 +278,7 @@ void cart::show_cart()
         ui->pushButton_16->hide();
         ui->pushButton_g1->hide();
         ui->spinBox_1->hide();
+        ui->label_type_19->hide();
     }
 
     if(end_part_cart >= 2) {
@@ -251,10 +287,18 @@ void cart::show_cart()
         ui->pushButton_14->show();
         ui->pushButton_g2->show();
         ui->spinBox_2->show();
+        ui->label_type_20->show();
         ui->spinBox_2->setValue(number[1]);
         product.char_array_to_string(str,16,products[1].type);
         ui->label_type_11->setText(QString::fromStdString(str));
-        ui->label_price_11->setText(QString::number(products[1].price));
+        if(flag_cart==0){
+            ui->label_price_11->setText(QString::number(products[1].price));
+            show_status(ui->label_type_20,flag_status[1]);
+        }
+        else{
+            ui->label_price_11->setText(QString::number(prices[count - (end_part_cart-1)]));
+            ui->label_type_20->setText("موجود");
+        }
     }
     else {
         ui->label_type_11->hide();
@@ -262,6 +306,7 @@ void cart::show_cart()
         ui->pushButton_14->hide();
         ui->pushButton_g2->hide();
         ui->spinBox_2->hide();
+        ui->label_type_20->hide();
     }
 
     if(end_part_cart >= 3) {
@@ -270,10 +315,18 @@ void cart::show_cart()
         ui->pushButton_15->show();
         ui->pushButton_g3->show();
         ui->spinBox_3->show();
+        ui->label_type_21->show();
         ui->spinBox_3->setValue(number[2]);
         product.char_array_to_string(str,16,products[2].type);
         ui->label_type_12->setText(QString::fromStdString(str));
-        ui->label_price_12->setText(QString::number(products[2].price));
+        if(flag_cart==0){
+            ui->label_price_12->setText(QString::number(products[2].price));
+            show_status(ui->label_type_21,flag_status[2]);
+        }
+        else{
+            ui->label_price_12->setText(QString::number(prices[count - (end_part_cart-2)]));
+            ui->label_type_21->setText("موجود");
+        }
     }
     else {
         ui->label_type_12->hide();
@@ -281,6 +334,7 @@ void cart::show_cart()
         ui->pushButton_15->hide();
         ui->pushButton_g3->hide();
         ui->spinBox_3->hide();
+        ui->label_type_21->hide();
     }
 
     if(end_part_cart >= 4) {
@@ -289,10 +343,18 @@ void cart::show_cart()
         ui->pushButton_13->show();
         ui->pushButton_g4->show();
         ui->spinBox_4->show();
+        ui->label_type_22->show();
         ui->spinBox_4->setValue(number[3]);
         product.char_array_to_string(str,16,products[3].type);
         ui->label_type_13->setText(QString::fromStdString(str));
-        ui->label_price_13->setText(QString::number(products[3].price));
+        if(flag_cart==0){
+            ui->label_price_13->setText(QString::number(products[3].price));
+            show_status(ui->label_type_22,flag_status[3]);
+        }
+        else{
+            ui->label_price_13->setText(QString::number(prices[count - (end_part_cart-3)]));
+            ui->label_type_22->setText("موجود");
+        }
     }
     else {
         ui->label_type_13->hide();
@@ -300,6 +362,7 @@ void cart::show_cart()
         ui->pushButton_13->hide();
         ui->pushButton_g4->hide();
         ui->spinBox_4->hide();
+        ui->label_type_22->hide();
     }
 
     if(end_part_cart >= 5) {
@@ -308,10 +371,18 @@ void cart::show_cart()
         ui->pushButton_12->show();
         ui->pushButton_g5->show();
         ui->spinBox_5->show();
+        ui->label_type_23->show();
         ui->spinBox_5->setValue(number[4]);
         product.char_array_to_string(str,16,products[4].type);
         ui->label_type_14->setText(QString::fromStdString(str));
-        ui->label_price_14->setText(QString::number(products[4].price));
+        if(flag_cart==0){
+            ui->label_price_14->setText(QString::number(products[4].price));
+            show_status(ui->label_type_23,flag_status[4]);
+        }
+        else{
+            ui->label_price_14->setText(QString::number(prices[count - (end_part_cart-4)]));
+            ui->label_type_23->setText("موجود");
+        }
     }
     else {
         ui->label_type_14->hide();
@@ -319,6 +390,7 @@ void cart::show_cart()
         ui->pushButton_12->hide();
         ui->pushButton_g5->hide();
         ui->spinBox_5->hide();
+        ui->label_type_23->hide();
     }
 
     if(end_part_cart >= 6) {
@@ -327,10 +399,18 @@ void cart::show_cart()
         ui->pushButton_17->show();
         ui->pushButton_g6->show();
         ui->spinBox_6->show();
+        ui->label_type_24->show();
         ui->spinBox_6->setValue(number[5]);
         product.char_array_to_string(str,16,products[5].type);
         ui->label_type_15->setText(QString::fromStdString(str));
-        ui->label_price_15->setText(QString::number(products[5].price));
+        if(flag_cart==0){
+            ui->label_price_15->setText(QString::number(products[5].price));
+            show_status(ui->label_type_24,flag_status[5]);
+        }
+        else{
+            ui->label_price_15->setText(QString::number(prices[count - (end_part_cart-5)]));
+            ui->label_type_24->setText("موجود");
+        }
     }
     else {
         ui->label_type_15->hide();
@@ -338,6 +418,7 @@ void cart::show_cart()
         ui->pushButton_17->hide();
         ui->pushButton_g6->hide();
         ui->spinBox_6->hide();
+        ui->label_type_24->hide();
     }
 
     if(end_part_cart >= 7) {
@@ -346,10 +427,18 @@ void cart::show_cart()
         ui->pushButton_18->show();
         ui->pushButton_g7->show();
         ui->spinBox_7->show();
+        ui->label_type_25->show();
         ui->spinBox_7->setValue(number[6]);
         product.char_array_to_string(str,16,products[6].type);
         ui->label_type_16->setText(QString::fromStdString(str));
-        ui->label_price_16->setText(QString::number(products[6].price));
+        if(flag_cart==0){
+            ui->label_price_16->setText(QString::number(products[6].price));
+            show_status(ui->label_type_25,flag_status[6]);
+        }
+        else{
+            ui->label_price_16->setText(QString::number(prices[count - (end_part_cart-6)]));
+            ui->label_type_25->setText("موجود");
+        }
     }
     else {
         ui->label_type_16->hide();
@@ -357,6 +446,7 @@ void cart::show_cart()
         ui->pushButton_18->hide();
         ui->pushButton_g7->hide();
         ui->spinBox_7->hide();
+        ui->label_type_25->hide();
     }
 
     if(end_part_cart >= 8) {
@@ -365,10 +455,18 @@ void cart::show_cart()
         ui->pushButton_19->show();
         ui->pushButton_g8->show();
         ui->spinBox_8->show();
+        ui->label_type_26->show();
         ui->spinBox_8->setValue(number[7]);
         product.char_array_to_string(str,16,products[7].type);
         ui->label_type_17->setText(QString::fromStdString(str));
-        ui->label_price_17->setText(QString::number(products[7].price));
+        if(flag_cart==0){
+            ui->label_price_17->setText(QString::number(products[7].price));
+            show_status(ui->label_type_26,flag_status[7]);
+        }
+        else{
+            ui->label_price_17->setText(QString::number(prices[count - (end_part_cart-7)]));
+            ui->label_type_26->setText("موجود");
+        }
     }
     else {
         ui->label_type_17->hide();
@@ -376,6 +474,7 @@ void cart::show_cart()
         ui->pushButton_19->hide();
         ui->pushButton_g8->hide();
         ui->spinBox_8->hide();
+        ui->label_type_26->hide();
     }
 
     if(end_part_cart >= 9) {
@@ -384,10 +483,18 @@ void cart::show_cart()
         ui->pushButton_20->show();
         ui->pushButton_g9->show();
         ui->spinBox_9->show();
+        ui->label_type_27->show();
         ui->spinBox_9->setValue(number[8]);
         product.char_array_to_string(str,16,products[8].type);
         ui->label_type_18->setText(QString::fromStdString(str));
-        ui->label_price_18->setText(QString::number(products[8].price));
+        if(flag_cart==0){
+            ui->label_price_18->setText(QString::number(products[8].price));
+            show_status(ui->label_type_27,flag_status[8]);
+        }
+        else{
+            ui->label_price_18->setText(QString::number(prices[count - (end_part_cart-8)]));
+            ui->label_type_27->setText("موجود");
+        }
     }
     else {
         ui->label_type_18->hide();
@@ -395,7 +502,41 @@ void cart::show_cart()
         ui->pushButton_20->hide();
         ui->pushButton_g9->hide();
         ui->spinBox_9->hide();
+        ui->label_type_27->hide();
     }
+}
+
+void cart::show_status(QLabel* label_status, int flag_status)
+{
+    if(flag_status==0){label_status->setText("حذفی");}
+    else if(flag_status==1){label_status->setText("ناموجود");}
+    else if(flag_status==2){label_status->setText("ناکافی");}
+    else if(flag_status==3){label_status->setText("موجود");}
+}
+
+bool cart::status_cart(int sum)
+{
+    sum=0;
+    int type;
+    int ptr_product;
+    int number_orders;
+
+    fstream database_product(data_product,ios::in | ios::out | ios::binary);
+    fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
+
+    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+
+    for(int i=0;i<len_cart;i++){
+        database_cart.read((char*)&type, sizeof(int));
+        database_cart.read((char*)&ptr_product, sizeof(int));
+        database_cart.read((char*)&number_orders, sizeof(int));
+        database_product.seekg(ptr_product);
+        database_product.read((char*)&product, sizeof(Product));
+        prices[i]=product.price;
+        sum+=(number_orders*prices[i]);
+        if(status_product(product,number_orders)!=3){return 0;}
+    }
+    return 1;
 }
 
 void cart::transaction()
@@ -415,88 +556,13 @@ void cart::transaction()
 
 
 void cart::on_pushButton_filter_clicked()
-{
-    //    int Price = 0;
-    //    if(numOfProducts >= 1)
-    //    {
-    //        Price += ((ui->spinBox->displayIntegerBase()) * (ui->label_price_10->text().toInt()));
-    //    }
-
-    //    if(numOfProducts >= 2)
-    //    {
-    //        Price += ((ui->spinBox_2->displayIntegerBase()) * (ui->label_price_11->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 3)
-    //    {
-    //        Price += ((ui->spinBox_3->displayIntegerBase()) * (ui->label_price_12->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 4)
-    //    {
-    //        Price += ((ui->spinBox_4->displayIntegerBase()) * (ui->label_price_13->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 5)
-    //    {
-    //        Price += ((ui->spinBox_5->displayIntegerBase()) * (ui->label_price_14->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 6)
-    //    {
-    //        Price += ((ui->spinBox_6->displayIntegerBase()) * (ui->label_price_15->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 7)
-    //    {
-    //        Price += ((ui->spinBox_7->displayIntegerBase()) * (ui->label_price_16->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 8)
-    //    {
-    //        Price += ((ui->spinBox_8->displayIntegerBase()) * (ui->label_price_17->text().toInt()));
-
-    //    }
-
-    //    if(numOfProducts >= 9)
-    //    {
-    //        Price += ((ui->spinBox_9->displayIntegerBase()) * (ui->label_price_18->text().toInt()));
-
-    //    }
-
-
-        //int price;//it should increase when any buy buttons clicked;
-
-        //payMethod = new choosepay(this);
-        //this->hide();
-        //payMethod->show();
-
-        //connect(payMethod, SIGNAL(send_method(bool)), this, SLOT(rec_method(bool)));
-    transaction();
-}
-
-void cart::rec_method(bool method)
-{
-    bool meth = method;
-    int price = 0;// این متغیر بعدا با خواندن فایل کالاها بدست خواهد آمد.
-    if(meth == true)
-    {
-        PaymentGateWay *directpay = new PaymentGateWay(price, this);
-        directpay->show();
+{ 
+    int sum=0;
+    if(status_cart(sum)==1){
+        flag_cart=1;
+        show_cart();
     }
-
-    else
-    {
-        //show new page of charging wallet.
-        TopUpWallet *fromWallet = new TopUpWallet(price, this);
-        fromWallet->show();
-    }
+    else{}
 }
 
 void cart::on_pushButton_next_clicked()
@@ -509,4 +575,37 @@ void cart::on_pushButton_prev_clicked()
 {
     preview_to_cart(9);
     show_cart();
+}
+
+void cart::on_pushButton_filter_2_clicked()
+{
+    choosepay *payMethod = new choosepay(this);
+    payMethod->show();
+
+    connect(payMethod, SIGNAL(send_method(bool)), this, SLOT(rec_method(bool)));
+    //connect(payMethod, SIGNAL(status_payment()), this, SLOT(status_payment()));
+    transaction();
+}
+
+void cart::rec_method(bool method)
+{
+    if(method == 1)
+    {
+        PaymentGateWay *directpay = new PaymentGateWay(sum, this);
+        this->hide();
+        //connect(directpay, SIGNAL(status_payment(bool)), this, SLOT(status_payment(bool)));
+        directpay->show();
+    }
+
+    else
+    {
+        //show new page of charging wallet.
+        TopUpWallet *fromWallet = new TopUpWallet(clie, this);
+        fromWallet->show();
+    }
+}
+
+void cart::status_payment()
+{
+    this->show();
 }

@@ -298,6 +298,16 @@ border-radius: 12px;</string>
       <widget class="QSpinBox" name="spinBox_1"/>
      </item>
      <item>
+      <widget class="QLabel" name="label_type_19">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>ناموجود</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_2">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -386,6 +396,13 @@ border-radius: 12px;</string>
       <widget class="QSpinBox" name="spinBox_2"/>
      </item>
      <item>
+      <widget class="QLabel" name="label_type_20">
+       <property name="text">
+        <string>موجود</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_4">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -469,6 +486,13 @@ border-radius: 12px;</string>
      </item>
      <item>
       <widget class="QSpinBox" name="spinBox_3"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_type_21">
+       <property name="text">
+        <string>ناکافی</string>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer_6">
@@ -556,6 +580,13 @@ border-radius: 12px;</string>
       <widget class="QSpinBox" name="spinBox_4"/>
      </item>
      <item>
+      <widget class="QLabel" name="label_type_22">
+       <property name="text">
+        <string>حذفی</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_8">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -639,6 +670,13 @@ border-radius: 12px;</string>
      </item>
      <item>
       <widget class="QSpinBox" name="spinBox_5"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_type_23">
+       <property name="text">
+        <string>موجود</string>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer_10">
@@ -726,6 +764,13 @@ border-radius: 12px;</string>
       <widget class="QSpinBox" name="spinBox_6"/>
      </item>
      <item>
+      <widget class="QLabel" name="label_type_24">
+       <property name="text">
+        <string>ناموجود</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_12">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -809,6 +854,13 @@ border-radius: 12px;</string>
      </item>
      <item>
       <widget class="QSpinBox" name="spinBox_7"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_type_25">
+       <property name="text">
+        <string>موجود</string>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer_14">
@@ -896,6 +948,13 @@ border-radius: 12px;</string>
       <widget class="QSpinBox" name="spinBox_8"/>
      </item>
      <item>
+      <widget class="QLabel" name="label_type_26">
+       <property name="text">
+        <string>موجود</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_16">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -981,6 +1040,13 @@ border-radius: 12px;</string>
       <widget class="QSpinBox" name="spinBox_9"/>
      </item>
      <item>
+      <widget class="QLabel" name="label_type_27">
+       <property name="text">
+        <string>موجود</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer_18">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -1023,81 +1089,152 @@ border-radius: 12px;</string>
     </layout>
    </widget>
   </widget>
-  <widget class="QPushButton" name="pushButton_prev">
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
    <property name="geometry">
     <rect>
-     <x>7</x>
+     <x>10</x>
      <y>590</y>
-     <width>75</width>
-     <height>26</height>
+     <width>161</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Lalezar&quot;;
+   <layout class="QHBoxLayout" name="horizontalLayout_11">
+    <item>
+     <widget class="QPushButton" name="pushButton_prev">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);
 background-color: rgb(236, 229, 199);
 </string>
-   </property>
-   <property name="text">
-    <string>صفحه قبلی</string>
-   </property>
+      </property>
+      <property name="text">
+       <string>صفحه قبلی</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_next">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+background-color: rgb(236, 229, 199);
+</string>
+      </property>
+      <property name="text">
+       <string>صفحه بعدی</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_next">
+  <widget class="QWidget" name="horizontalLayoutWidget_3">
    <property name="geometry">
     <rect>
-     <x>88</x>
+     <x>180</x>
      <y>590</y>
-     <width>75</width>
-     <height>26</height>
+     <width>158</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Lalezar&quot;;
+   <layout class="QHBoxLayout" name="horizontalLayout_13">
+    <item>
+     <widget class="QPushButton" name="pushButton_filter">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);
 background-color: rgb(236, 229, 199);
 </string>
-   </property>
-   <property name="text">
-    <string>صفحه بعدی</string>
-   </property>
+      </property>
+      <property name="text">
+       <string>حذف سبد</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_filter_3">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(53, 66, 89);
+background-color: rgb(236, 229, 199);
+</string>
+      </property>
+      <property name="text">
+       <string>پرداخت</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_filter">
+  <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>169</x>
+     <x>390</x>
      <y>590</y>
-     <width>75</width>
-     <height>26</height>
+     <width>441</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Lalezar&quot;;
+   <layout class="QHBoxLayout" name="horizontalLayout_10">
+    <item>
+     <widget class="QPushButton" name="pushButton_filter_4">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);
 background-color: rgb(236, 229, 199);
 </string>
-   </property>
-   <property name="text">
-    <string>پرداخت</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_filter_3">
-   <property name="geometry">
-    <rect>
-     <x>250</x>
-     <y>590</y>
-     <width>75</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Lalezar&quot;;
+      </property>
+      <property name="text">
+       <string>انصراف از خرید</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_filter_2">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);
 background-color: rgb(236, 229, 199);
 </string>
-   </property>
-   <property name="text">
-    <string>بازگشت</string>
-   </property>
+      </property>
+      <property name="text">
+       <string>پرداخت نهایی</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_type_29">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>جمع</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_type_28">
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>جمع فاکتور پرداخت:</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

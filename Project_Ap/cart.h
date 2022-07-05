@@ -9,6 +9,7 @@
 #include "product.h"
 #include "client.h"
 #include "customer.h"
+#include "ui_cart.h"
 
 namespace Ui {
 class cart;
@@ -34,9 +35,17 @@ public:
 
     void preview_to_cart(int);
 
+    int status_product(Product&,int);
+
     void show_cart();
 
+    void show_status(QLabel*,int);
+
+    bool status_cart(int);
+
     void transaction();
+
+
 
 private slots:
     void on_pushButton_filter_clicked();
@@ -45,18 +54,22 @@ private slots:
 
     void on_pushButton_prev_clicked();
 
+    void on_pushButton_filter_2_clicked();
+
     void rec_method(bool);
+
+    void status_payment();
 
 private:
     Ui::cart *ui;
-    choosepay *payMethod;
     customer cust;
     client clie;
     Factor factor;
     Product product;
     Product products[9];
     int number[9];
-    int numOfProducts;
+    int flag_status[9];
+    int prices[20];
     int number_factors;
     int number_buys;
     int number_sells;
@@ -64,6 +77,8 @@ private:
     int end_part_cart;
     int count;
     int len_cart;
+    bool flag_cart;
+    int sum;
 };
 
 #endif // CART_H

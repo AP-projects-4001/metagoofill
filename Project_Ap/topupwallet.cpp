@@ -1,10 +1,11 @@
 #include "topupwallet.h"
 #include "ui_topupwallet.h"
 
-TopUpWallet::TopUpWallet(int price, QWidget *parent) :
+TopUpWallet::TopUpWallet(client _clie, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::TopUpWallet)
 {
+    clie=_clie;
     ui->setupUi(this);
 }
 

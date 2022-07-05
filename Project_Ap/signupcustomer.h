@@ -38,7 +38,6 @@ private slots:
 
 private:
     Ui::SignUpCUSTOMER *ui;
-    //QVector<Customer>customer;
 };
 
 #endif // SIGNUPCUSTOMER_H
