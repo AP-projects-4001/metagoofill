@@ -100,7 +100,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          }
 
          int tmp_id;
-         fstream spec_info("infos.txt", ios::in | ios::out | ios::binary);
+         fstream spec_info("numbers.txt", ios::in | ios::out | ios::binary);
          spec_info.seekg(4);
          spec_info.read((char*)&tmp_id, 4);
          tmp_id++;

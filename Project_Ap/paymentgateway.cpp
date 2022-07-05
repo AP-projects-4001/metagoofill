@@ -25,14 +25,12 @@ void PaymentGateWay::on_pushButton_clicked()
     else//پرداخت موفقیت آمیز
     {
         QMessageBox::information(this,"توجه","پرداخت موفقیت آمیز");
-        this->close();
-        emit PaymentStatusOnThePaymentGateWayPage(1);
+        emit PaymentStatusOnThePaymentGateWayPage();
     }
 }
 
 void PaymentGateWay::on_pushButton_2_clicked()//دکمه انصراف از پرداخت
 {
     QMessageBox::information(this,"توجه","عملیات پرداخت لغو شد");
-    this->close();
-    emit PaymentStatusOnThePaymentGateWayPage(0);
+    emit PaymentStatusOnThePaymentGateWayPage();
 }

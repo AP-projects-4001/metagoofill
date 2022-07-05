@@ -579,11 +579,11 @@ void cart::on_pushButton_prev_clicked()
 
 void cart::on_pushButton_filter_2_clicked()
 {
-    choosepay *payMethod = new choosepay(this);
+    choosepay *payMethod = new choosepay(sum,clie,this);
     payMethod->show();
 
-    connect(payMethod, SIGNAL(send_method(bool)), this, SLOT(rec_method(bool)));
-    //connect(payMethod, SIGNAL(status_payment()), this, SLOT(status_payment()));
+    connect(payMethod, SIGNAL(send_method(bool)), this, SLOT(rec_method(bool)));//پرداخت مستقیم یا کیف پول شارژ
+    connect(payMethod, SIGNAL(send_status_payment_from_wallet()), this, SLOT(status_payment()));//پرداخت از کیف پول
     transaction();
 }
 
@@ -594,13 +594,12 @@ void cart::rec_method(bool method)
         //Show Payment GateWay Page
         PaymentGateWay *directpay = new PaymentGateWay(sum, this);
         this->hide();
-        connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage(bool)), this, SLOT(status_payment(bool)));
+        connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage()), this, SLOT(status_payment()));
         directpay->show();
     }
 
-    else//بر روی دکمه شارژ کیف پول کلیک شده
+    else//برروی دکمه شارژ کلیک شده
     {
-        //show new page of charging wallet.
         TopUpWallet *fromWallet = new TopUpWallet(clie, this);
         fromWallet->show();
     }

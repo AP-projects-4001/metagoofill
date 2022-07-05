@@ -19,8 +19,8 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>70</y>
+     <x>60</x>
+     <y>80</y>
      <width>761</width>
      <height>381</height>
     </rect>
@@ -40,7 +40,7 @@ color: rgb(0, 117, 3);</string>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="pushButton_refuse">
         <property name="styleSheet">
          <string notr="true">color: rgb(221, 0, 0);
 font: 16pt &quot;MS Shell Dlg 2&quot;;</string>

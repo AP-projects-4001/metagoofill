@@ -16,9 +16,15 @@ public:
     explicit TopUpWallet(client, QWidget *parent = nullptr);
     ~TopUpWallet();
 
+private slots:
+    void on_pushButton_clicked();
+    void Charging_success();
+    void on_pushButton_refuse_clicked();
+
 private:
     Ui::TopUpWallet *ui;
     client clie;
+    int AmountOfInventoryincrease;
 };
 
 #endif // TOPUPWALLET_H

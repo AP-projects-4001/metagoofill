@@ -19,6 +19,7 @@ public:
     int ptr_end_mysells;
     int number_myproducts;
     int number_mysells;
+    int Wallet_balance;
 
 
 public:

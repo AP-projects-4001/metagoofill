@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    admin.cpp \
     adminpage.cpp \
     cart.cpp \
     choosepay.cpp \
@@ -63,6 +64,7 @@ SOURCES += \
     topupwallet.cpp
 
 HEADERS += \
+    admin.h \
     adminpage.h \
     cart.h \
     choosepay.h \

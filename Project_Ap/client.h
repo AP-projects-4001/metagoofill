@@ -17,6 +17,7 @@ public:
     int ptr_start_mybuys;
     int ptr_end_mybuys;
     int number_mybuys;
+    int Wallet_balance;
 
 public:
     client();

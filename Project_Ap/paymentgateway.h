@@ -20,7 +20,7 @@ private slots:
     void on_pushButton_2_clicked();
 
 signals:
-    void PaymentStatusOnThePaymentGateWayPage(bool);
+    void PaymentStatusOnThePaymentGateWayPage();
 private:
     Ui::PaymentGateWay *ui;
     int prc;
