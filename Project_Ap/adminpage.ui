@@ -6,66 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1212</width>
-    <height>766</height>
+    <width>1219</width>
+    <height>684</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 106, 252, 231));</string>
+  </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="styleSheet">
-      <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-     </property>
-     <property name="title">
-      <string>Admin</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(180, 255, 153);</string>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="label">
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>آخرین دسترسی</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(180, 255, 153);</string>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_2">
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>سطح دسترسی</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
    <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
@@ -80,6 +31,7 @@
     font: bold 14px;
     min-width: 10em;
     padding: 6px;
+color: white;
 }
 QPushButton:hover { color: yellow; }</string>
        </property>
@@ -100,6 +52,7 @@ QPushButton:hover { color: yellow; }</string>
     font: bold 14px;
     min-width: 10em;
     padding: 6px;
+ color: white;
 }
 QPushButton:hover { color: yellow; }</string>
        </property>
@@ -112,7 +65,8 @@ QPushButton:hover { color: yellow; }</string>
       <widget class="QPushButton" name="pushButton_3">
        <property name="styleSheet">
         <string notr="true">QPushButton {
-    background-color: black;
+	color: rgb(198, 41, 158);
+    background-color: #c6299e;
     border-style: outset;
     border-width: 2px;
     border-radius: 10px;
@@ -122,7 +76,7 @@ QPushButton:hover { color: yellow; }</string>
     padding: 6px;
 	color:white;
 }
-</string>
+QPushButton:hover { color: yellow; }</string>
        </property>
        <property name="text">
         <string>بازگشت به عقب</string>
@@ -133,7 +87,7 @@ QPushButton:hover { color: yellow; }</string>
       <widget class="QPushButton" name="pushButton">
        <property name="styleSheet">
         <string notr="true">QPushButton {
-    background-color: red;
+    background-color: #fead51;
     border-style: outset;
     border-width: 2px;
     border-radius: 10px;
@@ -141,6 +95,7 @@ QPushButton:hover { color: yellow; }</string>
     font: bold 14px;
     min-width: 10em;
     padding: 6px;
+color:white;
 }
 QPushButton:hover { color: yellow; }</string>
        </property>
@@ -150,6 +105,60 @@ QPushButton:hover { color: yellow; }</string>
       </widget>
      </item>
     </layout>
+   </item>
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="title">
+      <string>Admin</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1">
+       <widget class="QLabel" name="label">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>آخرین دسترسی</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(5, 117, 230);</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(5, 117, 230);</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>سطح دسترسی</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>840</width>
-    <height>630</height>
+    <width>1047</width>
+    <height>778</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,10 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>823</width>
-     <height>579</height>
+     <x>50</x>
+     <y>20</y>
+     <width>821</width>
+     <height>551</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -258,16 +258,22 @@ color: rgb(53, 66, 89);</string>
     <property name="geometry">
      <rect>
       <x>29</x>
-      <y>70</y>
+      <y>78</y>
       <width>741</width>
-      <height>61</height>
+      <height>49</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QPushButton" name="pushButton_g1">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g1 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -365,7 +371,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g2">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g2 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -457,7 +469,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g3">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g3 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -549,7 +567,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g4">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g4 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -641,7 +665,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g5">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g5 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -733,7 +763,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g6">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g6 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -825,7 +861,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g7">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g7 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -917,7 +959,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g8">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g8 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -1009,7 +1057,13 @@ border-radius: 12px;</string>
      <item>
       <widget class="QPushButton" name="pushButton_g9">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(116, 141, 166);</string>
+        <string notr="true">QPushButton#pushButton_g9 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: #0575E6;
+color: #fefefe;
+}</string>
        </property>
        <property name="text">
         <string>جزئیات</string>
@@ -1089,150 +1143,163 @@ border-radius: 12px;</string>
     </layout>
    </widget>
   </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget_2">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>590</y>
-     <width>161</width>
-     <height>31</height>
+     <x>120</x>
+     <y>570</y>
+     <width>736</width>
+     <height>155</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_11">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QPushButton" name="pushButton_prev">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-      </property>
-      <property name="text">
-       <string>صفحه قبلی</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_13">
+      <item>
+       <widget class="QPushButton" name="pushButton_filter">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton_filter {
+padding-left: 20px;
+padding-right: 20px;
+	font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+background: #dd1818;
+color: #fefefe;
+}</string>
+        </property>
+        <property name="text">
+         <string>حذف سبد</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_filter_3">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton_filter_3 {
+padding-left: 20px;
+padding-right: 20px;
+	font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+background: #0f9b0f;
+color: #fefefe;
+}</string>
+        </property>
+        <property name="text">
+         <string>پرداخت</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_next">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-      </property>
-      <property name="text">
-       <string>صفحه بعدی</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget_3">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>590</y>
-     <width>158</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_13">
-    <item>
-     <widget class="QPushButton" name="pushButton_filter">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-      </property>
-      <property name="text">
-       <string>حذف سبد</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_filter_3">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-      </property>
-      <property name="text">
-       <string>پرداخت</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="horizontalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>590</y>
-     <width>441</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_10">
-    <item>
-     <widget class="QPushButton" name="pushButton_filter_4">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-      </property>
-      <property name="text">
-       <string>انصراف از خرید</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_11">
+      <item>
+       <widget class="QPushButton" name="pushButton_prev">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton_prev {
+padding-left: 20px;
+padding-right: 20px;
+	font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(229, 139, 255, 255), stop:1 rgba(255, 255, 255, 255));
+	color: rgb(213, 0, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string>صفحه قبلی</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_next">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton_next {
+padding-left: 20px;
+padding-right: 20px;
+	font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(9, 41, 4, 255), stop:0.085 rgba(2, 79, 0, 255), stop:0.19 rgba(50, 147, 22, 255), stop:0.275 rgba(236, 191, 49, 255), stop:0.39 rgba(243, 61, 34, 255), stop:0.555 rgba(135, 81, 60, 255), stop:0.667 rgba(121, 75, 255, 255), stop:0.825 rgba(164, 255, 244, 255), stop:0.885 rgba(104, 222, 71, 255), stop:1 rgba(93, 128, 0, 255));
+color: #fefefe;
+}</string>
+        </property>
+        <property name="text">
+         <string>صفحه بعدی</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton_filter_2">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
-      </property>
-      <property name="text">
-       <string>پرداخت نهایی</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>40</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_type_29">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>جمع</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_type_28">
-      <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-      </property>
-      <property name="text">
-       <string>جمع فاکتور پرداخت:</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <widget class="QPushButton" name="pushButton_filter_4">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton_filter_4 {
+padding-left: 20px;
+padding-right: 20px;
+	font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(255, 0, 128);
+color: #fefefe;
+}</string>
+        </property>
+        <property name="text">
+         <string>انصراف از خرید</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_filter_2">
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton_filter_2 {
+
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(117, 202, 77);
+	color: rgb(67, 67, 67);
+}</string>
+        </property>
+        <property name="text">
+         <string>پرداخت نهایی</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_type_29">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>جمع</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_type_28">
+        <property name="styleSheet">
+         <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>جمع فاکتور پرداخت:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

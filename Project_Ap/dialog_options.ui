@@ -25,6 +25,18 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QDialogButtonBox#buttonBox {
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+	background-color: rgb(180, 180, 180);
+color: blue;
+}
+
+</string>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -35,9 +47,9 @@
   <widget class="Line" name="line_5">
    <property name="geometry">
     <rect>
-     <x>530</x>
+     <x>509</x>
      <y>80</y>
-     <width>20</width>
+     <width>41</width>
      <height>201</height>
     </rect>
    </property>
@@ -131,7 +143,7 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
      <rect>
       <x>40</x>
       <y>70</y>
-      <width>131</width>
+      <width>161</width>
       <height>31</height>
      </rect>
     </property>
@@ -150,7 +162,7 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
      <rect>
       <x>40</x>
       <y>30</y>
-      <width>131</width>
+      <width>151</width>
       <height>31</height>
      </rect>
     </property>
@@ -168,9 +180,9 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QCheckBox" name="checkBox_weight">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>370</x>
      <y>230</y>
-     <width>91</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -185,9 +197,9 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QCheckBox" name="checkBox_color">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>370</x>
      <y>160</y>
-     <width>91</width>
+     <width>101</width>
      <height>31</height>
     </rect>
    </property>
@@ -215,9 +227,9 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QCheckBox" name="checkBox_berand">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>370</x>
      <y>90</y>
-     <width>91</width>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>

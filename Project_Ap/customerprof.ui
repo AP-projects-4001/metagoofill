@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>888</width>
+    <height>610</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,7 @@
      <rect>
       <x>40</x>
       <y>480</y>
-      <width>721</width>
+      <width>792</width>
       <height>61</height>
      </rect>
     </property>
@@ -31,12 +31,30 @@
       <widget class="QPushButton" name="pushButton_3">
        <property name="font">
         <font>
-         <family>Lalezar</family>
-         <pointsize>10</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>20</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">color: rgb(53, 66, 89);
+        <string notr="true">QPushButton#pushButton_3 {
+	font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background-color: rgb(180, 180, 180);
+color: blue;
+}
+
+QPushButton#pushButton_3:hover {
+	background-color: rgb(43, 255, 185);
+border-style: solid;
+ border-width: 1px;
+	border-color: rgb(245, 179, 1);
+	color: rgb(241, 182, 88);
+}
 </string>
        </property>
        <property name="text">
@@ -48,13 +66,24 @@
       <widget class="QPushButton" name="pushButton_2">
        <property name="font">
         <font>
-         <family>Lalezar</family>
-         <pointsize>10</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>20</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">
-color: rgb(53, 66, 89);</string>
+        <string notr="true">QPushButton#pushButton_2 {
+	font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background-color: rgb(180, 180, 180);
+color: blue;
+}
+
+</string>
        </property>
        <property name="text">
         <string>لیست محصولات</string>
@@ -65,13 +94,24 @@ color: rgb(53, 66, 89);</string>
       <widget class="QPushButton" name="pushButton">
        <property name="font">
         <font>
-         <family>Lalezar</family>
-         <pointsize>10</pointsize>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>20</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">
-color: rgb(53, 66, 89);</string>
+        <string notr="true">QPushButton#pushButton {
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+	background-color: rgb(180, 180, 180);
+color: blue;
+}
+
+</string>
        </property>
        <property name="text">
         <string>سوابق فروش</string>
@@ -99,6 +139,7 @@ color: rgb(53, 66, 89);</string>
      <font>
       <family>Lalezar</family>
       <pointsize>20</pointsize>
+      <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
@@ -246,21 +287,39 @@ color: rgb(53, 66, 89);</string>
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>330</y>
-       <width>181</width>
+       <x>20</x>
+       <y>320</y>
+       <width>231</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Lalezar</family>
-       <pointsize>10</pointsize>
+       <family>MS Shell Dlg 2</family>
+       <pointsize>20</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);
-background-color: rgb(116, 141, 166);</string>
+      <string notr="true">QPushButton#pushButton_4 {
+	font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background: yellow;
+color: blue;
+}
+
+QPushButton#pushButton_4:hover {
+	background-color: rgb(43, 255, 185);
+border-style: solid;
+ border-width: 1px;
+	border-color: rgb(245, 179, 1);
+	color: rgb(241, 182, 88);
+}
+</string>
      </property>
      <property name="text">
       <string>ذخیره تغییرات</string>
@@ -301,6 +360,7 @@ background-color: rgb(116, 141, 166);</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -323,6 +383,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -345,6 +406,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -370,6 +432,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -392,6 +455,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -414,6 +478,7 @@ background-color: rgb(116, 141, 166);</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>

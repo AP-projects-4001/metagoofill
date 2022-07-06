@@ -113,9 +113,9 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QLabel" name="label_price_">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>180</x>
       <y>150</y>
-      <width>121</width>
+      <width>141</width>
       <height>31</height>
      </rect>
     </property>
@@ -173,9 +173,9 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLabel" name="label_available_">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>170</x>
       <y>330</y>
-      <width>101</width>
+      <width>131</width>
       <height>31</height>
      </rect>
     </property>
@@ -185,7 +185,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
 </string>
     </property>
     <property name="text">
-     <string>تعداد موجود:</string>
+     <string>تعداد موجود</string>
     </property>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
@@ -228,17 +228,22 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>490</y>
-      <width>91</width>
-      <height>31</height>
+      <y>480</y>
+      <width>261</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(120, 120, 180);
+     <string notr="true">QPushButton#pushButton_confirm {
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+	background-color: rgb(180, 180, 180);
+color: green;
+}
 
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-
-color: rgb(85, 255, 0);</string>
+</string>
     </property>
     <property name="text">
      <string>اضافه کردن کالا</string>
@@ -277,7 +282,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit_price">
     <property name="geometry">
      <rect>
-      <x>80</x>
+      <x>60</x>
       <y>150</y>
       <width>121</width>
       <height>31</height>
@@ -293,7 +298,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit_available">
     <property name="geometry">
      <rect>
-      <x>70</x>
+      <x>50</x>
       <y>330</y>
       <width>121</width>
       <height>31</height>
@@ -373,18 +378,23 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QPushButton" name="pushButton_cancel">
     <property name="geometry">
      <rect>
-      <x>570</x>
-      <y>490</y>
-      <width>91</width>
-      <height>31</height>
+      <x>440</x>
+      <y>480</y>
+      <width>221</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(120, 120, 180);
+     <string notr="true">QPushButton#pushButton_cancel {
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+	background-color: rgb(180, 180, 180);
+color: red;
+}
 
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-
-color: rgb(85, 255, 0);</string>
+</string>
     </property>
     <property name="text">
      <string>انصراف</string>
@@ -393,9 +403,9 @@ color: rgb(85, 255, 0);</string>
    <widget class="QLabel" name="label_type_1">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>180</x>
       <y>440</y>
-      <width>201</width>
+      <width>231</width>
       <height>31</height>
      </rect>
     </property>

@@ -146,6 +146,16 @@ font: 11pt &quot;Lalezar&quot;;</string>
      <layout class="QHBoxLayout" name="horizontalLayout_8">
       <item>
        <widget class="QComboBox" name="comboBox_4">
+        <property name="styleSheet">
+         <string notr="true">QComboBox#comboBox_4 {
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(167, 167, 167);
+color: #fefefe;
+}</string>
+        </property>
         <item>
          <property name="text">
           <string>انتخاب کنید</string>
@@ -205,6 +215,16 @@ font: 11pt &quot;Lalezar&quot;;</string>
      <layout class="QHBoxLayout" name="horizontalLayout_7">
       <item>
        <widget class="QComboBox" name="comboBox_3">
+        <property name="styleSheet">
+         <string notr="true">QComboBox#comboBox_3 {
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(167, 167, 167);
+color: #fefefe;
+}</string>
+        </property>
         <item>
          <property name="text">
           <string>انتخاب کنید</string>
@@ -244,6 +264,16 @@ font: 11pt &quot;Lalezar&quot;;</string>
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
        <widget class="QComboBox" name="comboBox_2">
+        <property name="styleSheet">
+         <string notr="true">QComboBox#comboBox_2 {
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(167, 167, 167);
+color: #fefefe;
+}</string>
+        </property>
         <item>
          <property name="text">
           <string>انتخاب کنید</string>
@@ -283,6 +313,16 @@ font: 11pt &quot;Lalezar&quot;;</string>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QComboBox" name="comboBox">
+        <property name="styleSheet">
+         <string notr="true">QComboBox#comboBox {
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+background-color: rgb(167, 167, 167);
+color: #fefefe;
+}</string>
+        </property>
         <item>
          <property name="text">
           <string>انتخاب کنید</string>
@@ -400,39 +440,51 @@ font: 11pt &quot;Lalezar&quot;;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>520</y>
-     <width>89</width>
-     <height>35</height>
+     <x>210</x>
+     <y>510</y>
+     <width>401</width>
+     <height>47</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
-   </property>
-   <property name="text">
-    <string>حذف فیلتر</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>520</y>
-     <width>87</width>
-     <height>35</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
-   </property>
-   <property name="text">
-    <string>فیلتر کردن</string>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_9">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton#pushButton {
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(167, 167, 167);
+color: #fefefe;
+}</string>
+      </property>
+      <property name="text">
+       <string>حذف فیلتر</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true">QPushButton#pushButton_2 {
+padding-left: 20px;
+padding-right: 20px;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+border-radius: 5px;
+	background-color: rgb(167, 167, 167);
+color: #fefefe;
+}</string>
+      </property>
+      <property name="text">
+       <string>فیلتر کردن</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

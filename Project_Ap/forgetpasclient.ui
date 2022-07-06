@@ -16,126 +16,130 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(236, 229, 199);</string>
   </property>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>140</x>
-     <y>80</y>
-     <width>518</width>
-     <height>221</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20pt &quot;Lalezar&quot;;
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);</string>
-   </property>
-   <property name="title">
-    <string>تغییر رمز</string>
-   </property>
-   <widget class="QTextEdit" name="textEdit">
-    <property name="geometry">
-     <rect>
-      <x>17</x>
-      <y>83</y>
-      <width>331</width>
-      <height>55</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>357</x>
-      <y>83</y>
-      <width>144</width>
-      <height>55</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
-    </property>
-    <property name="text">
-     <string>نام کاربری:</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="textEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>17</x>
-      <y>149</y>
-      <width>331</width>
-      <height>55</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>149</y>
-      <width>141</width>
-      <height>55</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Lalezar</family>
-      <pointsize>14</pointsize>
-      <weight>50</weight>
-      <italic>false</italic>
-      <bold>false</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
-    </property>
-    <property name="text">
-     <string>شماره تلفن :</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>260</x>
-     <y>330</y>
-     <width>269</width>
-     <height>112</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton">
+     </property>
+     <property name="title">
+      <string>تغییر رمز</string>
+     </property>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>83</y>
+        <width>331</width>
+        <height>55</height>
+       </rect>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>357</x>
+        <y>83</y>
+        <width>144</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);</string>
       </property>
       <property name="text">
-       <string>بازیابی</string>
+       <string>نام کاربری:</string>
       </property>
      </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QTextEdit" name="textEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>17</x>
+        <y>149</y>
+        <width>331</width>
+        <height>55</height>
+       </rect>
+      </property>
       <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+       <string notr="true">background-color: rgb(116, 141, 166);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>149</y>
+        <width>141</width>
+        <height>55</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Lalezar</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;Lalezar&quot;;
 color: rgb(53, 66, 89);</string>
       </property>
       <property name="text">
-       <string>بازگشت به صفحه قبل</string>
+       <string>شماره تلفن :</string>
       </property>
      </widget>
-    </item>
-   </layout>
-  </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton {
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+	background-color: rgb(180, 180, 180);
+color: blue;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>بازیابی</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_2 {
+font: 20pt &quot;MS Shell Dlg 2&quot;;
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+	background-color: rgb(180, 180, 180);
+color: blue;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>بازگشت به صفحه قبل</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
