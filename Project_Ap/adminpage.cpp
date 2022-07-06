@@ -17,29 +17,28 @@ AdminPage::~AdminPage()
 
 void AdminPage::on_pushButton_2_clicked()
 {
-    close();
-    listoftransactions *p = new listoftransactions(this);
+    this->close();
+    listoftransactions *p = new listoftransactions();
     p->show();
 }
 
 void AdminPage::on_pushButton_clicked()
 {
-    close();
-    ListOfCustomersForAdmin *p = new ListOfCustomersForAdmin(this);
+    this->close();
+    ListOfCustomersForAdmin *p = new ListOfCustomersForAdmin();
     p->show();
 }
 
 void AdminPage::on_pushButton_3_clicked()
 {
-    close();
-    MainLogin *p = new MainLogin(this);
+    this->close();
+    MainLogin *p = new MainLogin();
     p->show();
 }
 
 void AdminPage::on_pushButton_4_clicked()
 {
-    close();
-    ListOFClientForAdmin *p = new ListOFClientForAdmin(this);
+    this->close();
+    ListOFClientForAdmin *p = new ListOFClientForAdmin();
     p->show();
-//    this->hide();
 }

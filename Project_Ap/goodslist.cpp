@@ -155,12 +155,13 @@ void goodsList::search_by_filter_in_products()
         ptr_file=product.ptr_file_product_type_next;
     }
     count=0;
+    end_part_products = 0;
 }
 
 void goodsList::next_to_search(int part)
 {
     int ptr_file;
-    if(count!=len_search){
+    if(count>len_search){
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
@@ -471,9 +472,9 @@ void goodsList::on_pushButton_g9_clicked()
 
 void goodsList::on_pushButton_filter_3_clicked()//for return from goodslist to groupinggoods
 {
-//    this->hide();
-//    groupingGoods *groups = new groupingGoods(this);
-//    groups->show();
+    this->hide();
+    groupingGoods *groups = new groupingGoods();
+    groups->show();
 }
 
 
