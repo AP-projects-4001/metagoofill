@@ -26,6 +26,7 @@ void PaymentGateWay::on_pushButton_clicked()
     {
         QMessageBox::information(this,"توجه","پرداخت موفقیت آمیز");
         emit PaymentStatusOnThePaymentGateWayPage(1);
+        this->close();
     }
 }
 
@@ -33,4 +34,5 @@ void PaymentGateWay::on_pushButton_2_clicked()//دکمه انصراف از پر�
 {
     QMessageBox::information(this,"توجه","عملیات پرداخت لغو شد");
     emit PaymentStatusOnThePaymentGateWayPage(0);
+    this->close();
 }

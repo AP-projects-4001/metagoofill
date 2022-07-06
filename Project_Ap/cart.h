@@ -41,11 +41,15 @@ public:
 
     void show_status(QLabel*,int);
 
-    bool status_cart(int);
+    bool status_cart();
+
+    void delete_cart();
+
+    void reserve_products();
+
+    void cansel_reserve_products();
 
     void transaction();
-
-
 
 private slots:
     void on_pushButton_next_clicked();
@@ -61,6 +65,8 @@ private slots:
     void rec_method(bool);
 
     void status_payment(bool );
+
+    void on_pushButton_filter_4_clicked();
 
 private:
     Ui::cart *ui;
