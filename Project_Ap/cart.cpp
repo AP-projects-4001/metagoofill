@@ -220,6 +220,70 @@ void cart::preview_to_cart(int part)
     }
 }
 
+void cart::repet_to_search(int part)
+{
+    int type;
+    int ptr_product;
+    int number_orders;
+
+    count-=end_part_cart;
+    fstream database_product(data_product,ios::in | ios::out | ios::binary);
+    fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
+
+    end_part_cart=len_cart-count;
+    if(end_part_cart>=part-1){end_part_cart=part;}
+    database_cart.seekg((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    for(int i=0;i<end_part_cart;i++){
+
+        database_cart.read((char*)&type, sizeof(int));
+        database_cart.read((char*)&ptr_product, sizeof(int));
+        database_cart.read((char*)&number_orders, sizeof(int));
+        database_product.seekg(ptr_product);
+        database_product.read((char*)&products[i], sizeof(Product));
+        number[i]=number_orders;
+        flag_status[i]=status_product(products[i],number[i]);
+    }
+    count+=end_part_cart;
+}
+
+void cart::delete_product(int andis)
+{
+    int type;
+    int ptr_product;
+    int number_orders;
+
+    fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
+    database_cart.seekg((andis)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    for(int i=andis;i<len_cart-1;i++){
+        database_cart.seekg((sizeof(int)*3),ios::cur);
+        database_cart.read((char*)&type, sizeof(int));
+        database_cart.read((char*)&ptr_product, sizeof(int));
+        database_cart.read((char*)&number_orders, sizeof(int));
+        database_cart.seekp(-1*(sizeof(int)*3),ios::cur);
+        database_cart.write((char*)&type, sizeof(int));
+        database_cart.write((char*)&ptr_product, sizeof(int));
+        database_cart.write((char*)&number_orders, sizeof(int));
+    }
+    end_part_cart--;
+}
+
+void cart::save_number_orders()
+{
+    int number_orders;
+
+    fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
+
+    count-=end_part_cart;
+
+    database_cart.seekp((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    for(int i=0;i<end_part_cart;i++){
+        number_orders=number[i];
+        database_cart.seekp(sizeof(int)*2,ios::cur);
+        database_cart.write((char*)&number_orders, sizeof(int));
+    }
+    count+=end_part_cart;
+}
+
 int cart::status_product(Product &product, int number)
 {
     if(product.flag_delete_product==1){return 0;}

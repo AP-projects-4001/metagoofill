@@ -161,7 +161,7 @@ void goodsList::search_by_filter_in_products()
 void goodsList::next_to_search(int part)
 {
     int ptr_file;
-    if(count>len_search){
+    if(count!=len_search){
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 

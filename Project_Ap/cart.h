@@ -35,6 +35,12 @@ public:
 
     void preview_to_cart(int);
 
+    void repet_to_search(int);
+
+    void delete_product(int);
+
+    void save_number_orders();
+
     int status_product(Product&,int);
 
     void show_cart();
