@@ -375,6 +375,7 @@ void storecustomer::on_pushButton_2_clicked()
 void storecustomer::on_pushButton_clicked()
 {
     //صفحه سوایق فروش
+
 }
 
 void storecustomer::on_pushButton_3_clicked()

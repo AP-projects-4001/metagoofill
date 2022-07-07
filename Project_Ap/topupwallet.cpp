@@ -1,6 +1,7 @@
 #include "topupwallet.h"
 #include "ui_topupwallet.h"
 #include "paymentgateway.h"
+#include "clientprof.h"
 TopUpWallet::TopUpWallet(client _clie, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::TopUpWallet)
@@ -36,4 +37,6 @@ void TopUpWallet::Charging_success(bool m)
 void TopUpWallet::on_pushButton_refuse_clicked()
 {
     this->close();
+    clientProf *reprof = new clientProf(clie);
+    reprof->show();
 }

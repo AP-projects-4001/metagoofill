@@ -2,11 +2,13 @@
 #include "ui_groupinggoods.h"
 #include "clientprof.h"
 
-groupingGoods::groupingGoods(QWidget *parent) :
+
+groupingGoods::groupingGoods(client _clie, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::groupingGoods)
 {
     ui->setupUi(this);
+    clie = _clie;
 }
 
 groupingGoods::~groupingGoods()
@@ -69,5 +71,13 @@ void groupingGoods::on_popular_clicked()
     // یا ارسال کد هر دسته بندی
     this->hide();
     emit G_type(6);
+}
+
+
+void groupingGoods::on_profile_clicked()
+{
+    this->close();
+    clientProf *reprof = new clientProf(clie);
+    reprof->show();
 }
 

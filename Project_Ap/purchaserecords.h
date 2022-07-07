@@ -20,6 +20,9 @@ public:
 
     void show_buys(string&);
 
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::PurchaseRecords *ui;
     client clie;

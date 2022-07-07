@@ -2,6 +2,7 @@
 #define GROUPINGGOODS_H
 
 #include <QDialog>
+#include "client.h"
 
 namespace Ui {
 class groupingGoods;
@@ -12,7 +13,7 @@ class groupingGoods : public QDialog
     Q_OBJECT
 
 public:
-    explicit groupingGoods(QWidget *parent = nullptr);
+    explicit groupingGoods(client _clie, QWidget *parent = nullptr);
     ~groupingGoods();
 
 signals:
@@ -33,8 +34,11 @@ private slots:
 
     void on_popular_clicked();
 
+    void on_profile_clicked();
+
 private:
     Ui::groupingGoods *ui;
+    client clie;
 
 };
 

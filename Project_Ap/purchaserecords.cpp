@@ -1,5 +1,6 @@
 #include "purchaserecords.h"
 #include "ui_purchaserecords.h"
+#include "clientprof.h"
 #include <fstream>
 
 using namespace std;
@@ -50,3 +51,11 @@ void PurchaseRecords::show_buys(string &buys)
     QListWidgetItem *m_textEdit = new QListWidgetItem(content);
     ui->listWidget->addItem(m_textEdit);
 }
+
+void PurchaseRecords::on_pushButton_2_clicked()
+{
+    this->close();
+    clientProf *reprof = new clientProf(clie);
+    reprof->show();
+}
+

@@ -1,5 +1,7 @@
 #include "infofclie.h"
 #include "ui_infofclie.h"
+#include "listofclientforadmin.h"
+
 #include <fstream>
 
 using namespace std;
@@ -81,5 +83,13 @@ void infofclie::on_pushButton_4_clicked()
 
         remove("clients.txt");
         rename("tmpFile.txt", "clients.txt");
+}
+
+
+void infofclie::on_pushButton_5_clicked()
+{
+    ListOFClientForAdmin *readmin = new ListOFClientForAdmin();
+    this->close();
+    readmin->show();
 }
 

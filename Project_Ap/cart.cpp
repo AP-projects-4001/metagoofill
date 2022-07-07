@@ -1,6 +1,7 @@
 #include "cart.h"
 #include "ui_cart.h"
 #include <fstream>
+#include <QMessageBox>
 
 #define data_product "database_products.txt"
 using namespace std;
@@ -690,7 +691,7 @@ void cart::on_pushButton_filter_3_clicked()
         show_cart();
     }
     else{
-        //اخطار موجود یا کافی نبودن کالا های سبد خرید
+        QMessageBox::warning(this, "اخطار", "کالا با این تعداد موجود نمی باشد");
     }
 }
 

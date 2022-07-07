@@ -4,6 +4,8 @@
 #include <cstring>
 #include "storecustomer.h"
 #include "salesrecords.h"
+#include "loginpage.h"
+
 using namespace std;
 
 customerProf::customerProf(customer _cust, QWidget *parent) :
@@ -95,3 +97,11 @@ void customerProf::on_pushButton_3_clicked()
 {
     //طرح های تبلیغاتی
 }
+
+void customerProf::on_pushButton_5_clicked()
+{
+    this->close();
+    LoginPage *relogin = new LoginPage();
+    relogin->show();
+}
+

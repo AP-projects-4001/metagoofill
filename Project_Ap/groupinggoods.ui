@@ -50,7 +50,7 @@ color: rgb(53, 66, 89);
 </string>
    </property>
    <property name="text">
-    <string>پروفایل کاربری</string>
+    <string>پروفایل </string>
    </property>
   </widget>
   <widget class="QGroupBox" name="groupBox">

@@ -3,6 +3,9 @@
 #include <cstring>
 #include "goodslist.h"
 #include "purchaserecords.h"
+#include "loginpage.h"
+#include "topupwallet.h"
+
 using namespace std;
 clientProf::clientProf(client cli_info, QWidget *parent) :
     QMainWindow(parent),
@@ -83,12 +86,12 @@ void clientProf::on_pushButton_8_clicked()
 void clientProf::on_pushButton_7_clicked()
 {
     //رفتن به فروشگاه
-    goodsList *goodslist= new goodsList(clie,this);
     this->hide();
+    goodsList *goodslist= new goodsList(clie,this);    
 }
 
 
-void clientProf::on_pushButton_6_clicked()
+void clientProf::on_pushButton_6_clicked()//?
 {
     PurchaseRecords *purchaserecords= new PurchaseRecords(clie,this);
     purchaserecords->show();
@@ -98,7 +101,18 @@ void clientProf::on_pushButton_6_clicked()
 
 void clientProf::on_pushButton_4_clicked()
 {
-    //بازگشت به صفحه قبل
+    this->close();
+    LoginPage *relogin = new LoginPage();
+    relogin->show();
 }
 
+
+
+void clientProf::on_pushButton_5_clicked()
+{
+    //شارژ کیف
+    TopUpWallet *walletact = new TopUpWallet(clie, this);
+    walletact->show();
+    this->hide();
+}
 

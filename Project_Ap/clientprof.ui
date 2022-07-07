@@ -34,7 +34,6 @@
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>22</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -50,7 +49,7 @@ color: #fefefe;
 }</string>
        </property>
        <property name="text">
-        <string>بازگشت</string>
+        <string>خروج</string>
        </property>
       </widget>
      </item>
@@ -60,7 +59,6 @@ color: #fefefe;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>22</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -86,7 +84,6 @@ color: #fefefe;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>22</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -112,7 +109,6 @@ color: #fefefe;
         <font>
          <family>MS Shell Dlg 2</family>
          <pointsize>22</pointsize>
-         <weight>50</weight>
          <italic>false</italic>
          <bold>false</bold>
         </font>
@@ -153,7 +149,6 @@ color: #fefefe;
      <font>
       <family>Lalezar</family>
       <pointsize>20</pointsize>
-      <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
@@ -311,7 +306,6 @@ color: #fefefe;
       <font>
        <family>MS Shell Dlg 2</family>
        <pointsize>22</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -365,7 +359,6 @@ color: #fefefe;
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -388,7 +381,6 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -411,7 +403,6 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -437,7 +428,6 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -460,7 +450,6 @@ font: 12pt &quot;Lalezar&quot;;</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>
@@ -483,7 +472,6 @@ background-color: rgb(116, 141, 166);</string>
       <font>
        <family>Lalezar</family>
        <pointsize>12</pointsize>
-       <weight>50</weight>
        <italic>false</italic>
        <bold>false</bold>
       </font>

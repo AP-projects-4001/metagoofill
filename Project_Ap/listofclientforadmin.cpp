@@ -48,9 +48,9 @@ ListOFClientForAdmin::~ListOFClientForAdmin()
 
 void ListOFClientForAdmin::on_pushButton_2_clicked()
 {
-    AdminPage *p = new AdminPage(this);
+    AdminPage *p = new AdminPage();
     p->show();
-    this->hide();
+    this->close();
 }
 
 void ListOFClientForAdmin::on_pushButton_clicked()
@@ -63,8 +63,8 @@ void ListOFClientForAdmin::on_pushButton_clicked()
         clie_forChange.char_array_to_string(tmp, 16, clie_forChange.User);
         if(ui->textEdit->toPlainText().toStdString() == tmp)
         {
-            clie_inf = new infofclie(clie_forChange, this);
-            this->hide();
+            clie_inf = new infofclie(clie_forChange);
+            this->close();
             clie_inf->show();
             return;
         }

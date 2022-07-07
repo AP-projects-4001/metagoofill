@@ -1,5 +1,6 @@
 #include "infofcus.h"
 #include "ui_infofcus.h"
+#include "listofcustomersforadmin.h"
 #include <fstream>
 
 using namespace std;
@@ -79,5 +80,13 @@ void infofcus::on_pushButton_4_clicked()
 
     remove("customers.txt");
     rename("tmpFile.txt", "customers.txt");
+}
+
+
+void infofcus::on_pushButton_5_clicked()
+{
+    this->close();
+    ListOfCustomersForAdmin *readmin = new ListOfCustomersForAdmin();
+    readmin->show();
 }
 

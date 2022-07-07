@@ -16,9 +16,9 @@ RecoveryPasClient::~RecoveryPasClient()
 
 void RecoveryPasClient::on_pushButton_2_clicked()
 {
-    ForgetPasClient *p = new ForgetPasClient(this);
+    ForgetPasClient *p = new ForgetPasClient();
     p->show();
-    this->hide();
+    this->close();
 }
 
 void RecoveryPasClient::on_pushButton_clicked()

@@ -10,7 +10,9 @@
 #include <fstream>
 #include <QMessageBox>
 #include "groupinggoods.h"
+#include "clientprof.h"
 #define data_product "database_products.txt"
+
 using namespace std;
 goodsList::goodsList(client _clie ,QWidget *parent) :
     QDialog(parent),
@@ -20,7 +22,7 @@ goodsList::goodsList(client _clie ,QWidget *parent) :
 
     clie=_clie;
 
-    groupingGoods *goodsGroup = new groupingGoods(this);
+    groupingGoods *goodsGroup = new groupingGoods(clie, this);
     connect(goodsGroup, SIGNAL(G_type(int)), this, SLOT(recG_type(int)));
     goodsGroup->show();
     this->hide();
@@ -470,11 +472,14 @@ void goodsList::on_pushButton_g9_clicked()
 
 
 
-void goodsList::on_pushButton_filter_3_clicked()//for return from goodslist to groupinggoods
+void goodsList::on_pushButton_filter_3_clicked()//
 {
-    this->hide();
-    groupingGoods *groups = new groupingGoods();
-    groups->show();
+//    this->hide();
+//    groupingGoods *groups = new groupingGoods();
+//    groups->show();
+    this->close();
+    clientProf *reprof = new clientProf(clie);
+    reprof->show();
 }
 
 
@@ -484,8 +489,6 @@ void goodsList::on_pushButton_filter_2_clicked()
     this->hide();
     cart *_cart = new cart(clie,this);
     _cart->show();
-    //باید بعد از ایجاد ساختار سبد خرید تغییر کند. زیرا با این روش فقط پتانسیل خرید یک دسته بندی از کالا وجود دارد
-
 }
 
 bool goodsList::add_to_cart(int andis,int number_orders)
