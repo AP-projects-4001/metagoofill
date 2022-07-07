@@ -14,20 +14,20 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>480</y>
-     <width>87</width>
-     <height>35</height>
+     <x>392</x>
+     <y>460</y>
+     <width>141</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 11pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="text">
@@ -38,14 +38,14 @@ font: 11pt &quot;Lalezar&quot;;</string>
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>120</y>
+     <y>90</y>
      <width>391</width>
      <height>341</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
+    <string notr="true">font: 16pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
 </string>
    </property>
    <property name="title">
@@ -57,7 +57,9 @@ color: rgb(53, 66, 89);
       <item>
        <widget class="QLineEdit" name="lineEdit">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string/>
@@ -67,8 +69,9 @@ color: rgb(53, 66, 89);
       <item>
        <widget class="QLabel" name="label">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>نام محصول:     </string>
@@ -82,8 +85,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLabel" name="label_6">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>تومان</string>
@@ -93,7 +97,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLineEdit" name="lineEdit_5">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string/>
@@ -103,8 +109,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLabel" name="label_5">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>تا</string>
@@ -114,7 +121,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLineEdit" name="lineEdit_2">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string/>
@@ -124,8 +133,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLabel" name="label_2">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>قیمت :                  </string>
@@ -139,7 +149,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLineEdit" name="lineEdit_3">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string/>
@@ -149,8 +161,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLabel" name="label_3">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>نام فروشنده:   </string>
@@ -163,6 +176,11 @@ font: 11pt &quot;Lalezar&quot;;</string>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QComboBox" name="comboBox">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
+        </property>
         <item>
          <property name="text">
           <string>انتخاب کنید</string>
@@ -208,8 +226,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLabel" name="label_4">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>دسته بندی: </string>
@@ -223,7 +242,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLineEdit" name="lineEdit_6">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string/>
@@ -233,8 +254,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QLabel" name="label_7">
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-font: 11pt &quot;Lalezar&quot;;</string>
+         <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
         </property>
         <property name="text">
          <string>کلمات کلیدی:</string>
@@ -248,14 +270,15 @@ font: 11pt &quot;Lalezar&quot;;</string>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>200</x>
-     <y>480</y>
-     <width>89</width>
-     <height>35</height>
+     <x>250</x>
+     <y>460</y>
+     <width>131</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 11pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="text">

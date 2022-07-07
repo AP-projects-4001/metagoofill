@@ -14,16 +14,15 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="0">
     <widget class="QPushButton" name="pushButton_2">
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);
-
-font: 14pt &quot;Lalezar&quot;;</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>بازگشت</string>
@@ -46,8 +45,9 @@ font: 14pt &quot;Lalezar&quot;;</string>
    <item row="0" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);
-font: 12pt &quot;Lalezar&quot;;</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 14pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="title">
       <string>عضویت</string>
@@ -55,15 +55,16 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <widget class="QGroupBox" name="groupBox_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>30</x>
         <y>50</y>
-        <width>811</width>
+        <width>791</width>
         <height>171</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 10pt &quot;Lalezar&quot;;</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="title">
        <string>نوع محصول</string>
@@ -71,7 +72,7 @@ font: 10pt &quot;Lalezar&quot;;</string>
       <widget class="QWidget" name="layoutWidget_3">
        <property name="geometry">
         <rect>
-         <x>20</x>
+         <x>10</x>
          <y>60</y>
          <width>771</width>
          <height>91</height>
@@ -145,15 +146,15 @@ font: 11pt &quot;Lalezar&quot;;</string>
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>440</x>
+        <x>490</x>
         <y>400</y>
-        <width>291</width>
+        <width>201</width>
         <height>56</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Lalezar&quot;;
-</string>
+       <string notr="true">background-color: rgb(132, 169, 172);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>ثبت نام نهایی</string>
@@ -175,9 +176,9 @@ font: 11pt &quot;Lalezar&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -216,9 +217,9 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -260,9 +261,9 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -301,9 +302,9 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -345,10 +346,9 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);
-</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;

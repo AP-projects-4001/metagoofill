@@ -14,7 +14,7 @@
    <string>LoginPage</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -29,14 +29,14 @@
     <property name="font">
      <font>
       <family>Lalezar</family>
-      <pointsize>24</pointsize>
+      <pointsize>20</pointsize>
       <italic>false</italic>
       <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 24pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);
+font: 20pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="title">
      <string>صفحه اصلی</string>
@@ -45,18 +45,18 @@ color: rgb(53, 66, 89);</string>
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>190</y>
+       <y>160</y>
        <width>381</width>
-       <height>171</height>
+       <height>251</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QPushButton" name="pushButton_8">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);
-color: rgb(53, 66, 89);
-font: 20pt &quot;Lalezar&quot;;</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 16pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string>ورود</string>
@@ -66,9 +66,9 @@ font: 20pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QPushButton" name="pushButton_9">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(116, 141, 166);
-color: rgb(53, 66, 89);
-font: 20pt &quot;Lalezar&quot;;</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 16pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string>عضویت</string>
@@ -80,15 +80,15 @@ font: 20pt &quot;Lalezar&quot;;</string>
         <property name="font">
          <font>
           <family>Lalezar</family>
-          <pointsize>20</pointsize>
+          <pointsize>16</pointsize>
           <italic>false</italic>
           <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);
-background-color: rgb(116, 141, 166);
-font: 20pt &quot;Lalezar&quot;;</string>
+         <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 16pt &quot;Lalezar&quot;;</string>
         </property>
         <property name="text">
          <string>خروج</string>

@@ -6,39 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1187</width>
-    <height>690</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 239, 157);
-background-color: rgb(32, 64, 81);</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>730</x>
-     <y>520</y>
-     <width>336</width>
-     <height>81</height>
+     <x>100</x>
+     <y>530</y>
+     <width>171</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-    background-color: green;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 24px;
-    min-width: 10em;
-    padding: 6px;
- 	color:red;
-}
-QPushButton:hover { color:purple; }</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="text">
     <string>جست و جو</string>
@@ -47,39 +37,43 @@ QPushButton:hover { color:purple; }</string>
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>90</y>
-     <width>441</width>
-     <height>311</height>
+     <x>30</x>
+     <y>20</y>
+     <width>741</width>
+     <height>471</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>180</x>
-     <y>520</y>
-     <width>481</width>
-     <height>106</height>
+     <x>290</x>
+     <y>530</y>
+     <width>391</width>
+     <height>51</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTextEdit" name="textEdit">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QLabel" name="label">
       <property name="styleSheet">
-       <string notr="true">font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
+       <string notr="true">
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
        <string>شماره فاکتور فروش:</string>

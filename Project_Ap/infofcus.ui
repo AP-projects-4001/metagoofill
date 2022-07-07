@@ -14,14 +14,13 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>90</y>
+     <y>60</y>
      <width>751</width>
      <height>431</height>
     </rect>
@@ -40,7 +39,8 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
    </property>
    <property name="title">
     <string>مشخصات</string>
@@ -64,7 +64,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);</string>
     </property>
     <property name="text">
      <string>نام فروشگاه:</string>
@@ -86,7 +86,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);</string>
     </property>
     <property name="text">
      <string>شماره تلفن:</string>
@@ -108,7 +108,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);</string>
     </property>
     <property name="text">
      <string>آدرس:</string>
@@ -130,7 +130,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);</string>
     </property>
     <property name="text">
      <string>نقش:</string>
@@ -152,7 +152,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);</string>
     </property>
     <property name="text">
      <string>نام کاربری:</string>
@@ -174,7 +174,7 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">color: rgb(228, 227, 227);</string>
     </property>
     <property name="text">
      <string>دسترسی:</string>
@@ -192,12 +192,14 @@
     <property name="font">
      <font>
       <family>Lalezar</family>
-      <pointsize>10</pointsize>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);
-background-color: rgb(116, 141, 166);</string>
+     <string notr="true">background-color: rgb(132, 169, 172);
+font: 12pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="text">
      <string>ذخیره تغییرات</string>
@@ -221,8 +223,7 @@ background-color: rgb(116, 141, 166);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit_2">
@@ -243,8 +244,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit_6">
@@ -265,8 +265,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="plainText">
      <string/>
@@ -290,8 +289,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit_5">
@@ -312,8 +310,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="plainTextEdit_8">
@@ -334,16 +331,15 @@ background-color: rgb(116, 141, 166);</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
   </widget>
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>550</y>
+     <x>30</x>
+     <y>520</y>
      <width>121</width>
      <height>41</height>
     </rect>
@@ -351,12 +347,15 @@ background-color: rgb(116, 141, 166);</string>
    <property name="font">
     <font>
      <family>Lalezar</family>
-     <pointsize>10</pointsize>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
-background-color: rgb(116, 141, 166);</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="text">
     <string>برگشت</string>

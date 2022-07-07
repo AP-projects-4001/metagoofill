@@ -6,34 +6,53 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1219</width>
-    <height>684</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 106, 252, 231));</string>
+   <string notr="true">background-color: rgb(32, 64, 81);
+background-color: rgb(32, 64, 81);
+background-color: rgb(132, 169, 172);</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="1" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout">
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>90</y>
+     <width>661</width>
+     <height>431</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 16pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
+   </property>
+   <property name="title">
+    <string>ادمین</string>
+   </property>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>481</width>
+      <height>277</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="styleSheet">
-        <string notr="true">QPushButton {
-    background-color: green;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 14px;
-    min-width: 10em;
-    padding: 6px;
-color: white;
-}
-QPushButton:hover { color: yellow; }</string>
+        <string notr="true">
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+font: 16pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);</string>
        </property>
        <property name="text">
         <string>تراکنش ها</string>
@@ -43,124 +62,45 @@ QPushButton:hover { color: yellow; }</string>
      <item>
       <widget class="QPushButton" name="pushButton_4">
        <property name="styleSheet">
-        <string notr="true">QPushButton {
-    background-color: red;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 14px;
-    min-width: 10em;
-    padding: 6px;
- color: white;
-}
-QPushButton:hover { color: yellow; }</string>
+        <string notr="true">font: 16pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);</string>
        </property>
        <property name="text">
-        <string>لیست خریدار</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-	color: rgb(198, 41, 158);
-    background-color: #c6299e;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 14px;
-    min-width: 10em;
-    padding: 6px;
-	color:white;
-}
-QPushButton:hover { color: yellow; }</string>
-       </property>
-       <property name="text">
-        <string>بازگشت به عقب</string>
+        <string>خریدارها</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="styleSheet">
-        <string notr="true">QPushButton {
-    background-color: #fead51;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 14px;
-    min-width: 10em;
-    padding: 6px;
-color:white;
-}
-QPushButton:hover { color: yellow; }</string>
+        <string notr="true">font: 16pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
        </property>
        <property name="text">
-        <string>لیست فروشنده ها</string>
+        <string>فروشنده ها</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">font: 16pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
+       </property>
+       <property name="text">
+        <string>بازگشت به عقب</string>
        </property>
       </widget>
      </item>
     </layout>
-   </item>
-   <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="styleSheet">
-      <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-     </property>
-     <property name="title">
-      <string>Admin</string>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="1">
-       <widget class="QLabel" name="label">
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>آخرین دسترسی</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_4">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(5, 117, 230);</string>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(5, 117, 230);</string>
-        </property>
-        <property name="text">
-         <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QLabel" name="label_2">
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);</string>
-        </property>
-        <property name="text">
-         <string>سطح دسترسی</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-  </layout>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>

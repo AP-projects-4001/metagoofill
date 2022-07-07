@@ -6,119 +6,101 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>637</width>
-    <height>558</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
+   <string notr="true">background-color: rgb(132, 169, 172);
 </string>
   </property>
-  <widget class="QPushButton" name="pushButton_refuse">
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>450</y>
-     <width>184</width>
-     <height>42</height>
+     <x>170</x>
+     <y>150</y>
+     <width>461</width>
+     <height>314</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton#pushButton_refuse {
-padding-left: 20px;
-padding-right: 20px;
-font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: red;
-color: #fefefe;
-}</string>
+    <string notr="true">color: rgb(228, 227, 227);
+font: 14pt &quot;Lalezar&quot;;</string>
    </property>
-   <property name="text">
-    <string>برگشت</string>
+   <property name="title">
+    <string>نحوه پرداخت</string>
    </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>40</y>
-     <width>441</width>
-     <height>371</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 16pt &quot;Lalezar&quot;;</string>
-      </property>
-      <property name="title">
-       <string>نحوه پرداخت</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <layout class="QVBoxLayout" name="verticalLayout">
-         <item>
-          <widget class="QPushButton" name="pushButton_difectpay">
-           <property name="styleSheet">
-            <string notr="true">QPushButton#pushButton_difectpay {
-padding-left: 20px;
-padding-right: 20px;
-font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: rgb(167, 167, 167);
-color: #fefefe;
-}</string>
-           </property>
-           <property name="text">
-            <string>پرداخت مستقیم</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pushButton_wallet">
-           <property name="styleSheet">
-            <string notr="true">QPushButton#pushButton_wallet {
-padding-left: 20px;
-padding-right: 20px;
-font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: rgb(167, 167, 167);
-color: #fefefe;
-}</string>
-           </property>
-           <property name="text">
-            <string>پرداخت از کیف پول</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_wallet_2">
-      <property name="styleSheet">
-       <string notr="true">QPushButton#pushButton_wallet_2 {
-padding-left: 20px;
-padding-right: 20px;
-font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: rgb(167, 167, 167);
-color: #fefefe;
-}</string>
-      </property>
-      <property name="text">
-       <string>شارژ کیف پول</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>160</y>
+      <width>351</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_wallet">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>پرداخت از کیف پول</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_wallet_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>شارژ کیف پول</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="pushButton_refuse">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>218</y>
+      <width>351</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+    </property>
+    <property name="text">
+     <string>برگشت</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_difectpay">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>102</y>
+      <width>351</width>
+      <height>49</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+    </property>
+    <property name="text">
+     <string>پرداخت مستقیم</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

@@ -14,17 +14,14 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="3">
     <widget class="QPushButton" name="pushButton_filter_2">
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>سبد خرید</string>
@@ -47,10 +44,8 @@ background-color: rgb(236, 229, 199);
    <item row="1" column="1">
     <widget class="QPushButton" name="pushButton_next">
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>صفحه بعدی</string>
@@ -60,8 +55,8 @@ background-color: rgb(236, 229, 199);
    <item row="0" column="0" colspan="7">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
      </property>
      <property name="title">
       <string>لیست کالا ها</string>
@@ -70,7 +65,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>460</y>
+        <y>450</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -83,7 +78,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>60</y>
+        <y>50</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -96,7 +91,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>110</y>
+        <y>100</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -109,7 +104,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>160</y>
+        <y>150</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -122,7 +117,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>210</y>
+        <y>200</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -135,7 +130,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>260</y>
+        <y>250</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -148,7 +143,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>310</y>
+        <y>300</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -161,7 +156,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>360</y>
+        <y>350</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -174,7 +169,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>410</y>
+        <y>400</y>
         <width>201</width>
         <height>24</height>
        </rect>
@@ -187,7 +182,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>60</y>
+        <y>50</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -200,7 +195,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>110</y>
+        <y>100</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -213,7 +208,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>160</y>
+        <y>150</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -226,7 +221,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>260</y>
+        <y>250</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -239,7 +234,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>310</y>
+        <y>300</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -252,7 +247,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>360</y>
+        <y>350</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -265,7 +260,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>410</y>
+        <y>400</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -278,7 +273,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>272</x>
-        <y>460</y>
+        <y>450</y>
         <width>141</width>
         <height>24</height>
        </rect>
@@ -291,7 +286,7 @@ color: rgb(53, 66, 89);</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>70</y>
+        <y>60</y>
         <width>741</width>
         <height>61</height>
        </rect>
@@ -300,7 +295,7 @@ color: rgb(53, 66, 89);</string>
        <item>
         <widget class="QPushButton" name="pushButton_g1">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -379,7 +374,7 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>130</y>
+        <y>120</y>
         <width>741</width>
         <height>55</height>
        </rect>
@@ -388,7 +383,7 @@ border-radius: 12px;</string>
        <item>
         <widget class="QPushButton" name="pushButton_g2">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -464,16 +459,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>180</y>
+        <y>170</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <item>
         <widget class="QPushButton" name="pushButton_g3">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -549,16 +544,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>230</y>
+        <y>220</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
         <widget class="QPushButton" name="pushButton_g4">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -634,16 +629,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>280</y>
+        <y>270</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <item>
         <widget class="QPushButton" name="pushButton_g5">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -719,16 +714,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>330</y>
+        <y>320</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_6">
        <item>
         <widget class="QPushButton" name="pushButton_g6">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -804,16 +799,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>380</y>
+        <y>370</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_7">
        <item>
         <widget class="QPushButton" name="pushButton_g7">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -889,16 +884,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>430</y>
+        <y>420</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_8">
        <item>
         <widget class="QPushButton" name="pushButton_g8">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -974,16 +969,16 @@ border-radius: 12px;</string>
       <property name="geometry">
        <rect>
         <x>29</x>
-        <y>480</y>
+        <y>470</y>
         <width>741</width>
-        <height>50</height>
+        <height>51</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_9">
        <item>
         <widget class="QPushButton" name="pushButton_g9">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(116, 141, 166);</string>
+          <string notr="true">background-color: rgb(132, 169, 172);</string>
          </property>
          <property name="text">
           <string>جزئیات</string>
@@ -1060,10 +1055,8 @@ border-radius: 12px;</string>
    <item row="1" column="4">
     <widget class="QPushButton" name="pushButton_filter_3">
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>پروفایل</string>
@@ -1073,10 +1066,8 @@ background-color: rgb(236, 229, 199);
    <item row="1" column="2">
     <widget class="QPushButton" name="pushButton_filter">
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>فیلتر</string>
@@ -1086,9 +1077,8 @@ background-color: rgb(236, 229, 199);
    <item row="1" column="0">
     <widget class="QPushButton" name="pushButton_prev">
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;
 </string>
      </property>
      <property name="text">
@@ -1099,10 +1089,8 @@ background-color: rgb(236, 229, 199);
    <item row="1" column="5">
     <widget class="QPushButton" name="pushButton_filter_4">
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(236, 229, 199);
-</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>دسته بندی</string>

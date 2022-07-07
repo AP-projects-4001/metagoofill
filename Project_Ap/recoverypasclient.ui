@@ -6,59 +6,85 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>887</width>
-    <height>718</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="1">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="styleSheet">
-        <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);</string>
-       </property>
-       <property name="text">
-        <string>رمز جدید</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="textEdit">
-       <property name="styleSheet">
-        <string notr="true">color: rgb(47, 42, 39);
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="pushButton">
-     <property name="styleSheet">
-      <string notr="true">font: 17pt &quot;MS Sans Serif&quot;;
-font: 18pt &quot;MS Shell Dlg 2&quot;;</string>
-     </property>
-     <property name="text">
-      <string>ثبت رمز جدید</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="styleSheet">
-      <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-     </property>
-     <property name="text">
-      <string>بازگشت به قبل</string>
-     </property>
-    </widget>
-   </item>
-  </layout>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>230</y>
+     <width>393</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>رمز جدید</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>330</y>
+     <width>179</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>ثبت رمز جدید</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>بازگشت</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>

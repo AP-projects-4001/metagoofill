@@ -14,22 +14,9 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="0">
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="styleSheet">
-      <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-</string>
-     </property>
-     <property name="text">
-      <string>بازگشت</string>
-     </property>
-    </widget>
-   </item>
    <item row="1" column="1">
     <spacer name="horizontalSpacer">
      <property name="orientation">
@@ -43,11 +30,24 @@ color: rgb(53, 66, 89);
      </property>
     </spacer>
    </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+     </property>
+     <property name="text">
+      <string>بازگشت</string>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0" colspan="2">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);
-font: 20pt &quot;Lalezar&quot;;</string>
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 14pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="title">
       <string>عضویت</string>
@@ -62,7 +62,8 @@ font: 20pt &quot;Lalezar&quot;;</string>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
@@ -83,7 +84,8 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
@@ -98,16 +100,14 @@ p, li { white-space: pre-wrap; }
       <property name="geometry">
        <rect>
         <x>410</x>
-        <y>309</y>
+        <y>340</y>
         <width>221</width>
         <height>61</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 14pt &quot;Lalezar&quot;;
-
-</string>
+       <string notr="true">background-color: rgb(132, 169, 172);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>ثبت نام </string>
@@ -152,7 +152,8 @@ font: 14pt &quot;Lalezar&quot;;
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
@@ -173,7 +174,8 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
@@ -255,7 +257,8 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">
@@ -299,7 +302,8 @@ p, li { white-space: pre-wrap; }
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="html">

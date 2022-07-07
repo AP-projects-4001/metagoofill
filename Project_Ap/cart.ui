@@ -6,29 +6,29 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1047</width>
-    <height>778</height>
+    <width>897</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
+   <string notr="true">background-color: rgb(132, 169, 172);
 </string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>20</y>
-     <width>821</width>
-     <height>551</height>
+     <x>30</x>
+     <y>13</y>
+     <width>831</width>
+     <height>521</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 10pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
    </property>
    <property name="title">
     <string>لیست کالا ها</string>
@@ -36,8 +36,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_8">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>460</y>
+      <x>531</x>
+      <y>430</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -49,8 +49,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_0">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>60</y>
+      <x>531</x>
+      <y>30</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -62,8 +62,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_1">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>110</y>
+      <x>531</x>
+      <y>80</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -75,8 +75,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_2">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>160</y>
+      <x>531</x>
+      <y>130</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -88,8 +88,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_3">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>210</y>
+      <x>531</x>
+      <y>180</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -101,8 +101,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_4">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>260</y>
+      <x>531</x>
+      <y>230</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -114,8 +114,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_5">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>310</y>
+      <x>531</x>
+      <y>280</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -127,8 +127,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_6">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>360</y>
+      <x>531</x>
+      <y>330</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -140,8 +140,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_type_7">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>410</y>
+      <x>531</x>
+      <y>380</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -153,8 +153,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_0">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>60</y>
+      <x>283</x>
+      <y>30</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -166,8 +166,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_1">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>110</y>
+      <x>283</x>
+      <y>80</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -179,8 +179,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_2">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>160</y>
+      <x>283</x>
+      <y>130</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -192,8 +192,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_4">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>260</y>
+      <x>283</x>
+      <y>230</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -205,8 +205,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_5">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>310</y>
+      <x>283</x>
+      <y>280</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -218,8 +218,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_6">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>360</y>
+      <x>283</x>
+      <y>330</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -231,8 +231,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_7">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>410</y>
+      <x>283</x>
+      <y>380</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -244,8 +244,8 @@ color: rgb(53, 66, 89);</string>
    <widget class="QLabel" name="label_price_8">
     <property name="geometry">
      <rect>
-      <x>272</x>
-      <y>460</y>
+      <x>283</x>
+      <y>430</y>
       <width>141</width>
       <height>24</height>
      </rect>
@@ -257,10 +257,10 @@ color: rgb(53, 66, 89);</string>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>78</y>
+      <x>40</x>
+      <y>48</y>
       <width>741</width>
-      <height>49</height>
+      <height>50</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -361,8 +361,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>130</y>
+      <x>40</x>
+      <y>100</y>
       <width>741</width>
       <height>55</height>
      </rect>
@@ -459,8 +459,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_3">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>180</y>
+      <x>40</x>
+      <y>150</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -557,8 +557,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_4">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>230</y>
+      <x>40</x>
+      <y>200</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -655,8 +655,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_5">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>280</y>
+      <x>40</x>
+      <y>250</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -753,8 +753,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_6">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>330</y>
+      <x>40</x>
+      <y>300</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -851,8 +851,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_7">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>380</y>
+      <x>40</x>
+      <y>350</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -949,8 +949,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_8">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>430</y>
+      <x>40</x>
+      <y>400</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -1047,8 +1047,8 @@ border-radius: 12px;</string>
    <widget class="QWidget" name="layoutWidget_9">
     <property name="geometry">
      <rect>
-      <x>29</x>
-      <y>480</y>
+      <x>40</x>
+      <y>450</y>
       <width>741</width>
       <height>50</height>
      </rect>
@@ -1146,160 +1146,113 @@ border-radius: 12px;</string>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>570</y>
-     <width>736</width>
-     <height>155</height>
+     <x>10</x>
+     <y>540</y>
+     <width>880</width>
+     <height>51</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout_10">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_13">
-      <item>
-       <widget class="QPushButton" name="pushButton_filter">
-        <property name="styleSheet">
-         <string notr="true">QPushButton#pushButton_filter {
-padding-left: 20px;
-padding-right: 20px;
-	font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-background: #dd1818;
-color: #fefefe;
-}</string>
-        </property>
-        <property name="text">
-         <string>حذف سبد</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_filter_3">
-        <property name="styleSheet">
-         <string notr="true">QPushButton#pushButton_filter_3 {
-padding-left: 20px;
-padding-right: 20px;
-	font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-background: #0f9b0f;
-color: #fefefe;
-}</string>
-        </property>
-        <property name="text">
-         <string>پرداخت</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="pushButton_prev">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>صفحه قبلی</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
-      <item>
-       <widget class="QPushButton" name="pushButton_prev">
-        <property name="styleSheet">
-         <string notr="true">QPushButton#pushButton_prev {
-padding-left: 20px;
-padding-right: 20px;
-	font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(229, 139, 255, 255), stop:1 rgba(255, 255, 255, 255));
-	color: rgb(213, 0, 255);
-}</string>
-        </property>
-        <property name="text">
-         <string>صفحه قبلی</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_next">
-        <property name="styleSheet">
-         <string notr="true">QPushButton#pushButton_next {
-padding-left: 20px;
-padding-right: 20px;
-	font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(9, 41, 4, 255), stop:0.085 rgba(2, 79, 0, 255), stop:0.19 rgba(50, 147, 22, 255), stop:0.275 rgba(236, 191, 49, 255), stop:0.39 rgba(243, 61, 34, 255), stop:0.555 rgba(135, 81, 60, 255), stop:0.667 rgba(121, 75, 255, 255), stop:0.825 rgba(164, 255, 244, 255), stop:0.885 rgba(104, 222, 71, 255), stop:1 rgba(93, 128, 0, 255));
-color: #fefefe;
-}</string>
-        </property>
-        <property name="text">
-         <string>صفحه بعدی</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="pushButton_next">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>صفحه بعدی</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
-      <item>
-       <widget class="QPushButton" name="pushButton_filter_4">
-        <property name="styleSheet">
-         <string notr="true">QPushButton#pushButton_filter_4 {
-padding-left: 20px;
-padding-right: 20px;
-	font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: rgb(255, 0, 128);
-color: #fefefe;
-}</string>
-        </property>
-        <property name="text">
-         <string>انصراف از خرید</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_filter_2">
-        <property name="styleSheet">
-         <string notr="true">QPushButton#pushButton_filter_2 {
-
-padding-left: 20px;
-padding-right: 20px;
-font: 22pt &quot;MS Shell Dlg 2&quot;;
-border-radius: 5px;
-	background-color: rgb(117, 202, 77);
-	color: rgb(67, 67, 67);
-}</string>
-        </property>
-        <property name="text">
-         <string>پرداخت نهایی</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_type_29">
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>جمع</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_type_28">
-        <property name="styleSheet">
-         <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>جمع فاکتور پرداخت:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="pushButton_filter_4">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>انصراف از خرید</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_filter_3">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>پرداخت</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_filter_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>پرداخت نهایی</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_filter">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>حذف سبد</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_type_29">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 10pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>جمع</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_type_28">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 10pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>جمع فاکتور پرداخت:</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

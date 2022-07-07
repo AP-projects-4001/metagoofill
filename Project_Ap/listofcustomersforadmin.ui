@@ -6,106 +6,94 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1176</width>
-    <height>723</height>
+    <width>802</width>
+    <height>614</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>490</y>
-     <width>821</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <property name="text">
-    <string>اسم فروشنده را وارد کنید تا به سوابق دسترسی پیدا کنید</string>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
+  </property>
   <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
-     <x>190</x>
+     <x>30</x>
      <y>20</y>
      <width>741</width>
-     <height>431</height>
+     <height>391</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 0, 0);
-background-color: rgb(180, 255, 198);</string>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>490</y>
-     <width>311</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>610</y>
+     <x>40</x>
+     <y>510</y>
      <width>721</width>
-     <height>91</height>
+     <height>71</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QPushButton" name="pushButton_2">
       <property name="styleSheet">
-       <string notr="true">QPushButton {
-    background-color: Gray;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 24px;
-    min-width: 10em;
-    padding: 6px;
- 	color:red;
-}
-QPushButton:hover { color:yellow; }</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>بازگشت به صفحه قبل</string>
+       <string>بازگشت</string>
       </property>
      </widget>
     </item>
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="styleSheet">
-       <string notr="true">QPushButton {
-    background-color: green;
-    border-style: outset;
-    border-width: 2px;
-    border-radius: 10px;
-    border-color: beige;
-    font: bold 24px;
-    min-width: 10em;
-    padding: 6px;
- 	color:red;
-}
-QPushButton:hover { color:purple; }</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>دریافت اسم فروشنده</string>
+       <string>دریافت جزییات</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>430</y>
+     <width>735</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>اسم فروشنده را وارد کنید تا به سوابق دسترسی پیدا کنید</string>
       </property>
      </widget>
     </item>

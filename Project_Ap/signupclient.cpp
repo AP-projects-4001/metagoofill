@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 SignUpClient::SignUpClient(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignUpClient)

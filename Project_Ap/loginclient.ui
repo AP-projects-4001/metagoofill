@@ -14,19 +14,19 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>150</y>
+     <y>100</y>
      <width>518</width>
      <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
+    <string notr="true">color: rgb(228, 227, 227);
 font: 20pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="title">
@@ -58,7 +58,9 @@ font: 20pt &quot;Lalezar&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);</string>
+     <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -87,7 +89,9 @@ font: 20pt &quot;Lalezar&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);</string>
+     <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
   </widget>
@@ -111,21 +115,22 @@ color: rgb(105, 166, 161);</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>400</y>
+     <y>360</y>
      <width>217</width>
-     <height>151</height>
+     <height>185</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
        <string>ورود</string>
@@ -135,8 +140,9 @@ color: rgb(53, 66, 89);</string>
     <item>
      <widget class="QPushButton" name="pushButton_3">
       <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
        <string>فراموشی رمز</string>
@@ -146,11 +152,12 @@ color: rgb(53, 66, 89);</string>
     <item>
      <widget class="QPushButton" name="pushButton_2">
       <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>بازگشت به صفحه قبل</string>
+       <string>بازگشت</string>
       </property>
      </widget>
     </item>

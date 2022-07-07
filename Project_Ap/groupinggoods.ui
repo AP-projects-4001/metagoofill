@@ -14,8 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QPushButton" name="cart">
    <property name="geometry">
@@ -27,9 +26,8 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 10pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-</string>
+    <string notr="true">
+font: 12pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="text">
     <string>سبد خرید</string>
@@ -45,9 +43,8 @@ color: rgb(53, 66, 89);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 10pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-</string>
+    <string notr="true">
+font: 12pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="text">
     <string>پروفایل </string>
@@ -63,9 +60,8 @@ color: rgb(53, 66, 89);
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-</string>
+    <string notr="true">color: rgb(228, 227, 227);
+font: 16pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="title">
     <string>دسته بندی کالاها</string>
@@ -74,7 +70,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="technology">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>تکنولوژی</string>
@@ -84,7 +83,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="homeApp">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>لوازم خانگی</string>
@@ -94,7 +96,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="clothes">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>پوشاک</string>
@@ -104,7 +109,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="fruit">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>میوه و تره بار</string>
@@ -114,7 +122,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="supermarket">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>سوپری</string>
@@ -124,7 +135,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="nuts">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>آجیل</string>
@@ -134,7 +148,10 @@ color: rgb(53, 66, 89);
     <item>
      <widget class="QPushButton" name="popular">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(116, 141, 166);</string>
+       <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>پرفروش ترین ها</string>

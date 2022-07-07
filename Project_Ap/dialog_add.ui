@@ -6,45 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>727</width>
-    <height>571</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QDialogButtonBox" name="buttonBox">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>410</y>
-     <width>341</width>
-     <height>32</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(132, 169, 172);</string>
+  </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
+     <x>70</x>
+     <y>50</y>
      <width>661</width>
-     <height>521</height>
+     <height>461</height>
     </rect>
    </property>
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(205, 194, 174);
-</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 14pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="title">
     <string>کالا یاب</string>
@@ -75,75 +63,6 @@ background-color: rgb(205, 194, 174);
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_type_">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>150</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
-</string>
-    </property>
-    <property name="text">
-     <string>نوع کالا:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_berand_">
-    <property name="geometry">
-     <rect>
-      <x>540</x>
-      <y>220</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-</string>
-    </property>
-    <property name="text">
-     <string>مدل کالا:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_price_">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>150</y>
-      <width>141</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>قیمت هر عدد:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_color_">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>220</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>رنگ کالا:</string>
-    </property>
-   </widget>
    <widget class="Line" name="line_3">
     <property name="geometry">
      <rect>
@@ -170,35 +89,17 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
      <enum>Qt::Vertical</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_available_">
-    <property name="geometry">
-     <rect>
-      <x>170</x>
-      <y>330</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;
-</string>
-    </property>
-    <property name="text">
-     <string>تعداد موجود</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
       <x>350</x>
       <y>290</y>
       <width>251</width>
-      <height>111</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="title">
      <string>توضیحات کالا</string>
@@ -206,9 +107,9 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
     <widget class="QPlainTextEdit" name="plainTextEdit_descript">
      <property name="geometry">
       <rect>
-       <x>13</x>
-       <y>20</y>
-       <width>221</width>
+       <x>10</x>
+       <y>40</y>
+       <width>231</width>
        <height>81</height>
       </rect>
      </property>
@@ -216,55 +117,12 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;
       <enum>Qt::RightToLeft</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;
-</string>
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="plainText">
       <string/>
      </property>
     </widget>
-   </widget>
-   <widget class="QPushButton" name="pushButton_confirm">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>480</y>
-      <width>261</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#pushButton_confirm {
-font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-	background-color: rgb(180, 180, 180);
-color: green;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>اضافه کردن کالا</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_weight_">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>220</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>وزن کالا(gr):</string>
-    </property>
    </widget>
    <widget class="Line" name="line_5">
     <property name="geometry">
@@ -279,164 +137,259 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_price">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>80</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_available">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>390</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_berand">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>220</y>
-      <width>131</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_color">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>220</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_weight">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>220</y>
-      <width>71</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_type">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>150</y>
-      <width>151</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_cancel">
-    <property name="geometry">
-     <rect>
-      <x>440</x>
-      <y>480</y>
-      <width>221</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QPushButton#pushButton_cancel {
-font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-	background-color: rgb(180, 180, 180);
-color: red;
-}
-
-</string>
-    </property>
-    <property name="text">
-     <string>انصراف</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_type_1">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>440</y>
+      <x>380</x>
+      <y>80</y>
       <width>231</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
-</string>
+     <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="text">
      <string>مشخصات را کامل کنید</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox">
+   <widget class="QLineEdit" name="lineEdit_price">
     <property name="geometry">
      <rect>
-      <x>78</x>
-      <y>150</y>
-      <width>111</width>
-      <height>35</height>
+      <x>80</x>
+      <y>80</y>
+      <width>113</width>
+      <height>32</height>
      </rect>
     </property>
    </widget>
-   <widget class="QSpinBox" name="spinBox_2">
+   <widget class="QLineEdit" name="lineEdit_available">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>70</x>
+      <y>400</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>220</y>
+      <width>531</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLineEdit" name="lineEdit_weight">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_weight_">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>وزن(gr):</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_color">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_color_">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>رنگ :</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_berand">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_berand_">
+       <property name="styleSheet">
+        <string notr="true">
+font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>مدل:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>74</x>
+      <y>140</y>
+      <width>531</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QSpinBox" name="spinBox">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_price_">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>قیمت هر عدد:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_type">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_type_">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>نوع :</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
       <y>330</y>
-      <width>111</width>
-      <height>35</height>
+      <width>172</width>
+      <height>55</height>
      </rect>
     </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QSpinBox" name="spinBox_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_available_">
+       <property name="styleSheet">
+        <string notr="true">
+font: 12pt &quot;Lalezar&quot;;
+</string>
+       </property>
+       <property name="text">
+        <string>تعداد موجود</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>540</y>
+     <width>701</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_confirm">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>اضافه کردن</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_cancel">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>انصراف</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

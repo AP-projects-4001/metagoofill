@@ -14,8 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);
-</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -27,9 +26,9 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);
-background-color: rgb(116, 141, 166);</string>
+    <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);</string>
    </property>
    <property name="text">
     <string>بستن</string>
@@ -38,15 +37,18 @@ background-color: rgb(116, 141, 166);</string>
   <widget class="QLabel" name="label_20">
    <property name="geometry">
     <rect>
-     <x>665</x>
-     <y>370</y>
-     <width>91</width>
-     <height>101</height>
+     <x>660</x>
+     <y>380</y>
+     <width>111</width>
+     <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+    <string notr="true">
+font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+</string>
    </property>
    <property name="text">
     <string>توضیحات:</string>
@@ -63,13 +65,14 @@ color: rgb(53, 66, 89);</string>
    </property>
    <property name="styleSheet">
     <string notr="true">font: 12pt &quot;Lalezar&quot;;
-color: rgb(53, 66, 89);</string>
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
    </property>
    <property name="title">
-    <string>کالای فلان</string>
+    <string>جزییات کالا</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="1">
+    <item row="1" column="3">
      <layout class="QHBoxLayout" name="horizontalLayout_18">
       <item>
        <widget class="QLabel" name="label_group">
@@ -87,118 +90,7 @@ color: rgb(53, 66, 89);</string>
       </item>
      </layout>
     </item>
-    <item row="2" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
-      <item>
-       <widget class="QLabel" name="label_price">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_12">
-        <property name="text">
-         <string>قیمت:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayout_19">
-      <item>
-       <widget class="QLabel" name="label_weight">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_32">
-        <property name="text">
-         <string>وزن:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
-      <item>
-       <widget class="QLabel" name="label_megh">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_16">
-        <property name="text">
-         <string>مقیاس فروش:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_16">
-      <item>
-       <widget class="QLabel" name="label_name">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_26">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(53, 66, 89);</string>
-        </property>
-        <property name="text">
-         <string>نام محصول:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
-      <item>
-       <widget class="QLabel" name="label_model">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_10">
-        <property name="text">
-         <string>رنگ محصول:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout_14">
-      <item>
-       <widget class="QLabel" name="label_avail">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_22">
-        <property name="text">
-         <string>تعداد موجود:</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="1">
+    <item row="0" column="3">
      <layout class="QHBoxLayout" name="horizontalLayout_10">
       <item>
        <widget class="QLabel" name="label_id">
@@ -216,19 +108,185 @@ color: rgb(53, 66, 89);</string>
       </item>
      </layout>
     </item>
+    <item row="2" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_14">
+      <item>
+       <widget class="QLabel" name="label_avail">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_22">
+        <property name="text">
+         <string>تعداد موجود:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_11">
+      <item>
+       <widget class="QLabel" name="label_megh">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string>مقیاس فروش:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_19">
+      <item>
+       <widget class="QLabel" name="label_weight">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_32">
+        <property name="text">
+         <string>وزن:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="label_model">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>رنگ محصول:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label_price">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>قیمت:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_16">
+      <item>
+       <widget class="QLabel" name="label_name">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_26">
+        <property name="styleSheet">
+         <string notr="true">
+color: rgb(228, 227, 227);</string>
+        </property>
+        <property name="text">
+         <string>نام محصول:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="0">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
    </layout>
   </widget>
   <widget class="QLabel" name="label_info">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>30</x>
      <y>380</y>
-     <width>621</width>
+     <width>631</width>
      <height>91</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 11pt &quot;Lalezar&quot;;</string>
+    <string notr="true">font: 12pt &quot;Lalezar&quot;;
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
    </property>
    <property name="text">
     <string/>

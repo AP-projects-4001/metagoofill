@@ -6,229 +6,157 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>946</width>
-    <height>720</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(79, 87, 198);</string>
+   <string notr="true">
+background-color: rgb(132, 169, 172);</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="font">
-      <font>
-       <family>Lalezar</family>
-       <pointsize>20</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 0);</string>
-     </property>
-     <property name="title">
-      <string>ورود فروشنده</string>
-     </property>
-     <widget class="QTextEdit" name="textEdit_2">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>149</y>
-        <width>341</width>
-        <height>55</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QTextEdit#textEdit_2 {
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background-color: yellow;
-color: #fefefe;
-}
-
-QTextEdit#textEdit_2:hover {
-	background-color: rgb(42, 46, 52);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-
-QTextEdit#textEdit_2:pressed {
-border-style: solid;
-border-width: 1px;
-	background-color: rgb(25, 69, 105);
-	color: rgb(85, 255, 255);
-}‏</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_2">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>149</y>
-        <width>110</width>
-        <height>55</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(236, 236, 0);
-font: 18pt &quot;Lalezar&quot;;
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>110</y>
+     <width>551</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lalezar</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(228, 227, 227);</string>
+   </property>
+   <property name="title">
+    <string>ورود فروشنده</string>
+   </property>
+   <widget class="QTextEdit" name="textEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>160</y>
+      <width>311</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>160</y>
+      <width>110</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(236, 236, 0);
+font: 14pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);
 </string>
+    </property>
+    <property name="text">
+     <string>رمز عبور :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>372</x>
+      <y>94</y>
+      <width>129</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Lalezar</family>
+      <pointsize>14</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(236, 236, 0);
+font: 14pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);
+</string>
+    </property>
+    <property name="text">
+     <string>نام کاربری:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>94</y>
+      <width>311</width>
+      <height>55</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>370</y>
+     <width>221</width>
+     <height>182</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>رمز عبور :</string>
+       <string>ورود</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>372</x>
-        <y>83</y>
-        <width>129</width>
-        <height>55</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Lalezar</family>
-        <pointsize>18</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
       <property name="styleSheet">
-       <string notr="true">color: rgb(236, 236, 0);
-font: 18pt &quot;Lalezar&quot;;
-</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
-       <string>نام کاربری:</string>
+       <string>فراموشی رمزعبور</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="geometry">
-       <rect>
-        <x>17</x>
-        <y>83</y>
-        <width>341</width>
-        <height>55</height>
-       </rect>
-      </property>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_3">
       <property name="styleSheet">
-       <string notr="true">QTextEdit#textEdit {
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background-color: yellow;
-color: #fefefe;
-}
-
-QTextEdit#textEdit:hover {
-	background-color: rgb(42, 46, 52);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-
-QTextEdit#textEdit:pressed {
-border-style: solid;
-border-width: 1px;
-	background-color: rgb(25, 69, 105);
-	color: rgb(85, 255, 255);
-}‏</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
+      </property>
+      <property name="text">
+       <string>بازگشت به صفحه قبل</string>
       </property>
      </widget>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton {
-	font: 24pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background: yellow;
-color: blue;
-}
-
-QPushButton#pushButton:hover {
-	background-color: rgb(43, 255, 185);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>ورود</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton_2 {
-	font: 24pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background: yellow;
-color: blue;
-}
-
-QPushButton#pushButton_2:hover {
-	background-color: rgb(43, 255, 185);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>فراموشی رمزعبور</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton_3 {
-	font: 24pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background: yellow;
-color: blue;
-}
-
-QPushButton#pushButton_3:hover {
-	background-color: rgb(43, 255, 185);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-</string>
-       </property>
-       <property name="text">
-        <string>بازگشت به صفحه قبل</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-  </layout>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>

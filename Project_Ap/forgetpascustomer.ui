@@ -6,27 +6,27 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1064</width>
-    <height>657</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>160</y>
-     <width>518</width>
+     <x>160</x>
+     <y>130</y>
+     <width>461</width>
      <height>221</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(53, 66, 89);
+    <string notr="true">color: rgb(228, 227, 227);
 font: 20pt &quot;Lalezar&quot;;</string>
    </property>
    <property name="title">
@@ -35,9 +35,9 @@ font: 20pt &quot;Lalezar&quot;;</string>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>325</x>
+      <x>330</x>
       <y>80</y>
-      <width>176</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -50,7 +50,7 @@ font: 20pt &quot;Lalezar&quot;;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);
+     <string notr="true">color: rgb(228, 227, 227);
 font: 14pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="text">
@@ -62,25 +62,28 @@ font: 14pt &quot;Lalezar&quot;;</string>
      <rect>
       <x>20</x>
       <y>80</y>
-      <width>341</width>
+      <width>301</width>
       <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);</string>
+     <string notr="true">font: 16pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>328</x>
       <y>150</y>
-      <width>289</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);
+     <string notr="true">color: rgb(228, 227, 227);
 font: 14pt &quot;Lalezar&quot;;</string>
     </property>
     <property name="text">
@@ -92,30 +95,35 @@ font: 14pt &quot;Lalezar&quot;;</string>
      <rect>
       <x>20</x>
       <y>150</y>
-      <width>341</width>
+      <width>301</width>
       <height>51</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 141, 166);</string>
+     <string notr="true">font: 16pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
     </property>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>430</y>
+     <x>260</x>
+     <y>400</y>
      <width>269</width>
-     <height>121</height>
+     <height>101</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 14pt &quot;Lalezar&quot;;</string>
+       <string notr="true">font: 16pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
        <string>بازیابی</string>
@@ -125,11 +133,13 @@ font: 14pt &quot;Lalezar&quot;;</string>
     <item>
      <widget class="QPushButton" name="pushButton_2">
       <property name="styleSheet">
-       <string notr="true">color: rgb(53, 66, 89);
-font: 14pt &quot;Lalezar&quot;;</string>
+       <string notr="true">font: 16pt &quot;Lalezar&quot;;
+background-color: rgb(59, 105, 120);
+background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
       </property>
       <property name="text">
-       <string>بازگشت به صفحه قبل</string>
+       <string>بازگشت</string>
       </property>
      </widget>
     </item>

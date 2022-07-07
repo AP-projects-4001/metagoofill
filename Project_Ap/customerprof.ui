@@ -6,23 +6,23 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>888</width>
-    <height>610</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(236, 229, 199);</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>490</y>
-      <width>951</width>
+      <y>520</y>
+      <width>751</width>
       <height>61</height>
      </rect>
     </property>
@@ -31,23 +31,16 @@
       <widget class="QPushButton" name="pushButton_5">
        <property name="font">
         <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
+         <family>Lalezar</family>
+         <pointsize>12</pointsize>
          <italic>false</italic>
          <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton {
-font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-	background-color: rgb(180, 180, 180);
-color: blue;
-}
-
-</string>
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
        </property>
        <property name="text">
         <string>خروج</string>
@@ -55,53 +48,19 @@ color: blue;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
-         <italic>false</italic>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton {
-font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-	background-color: rgb(180, 180, 180);
-color: blue;
-}
-
-</string>
-       </property>
-       <property name="text">
-        <string>سوابق فروش</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushButton_2">
        <property name="font">
         <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
+         <family>Lalezar</family>
+         <pointsize>12</pointsize>
          <italic>false</italic>
          <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton_2 {
-	font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background-color: rgb(180, 180, 180);
-color: blue;
-}
-
-</string>
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
        </property>
        <property name="text">
         <string>لیست محصولات</string>
@@ -109,38 +68,37 @@ color: blue;
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButton">
        <property name="font">
         <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
+         <family>Lalezar</family>
+         <pointsize>12</pointsize>
          <italic>false</italic>
          <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true">QPushButton#pushButton_3 {
-	font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background-color: rgb(180, 180, 180);
-color: blue;
-}
-
-QPushButton#pushButton_3:hover {
-	background-color: rgb(43, 255, 185);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-</string>
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
        </property>
        <property name="text">
-        <string>طرح های تبلیغاتی</string>
+        <string>سوابق فروش</string>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </widget>
@@ -148,7 +106,7 @@ border-style: solid;
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
+      <y>50</y>
       <width>751</width>
       <height>431</height>
      </rect>
@@ -167,7 +125,8 @@ border-style: solid;
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(53, 66, 89);</string>
+     <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);</string>
     </property>
     <property name="title">
      <string> پروفایل</string>
@@ -191,7 +150,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
+      <string notr="true">color: rgb(228, 227, 227);</string>
      </property>
      <property name="text">
       <string>نام فروشگاه:</string>
@@ -213,7 +172,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
+      <string notr="true">color: rgb(228, 227, 227);</string>
      </property>
      <property name="text">
       <string>شماره تلفن:</string>
@@ -235,7 +194,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
+      <string notr="true">color: rgb(228, 227, 227);</string>
      </property>
      <property name="text">
       <string>آدرس:</string>
@@ -257,7 +216,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
+      <string notr="true">color: rgb(228, 227, 227);</string>
      </property>
      <property name="text">
       <string>نقش:</string>
@@ -279,7 +238,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
+      <string notr="true">color: rgb(228, 227, 227);</string>
      </property>
      <property name="text">
       <string>نام کاربری:</string>
@@ -301,7 +260,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
+      <string notr="true">color: rgb(228, 227, 227);</string>
      </property>
      <property name="text">
       <string>پسورد:</string>
@@ -310,63 +269,26 @@ border-style: solid;
     <widget class="QPushButton" name="pushButton_4">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>320</y>
+       <x>50</x>
+       <y>340</y>
        <width>231</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>MS Shell Dlg 2</family>
-       <pointsize>20</pointsize>
+       <family>Lalezar</family>
+       <pointsize>12</pointsize>
        <italic>false</italic>
        <bold>false</bold>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">QPushButton#pushButton_4 {
-	font: 20pt &quot;MS Shell Dlg 2&quot;;
-padding-left: 20px;
-padding-right: 20px;
-border-radius: 5px;
-background: yellow;
-color: blue;
-}
-
-QPushButton#pushButton_4:hover {
-	background-color: rgb(43, 255, 185);
-border-style: solid;
- border-width: 1px;
-	border-color: rgb(245, 179, 1);
-	color: rgb(241, 182, 88);
-}
-</string>
+      <string notr="true">background-color: rgb(132, 169, 172);
+font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="text">
       <string>ذخیره تغییرات</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>550</x>
-       <y>10</y>
-       <width>181</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Lalezar</family>
-       <pointsize>14</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(53, 66, 89);</string>
-     </property>
-     <property name="text">
-      <string/>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="plainTextEdit">
@@ -387,8 +309,7 @@ border-style: solid;
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="plainTextEdit_2">
@@ -409,8 +330,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="plainTextEdit_6">
@@ -431,8 +351,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
      </property>
      <property name="plainText">
       <string/>
@@ -456,8 +375,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(116, 141, 166);
-font: 12pt &quot;Lalezar&quot;;</string>
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
      </property>
     </widget>
     <widget class="QPlainTextEdit" name="plainTextEdit_5">
@@ -478,8 +396,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 12pt &quot;Lalezar&quot;;
-background-color: rgb(116, 141, 166);</string>
+      <string notr="true">font: 12pt &quot;Lalezar&quot;;</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_2">

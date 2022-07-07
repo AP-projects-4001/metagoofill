@@ -6,73 +6,98 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>927</width>
-    <height>563</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 191, 112);</string>
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>80</y>
-     <width>761</width>
-     <height>381</height>
+     <x>190</x>
+     <y>400</y>
+     <width>375</width>
+     <height>51</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="styleSheet">
-         <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(0, 117, 3);</string>
-        </property>
-        <property name="text">
-         <string>شارژ</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_refuse">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(221, 0, 0);
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
-        </property>
-        <property name="text">
-         <string>برگشت</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="0">
-     <widget class="QSpinBox" name="spinBox"/>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLabel" name="label">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 191, 112);
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>مبلغ شارژ</string>
+       <string>شارژ</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="label_2">
+    <item>
+     <widget class="QPushButton" name="pushButton_refuse">
       <property name="styleSheet">
-       <string notr="true">font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
       </property>
       <property name="text">
-       <string>حداقل مبلغ شارژ هزار تومان است</string>
+       <string>برگشت</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>254</x>
+     <y>300</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 12pt &quot;Lalezar&quot;;
+color: rgb(228, 227, 227);
+</string>
+   </property>
+   <property name="text">
+    <string>حداقل مبلغ شارژ هزار تومان است</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>250</y>
+     <width>341</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QSpinBox" name="spinBox">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 11pt &quot;Lalezar&quot;;</string>
+      </property>
+      <property name="text">
+       <string>مبلغ شارژ</string>
       </property>
      </widget>
     </item>

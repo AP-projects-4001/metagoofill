@@ -6,57 +6,81 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1366</width>
-    <height>980</height>
+    <width>800</width>
+    <height>616</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox">
-     <property name="styleSheet">
-      <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(255, 240, 224);
-
-</string>
-     </property>
-     <property name="title">
-      <string>چه اکانتی ساخته بشه؟</string>
-     </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(85, 170, 255);</string>
-        </property>
-        <property name="text">
-         <string>فروشنده</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="styleSheet">
-         <string notr="true">color: rgb(85, 170, 255);</string>
-        </property>
-        <property name="text">
-         <string>خریدار</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_3">
-        <property name="text">
-         <string>بازگشت به صفحه قبل</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-   </item>
-  </layout>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(132, 169, 172);</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>761</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(228, 227, 227);
+font: 20pt &quot;Lalezar&quot;;</string>
+   </property>
+   <property name="title">
+    <string>شما؟</string>
+   </property>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>190</y>
+      <width>271</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>فروشنده</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>خریدار</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;</string>
+       </property>
+       <property name="text">
+        <string>بازگشت</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
  </widget>
  <resources/>
  <connections/>
