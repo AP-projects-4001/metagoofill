@@ -343,7 +343,7 @@ color: rgb(85, 255, 0);</string>
     <property name="geometry">
      <rect>
       <x>80</x>
-      <y>150</y>
+      <y>100</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -358,8 +358,8 @@ color: rgb(85, 255, 0);</string>
    <widget class="QLineEdit" name="lineEdit_available">
     <property name="geometry">
      <rect>
-      <x>70</x>
-      <y>330</y>
+      <x>60</x>
+      <y>380</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -524,6 +524,26 @@ color: rgb(85, 255, 0);</string>
     </property>
     <property name="text">
      <string>&gt;&gt;</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>150</y>
+      <width>121</width>
+      <height>35</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
     </property>
    </widget>
   </widget>

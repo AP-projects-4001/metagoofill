@@ -282,8 +282,8 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    <widget class="QLineEdit" name="lineEdit_price">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>150</y>
+      <x>80</x>
+      <y>80</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -299,7 +299,7 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>330</y>
+      <y>390</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -415,6 +415,26 @@ color: red;
     </property>
     <property name="text">
      <string>مشخصات را کامل کنید</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox">
+    <property name="geometry">
+     <rect>
+      <x>78</x>
+      <y>150</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_2">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>330</y>
+      <width>111</width>
+      <height>35</height>
+     </rect>
     </property>
    </widget>
   </widget>

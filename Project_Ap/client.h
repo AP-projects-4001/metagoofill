@@ -29,6 +29,26 @@ public:
     char* get_Address();
     char* get_Password();
     char* get_city();
+    char get_access();
+    int get_ID();
+    int get_ptr_start_mybuys();
+    int get_ptr_end_mybuys();
+    int get_number_mybuys();
+    int get_Wallet_balance();
+    void set_Name(char* _name);
+    void set_User(char* _user);
+    void set_phoneNumber(char* _phonenumber);
+    void set_Address(char* _address);
+    void set_Password(char* _password);
+    void set_city(char* _city);
+    void set_access(char _access);
+    void set_ID(int _id);
+    void set_ptr_start_mybuys(int _ptr_start);
+    void set_ptr_end_mybuys(int _ptr_end);
+    void set_number_mybuys(int _number_mybuys);
+    void set_Wallet_balance(int _wallet_balance);
+
+
 
 
 

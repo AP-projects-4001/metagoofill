@@ -14,14 +14,15 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 239, 157);</string>
+   <string notr="true">background-color: rgb(255, 239, 157);
+background-color: rgb(32, 64, 81);</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
      <x>730</x>
      <y>520</y>
-     <width>306</width>
+     <width>336</width>
      <height>81</height>
     </rect>
    </property>
@@ -63,7 +64,7 @@ font: 20pt &quot;MS Shell Dlg 2&quot;;</string>
      <x>180</x>
      <y>520</y>
      <width>481</width>
-     <height>89</height>
+     <height>106</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
