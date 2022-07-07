@@ -3,6 +3,7 @@
 #include "signup.h"
 #include "mainlogin.h"
 #include <fstream>
+#include "admin.h"
 
 using namespace std;
 LoginPage::LoginPage(QWidget *parent)
@@ -16,6 +17,18 @@ LoginPage::LoginPage(QWidget *parent)
 
     fstream database_customers("customers.txt",  ios::app | ios::binary);
     database_customers.close();
+
+    fstream database_admin("admin.txt",  ios::in | ios::binary);
+    if(!database_admin){
+        database_admin.close();
+        database_admin.open("admin.txt",  ios::out | ios::binary);
+        Admin admin;
+        admin.string_to_char_array("Admin",16,admin.User);
+        admin.string_to_char_array("Admin",31,admin.Password);
+        admin.Wallet_balance=0;
+        database_admin.write((char*)&admin, sizeof(Admin));
+    }
+    database_admin.close();
 
     fstream database_product("database_products.txt",  ios::app | ios::binary);
     database_product.close();
@@ -52,9 +65,9 @@ LoginPage::LoginPage(QWidget *parent)
         numbers.close();
         numbers.open("numbers.txt",  ios::out | ios::binary);
         int a=0;
-        for(int i=0; i<6; i++)
+        for(int i=0; i<4; i++)
         {
-            numbers.write((char*)&a, 4);
+            numbers.write((char*)&a, sizeof(int));
         }
     }
     numbers.close();

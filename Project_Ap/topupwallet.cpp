@@ -37,6 +37,4 @@ void TopUpWallet::Charging_success(bool m)
 void TopUpWallet::on_pushButton_refuse_clicked()
 {
     this->close();
-    clientProf *reprof = new clientProf(clie);
-    reprof->show();
 }

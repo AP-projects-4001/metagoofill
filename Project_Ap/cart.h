@@ -9,6 +9,7 @@
 #include "product.h"
 #include "client.h"
 #include "customer.h"
+#include "admin.h"
 #include "ui_cart.h"
 
 namespace Ui {
@@ -35,9 +36,11 @@ public:
 
     void preview_to_cart(int);
 
-    void repet_to_search(int);
+    void repet_to_cart(int);
 
     void delete_product(int);
+
+    bool get_number_orders();
 
     void save_number_orders();
 
@@ -55,7 +58,7 @@ public:
 
     void cansel_reserve_products();
 
-    void transaction();
+    void transaction_admin();
 
 private slots:
     void on_pushButton_next_clicked();
@@ -74,6 +77,24 @@ private slots:
 
     void on_pushButton_filter_4_clicked();
 
+    void on_pushButton_16_clicked();
+
+    void on_pushButton_14_clicked();
+
+    void on_pushButton_15_clicked();
+
+    void on_pushButton_13_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_17_clicked();
+
+    void on_pushButton_18_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_pushButton_20_clicked();
+
 private:
     Ui::cart *ui;
     customer cust;
@@ -90,7 +111,8 @@ private:
     int count;
     int len_cart;
     bool flag_cart;
-    int sum;
+    int sum_sell;
+    int sum_buy;
 };
 
 #endif // CART_H

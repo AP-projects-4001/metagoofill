@@ -52,7 +52,7 @@ void cart::add_to_factor()
         factor.number=number_orders;
 
         database_product.seekg(ptr_product);
-        database_product.read((char*)&product, sizeof(int));
+        database_product.read((char*)&product, sizeof(Product));
         factor.price=prices[i];
         factor.ID_customer=product.ID_customer;
         factor.ID_client=clie.ID;
@@ -128,7 +128,7 @@ void cart::add_to_sells()
 
     for(int i=0;i<len_cart;i++){
         ptr_factor=(number_factors-len_cart+i)*sizeof(Factor);
-        database_sells.seekg((number_factors-len_cart+i)*sizeof(int)*2);
+        database_sells.seekp((number_factors-len_cart+i)*sizeof(int)*2);
         database_sells.write((char*)&ptr_factor,sizeof(int));
 
         database_factor.seekg(ptr_factor);
@@ -137,7 +137,7 @@ void cart::add_to_sells()
         database_customers.seekg((factor.ID_customer-1)*sizeof(customer));
         database_customers.read((char*)&cust,sizeof(customer));
 
-        ptr_next_sell=(number_factors-len_cart)*sizeof(int)*2;
+        ptr_next_sell=(number_factors-len_cart+i)*sizeof(int)*2;
         if(cust.number_mysells!=0){
             database_sells.seekp(cust.ptr_end_mysells+sizeof(int));
             database_sells.write((char*)&ptr_next_sell,sizeof(int));
@@ -147,6 +147,7 @@ void cart::add_to_sells()
         }
         cust.ptr_end_mysells=ptr_next_sell;
         cust.number_mysells++;
+        cust.Wallet_balance+=(factor.number*factor.price);
         database_customers.seekp((factor.ID_customer-1)*sizeof(customer));
         database_customers.write((char*)&cust,sizeof(customer));
     }
@@ -162,10 +163,10 @@ void cart::start_cart()
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
+    database_cart.close();
     count=0;
     end_part_cart=0;
     flag_cart=0;
-    database_cart.close();
 }
 
 void cart::next_to_cart(int part)
@@ -191,6 +192,9 @@ void cart::next_to_cart(int part)
             flag_status[i]=status_product(products[i],number[i]);
         }
         count+=end_part_cart;
+
+        database_cart.close();
+        database_product.close();
     }
 }
 
@@ -218,10 +222,13 @@ void cart::preview_to_cart(int part)
             flag_status[i]=status_product(products[i],number[i]);
         }
         count+=end_part_cart;
+
+        database_cart.close();
+        database_product.close();
     }
 }
 
-void cart::repet_to_search(int part)
+void cart::repet_to_cart(int part)
 {
     int type;
     int ptr_product;
@@ -245,6 +252,9 @@ void cart::repet_to_search(int part)
         flag_status[i]=status_product(products[i],number[i]);
     }
     count+=end_part_cart;
+
+    database_cart.close();
+    database_product.close();
 }
 
 void cart::delete_product(int andis)
@@ -260,22 +270,68 @@ void cart::delete_product(int andis)
         database_cart.read((char*)&type, sizeof(int));
         database_cart.read((char*)&ptr_product, sizeof(int));
         database_cart.read((char*)&number_orders, sizeof(int));
-        database_cart.seekp(-1*(sizeof(int)*3),ios::cur);
+        database_cart.seekp(-2*(sizeof(int)*3),ios::cur);
         database_cart.write((char*)&type, sizeof(int));
         database_cart.write((char*)&ptr_product, sizeof(int));
         database_cart.write((char*)&number_orders, sizeof(int));
     }
-    end_part_cart--;
+    len_cart--;
+    database_cart.seekp((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.write((char*)&len_cart, sizeof(int));
+
+    database_cart.close();
+
+}
+
+bool cart::get_number_orders()
+{
+    bool m;
+    m=1;
+    if(ui->spinBox_1->value()!=number[0]){
+        number[0]=ui->spinBox_1->value();
+        m=0;
+    }
+    if(ui->spinBox_2->value()!=number[1]){
+        number[1]=ui->spinBox_2->value();
+        m=0;
+    }
+    if(ui->spinBox_3->value()!=number[2]){
+        number[2]=ui->spinBox_3->value();
+        m=0;
+    }
+    if(ui->spinBox_4->value()!=number[3]){
+        number[3]=ui->spinBox_4->value();
+        m=0;
+    }
+    if(ui->spinBox_5->value()!=number[4]){
+        number[4]=ui->spinBox_5->value();
+        m=0;
+    }
+    if(ui->spinBox_6->value()!=number[5]){
+        number[5]=ui->spinBox_6->value();
+        m=0;
+    }
+    if(ui->spinBox_7->value()!=number[6]){
+        number[6]=ui->spinBox_7->value();
+        m=0;
+    }
+    if(ui->spinBox_8->value()!=number[7]){
+        number[7]=ui->spinBox_8->value();
+        m=0;
+    }
+    if(ui->spinBox_9->value()!=number[8]){
+        number[8]=ui->spinBox_9->value();
+        m=0;
+    }
+    return m;
 }
 
 void cart::save_number_orders()
 {
     int number_orders;
-
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
 
     count-=end_part_cart;
-
     database_cart.seekp((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
     for(int i=0;i<end_part_cart;i++){
         number_orders=number[i];
@@ -283,6 +339,8 @@ void cart::save_number_orders()
         database_cart.write((char*)&number_orders, sizeof(int));
     }
     count+=end_part_cart;
+
+    database_cart.close();
 }
 
 int cart::status_product(Product &product, int number)
@@ -310,7 +368,7 @@ void cart::show_cart()
         ui->label_type_29->show();
         ui->pushButton_filter->hide();
         ui->pushButton_filter_3->hide();
-        ui->label_type_29->setText(QString::number(sum));
+        ui->label_type_29->setText(QString::number(sum_buy));
     }
     string str;
     if(end_part_cart >= 1) {
@@ -576,7 +634,7 @@ void cart::show_status(QLabel* label_status, int flag_status)
 
 bool cart::status_cart()
 {
-    sum=0;
+    sum_sell=0;
     int type;
     int ptr_product;
     int number_orders;
@@ -593,9 +651,15 @@ bool cart::status_cart()
         database_product.seekg(ptr_product);
         database_product.read((char*)&product, sizeof(Product));
         prices[i]=product.price;
-        sum+=(number_orders*prices[i]);
-        if(status_product(product,number_orders)!=3){return 0;}
+        sum_sell+=(number_orders*prices[i]);
+        if(status_product(product,number_orders)!=3){
+            database_cart.close();
+            database_product.close();
+            return 0;
+        }
     }
+    database_cart.close();
+    database_product.close();
     return 1;
 }
 
@@ -605,6 +669,7 @@ void cart::delete_cart()
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekp((clie.ID-1)*(3*20+1)*sizeof(int));
     database_cart.write((char*)&len_cart, sizeof(int));
+    database_cart.close();
     count=0;
     end_part_cart=0;
 }
@@ -666,32 +731,49 @@ void cart::cansel_reserve_products()
     database_product.close();
 }
 
-void cart::transaction()
+void cart::transaction_admin()
 {
-
+    Admin admin;
+    fstream database_admin("admin.txt",ios::in | ios::out | ios::binary);
+    admin.Wallet_balance+=(sum_buy-sum_sell);
+    database_admin.seekp(0);
+    database_admin.write((char*)&admin, sizeof(Admin));
+    database_admin.close();
 }
 
 void cart::on_pushButton_next_clicked()
 {
+    if(get_number_orders()==0){
+        save_number_orders();
+    }
     next_to_cart(9);
     show_cart();
 }
 
 void cart::on_pushButton_prev_clicked()
 {
+    if(get_number_orders()==0){
+        save_number_orders();
+    }
     preview_to_cart(9);
     show_cart();
 }
 
 void cart::on_pushButton_filter_3_clicked()
 {
-    if(len_cart>0 && status_cart()==1){
+    if(get_number_orders()==0){
+        save_number_orders();
+        repet_to_cart(9);
+        show_cart();
+    }
+    if(len_cart>0 && status_cart()==1){ 
+        sum_buy=sum_sell+sum_sell*(0.01);
         reserve_products();
         flag_cart=1;
         show_cart();
     }
-    else{
-        QMessageBox::warning(this, "اخطار", "کالا با این تعداد موجود نمی باشد");
+    else if(status_cart()==0){
+        QMessageBox::warning(this, "اخطار", "تمام کالا های سبد خرید شما موجود نمی باشند");
     }
 }
 
@@ -703,11 +785,10 @@ void cart::on_pushButton_filter_clicked()
 
 void cart::on_pushButton_filter_2_clicked()
 {
-    choosepay *payMethod = new choosepay(sum,clie,this);
+    choosepay *payMethod = new choosepay(sum_buy,clie,this);
     payMethod->show();
-
     connect(payMethod, SIGNAL(send_method(bool)), this, SLOT(rec_method(bool)));//پرداخت مستقیم یا کیف پول شارژ
-    connect(payMethod, SIGNAL(send_status_payment_from_wallet()), this, SLOT(status_payment()));//پرداخت از کیف پول
+    connect(payMethod, SIGNAL(send_status_payment_from_wallet(bool)), this, SLOT(status_payment(bool)));//پرداخت از کیف پول
 }
 
 void cart::rec_method(bool method)
@@ -715,7 +796,7 @@ void cart::rec_method(bool method)
     if(method == 1)
     {
         //Show Payment GateWay Page
-        PaymentGateWay *directpay = new PaymentGateWay(sum, this);
+        PaymentGateWay *directpay = new PaymentGateWay(sum_buy, this);
         this->hide();
         connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage(bool)), this, SLOT(status_payment(bool)));
         directpay->show();
@@ -733,7 +814,7 @@ void cart::status_payment(bool m)
     this->show();
     if( m==1)//موفقیت
     {
-        transaction();
+        transaction_admin();
         add_to_factor();
         add_to_buys();
         add_to_sells();
@@ -741,6 +822,7 @@ void cart::status_payment(bool m)
         delete_cart();
         flag_cart=0;
         show_cart();
+        //کیو مسیج خرید با موفقیت انجام شد
     }
 }
 
@@ -748,5 +830,77 @@ void cart::on_pushButton_filter_4_clicked()
 {
     cansel_reserve_products();
     flag_cart=0;
+    show_cart();
+}
+
+void cart::on_pushButton_16_clicked()
+{
+    int andis = count - (end_part_cart-0);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_14_clicked()
+{
+    int andis = count - (end_part_cart-1);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_15_clicked()
+{
+    int andis = count - (end_part_cart-2);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_13_clicked()
+{
+    int andis = count - (end_part_cart-3);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_12_clicked()
+{
+    int andis = count - (end_part_cart-4);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_17_clicked()
+{
+    int andis = count - (end_part_cart-5);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_18_clicked()
+{
+    int andis = count - (end_part_cart-6);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_19_clicked()
+{
+    int andis = count - (end_part_cart-7);
+    delete_product(andis);
+    repet_to_cart(9);
+    show_cart();
+}
+
+void cart::on_pushButton_20_clicked()
+{
+    int andis = count - (end_part_cart-8);
+    delete_product(andis);
+    repet_to_cart(9);
     show_cart();
 }

@@ -72,7 +72,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          NewCustomer.number_mysells = 0;
          NewCustomer.ptr_start_myproducts = 0;
          NewCustomer.number_myproducts = 0;
-
+         NewCustomer.Wallet_balance=0;
 
          if(ui->radioButton_3->isChecked())
          {

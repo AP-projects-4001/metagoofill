@@ -17,7 +17,7 @@ public:
 
 signals:
     void send_method(bool);
-    void send_status_payment_from_wallet();
+    void send_status_payment_from_wallet(bool);
 
 private slots:
     void on_pushButton_difectpay_clicked();

@@ -59,6 +59,7 @@ void SignUpClient::on_pushButton_clicked()
     NewClient.ptr_start_mybuys = 0;
     NewClient.ptr_end_mybuys = 0;
     NewClient.number_mybuys = 0;
+    NewClient.Wallet_balance=0;
 
     int tmp_id;
     fstream spec_info("numbers.txt", ios::in | ios::out | ios::binary);

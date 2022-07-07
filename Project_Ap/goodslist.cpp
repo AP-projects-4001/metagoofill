@@ -133,7 +133,6 @@ void goodsList::search_by_filter_in_products()
     int number_product_type;
     int ptr_file;
 
-
     fstream  database_product_type("database_product_type.txt",ios::in | ios::out | ios::binary);
     database_product_type.seekg(type*3*sizeof(int));
     database_product_type.read((char*)&ptr_start_file_product_type,sizeof(int));
@@ -158,6 +157,10 @@ void goodsList::search_by_filter_in_products()
     }
     count=0;
     end_part_products = 0;
+
+    database_product.close();
+    database_search.close();
+    database_product_type.close();
 }
 
 void goodsList::next_to_search(int part)
@@ -176,6 +179,9 @@ void goodsList::next_to_search(int part)
             database_product.read((char*)&products[i], sizeof(Product));
         }
         count+=end_part_products;
+
+        database_product.close();
+        database_search.close();
     }
 }
 
@@ -198,6 +204,9 @@ void goodsList::preview_to_search(int part)
             database_product.read((char*)&products[i], sizeof(Product));
         }
         count+=end_part_products;
+
+        database_product.close();
+        database_search.close();
     }
 }
 
@@ -499,7 +508,6 @@ bool goodsList::add_to_cart(int andis,int number_orders)
     fstream database_product(data_product,ios::in | ios::out | ios::binary);
     fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
-
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
@@ -520,6 +528,10 @@ bool goodsList::add_to_cart(int andis,int number_orders)
     else{
         return 0;
     }
+
+    database_cart.close();
+    database_search.close();
+    database_product.close();
 }
 
 void goodsList::on_pushButton_16_clicked()
