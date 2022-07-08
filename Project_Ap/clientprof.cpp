@@ -114,6 +114,5 @@ void clientProf::on_pushButton_5_clicked()
     //شارژ کیف
     TopUpWallet *walletact = new TopUpWallet(clie, this);
     walletact->show();
-    this->hide();
 }
 
