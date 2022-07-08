@@ -12,7 +12,7 @@ class LoginPage : public QMainWindow
     Q_OBJECT
 
 public:
-    LoginPage(QWidget *parent = nullptr);
+    LoginPage(bool x,QWidget *parent = nullptr);
     ~LoginPage();
 
 private slots:
@@ -25,5 +25,6 @@ private slots:
 private:
     Ui::LoginPage *ui;
     QTimer *timer;
+    bool flag;
 };
 #endif // LOGINPAGE_H

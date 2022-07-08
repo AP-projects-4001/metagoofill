@@ -103,7 +103,7 @@ void clientProf::on_pushButton_6_clicked()//?
 void clientProf::on_pushButton_4_clicked()
 {
     this->close();
-    LoginPage *relogin = new LoginPage();
+    LoginPage *relogin = new LoginPage(1);
     relogin->show();
 }
 

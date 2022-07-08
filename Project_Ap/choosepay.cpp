@@ -1,6 +1,8 @@
 #include "choosepay.h"
 #include "ui_choosepay.h"
 #include <QMessageBox>
+#include <fstream>
+using namespace std;
 choosepay::choosepay(int _sum,client _clie,QWidget *parent) :
     QDialog(parent),
     ui(new Ui::choosepay)
@@ -8,6 +10,7 @@ choosepay::choosepay(int _sum,client _clie,QWidget *parent) :
     ui->setupUi(this);
     this->sum=_sum;
     this->clie=_clie;
+
 }
 
 choosepay::~choosepay()
@@ -25,8 +28,14 @@ void choosepay::on_pushButton_difectpay_clicked()
 
 void choosepay::on_pushButton_wallet_clicked()
 {
+    fstream database_clients("clients.txt", ios::in | ios::out | ios::binary);
+    database_clients.seekp((clie.get_ID()-1)*sizeof(client));
+    database_clients.read((char*)&clie,sizeof(client));
     bool check = clie.get_Wallet_balance()>=sum;
     if(check==1){
+        clie.set_Wallet_balance(clie.get_Wallet_balance() - sum);
+        database_clients.seekp((clie.get_ID()-1)*sizeof(client));
+        database_clients.write((char*)&clie,sizeof(client));
         emit send_status_payment_from_wallet(1);
         this->close();
     }
@@ -34,6 +43,7 @@ void choosepay::on_pushButton_wallet_clicked()
     {
         QMessageBox::about(this,"توجه","کیف پول خودرا شارژ کنید");
     }
+    database_clients.close();
 }
 
 

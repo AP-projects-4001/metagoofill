@@ -6,11 +6,12 @@
 #include <QDateTime>
 #include "admin.h"
 using namespace std;
-LoginPage::LoginPage(QWidget *parent)
+LoginPage::LoginPage(bool x,QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginPage)
 {
     ui->setupUi(this);
+    flag = x;
     timer = new QTimer(this);
     connect(timer,SIGNAL(timeout()),this,SLOT(myfunction()));
     timer->start(1000);
@@ -92,14 +93,16 @@ void LoginPage::on_pushButton_9_clicked()
 {
     SignUp *p = new SignUp(this);
     p->show();
-    this->hide();
+    if(flag==1)
+        this->hide();
 }
 
 void LoginPage::on_pushButton_8_clicked()
 {
     MainLogin *p = new MainLogin(this);
     p->show();
-    this->hide();
+    if(flag==1)
+        this->hide();
 }
 void LoginPage::myfunction()
 {

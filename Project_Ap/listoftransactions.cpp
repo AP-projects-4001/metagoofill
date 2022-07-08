@@ -71,7 +71,7 @@ void listoftransactions::search_in_factors(string &fac)
 
 void listoftransactions::show_factors(string &fac)
 {
-    QString content = "shop\tcustomer\tclient\tproduct\tprice\tnumber\n";
+    QString content = "\tshop\tcus       client\tproduct\tprice\tnumber\n";
     content+=QString::fromStdString(fac);
     QListWidgetItem *m_textEdit = new QListWidgetItem(content);
     ui->listWidget->addItem(m_textEdit);
