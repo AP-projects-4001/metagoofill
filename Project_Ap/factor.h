@@ -19,7 +19,7 @@ public:
     void set_ID_customer(int _ID_customer);
     void set_ID_client(int _ID_client);
 
-public:
+private:
     int ptr_product;
     int number;
     int price;

@@ -14,7 +14,6 @@ goodDetails::goodDetails(Product _product, QWidget *parent) :
     ui->label_name->setText(QString::fromStdString(tmp));
 
     Prdct.char_array_to_string(tmp, 16, Prdct.get_type());
-    ui->label_group->setText(QString::fromStdString(tmp));
 
     Prdct.char_array_to_string(tmp, 16, Prdct.get_color());
     ui->label_model->setText(QString::fromStdString(tmp));

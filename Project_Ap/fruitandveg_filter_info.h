@@ -12,7 +12,7 @@ public:
     string price_from;
     string price_to;
     string customer_name;
-    string key_words;
+    string color;
 };
 
 #endif // FRUITANDVEG_FILTER_INFO_H

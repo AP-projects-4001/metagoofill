@@ -164,7 +164,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
 color: rgb(228, 227, 227);</string>
         </property>
         <property name="text">
-         <string>کلمات کلیدی:</string>
+         <string>رنگ:</string>
         </property>
        </widget>
       </item>
@@ -172,7 +172,7 @@ color: rgb(228, 227, 227);</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>290</x>

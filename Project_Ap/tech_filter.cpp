@@ -20,7 +20,7 @@ void tech_filter::on_pushButton_2_clicked()
     tech_info.price_to = ui->lineEdit_5->text().toStdString();
     tech_info.customer_name = ui->lineEdit_3->text().toStdString();
     tech_info.grouping = ui->comboBox->currentText().toStdString();
-    tech_info.key_words = ui->lineEdit_6->text().toStdString();
+    tech_info.color = ui->lineEdit_6->text().toStdString();
 
     emit send_tech_info(tech_info);
     this->close();

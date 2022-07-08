@@ -21,6 +21,9 @@ public:
     void search_in_sells(string&);
 
     void show_sells(string&);
+private slots:
+    void on_pushButton_2_clicked();
+
 private:
     Ui::SalesRecords *ui;
     customer cust;

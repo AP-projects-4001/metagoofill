@@ -90,6 +90,12 @@ private slots:
 
     void on_pushButton_20_clicked();
 
+    void on_pushButton_filter_4_clicked();
+
+    void on_pushButton_filter_5_clicked();
+
+    void on_pushButton_filter_6_clicked();
+
 private:
     Ui::goodsList *ui;
     client clie;

@@ -55,17 +55,12 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <x>300</x>
      <y>450</y>
      <width>381</width>
-     <height>51</height>
+     <height>73</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
-      </property>
-     </widget>
+     <widget class="QSpinBox" name="spinBox"/>
     </item>
     <item>
      <widget class="QLabel" name="label">

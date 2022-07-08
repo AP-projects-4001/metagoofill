@@ -15,7 +15,7 @@ public:
     string age;
     string sex;
     string grouping;
-    string key_words;
+    string color;
 };
 
 #endif // CLOTHES_FILTER_INFO_H

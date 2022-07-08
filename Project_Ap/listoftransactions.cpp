@@ -44,19 +44,19 @@ void listoftransactions::search_in_factors(string &fac)
     for(int i=0;i<number_factors;i++)
     {
         factors.read((char*)&factor, sizeof(Factor));
-        _price = to_string(factor.price);
-        _number = to_string(factor.number);
+        _price = to_string(factor.get_price());
+        _number = to_string(factor.get_number());
 
-        clients.seekg((factor.ID_client-1)*sizeof(client));
+        clients.seekg((factor.get_ID_client()-1)*sizeof(client));
         clients.read((char*)&clie, sizeof(client));
         clie.char_array_to_string(client_user, 16, clie.get_User());
 
-        customers.seekg((factor.ID_customer-1)*sizeof(customer));
+        customers.seekg((factor.get_ID_customer()-1)*sizeof(customer));
         customers.read((char*)&cust, sizeof(customer));
         cust.char_array_to_string(shop_name, 16, cust.get_Name());
         cust.char_array_to_string(customer_user, 16, cust.get_User());
 
-        products.seekg(factor.ptr_product);
+        products.seekg(factor.get_ptr_product());
         products.read((char*)&product, sizeof(Product));
         product.char_array_to_string(product_name,16,product.get_type());
 

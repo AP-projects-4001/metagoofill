@@ -5,6 +5,7 @@
 #include "purchaserecords.h"
 #include "loginpage.h"
 #include "topupwallet.h"
+#include "cart.h"
 
 using namespace std;
 clientProf::clientProf(client cli_info, QWidget *parent) :
@@ -50,45 +51,26 @@ clientProf::~clientProf()
 void clientProf::on_pushButton_8_clicked()
 {
     //تغییر اطلاعات و ذخیره در فایل
-    client cli_changes;
-    client tmp;
-    cli_changes.string_to_char_array(cli_changes.get_Name(), 16, ui->plainTextEdit_13->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_phoneNumber(), 12, ui->plainTextEdit_5->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_city(), 11, ui->plainTextEdit_15->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_Address(), 31, ui->plainTextEdit_14->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_User(), 16, ui->plainTextEdit_16->toPlainText().toStdString());
-    strcpy(cli_changes.get_Password(), clie.get_Password());
 
-    ifstream oldFile("clients.txt", ios::in | ios::binary);
-    ofstream newChanges("tmpFile.txt", ios::app | ios::binary);
-    int flag;
+    clie.string_to_char_array(clie.get_Name(), 16, ui->plainTextEdit_13->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_phoneNumber(), 12, ui->plainTextEdit_5->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_city(), 11, ui->plainTextEdit_15->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_Address(), 31, ui->plainTextEdit_14->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_User(), 16, ui->plainTextEdit_16->toPlainText().toStdString());
 
-    while(!oldFile.eof())
-        {
-            oldFile.read((char*)&tmp, 138);
-            if(oldFile)
-            {
-                if(strcmp(clie.get_User(), tmp.get_User()))
-                {
-                    newChanges.write((char*)&tmp, sizeof(client));
-                }
-            }
-        }
-    newChanges.write((char *)&cli_changes, sizeof(client));
+    fstream database_clients("clients.txt", ios::in | ios::out | ios::binary);
+    database_clients.seekp((clie.get_ID()-1)*sizeof(client));
+    database_clients.write((char*)&clie,sizeof(client));
+    database_clients.close();
 
-        newChanges.close();
-        oldFile.close();
-
-        remove("clients.txt");
-        rename("tmpFile.txt", "clients.txt");
 }
 
 
 void clientProf::on_pushButton_7_clicked()
 {
     //رفتن به فروشگاه
-    this->hide();
-    goodsList *goodslist= new goodsList(clie,this);    
+    this->close();
+    goodsList *goodslist= new goodsList(clie);
 }
 
 
@@ -116,3 +98,10 @@ void clientProf::on_pushButton_5_clicked()
     walletact->show();
 }
 
+
+void clientProf::on_pushButton_9_clicked()
+{
+    cart *_cart = new cart(clie);
+    this->close();
+    _cart->show();
+}

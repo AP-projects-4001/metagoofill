@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include "customerprof.h"
+#include "salesrecords.h"
 #define data_product "database_products.txt"
 
 using namespace std;
@@ -382,15 +383,4 @@ void storecustomer::on_pushButton_2_clicked()
     customerProf *d=new customerProf(cust);
     d->show();
     this->close();
-}
-
-void storecustomer::on_pushButton_clicked()
-{
-    //صفحه سوایق فروش
-
-}
-
-void storecustomer::on_pushButton_3_clicked()
-{
-    //طرح های تبلیغاتی
 }

@@ -53,7 +53,7 @@ void goodsList::on_pushButton_filter_clicked()
        tech_filter *filter_0 = new tech_filter(this);//add product class array to constructor.
        filter_0->show();
        //this->hide();
-       connect(filter_0, SIGNAL(send_tech_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
+       connect(filter_0, SIGNAL(send_tech_info(others_filter_info)), this, SLOT(rec_other_info(others_filter_info)));
    }
 
    else if(type == 1)
@@ -61,7 +61,7 @@ void goodsList::on_pushButton_filter_clicked()
         homeApps_filter *filter_1 = new homeApps_filter(this);
         filter_1->show();
         //this->hide();
-        connect(filter_1, SIGNAL(send_homeapp_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
+        connect(filter_1, SIGNAL(send_homeapp_info(others_filter_info)), this, SLOT(rec_other_info(others_filter_info)));
    }
 
    else if(type == 2)
@@ -77,7 +77,7 @@ void goodsList::on_pushButton_filter_clicked()
        fruitandveg_filter *filter_3 = new fruitandveg_filter(this);
        filter_3->show();
        //this->hide();
-       connect(filter_3, SIGNAL(send_fruit_info(fruits_filter_info)), this, SLOT(rec_fruits_info(fruits_filter_info)));
+       connect(filter_3, SIGNAL(send_fruits_info(fruitandveg_filter_info)), this, SLOT(rec_fruit_info(fruitandveg_filter_info)));
    }
 
    else if(type == 4)
@@ -85,7 +85,7 @@ void goodsList::on_pushButton_filter_clicked()
        super_filter *filter_4 = new super_filter(this);
        filter_4->show();
        //this->hide();
-       connect(filter_4, SIGNAL(send_super_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
+       connect(filter_4, SIGNAL(send_super_info(others_filter_info)), this, SLOT(rec_other_info(others_filter_info)));
 
    }
 
@@ -94,7 +94,7 @@ void goodsList::on_pushButton_filter_clicked()
        fruitandveg_filter *filter_5 = new fruitandveg_filter(this);
        filter_5->show();
        //this->hide();
-       connect(filter_5, SIGNAL(send_fruit_info(fruits_filter_info)), this, SLOT(rec_fruits_info(fruits_filter_info)));
+       connect(filter_5, SIGNAL(send_fruits_info(fruitandveg_filter_info)), this, SLOT(rec_fruit_info(fruitandveg_filter_info)));
 
    }
 
@@ -269,6 +269,9 @@ bool goodsList::filter()
             product.char_array_to_string(str,16,product.get_type());
             if(other_info_2.name_prod!="" && other_info_2.name_prod!=str){return 0;}
 
+            product.char_array_to_string(str,16,product.get_color());
+            if(other_info_2.color!="" && (other_info_2.color!=str || product.get_flag_color()==0)){return 0;}
+
             database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
             database_customers.read((char*)&cust,sizeof(customer));
             cust.char_array_to_string(str,16,cust.get_Name());
@@ -286,6 +289,9 @@ bool goodsList::filter()
             product.char_array_to_string(str,16,product.get_type());
             if(fruit_info_2.name_prod!="" && fruit_info_2.name_prod!=str){return 0;}
 
+            product.char_array_to_string(str,16,product.get_color());
+            if(fruit_info_2.color!="" && (fruit_info_2.color!=str || product.get_flag_color()==0 )){return 0;}
+
             database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
             database_customers.read((char*)&cust,sizeof(customer));
             cust.char_array_to_string(str,16,cust.get_Name());
@@ -302,6 +308,9 @@ bool goodsList::filter()
             }
             product.char_array_to_string(str,16,product.get_type());
             if(clothes_info_2.name_prod!="" && clothes_info_2.name_prod!=str){return 0;}
+
+            product.char_array_to_string(str,16,product.get_color());
+            if(clothes_info_2.color!="" && (clothes_info_2.color!=str || product.get_flag_color()==0)){return 0;}
 
             database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
             database_customers.read((char*)&cust,sizeof(customer));
@@ -566,6 +575,7 @@ void goodsList::on_pushButton_filter_3_clicked()//
 //    this->hide();
 //    groupingGoods *groups = new groupingGoods();
 //    groups->show();
+    delete_search();
     this->close();
     clientProf *reprof = new clientProf(clie);
     reprof->show();
@@ -575,8 +585,9 @@ void goodsList::on_pushButton_filter_3_clicked()//
 void goodsList::on_pushButton_filter_2_clicked()
 {
     //go to cart(sabad kharid)
+    delete_search();
     this->close();
-    cart *_cart = new cart(clie,this);
+    cart *_cart = new cart(clie);
     _cart->show();
 }
 
@@ -702,4 +713,32 @@ void goodsList::on_pushButton_20_clicked()
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
         QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
+}
+
+void goodsList::on_pushButton_filter_4_clicked()
+{
+    delete_search();
+    groupingGoods *goodsGroup = new groupingGoods(clie, this);
+    connect(goodsGroup, SIGNAL(G_type(int)), this, SLOT(recG_type(int)));
+    goodsGroup->show();
+    this->hide();
+}
+
+void goodsList::on_pushButton_filter_5_clicked()
+{
+    if(flag_filter==1){
+        delete_search();
+        flag_filter=0;
+        search_by_filter_in_products();
+        next_to_search(9);
+        show_list_products();
+    }
+}
+
+void goodsList::on_pushButton_filter_6_clicked()
+{
+    delete_search();
+    search_by_filter_in_products();
+    next_to_search(9);
+    show_list_products();
 }

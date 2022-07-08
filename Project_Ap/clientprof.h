@@ -30,6 +30,8 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_pushButton_9_clicked();
+
 private:
     Ui::clientProf *ui;
     client clie;

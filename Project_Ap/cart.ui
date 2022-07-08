@@ -1146,9 +1146,9 @@ border-radius: 12px;</string>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>10</x>
+     <x>30</x>
      <y>540</y>
-     <width>1002</width>
+     <width>831</width>
      <height>51</height>
     </rect>
    </property>
@@ -1176,19 +1176,6 @@ font: 12pt &quot;Lalezar&quot;;
       </property>
       <property name="text">
        <string>صفحه بعدی</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_prev_2">
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(32, 64, 81);
-color: rgb(228, 227, 227);
-font: 12pt &quot;Lalezar&quot;;
-</string>
-      </property>
-      <property name="text">
-       <string>فروشگاه</string>
       </property>
      </widget>
     </item>
@@ -1245,7 +1232,7 @@ font: 12pt &quot;Lalezar&quot;;
      </widget>
     </item>
     <item>
-     <spacer name="horizontalSpacer">
+     <spacer name="horizontalSpacer_20">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -1280,6 +1267,45 @@ font: 12pt &quot;Lalezar&quot;;
       </property>
       <property name="text">
        <string>جمع فاکتور پرداخت:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_prev_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>فروشگاه</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_prev_3">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>پروفایل</string>
       </property>
      </widget>
     </item>

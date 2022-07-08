@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>840</width>
+    <width>880</width>
     <height>630</height>
    </rect>
   </property>
@@ -17,20 +17,7 @@
    <string notr="true">background-color: rgb(132, 169, 172);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="1" column="3">
-    <widget class="QPushButton" name="pushButton_filter_2">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
-color: rgb(228, 227, 227);
-font: 12pt &quot;Lalezar&quot;;
-</string>
-     </property>
-     <property name="text">
-      <string>سبد خرید</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="6">
+   <item row="1" column="9">
     <spacer name="horizontalSpacer">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -43,8 +30,8 @@ font: 12pt &quot;Lalezar&quot;;
      </property>
     </spacer>
    </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_next">
+   <item row="1" column="4">
+    <widget class="QPushButton" name="pushButton_filter_5">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
@@ -52,11 +39,37 @@ font: 12pt &quot;Lalezar&quot;;
 </string>
      </property>
      <property name="text">
-      <string>صفحه بعدی</string>
+      <string>حذف فیلتر</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="0" colspan="7">
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton_prev">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>صفحه قبلی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="7">
+    <widget class="QPushButton" name="pushButton_filter_3">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>پروفایل</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="10">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
@@ -1056,8 +1069,8 @@ border-radius: 12px;</string>
      </widget>
     </widget>
    </item>
-   <item row="1" column="4">
-    <widget class="QPushButton" name="pushButton_filter_3">
+   <item row="1" column="6">
+    <widget class="QPushButton" name="pushButton_filter_2">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
@@ -1065,11 +1078,24 @@ font: 12pt &quot;Lalezar&quot;;
 </string>
      </property>
      <property name="text">
-      <string>پروفایل</string>
+      <string>سبد خرید</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="2">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_next">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>صفحه بعدی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
     <widget class="QPushButton" name="pushButton_filter">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
@@ -1079,19 +1105,6 @@ font: 12pt &quot;Lalezar&quot;;
      </property>
      <property name="text">
       <string>فیلتر</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="pushButton_prev">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
-color: rgb(228, 227, 227);
-font: 12pt &quot;Lalezar&quot;;
-</string>
-     </property>
-     <property name="text">
-      <string>صفحه قبلی</string>
      </property>
     </widget>
    </item>
@@ -1105,6 +1118,19 @@ font: 12pt &quot;Lalezar&quot;;
      </property>
      <property name="text">
       <string>دسته بندی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton_filter_6">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>بروز رسانی</string>
      </property>
     </widget>
    </item>

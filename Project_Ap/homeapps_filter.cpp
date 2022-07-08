@@ -20,7 +20,7 @@ void homeApps_filter::on_pushButton_2_clicked()
     homeapp_info.price_to = ui->lineEdit_5->text().toStdString();
     homeapp_info.customer_name = ui->lineEdit_3->text().toStdString();
     homeapp_info.grouping = ui->comboBox->currentText().toStdString();
-    homeapp_info.key_words = ui->lineEdit_6->text().toStdString();
+    homeapp_info.color = ui->lineEdit_6->text().toStdString();
 
     emit send_homeapp_info(homeapp_info);
     this->close();

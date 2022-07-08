@@ -23,7 +23,7 @@ void clothes_filter::on_pushButton_2_clicked()
     clothes_info.age = ui->comboBox_3->currentText().toStdString();
     clothes_info.sex = ui->comboBox_2->currentText().toStdString();
     clothes_info.grouping = ui->comboBox->currentText().toStdString();
-    clothes_info.key_words = ui->lineEdit_6->text().toStdString();
+    clothes_info.color = ui->lineEdit_6->text().toStdString();
 
     emit send_clothes_info(clothes_info);
     this->close(); //or hide??

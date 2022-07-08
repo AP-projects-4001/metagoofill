@@ -12,7 +12,7 @@ public:
     string price_to;
     string customer_name;
     string grouping;
-    string key_words;
+    string color;
 };
 
 #endif // OTHERS_FILTER_INFO_H

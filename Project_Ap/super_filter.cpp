@@ -20,7 +20,7 @@ void super_filter::on_pushButton_2_clicked()
     super_info.price_to = ui->lineEdit_5->text().toStdString();
     super_info.customer_name = ui->lineEdit_3->text().toStdString();
     super_info.grouping = ui->comboBox->currentText().toStdString();
-    super_info.key_words = ui->lineEdit_6->text().toStdString();
+    super_info.color = ui->lineEdit_6->text().toStdString();
 
     emit send_super_info(super_info);
     this->close();

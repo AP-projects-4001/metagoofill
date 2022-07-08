@@ -3,7 +3,7 @@
 #include "goodslist.h"
 #include <fstream>
 #include <QMessageBox>
-
+#include "clientprof.h"
 #define data_product "database_products.txt"
 using namespace std;
 cart::cart(client _clie,QWidget *parent) :
@@ -55,15 +55,15 @@ void cart::add_to_factor()
         database_cart.read((char*)&type, sizeof(int));
         database_cart.read((char*)&ptr_product, sizeof(int));
         database_cart.read((char*)&number_orders, sizeof(int));
-        factor.type=type;
-        factor.ptr_product=ptr_product;
-        factor.number=number_orders;
+        factor.set_type(type);
+        factor.set_ptr_product(ptr_product);
+        factor.set_number(number_orders);
 
         database_product.seekg(ptr_product);
         database_product.read((char*)&product, sizeof(Product));
-        factor.price=prices[i];
-        factor.ID_customer=product.get_ID_customer();
-        factor.ID_client=clie.get_ID();
+        factor.set_price(prices[i]);
+        factor.set_ID_customer(product.get_ID_customer());
+        factor.set_ID_client(clie.get_ID());
 
         database_factor.write((char*)&factor,sizeof(Factor));
         number_factors++;
@@ -142,7 +142,7 @@ void cart::add_to_sells()
         database_factor.seekg(ptr_factor);
         database_factor.read((char*)&factor,sizeof(Factor));
 
-        database_customers.seekg((factor.ID_customer-1)*sizeof(customer));
+        database_customers.seekg((factor.get_ID_customer()-1)*sizeof(customer));
         database_customers.read((char*)&cust,sizeof(customer));
 
         ptr_next_sell=(number_factors-len_cart+i)*sizeof(int)*2;
@@ -155,8 +155,8 @@ void cart::add_to_sells()
         }
         cust.set_ptr_end_mysells(ptr_next_sell);
         cust.set_number_mysells(cust.get_number_mysells()+1);
-        cust.set_Wallet_balance(cust.get_Wallet_balance()+(factor.number*factor.price));
-        database_customers.seekp((factor.ID_customer-1)*sizeof(customer));
+        cust.set_Wallet_balance(cust.get_Wallet_balance()+(factor.get_number()*factor.get_price()));
+        database_customers.seekp((factor.get_ID_customer()-1)*sizeof(customer));
         database_customers.write((char*)&cust,sizeof(customer));
     }
 
@@ -939,10 +939,28 @@ void cart::on_pushButton_20_clicked()
 
 void cart::on_pushButton_prev_2_clicked()
 {
-    this->close();
+    if(flag_cart==0 && get_number_orders()==0){
+        save_number_orders();
+    }
+    if(flag_cart==1){
+        cansel_reserve_products();
+        flag_cart=0;
+    }
     goodsList *newlist = new goodsList(clie);
-
-
-    newlist->show();
+    this->close();
 }
 
+
+void cart::on_pushButton_prev_3_clicked()
+{
+    if(flag_cart==0 && get_number_orders()==0){
+        save_number_orders();
+    }
+    if(flag_cart==1){
+        cansel_reserve_products();
+        flag_cart=0;
+    }
+    clientProf *reprof = new clientProf(clie);
+    reprof->show();
+    this->close();
+}

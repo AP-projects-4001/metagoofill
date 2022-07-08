@@ -43,38 +43,19 @@ customerProf::~customerProf()
 void customerProf::on_pushButton_4_clicked()
 {
     //تغییر اطلاعات و ذخیره در فایل
-    customer cus_changes;
-    customer tmp;
-    cus_changes.string_to_char_array(cus_changes.get_Name(), 16, ui->plainTextEdit_2->toPlainText().toStdString());
-    cus_changes.string_to_char_array(cus_changes.get_phoneNumber(), 12, ui->plainTextEdit->toPlainText().toStdString());
-    cus_changes.string_to_char_array(cus_changes.get_city(), 11, ui->plainTextEdit_6->toPlainText().toStdString());
-    cus_changes.set_ProductType(cust.get_ProductType());
-    cus_changes.string_to_char_array(cus_changes.get_User(), 16, ui->plainTextEdit_5->toPlainText().toStdString());
-    strcpy(cus_changes.get_Password(), cust.get_Password());
-    cus_changes.set_access( '1');
 
-    ifstream oldFile("customers.txt", ios::in | ios::binary);
-    ofstream newChanges("tmpFile.txt", ios::app | ios::binary);
-    int flag;
+    cust.string_to_char_array(cust.get_Name(), 16, ui->plainTextEdit_2->toPlainText().toStdString());
+    cust.string_to_char_array(cust.get_phoneNumber(), 12, ui->plainTextEdit->toPlainText().toStdString());
+    cust.string_to_char_array(cust.get_city(), 11, ui->plainTextEdit_6->toPlainText().toStdString());
+    cust.set_ProductType(cust.get_ProductType());
+    cust.string_to_char_array(cust.get_User(), 16, ui->plainTextEdit_5->toPlainText().toStdString());
 
-    while(!oldFile.eof())
-        {
-            oldFile.read((char*)&tmp, sizeof(customer));
-            if(oldFile)
-            {
-                if(strcmp(cust.get_User(), tmp.get_User()))
-                {
-                    newChanges.write((char*)&tmp, sizeof(customer));
-                }
-            }
-        }
-    newChanges.write((char *)&cus_changes,sizeof(customer));
+    cust.set_access( '1');
 
-    newChanges.close();
-    oldFile.close();
-
-    remove("customers.txt");
-    rename("tmpFile.txt", "customers.txt");
+    fstream database_customers("customers.txt", ios::in | ios::out | ios::binary);
+    database_customers.seekp((cust.get_ID()-1)*sizeof(customer));
+    database_customers.write((char*)&cust,sizeof(customer));
+    database_customers.close();
 
 }
 

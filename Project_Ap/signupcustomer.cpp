@@ -84,7 +84,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          }
          else if(ui->radioButton_5->isChecked())
          {
-             NewCustomer.set_ProductType(4);//لبنیات
+             NewCustomer.set_ProductType(4);//سوپری
          }
          else if(ui->radioButton_6->isChecked())
          {

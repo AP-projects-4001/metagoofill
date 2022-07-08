@@ -46,15 +46,15 @@ void PurchaseRecords::search_in_buys(string &buys)
         database_factor.seekg(ptr_factor);
         database_factor.read((char*)&factor, sizeof(Factor));
 
-        database_customers.seekg((factor.ID_customer-1)*sizeof(customer));
+        database_customers.seekg((factor.get_ID_customer()-1)*sizeof(customer));
         database_customers.read((char*)&cust,sizeof(customer));
         cust.char_array_to_string(shop_name,16,cust.get_Name());
 
-        database_product.seekg(factor.ptr_product);
+        database_product.seekg(factor.get_ptr_product());
         database_product.read((char*)&product, sizeof(Product));
         product.char_array_to_string(product_name,16,product.get_type());
 
-        buys+=to_string(i+1)+"\t"+product_name+"\t"+to_string(factor.number*factor.price)+"\t"+to_string(factor.number)+"\t"+shop_name+"\n";
+        buys+=to_string(i+1)+"\t"+product_name+"\t"+to_string(factor.get_price())+"\t"+to_string(factor.get_number())+"\t"+shop_name+"\n";
     }
     database_buys.close();
     database_factor.close();
@@ -93,7 +93,7 @@ void PurchaseRecords::go_to_factor(int radif)
         database_factor.seekg(ptr_factor);
         database_factor.read((char*)&factor, sizeof(Factor));
 
-        database_product.seekg(factor.ptr_product);
+        database_product.seekg(factor.get_ptr_product());
         database_product.read((char*)&product, sizeof(Product));
 
         goodDetails *details = new goodDetails(product, this);
@@ -115,5 +115,5 @@ void PurchaseRecords::on_pushButton_2_clicked()
 
 void PurchaseRecords::on_pushButton_clicked()
 {
-    go_to_factor((ui->textEdit->toPlainText()).toInt());
+    go_to_factor(ui->spinBox->value());
 }
