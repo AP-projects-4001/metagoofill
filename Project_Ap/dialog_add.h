@@ -23,7 +23,7 @@ private slots:
 
 signals:
 
-    void item_added2(QString,QString,QString,QString,QString,QString,QString,bool,bool,bool,bool);
+    void item_added2(QString,int,QString,QString,int,int,QString,bool,bool,bool,bool);
 
 private:
     Ui::Dialog_add *ui;

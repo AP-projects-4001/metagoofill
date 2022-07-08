@@ -5,7 +5,7 @@
 class client
 {
     //*important* we must change it to private!!!!!
-public:
+private:
     char Name[16];
     char User[16];
     char CellPhoneNumber[12];

@@ -2,8 +2,10 @@
 #define LISTOFTRANSACTIONS_H
 
 #include <QDialog>
-#include "customer.h"
 #include "client.h"
+#include "customer.h"
+#include "product.h"
+#include "factor.h"
 
 namespace Ui {
 class listoftransactions;
@@ -17,13 +19,19 @@ public:
     explicit listoftransactions(QWidget *parent = nullptr);
     ~listoftransactions();
 
-    void search_in_transactions();
+    void search_in_factors(string&);
+
+    void show_factors(string&);
 
 private slots:
     void on_pushButton_clicked();
 
 private:
     Ui::listoftransactions *ui;
+    Factor factor;
+    client clie;
+    customer cust;
+    Product product;
 };
 
 #endif // LISTOFTRANSACTIONS_H

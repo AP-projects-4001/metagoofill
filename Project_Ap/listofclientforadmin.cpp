@@ -60,7 +60,7 @@ void ListOFClientForAdmin::on_pushButton_clicked()
     string tmp;
     while(finder_file.read((char*)&clie_forChange, sizeof(client)))
     {
-        clie_forChange.char_array_to_string(tmp, 16, clie_forChange.User);
+        clie_forChange.char_array_to_string(tmp, 16, clie_forChange.get_User());
         if(ui->textEdit->toPlainText().toStdString() == tmp)
         {
             clie_inf = new infofclie(clie_forChange);

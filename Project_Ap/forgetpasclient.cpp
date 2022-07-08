@@ -23,8 +23,8 @@ bool Check(string Username,string Number)
        string number;
        while(clientFile.read((char*)&Client,sizeof(client)))
        {
-           Client.char_array_to_string(user, 16, Client.User);
-           Client.char_array_to_string(number, 31, Client.CellPhoneNumber);
+           Client.char_array_to_string(user, 16, Client.get_User());
+           Client.char_array_to_string(number, 31, Client.get_phoneNumber());
            if(Username == user)
            {
                if(Number == number)
@@ -49,15 +49,15 @@ void ForgetPasClient::on_pushButton_2_clicked()
 
 void ForgetPasClient::Getpas(QString m)
 {
-    string User = cli_tmp.User;
+    string User = cli_tmp.get_User();
     string username_tmp = "";
     fstream Cli_tmps("clients.txt", ios::in | ios::out | ios::binary);
     while(Cli_tmps.read((char*)&cli_tmp, sizeof(client)))
     {
-        cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.User);
+        cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.get_User());
         if(username_tmp == User)
         {
-            cli_tmp.string_to_char_array(cli_tmp.Password,16,m.toStdString());
+            cli_tmp.string_to_char_array(cli_tmp.get_Password(),16,m.toStdString());
             Cli_tmps.seekp(-sizeof(client),ios::cur);
             Cli_tmps.write((char*)&cli_tmp,sizeof(client));//جایگزین کردن اطلاعات
             break;
@@ -76,7 +76,7 @@ void ForgetPasClient::on_pushButton_clicked()
         fstream Cli_tmps("clients.txt", ios::in | ios::out | ios::binary);
         while(Cli_tmps.read((char*)&cli_tmp,sizeof(client)))
         {
-            cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.User);
+            cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.get_User());
             if(username_tmp == User)
             {
 

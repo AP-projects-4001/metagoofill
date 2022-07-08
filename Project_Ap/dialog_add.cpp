@@ -7,6 +7,12 @@ Dialog_add::Dialog_add(bool _flag_berand,bool _flag_color,bool _flag_weight,bool
     ui(new Ui::Dialog_add)
 {
     ui->setupUi(this);
+
+    ui->spinBox->setMinimum(0);
+    ui->spinBox->setMaximum(999999999);
+    ui->spinBox_2->setMinimum(0);
+    ui->spinBox_2->setMaximum(999999999);
+
     flag_berand=_flag_berand;
     flag_color=_flag_color;
     flag_weight=_flag_weight;
@@ -61,7 +67,7 @@ void Dialog_add::on_pushButton_confirm_clicked()
 {
     //بررسی مشخصات وارد شده
     if(1){
-        emit item_added2(ui->lineEdit_type->text(),ui->lineEdit_price->text(),ui->lineEdit_berand->text(),ui->lineEdit_color->text(),ui->lineEdit_weight->text(),ui->lineEdit_available->text(),ui->plainTextEdit_descript->toPlainText(),flag_berand,flag_color,flag_weight,flag_numerical);
+        emit item_added2(ui->lineEdit_type->text(),ui->spinBox->value(),ui->lineEdit_berand->text(),ui->lineEdit_color->text(),(ui->lineEdit_weight->text()).toInt(),ui->spinBox_2->value(),ui->plainTextEdit_descript->toPlainText(),flag_berand,flag_color,flag_weight,flag_numerical);
     }
     this->close();
 }

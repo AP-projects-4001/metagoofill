@@ -28,3 +28,13 @@ void Admin::char_array_to_string(string &str, int len, char *char_array)
         str+=char_array[i];
     }
 }
+
+int Admin::get_Wallet_balance()
+{
+    return Wallet_balance;
+}
+
+void Admin::set_Wallet_balance(int _Wallet_balance)
+{
+    Wallet_balance=_Wallet_balance;
+}

@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 SignUpClient::SignUpClient(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignUpClient)
@@ -26,7 +25,7 @@ bool CheckUserNameClient(string username)//یوزر تکراری
     string temp_user;
     while(oldClients.read((char*)&oldClient, sizeof(client)))
     {
-        oldClient.char_array_to_string(temp_user, 16, oldClient.User);
+        oldClient.char_array_to_string(temp_user, 16, oldClient.get_User());
         if(username == temp_user)
         {
             oldClients.close();
@@ -50,24 +49,24 @@ void SignUpClient::on_pushButton_clicked()
 
     client NewClient;
     ofstream clientFile("clients.txt", ios::app | ios::binary);
-    NewClient.string_to_char_array(NewClient.Name, ui->textEdit_12->toPlainText().size()+1, ui->textEdit_12->toPlainText().toStdString());
-    NewClient.string_to_char_array(NewClient.User, ui->textEdit_14->toPlainText().size()+1, ui->textEdit_14->toPlainText().toStdString());
-    NewClient.string_to_char_array(NewClient.Password, ui->textEdit_13->toPlainText().size()+1, ui->textEdit_13->toPlainText().toStdString());
-    NewClient.string_to_char_array(NewClient.Address, ui->textEdit_16->toPlainText().size()+1, ui->textEdit_16->toPlainText().toStdString());
-    NewClient.string_to_char_array(NewClient.city, ui->textEdit_17->toPlainText().size()+1, ui->textEdit_17->toPlainText().toStdString());
-    NewClient.string_to_char_array(NewClient.CellPhoneNumber, ui->textEdit_15->toPlainText().size()+1, ui->textEdit_15->toPlainText().toStdString());
-    NewClient.access = '1';
-    NewClient.ptr_start_mybuys = 0;
-    NewClient.ptr_end_mybuys = 0;
-    NewClient.number_mybuys = 0;
-    NewClient.Wallet_balance=0;
+    NewClient.string_to_char_array(NewClient.get_Name(), 16, ui->textEdit_12->toPlainText().toStdString());
+    NewClient.string_to_char_array(NewClient.get_User(), 16, ui->textEdit_14->toPlainText().toStdString());
+    NewClient.string_to_char_array(NewClient.get_Password(), 31, ui->textEdit_13->toPlainText().toStdString());
+    NewClient.string_to_char_array(NewClient.get_Address(), 31, ui->textEdit_16->toPlainText().toStdString());
+    NewClient.string_to_char_array(NewClient.get_city(), 11, ui->textEdit_17->toPlainText().toStdString());
+    NewClient.string_to_char_array(NewClient.get_phoneNumber(), 12, ui->textEdit_15->toPlainText().toStdString());
+    NewClient.set_access('1');
+    NewClient.set_ptr_start_mybuys( 0);
+    NewClient.set_ptr_end_mybuys(0);
+    NewClient.set_number_mybuys(0);
+    NewClient.set_Wallet_balance(0);
 
     int tmp_id;
     fstream spec_info("numbers.txt", ios::in | ios::out | ios::binary);
     spec_info.seekg(0);
     spec_info.read((char*)&tmp_id, 4);
     tmp_id++;
-    NewClient.ID = tmp_id;
+    NewClient.set_ID(tmp_id);
     //NewClient.string_to_char_array(NewClient.ID, to_string(tmp_id).size(), to_string(tmp_id));
     spec_info.seekp(0);
     spec_info.write((char*)&tmp_id, 4);
@@ -84,7 +83,7 @@ void SignUpClient::on_pushButton_clicked()
 
 
     fstream database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekp((NewClient.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekp((NewClient.get_ID()-1)*(3*20+1)*sizeof(int));
     int len_cart=0;
     database_cart.write((char*)&len_cart, sizeof(int));
     database_cart.close();

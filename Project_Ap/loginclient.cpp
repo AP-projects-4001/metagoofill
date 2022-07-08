@@ -36,9 +36,9 @@ bool checkingUserAndPass(string username,string password)
     string pass;
     while(clientFile.read((char*)&Client, sizeof(client)))
     {
-        char_array_to_string(user, 16, Client.User);
-        char_array_to_string(pass, 31, Client.Password);
-        if(Client.access == '1')
+        char_array_to_string(user, 16, Client.get_User());
+        char_array_to_string(pass, 31, Client.get_Password());
+        if(Client.get_access() == '1')
         {
             if(username == user)
             {
@@ -78,7 +78,7 @@ void LoginClient::on_pushButton_clicked()
         ifstream cus_tmps("clients.txt", ios::in | ios::binary);
         while(cus_tmps.read((char*)&cli_tmp, sizeof(client)))
         {
-            cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.User);
+            cli_tmp.char_array_to_string(username_tmp, 16, cli_tmp.get_User());
             if(username_tmp == User)
             {
                 //cus_tmps.close();

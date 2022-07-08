@@ -31,7 +31,7 @@ void TopUpWallet::Charging_success(bool m)
     this->show();
     if(m==1)
     {
-        clie.Wallet_balance=clie.Wallet_balance + AmountOfInventoryincrease;
+        clie.set_Wallet_balance(clie.get_Wallet_balance() + AmountOfInventoryincrease);
     }
 }
 void TopUpWallet::on_pushButton_refuse_clicked()

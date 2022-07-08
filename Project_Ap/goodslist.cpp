@@ -31,6 +31,7 @@ goodsList::goodsList(client _clie ,QWidget *parent) :
 
 goodsList::~goodsList()
 {
+    delete_search();
     delete ui;
 }
 
@@ -38,6 +39,7 @@ void goodsList::recG_type(int G_type)
 {
     type = G_type;
     this->show();
+    flag_filter=0;
     search_by_filter_in_products();
     next_to_search(9);
     show_list_products();
@@ -50,7 +52,7 @@ void goodsList::on_pushButton_filter_clicked()
    {
        tech_filter *filter_0 = new tech_filter(this);//add product class array to constructor.
        filter_0->show();
-       this->hide();
+       //this->hide();
        connect(filter_0, SIGNAL(send_tech_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
    }
 
@@ -58,7 +60,7 @@ void goodsList::on_pushButton_filter_clicked()
    {
         homeApps_filter *filter_1 = new homeApps_filter(this);
         filter_1->show();
-        this->hide();
+        //this->hide();
         connect(filter_1, SIGNAL(send_homeapp_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
    }
 
@@ -66,7 +68,7 @@ void goodsList::on_pushButton_filter_clicked()
    {
        clothes_filter *filter_2 = new clothes_filter(this);
        filter_2->show();
-       this->hide();
+       //this->hide();
        connect(filter_2, SIGNAL(send_clothes_info(clothes_filter_info)), this, SLOT(rec_clothes_info(clothes_filter_info)));
    }
 
@@ -74,7 +76,7 @@ void goodsList::on_pushButton_filter_clicked()
    {
        fruitandveg_filter *filter_3 = new fruitandveg_filter(this);
        filter_3->show();
-       this->hide();
+       //this->hide();
        connect(filter_3, SIGNAL(send_fruit_info(fruits_filter_info)), this, SLOT(rec_fruits_info(fruits_filter_info)));
    }
 
@@ -82,7 +84,7 @@ void goodsList::on_pushButton_filter_clicked()
    {
        super_filter *filter_4 = new super_filter(this);
        filter_4->show();
-       this->hide();
+       //this->hide();
        connect(filter_4, SIGNAL(send_super_info(other_filter_info)), this, SLOT(rec_tech_info(other_filter_info)));
 
    }
@@ -91,7 +93,7 @@ void goodsList::on_pushButton_filter_clicked()
    {
        fruitandveg_filter *filter_5 = new fruitandveg_filter(this);
        filter_5->show();
-       this->hide();
+       //this->hide();
        connect(filter_5, SIGNAL(send_fruit_info(fruits_filter_info)), this, SLOT(rec_fruits_info(fruits_filter_info)));
 
    }
@@ -106,24 +108,33 @@ void goodsList::rec_clothes_info(clothes_filter_info clothes_info)
 {
      clothes_info_2 = clothes_info;
      this->show();
-
-     //کار با فایل
+     delete_search();
+     flag_filter=1;
+     search_by_filter_in_products();
+     next_to_search(9);
+     show_list_products();
 }
 
 void goodsList::rec_fruit_info(fruitandveg_filter_info fruit_info)
 {
     fruit_info_2 = fruit_info;
     this->show();
-
-    //کار با فایل
+    delete_search();
+    flag_filter=1;
+    search_by_filter_in_products();
+    next_to_search(9);
+    show_list_products();
 }
 
 void goodsList::rec_other_info(others_filter_info other_info)
 {
     other_info_2 = other_info;
     this->show();
-
-    //کار با فایل
+    delete_search();
+    flag_filter=1;
+    search_by_filter_in_products();
+    next_to_search(9);
+    show_list_products();
 }
 
 void goodsList::search_by_filter_in_products()
@@ -133,18 +144,27 @@ void goodsList::search_by_filter_in_products()
     int number_product_type;
     int ptr_file;
 
+    fstream database_numbers("numbers.txt", ios::in | ios::out | ios::binary);
+    database_numbers.seekg((6-1)*sizeof(int));
+    database_numbers.read((char*)&number_search, sizeof(int));
+    number_search++;
+    database_numbers.seekp((6-1)*sizeof(int));
+    database_numbers.write((char*)&number_search, sizeof(int));
+
+    database_numbers.seekg((5-1)*sizeof(int));
+    database_numbers.read((char*)&start_search, sizeof(int));
+
     fstream  database_product_type("database_product_type.txt",ios::in | ios::out | ios::binary);
     database_product_type.seekg(type*3*sizeof(int));
     database_product_type.read((char*)&ptr_start_file_product_type,sizeof(int));
     database_product_type.read((char*)&ptr_end_file_product_type, sizeof(int));
     database_product_type.read((char*)&number_product_type, sizeof(int));
 
-
     fstream database_product(data_product,ios::in | ios::out | ios::binary);
     fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
     len_search=0;
-    database_search.seekp(0);
+    database_search.seekp(start_search);
     ptr_file=ptr_start_file_product_type;
     for(int i=0;i<number_product_type;i++){
         database_product.seekg(ptr_file);
@@ -153,14 +173,36 @@ void goodsList::search_by_filter_in_products()
             database_search.write((char *)&ptr_file, sizeof(int));
             len_search++;
         }
-        ptr_file=product.ptr_file_product_type_next;
+        ptr_file=product.get_ptr_file_product_type_next();
     }
     count=0;
     end_part_products = 0;
 
+    start_search+=len_search;
+    database_numbers.seekp((5-1)*sizeof(int));
+    database_numbers.write((char*)&start_search, sizeof(int));
+    database_numbers.close();
+    start_search-=len_search;
+
     database_product.close();
     database_search.close();
     database_product_type.close();
+}
+
+void goodsList::delete_search()
+{
+    fstream database_numbers("numbers.txt", ios::in | ios::out | ios::binary);
+    database_numbers.seekg((6-1)*sizeof(int));
+    database_numbers.read((char*)&number_search, sizeof(int));
+    number_search--;
+    database_numbers.seekp((6-1)*sizeof(int));
+    database_numbers.write((char*)&number_search, sizeof(int));
+    if(number_search==0){
+        start_search=0;
+        database_numbers.seekp((5-1)*sizeof(int));
+        database_numbers.write((char*)&start_search, sizeof(int));
+    }
+    database_numbers.close();
 }
 
 void goodsList::next_to_search(int part)
@@ -170,9 +212,9 @@ void goodsList::next_to_search(int part)
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
-        database_search.seekg((count)*sizeof(int));
+        database_search.seekg(start_search+(count)*sizeof(int));
         end_part_products=len_search-count;
-        if(end_part_products>=part-1){end_part_products=part;}
+        if(end_part_products>=part){end_part_products=part;}
         for(int i=0;i<end_part_products;i++){
             database_search.read((char *)&ptr_file, sizeof(int));
             database_product.seekg(ptr_file);
@@ -196,8 +238,7 @@ void goodsList::preview_to_search(int part)
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
-        database_search.seekg((count)*sizeof(int));
-
+        database_search.seekg(start_search+(count)*sizeof(int));
         for(int i=0;i<end_part_products;i++){
             database_search.read((char *)&ptr_file, sizeof(int));
             database_product.seekg(ptr_file);
@@ -212,25 +253,64 @@ void goodsList::preview_to_search(int part)
 
 bool goodsList::filter()
 {
+    customer cust;
+    string str;
+    fstream database_customers("customers.txt", ios::in | ios::out | ios::binary);
+    if(product.get_flag_delete_product()==1){return 0;}
+    if(flag_filter==1){
+        if(type==0 || type==1 || type==4){
 
-    if(type==0){
+            if(other_info_2.price_from!=""){
+                if(product.get_price()<stoi(other_info_2.price_from)){return 0;}
+            }
+            if(other_info_2.price_to!=""){
+                if(product.get_price()>stoi(other_info_2.price_to)){return 0;}
+            }
+            product.char_array_to_string(str,16,product.get_type());
+            if(other_info_2.name_prod!="" && other_info_2.name_prod!=str){return 0;}
 
+            database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
+            database_customers.read((char*)&cust,sizeof(customer));
+            cust.char_array_to_string(str,16,cust.get_Name());
+            if(other_info_2.customer_name!="" && other_info_2.customer_name!=str){return 0;}
+
+        }
+        else if(type==3 || type==5){
+
+            if(fruit_info_2.price_from!=""){
+                if(product.get_price()<stoi(fruit_info_2.price_from)){return 0;}
+            }
+            if(fruit_info_2.price_to!=""){
+                if(product.get_price()>stoi(fruit_info_2.price_to)){return 0;}
+            }
+            product.char_array_to_string(str,16,product.get_type());
+            if(fruit_info_2.name_prod!="" && fruit_info_2.name_prod!=str){return 0;}
+
+            database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
+            database_customers.read((char*)&cust,sizeof(customer));
+            cust.char_array_to_string(str,16,cust.get_Name());
+            if(fruit_info_2.customer_name!="" && fruit_info_2.customer_name!=str){return 0;}
+
+        }
+        else if(type==2){
+
+            if(clothes_info_2.price_from!=""){
+                if(product.get_price()<stoi(clothes_info_2.price_from)){return 0;}
+            }
+            if(clothes_info_2.price_to!=""){
+                if(product.get_price()>stoi(clothes_info_2.price_to)){return 0;}
+            }
+            product.char_array_to_string(str,16,product.get_type());
+            if(clothes_info_2.name_prod!="" && clothes_info_2.name_prod!=str){return 0;}
+
+            database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
+            database_customers.read((char*)&cust,sizeof(customer));
+            cust.char_array_to_string(str,16,cust.get_Name());
+            if(clothes_info_2.customer_name!="" && clothes_info_2.customer_name!=str){return 0;}
+
+        }
     }
-    else if(type==1){
-
-    }
-    else if(type==2){
-
-    }
-    else if(type==3){
-
-    }
-    else if(type==4){
-
-    }
-    else if(type==5){
-
-    }
+    database_customers.close();
     return 1;
 }
 
@@ -244,9 +324,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g1->show();
         ui->spinBox_1->show();
         ui->spinBox_1->setValue(0);
-        product.char_array_to_string(str,16,products[0].type);
+        product.char_array_to_string(str,16,products[0].get_type());
         ui->label_type_10->setText(QString::fromStdString(str));
-        ui->label_price_10->setText(QString::number(products[0].price));
+        ui->label_price_10->setText(QString::number(products[0].get_price()));
     }
     else {
         ui->label_type_10->hide();
@@ -263,9 +343,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g2->show();
         ui->spinBox_2->show();
         ui->spinBox_2->setValue(0);
-        product.char_array_to_string(str,16,products[1].type);
+        product.char_array_to_string(str,16,products[1].get_type());
         ui->label_type_11->setText(QString::fromStdString(str));
-        ui->label_price_11->setText(QString::number(products[1].price));
+        ui->label_price_11->setText(QString::number(products[1].get_price()));
     }
     else {
         ui->label_type_11->hide();
@@ -282,9 +362,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g3->show();
         ui->spinBox_3->show();
         ui->spinBox_3->setValue(0);
-        product.char_array_to_string(str,16,products[2].type);
+        product.char_array_to_string(str,16,products[2].get_type());
         ui->label_type_12->setText(QString::fromStdString(str));
-        ui->label_price_12->setText(QString::number(products[2].price));
+        ui->label_price_12->setText(QString::number(products[2].get_price()));
     }
     else {
         ui->label_type_12->hide();
@@ -301,9 +381,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g4->show();
         ui->spinBox_4->show();
         ui->spinBox_4->setValue(0);
-        product.char_array_to_string(str,16,products[3].type);
+        product.char_array_to_string(str,16,products[3].get_type());
         ui->label_type_13->setText(QString::fromStdString(str));
-        ui->label_price_13->setText(QString::number(products[3].price));
+        ui->label_price_13->setText(QString::number(products[3].get_price()));
     }
     else {
         ui->label_type_13->hide();
@@ -320,9 +400,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g5->show();
         ui->spinBox_5->show();
         ui->spinBox_5->setValue(0);
-        product.char_array_to_string(str,16,products[4].type);
+        product.char_array_to_string(str,16,products[4].get_type());
         ui->label_type_14->setText(QString::fromStdString(str));
-        ui->label_price_14->setText(QString::number(products[4].price));
+        ui->label_price_14->setText(QString::number(products[4].get_price()));
     }
     else {
         ui->label_type_14->hide();
@@ -339,9 +419,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g6->show();
         ui->spinBox_6->show();
         ui->spinBox_6->setValue(0);
-        product.char_array_to_string(str,16,products[5].type);
+        product.char_array_to_string(str,16,products[5].get_type());
         ui->label_type_15->setText(QString::fromStdString(str));
-        ui->label_price_15->setText(QString::number(products[5].price));
+        ui->label_price_15->setText(QString::number(products[5].get_price()));
     }
     else {
         ui->label_type_15->hide();
@@ -358,9 +438,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g7->show();
         ui->spinBox_7->show();
         ui->spinBox_7->setValue(0);
-        product.char_array_to_string(str,16,products[6].type);
+        product.char_array_to_string(str,16,products[6].get_type());
         ui->label_type_16->setText(QString::fromStdString(str));
-        ui->label_price_16->setText(QString::number(products[6].price));
+        ui->label_price_16->setText(QString::number(products[6].get_price()));
     }
     else {
         ui->label_type_16->hide();
@@ -377,9 +457,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g8->show();
         ui->spinBox_8->show();
         ui->spinBox_8->setValue(0);
-        product.char_array_to_string(str,16,products[7].type);
+        product.char_array_to_string(str,16,products[7].get_type());
         ui->label_type_17->setText(QString::fromStdString(str));
-        ui->label_price_17->setText(QString::number(products[7].price));
+        ui->label_price_17->setText(QString::number(products[7].get_price()));
     }
     else {
         ui->label_type_17->hide();
@@ -396,9 +476,9 @@ void goodsList::show_list_products()//first index is 1;
         ui->pushButton_g9->show();
         ui->spinBox_9->show();
         ui->spinBox_9->setValue(0);
-        product.char_array_to_string(str,16,products[8].type);
+        product.char_array_to_string(str,16,products[8].get_type());
         ui->label_type_18->setText(QString::fromStdString(str));
-        ui->label_price_18->setText(QString::number(products[8].price));
+        ui->label_price_18->setText(QString::number(products[8].get_price()));
     }
     else {
         ui->label_type_18->hide();
@@ -495,7 +575,7 @@ void goodsList::on_pushButton_filter_3_clicked()//
 void goodsList::on_pushButton_filter_2_clicked()
 {
     //go to cart(sabad kharid)
-    this->hide();
+    this->close();
     cart *_cart = new cart(clie,this);
     _cart->show();
 }
@@ -509,11 +589,11 @@ bool goodsList::add_to_cart(int andis,int number_orders)
     fstream database_search("database_search.txt",ios::in | ios::out | ios::binary);
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
     if(len_cart<20){
-        database_search.seekg((andis)*sizeof(int));
+        database_search.seekg(start_search+(andis)*sizeof(int));
         database_search.read((char*)&ptr_product,sizeof(int));
         database_cart.seekp(len_cart*3*sizeof(int),ios::cur);
         database_cart.write((char*)&type, sizeof(int));
@@ -521,7 +601,7 @@ bool goodsList::add_to_cart(int andis,int number_orders)
         database_cart.write((char*)&number_orders, sizeof(int));
 
         len_cart++;
-        database_cart.seekp((clie.ID-1)*(3*20+1)*sizeof(int));
+        database_cart.seekp((clie.get_ID()-1)*(3*20+1)*sizeof(int));
         database_cart.write((char*)&len_cart, sizeof(int));
         return 1;
     }

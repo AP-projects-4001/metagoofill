@@ -59,6 +59,11 @@ char* customer::get_city()
     return city;
 }
 
+char customer::get_ProductType()
+{
+    return ProductType;
+}
+
 char customer::get_access(){
     return access;
 }

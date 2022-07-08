@@ -16,6 +16,14 @@ public:
     explicit storecustomer(customer,QWidget *parent = nullptr);
     ~storecustomer();
 
+    void show_product();
+    int go_to_product(int);
+    void save_product();
+    void add_product();
+    void delete_product();
+    void show_without_product();
+    void add_product_to_type();
+
 private slots:
     void on_pushButten_add_clicked();
 
@@ -29,7 +37,7 @@ private slots:
 
     void item_added(bool,bool,bool,bool);
 
-    void item_added2(QString,QString,QString,QString,QString,QString,QString,bool,bool,bool,bool);
+    void item_added2(QString,int,QString,QString,int,int,QString,bool,bool,bool,bool);
 
 
     void on_pushButton_2_clicked();
@@ -51,14 +59,6 @@ private:
     int ptr_start_file_product_type;
     int ptr_end_file_product_type;
     int number_product_type;
-private:
-    void show_product();
-    int go_to_product(int);
-    void save_product();
-    void add_product();
-    void delete_product();
-    void show_without_product();
-    void add_product_to_type();
 };
 
 #endif // STORECUSTOMER_H

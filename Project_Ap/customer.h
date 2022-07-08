@@ -4,7 +4,7 @@
 
 class customer
 {
-public:
+private:
     char Name[16];
     char User[16];
     char PhoneNumber[12];

@@ -25,7 +25,7 @@ void choosepay::on_pushButton_difectpay_clicked()
 
 void choosepay::on_pushButton_wallet_clicked()
 {
-    bool check = clie.Wallet_balance>=sum;
+    bool check = clie.get_Wallet_balance()>=sum;
     if(check==1){
         emit send_status_payment_from_wallet(1);
         this->close();

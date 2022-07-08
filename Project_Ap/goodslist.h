@@ -22,6 +22,8 @@ public:
 
     void search_by_filter_in_products();
 
+    void delete_search();
+
     void next_to_search(int);
 
     void preview_to_search(int);
@@ -96,11 +98,15 @@ private:
     others_filter_info other_info_2;
     goodDetails *details;
     int type ;
-    Product products[9];//
-    Product product;//
-    int end_part_products;//
-    int len_search;//
+    Product products[9];
+    Product product;
+    int end_part_products;
+    int len_search;
     int count;
+    bool flag_filter;
+
+    int start_search;
+    int number_search;
 };
 
 #endif // GOODSLIST_H

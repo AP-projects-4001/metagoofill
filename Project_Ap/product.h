@@ -46,7 +46,7 @@ public:
     void set_flag_delete_product(bool _flag_del);
     void set_ID_customer(int _ID_cus);
 
-public:
+private:
     char type[16];
     int price;
     char berand[16];

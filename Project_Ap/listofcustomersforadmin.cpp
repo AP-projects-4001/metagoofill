@@ -61,7 +61,7 @@ void ListOfCustomersForAdmin::on_pushButton_clicked()
     string tmp;
     while(finder_file.read((char*)&cus_forChange,sizeof(customer)))
     {
-        cus_forChange.char_array_to_string(tmp, 16, cus_forChange.User);
+        cus_forChange.char_array_to_string(tmp, 16, cus_forChange.get_User());
         if(ui->textEdit->toPlainText().toStdString() == tmp)
         {
             cus_inf = new infofcus(cus_forChange, this);

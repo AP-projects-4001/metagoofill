@@ -10,25 +10,25 @@ goodDetails::goodDetails(Product _product, QWidget *parent) :
 //add product info;
     string tmp;
 
-    Prdct.char_array_to_string(tmp, 16, Prdct.berand);
+    Prdct.char_array_to_string(tmp, 16, Prdct.get_type());
     ui->label_name->setText(QString::fromStdString(tmp));
 
-    Prdct.char_array_to_string(tmp, 16, Prdct.type);
+    Prdct.char_array_to_string(tmp, 16, Prdct.get_type());
     ui->label_group->setText(QString::fromStdString(tmp));
 
-    Prdct.char_array_to_string(tmp, 16, Prdct.color);
+    Prdct.char_array_to_string(tmp, 16, Prdct.get_color());
     ui->label_model->setText(QString::fromStdString(tmp));
 
-    Prdct.char_array_to_string(tmp, 49, Prdct.descript);
+    Prdct.char_array_to_string(tmp, 49, Prdct.get_descript());
     ui->label_info->setText(QString::fromStdString(tmp));
 
-    ui->label_id->setText(QString::number(Prdct.ID));
+    ui->label_id->setText(QString::number(Prdct.get_ID()));
 
-    ui->label_price->setText(QString::number(Prdct.price));
+    ui->label_price->setText(QString::number(Prdct.get_price()));
 
-    ui->label_avail->setText(QString::number(Prdct.available));
+    ui->label_avail->setText(QString::number(Prdct.get_available()));
 
-    ui->label_weight->setText(QString::number(Prdct.weight));
+    ui->label_weight->setText(QString::number(Prdct.get_weight()));
 }
 
 goodDetails::~goodDetails()

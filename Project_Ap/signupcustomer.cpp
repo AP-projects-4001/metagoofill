@@ -24,7 +24,7 @@ bool CheckUserNameCustomer(string username)//تکراری بودن یوزر
     string temp_user;
     while(oldCustomers.read((char*)&oldCustomer, sizeof(customer)))
     {
-        oldCustomer.char_array_to_string(temp_user, 16, oldCustomer.User);
+        oldCustomer.char_array_to_string(temp_user, 16, oldCustomer.get_User());
         if(username == temp_user)
         {
             oldCustomers.close();
@@ -61,42 +61,42 @@ void SignUpCUSTOMER::on_pushButton_clicked()
     }
 
          class customer NewCustomer;
-         NewCustomer.string_to_char_array(NewCustomer.Name, ui->textEdit_7->toPlainText().size()+1, ui->textEdit_7->toPlainText().toStdString());
-         NewCustomer.string_to_char_array(NewCustomer.User, ui->textEdit_8->toPlainText().size()+1, ui->textEdit_8->toPlainText().toStdString());
-         NewCustomer.string_to_char_array(NewCustomer.Password, ui->textEdit_9->toPlainText().size()+1, ui->textEdit_9->toPlainText().toStdString());
-         NewCustomer.string_to_char_array(NewCustomer.PhoneNumber, ui->textEdit_10->toPlainText().size()+1, ui->textEdit_10->toPlainText().toStdString());
-         NewCustomer.string_to_char_array(NewCustomer.city, ui->textEdit_11->toPlainText().size()+1, ui->textEdit_11->toPlainText().toStdString());
-         NewCustomer.access = '1';
-         NewCustomer.ptr_end_mysells = 0;
-         NewCustomer.ptr_start_mysells = 0;
-         NewCustomer.number_mysells = 0;
-         NewCustomer.ptr_start_myproducts = 0;
-         NewCustomer.number_myproducts = 0;
-         NewCustomer.Wallet_balance=0;
+         NewCustomer.string_to_char_array(NewCustomer.get_Name(), 16, ui->textEdit_7->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.get_User(), 16, ui->textEdit_8->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.get_Password(), 31, ui->textEdit_9->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.get_phoneNumber(), 12, ui->textEdit_10->toPlainText().toStdString());
+         NewCustomer.string_to_char_array(NewCustomer.get_city(), 31, ui->textEdit_11->toPlainText().toStdString());
+         NewCustomer.set_access( '1');
+         NewCustomer.set_ptr_end_mysells(0);
+         NewCustomer.set_ptr_start_mysells(0);
+         NewCustomer.set_number_mysells(0);
+         NewCustomer.set_ptr_start_myproducts(0);
+         NewCustomer.set_number_myproducts(0);
+         NewCustomer.set_Wallet_balance(0);
 
          if(ui->radioButton_3->isChecked())
          {
-             NewCustomer.ProductType=2;//پوشاک
+             NewCustomer.set_ProductType(2);//پوشاک
          }
          else if(ui->radioButton_4->isChecked())
          {
-             NewCustomer.ProductType=3;//میوه و تره بار
+             NewCustomer.set_ProductType(3);//میوه و تره بار
          }
          else if(ui->radioButton_5->isChecked())
          {
-             NewCustomer.ProductType=4;//لبنیات
+             NewCustomer.set_ProductType(4);//لبنیات
          }
          else if(ui->radioButton_6->isChecked())
          {
-             NewCustomer.ProductType=0;//تکنولوژی
+             NewCustomer.set_ProductType(0);//تکنولوژی
          }
          else if(ui->radioButton_7->isChecked())
          {
-             NewCustomer.ProductType=5;//آجیل
+             NewCustomer.set_ProductType(5);//آجیل
          }
          else
          {
-             NewCustomer.ProductType=1;//لوازم خانگی
+             NewCustomer.set_ProductType(1);//لوازم خانگی
          }
 
          int tmp_id;
@@ -107,7 +107,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          spec_info.seekp(4);
          spec_info.write((char*)&tmp_id, 4);
          spec_info.close();
-         NewCustomer.ID = tmp_id;
+         NewCustomer.set_ID(tmp_id);
 
          ofstream CustomerFile("customers.txt", ios::app | ios::binary);
          if(CheckUserNameCustomer(ui->textEdit_8->toPlainText().toStdString()) == false)

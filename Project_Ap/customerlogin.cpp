@@ -29,9 +29,9 @@ bool checking_UserAndPass(string username,string password)
 
     while(CustomerFile.read((char*)&customerr, sizeof(customer)))
     {
-        customerr.char_array_to_string(user, 16, customerr.User);
-        customerr.char_array_to_string(pass, 31, customerr.Password);
-        if(customerr.access == '1')
+        customerr.char_array_to_string(user, 16, customerr.get_User());
+        customerr.char_array_to_string(pass, 31, customerr.get_Password());
+        if(customerr.get_access() == '1')
         {
             if(username == user)
             {
@@ -59,7 +59,7 @@ void CustomerLogin::on_pushButton_clicked()
         ifstream cus_tmps("customers.txt", ios::in | ios::binary);
         while(cus_tmps.read((char*)&cus_tmp,sizeof(customer)))
         {
-            cus_tmp.char_array_to_string(username_tmp, 16, cus_tmp.User);
+            cus_tmp.char_array_to_string(username_tmp, 16, cus_tmp.get_User());
             if(username_tmp == User)
             {
                 //cus_tmps.close();

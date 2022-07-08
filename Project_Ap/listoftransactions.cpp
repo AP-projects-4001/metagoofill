@@ -11,64 +11,9 @@ listoftransactions::listoftransactions(QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("لیست تراکنش ها");
-    QString content = "shop\tclient\tproduct\tprice\tnumber";
-    QListWidgetItem *m_textEdit = new QListWidgetItem(content);
-    ui->listWidget->addItem(m_textEdit);
-
-    ifstream factors("database_factors.txt", ios::in | ios::binary);
-    ifstream clients("clients.txt", ios::in | ios::binary);
-    ifstream customers("customers.txt", ios::in | ios::binary);
-
-    string shop_name;
-    string client_name;
-    string product_name;
-    string _price;
-    string _number;
-
-    Factor fac;
-    client cli;
-    customer cus;
-
-    while(factors.read((char*)&fac, sizeof(Factor)))
-    {
-        _price = to_string(fac.price);
-        _number = to_string(fac.number);
-
-        clients.seekg((fac.ID_client-1)*sizeof(client));
-        cli.char_array_to_string(client_name, 16, cli.get_Name());
-
-
-        customers.seekg((fac.ID_customer-1)*sizeof(customer));
-        cus.char_array_to_string(shop_name, 16, cus.get_Name());
-
-//        while(clients.read((char*)&cli, sizeof(client)))
-//        {
-//            if(cli.ID == fac.ID_client)
-//            {
-//                cli.char_array_to_string(client_name, 16, cli.get_Name());
-//                clients.seekg(0);
-//                break;
-//            }
-//        }
-
-//        while(customers.read((char*)&cus, sizeof(customer)))
-//        {
-//            if(cus.ID == fac.ID_customer)
-//            {
-//                cus.char_array_to_string(shop_name, 16, cus.get_Name());
-//                customers.seekg(0);
-//                break;
-//            }
-//        }
-
-        string x = shop_name+"\t" + client_name+"\t" + product_name+"\t" + _price+"\t"+_number+ "\n";
-        QListWidgetItem *m_textEdit = new QListWidgetItem();
-        m_textEdit->setText(QString::fromStdString(x));
-        ui->listWidget->addItem(m_textEdit);
-    }
-    factors.close();
-    clients.close();
-    customers.close();
+    string fac;
+    search_in_factors(fac);
+    show_factors(fac);
 }
 
 listoftransactions::~listoftransactions()
@@ -76,9 +21,60 @@ listoftransactions::~listoftransactions()
     delete ui;
 }
 
-void listoftransactions::search_in_transactions()
+void listoftransactions::search_in_factors(string &fac)
 {
+    int number_factors;
+    ifstream factors("database_factors.txt", ios::in | ios::binary);
+    ifstream clients("clients.txt", ios::in | ios::binary);
+    ifstream customers("customers.txt", ios::in | ios::binary);
+    ifstream products("database_products.txt", ios::in | ios::binary);
 
+    ifstream numbers("numbers.txt", ios::in | ios::binary);
+    numbers.seekg((4-1)*sizeof(int));
+    numbers.read((char*)&number_factors, sizeof(int));
+
+    string shop_name;
+    string customer_user;
+    string client_user;
+    string product_name;
+    string _price;
+    string _number;
+
+    factors.seekg(0);
+    for(int i=0;i<number_factors;i++)
+    {
+        factors.read((char*)&factor, sizeof(Factor));
+        _price = to_string(factor.price);
+        _number = to_string(factor.number);
+
+        clients.seekg((factor.ID_client-1)*sizeof(client));
+        clients.read((char*)&clie, sizeof(client));
+        clie.char_array_to_string(client_user, 16, clie.get_User());
+
+        customers.seekg((factor.ID_customer-1)*sizeof(customer));
+        customers.read((char*)&cust, sizeof(customer));
+        cust.char_array_to_string(shop_name, 16, cust.get_Name());
+        cust.char_array_to_string(customer_user, 16, cust.get_User());
+
+        products.seekg(factor.ptr_product);
+        products.read((char*)&product, sizeof(Product));
+        product.char_array_to_string(product_name,16,product.get_type());
+
+        fac += to_string(i+1)+"\t"+shop_name+"\t"+ customer_user+"\t"+ client_user+"\t" + product_name+"\t" + _price+"\t"+_number+ "\n";
+    }
+    factors.close();
+    clients.close();
+    customers.close();
+    products.close();
+    numbers.close();
+}
+
+void listoftransactions::show_factors(string &fac)
+{
+    QString content = "shop\tcustomer\tclient\tproduct\tprice\tnumber\n";
+    content+=QString::fromStdString(fac);
+    QListWidgetItem *m_textEdit = new QListWidgetItem(content);
+    ui->listWidget->addItem(m_textEdit);
 }
 
 void listoftransactions::on_pushButton_clicked()

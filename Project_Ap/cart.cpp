@@ -20,6 +20,13 @@ cart::cart(client _clie,QWidget *parent) :
 
 cart::~cart()
 {
+    if(flag_cart==0 && get_number_orders()==0){
+        save_number_orders();
+    }
+    if(flag_cart==1){
+        cansel_reserve_products();
+        flag_cart=0;
+    }
     delete ui;
 }
 
@@ -38,7 +45,7 @@ void cart::add_to_factor()
     database_factor.seekg( number_factors*sizeof(Factor));
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
     fstream database_product(data_product,  ios::in | ios::out | ios::binary);
@@ -54,8 +61,8 @@ void cart::add_to_factor()
         database_product.seekg(ptr_product);
         database_product.read((char*)&product, sizeof(Product));
         factor.price=prices[i];
-        factor.ID_customer=product.ID_customer;
-        factor.ID_client=clie.ID;
+        factor.ID_customer=product.get_ID_customer();
+        factor.ID_client=clie.get_ID();
 
         database_factor.write((char*)&factor,sizeof(Factor));
         number_factors++;
@@ -80,17 +87,17 @@ void cart::add_to_buys()
     fstream  database_buys("database_buys.txt",ios::in | ios::out | ios::binary);
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
     ptr_next_buy=(number_factors-len_cart)*sizeof(int)*2;
-    if(clie.number_mybuys!=0){
-        database_buys.seekp(clie.ptr_end_mybuys+sizeof(int));
+    if(clie.get_number_mybuys()!=0){
+        database_buys.seekp(clie.get_ptr_end_mybuys()+sizeof(int));
         database_buys.write((char*)&ptr_next_buy,sizeof(int));
     }
     else{
-        clie.ptr_start_mybuys=ptr_next_buy;
-        clie.ptr_end_mybuys= ptr_next_buy;
+        clie.set_ptr_start_mybuys(ptr_next_buy);
+        clie.set_ptr_end_mybuys( ptr_next_buy);
     }
     database_buys.seekg((number_factors-len_cart)*sizeof(int)*2);
     for(int i=0;i<len_cart;i++){
@@ -99,12 +106,12 @@ void cart::add_to_buys()
         database_buys.write((char*)&ptr_factor,sizeof(int));
         database_buys.write((char*)&ptr_next_buy,sizeof(int));
 
-        clie.number_mybuys++;
+        clie.set_number_mybuys(clie.get_number_mybuys()+1);
     }
-    clie.ptr_end_mybuys= ptr_next_buy-(sizeof(int)*2);
+    clie.set_ptr_end_mybuys( ptr_next_buy-(sizeof(int)*2));
 
     fstream database_clients("clients.txt", ios::in | ios::out | ios::binary);
-    database_clients.seekp((clie.ID-1)*sizeof(client));
+    database_clients.seekp((clie.get_ID()-1)*sizeof(client));
     database_clients.write((char*)&clie,sizeof(client));
     database_clients.close();
 
@@ -123,7 +130,7 @@ void cart::add_to_sells()
     fstream  database_sells("database_sells.txt",ios::in | ios::out | ios::binary);
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
     for(int i=0;i<len_cart;i++){
@@ -138,16 +145,16 @@ void cart::add_to_sells()
         database_customers.read((char*)&cust,sizeof(customer));
 
         ptr_next_sell=(number_factors-len_cart+i)*sizeof(int)*2;
-        if(cust.number_mysells!=0){
-            database_sells.seekp(cust.ptr_end_mysells+sizeof(int));
+        if(cust.get_number_mysells()!=0){
+            database_sells.seekp(cust.get_ptr_end_mysells()+sizeof(int));
             database_sells.write((char*)&ptr_next_sell,sizeof(int));
         }
         else{
-            cust.ptr_start_mysells=ptr_next_sell;
+            cust.set_ptr_start_mysells(ptr_next_sell);
         }
-        cust.ptr_end_mysells=ptr_next_sell;
-        cust.number_mysells++;
-        cust.Wallet_balance+=(factor.number*factor.price);
+        cust.set_ptr_end_mysells(ptr_next_sell);
+        cust.set_number_mysells(cust.get_number_mysells()+1);
+        cust.set_Wallet_balance(cust.get_Wallet_balance()+(factor.number*factor.price));
         database_customers.seekp((factor.ID_customer-1)*sizeof(customer));
         database_customers.write((char*)&cust,sizeof(customer));
     }
@@ -161,7 +168,7 @@ void cart::add_to_sells()
 void cart::start_cart()
 {
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
     database_cart.close();
     count=0;
@@ -179,9 +186,9 @@ void cart::next_to_cart(int part)
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
 
-        database_cart.seekg((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+        database_cart.seekg((count)*(sizeof(int)*3)+(clie.get_ID()-1)*(3*20+1)*sizeof(int)+sizeof(int));
         end_part_cart=len_cart-count;
-        if(end_part_cart>=part-1){end_part_cart=part;}
+        if(end_part_cart>=part){end_part_cart=part;}
         for(int i=0;i<end_part_cart;i++){
             database_cart.read((char*)&type, sizeof(int));
             database_cart.read((char*)&ptr_product, sizeof(int));
@@ -211,7 +218,7 @@ void cart::preview_to_cart(int part)
         fstream database_product(data_product,ios::in | ios::out | ios::binary);
         fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
 
-        database_cart.seekg((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+        database_cart.seekg((count)*(sizeof(int)*3)+(clie.get_ID()-1)*(3*20+1)*sizeof(int)+sizeof(int));
         for(int i=0;i<end_part_cart;i++){
             database_cart.read((char*)&type, sizeof(int));
             database_cart.read((char*)&ptr_product, sizeof(int));
@@ -239,8 +246,14 @@ void cart::repet_to_cart(int part)
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
 
     end_part_cart=len_cart-count;
-    if(end_part_cart>=part-1){end_part_cart=part;}
-    database_cart.seekg((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    if(end_part_cart>=part){end_part_cart=part;}
+    else if(end_part_cart==0){
+        if(count>=part){
+            count-=part;
+            end_part_cart=len_cart-count;
+        }
+    }
+    database_cart.seekg((count)*(sizeof(int)*3)+(clie.get_ID()-1)*(3*20+1)*sizeof(int)+sizeof(int));
     for(int i=0;i<end_part_cart;i++){
 
         database_cart.read((char*)&type, sizeof(int));
@@ -264,7 +277,7 @@ void cart::delete_product(int andis)
     int number_orders;
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((andis)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    database_cart.seekg((andis)*(sizeof(int)*3)+(clie.get_ID()-1)*(3*20+1)*sizeof(int)+sizeof(int));
     for(int i=andis;i<len_cart-1;i++){
         database_cart.seekg((sizeof(int)*3),ios::cur);
         database_cart.read((char*)&type, sizeof(int));
@@ -276,7 +289,7 @@ void cart::delete_product(int andis)
         database_cart.write((char*)&number_orders, sizeof(int));
     }
     len_cart--;
-    database_cart.seekp((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekp((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.write((char*)&len_cart, sizeof(int));
 
     database_cart.close();
@@ -332,7 +345,7 @@ void cart::save_number_orders()
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
 
     count-=end_part_cart;
-    database_cart.seekp((count)*(sizeof(int)*3)+(clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    database_cart.seekp((count)*(sizeof(int)*3)+(clie.get_ID()-1)*(3*20+1)*sizeof(int)+sizeof(int));
     for(int i=0;i<end_part_cart;i++){
         number_orders=number[i];
         database_cart.seekp(sizeof(int)*2,ios::cur);
@@ -345,9 +358,9 @@ void cart::save_number_orders()
 
 int cart::status_product(Product &product, int number)
 {
-    if(product.flag_delete_product==1){return 0;}
-    else if(product.available==0){return 1;}
-    else if(product.available<number){return 2;}
+    if(product.get_flag_delete_product()==1){return 0;}
+    else if(product.get_available()==0){return 1;}
+    else if(product.get_available()<number){return 2;}
     else{return 3;}
 }
 
@@ -379,10 +392,10 @@ void cart::show_cart()
         ui->spinBox_1->show();
         ui->label_type_19->show();
         ui->spinBox_1->setValue(number[0]);
-        product.char_array_to_string(str,16,products[0].type);
+        product.char_array_to_string(str,16,products[0].get_type());
         ui->label_type_10->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_10->setText(QString::number(products[0].price));
+            ui->label_price_10->setText(QString::number(products[0].get_price()));
             show_status(ui->label_type_19,flag_status[0]);
         }
         else{
@@ -407,10 +420,10 @@ void cart::show_cart()
         ui->spinBox_2->show();
         ui->label_type_20->show();
         ui->spinBox_2->setValue(number[1]);
-        product.char_array_to_string(str,16,products[1].type);
+        product.char_array_to_string(str,16,products[1].get_type());
         ui->label_type_11->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_11->setText(QString::number(products[1].price));
+            ui->label_price_11->setText(QString::number(products[1].get_price()));
             show_status(ui->label_type_20,flag_status[1]);
         }
         else{
@@ -435,10 +448,10 @@ void cart::show_cart()
         ui->spinBox_3->show();
         ui->label_type_21->show();
         ui->spinBox_3->setValue(number[2]);
-        product.char_array_to_string(str,16,products[2].type);
+        product.char_array_to_string(str,16,products[2].get_type());
         ui->label_type_12->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_12->setText(QString::number(products[2].price));
+            ui->label_price_12->setText(QString::number(products[2].get_price()));
             show_status(ui->label_type_21,flag_status[2]);
         }
         else{
@@ -463,10 +476,10 @@ void cart::show_cart()
         ui->spinBox_4->show();
         ui->label_type_22->show();
         ui->spinBox_4->setValue(number[3]);
-        product.char_array_to_string(str,16,products[3].type);
+        product.char_array_to_string(str,16,products[3].get_type());
         ui->label_type_13->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_13->setText(QString::number(products[3].price));
+            ui->label_price_13->setText(QString::number(products[3].get_price()));
             show_status(ui->label_type_22,flag_status[3]);
         }
         else{
@@ -491,10 +504,10 @@ void cart::show_cart()
         ui->spinBox_5->show();
         ui->label_type_23->show();
         ui->spinBox_5->setValue(number[4]);
-        product.char_array_to_string(str,16,products[4].type);
+        product.char_array_to_string(str,16,products[4].get_type());
         ui->label_type_14->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_14->setText(QString::number(products[4].price));
+            ui->label_price_14->setText(QString::number(products[4].get_price()));
             show_status(ui->label_type_23,flag_status[4]);
         }
         else{
@@ -519,10 +532,10 @@ void cart::show_cart()
         ui->spinBox_6->show();
         ui->label_type_24->show();
         ui->spinBox_6->setValue(number[5]);
-        product.char_array_to_string(str,16,products[5].type);
+        product.char_array_to_string(str,16,products[5].get_type());
         ui->label_type_15->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_15->setText(QString::number(products[5].price));
+            ui->label_price_15->setText(QString::number(products[5].get_price()));
             show_status(ui->label_type_24,flag_status[5]);
         }
         else{
@@ -547,10 +560,10 @@ void cart::show_cart()
         ui->spinBox_7->show();
         ui->label_type_25->show();
         ui->spinBox_7->setValue(number[6]);
-        product.char_array_to_string(str,16,products[6].type);
+        product.char_array_to_string(str,16,products[6].get_type());
         ui->label_type_16->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_16->setText(QString::number(products[6].price));
+            ui->label_price_16->setText(QString::number(products[6].get_price()));
             show_status(ui->label_type_25,flag_status[6]);
         }
         else{
@@ -575,10 +588,10 @@ void cart::show_cart()
         ui->spinBox_8->show();
         ui->label_type_26->show();
         ui->spinBox_8->setValue(number[7]);
-        product.char_array_to_string(str,16,products[7].type);
+        product.char_array_to_string(str,16,products[7].get_type());
         ui->label_type_17->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_17->setText(QString::number(products[7].price));
+            ui->label_price_17->setText(QString::number(products[7].get_price()));
             show_status(ui->label_type_26,flag_status[7]);
         }
         else{
@@ -603,10 +616,10 @@ void cart::show_cart()
         ui->spinBox_9->show();
         ui->label_type_27->show();
         ui->spinBox_9->setValue(number[8]);
-        product.char_array_to_string(str,16,products[8].type);
+        product.char_array_to_string(str,16,products[8].get_type());
         ui->label_type_18->setText(QString::fromStdString(str));
         if(flag_cart==0){
-            ui->label_price_18->setText(QString::number(products[8].price));
+            ui->label_price_18->setText(QString::number(products[8].get_price()));
             show_status(ui->label_type_27,flag_status[8]);
         }
         else{
@@ -642,7 +655,7 @@ bool cart::status_cart()
     fstream database_product(data_product,ios::in | ios::out | ios::binary);
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
 
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int)+sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int)+sizeof(int));
 
     for(int i=0;i<len_cart;i++){
         database_cart.read((char*)&type, sizeof(int));
@@ -650,7 +663,7 @@ bool cart::status_cart()
         database_cart.read((char*)&number_orders, sizeof(int));
         database_product.seekg(ptr_product);
         database_product.read((char*)&product, sizeof(Product));
-        prices[i]=product.price;
+        prices[i]=product.get_price();
         sum_sell+=(number_orders*prices[i]);
         if(status_product(product,number_orders)!=3){
             database_cart.close();
@@ -667,7 +680,7 @@ void cart::delete_cart()
 {
     len_cart=0;
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekp((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekp((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.write((char*)&len_cart, sizeof(int));
     database_cart.close();
     count=0;
@@ -681,7 +694,7 @@ void cart::reserve_products()
     int number_orders;
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
     fstream database_product(data_product,  ios::in | ios::out | ios::binary);
@@ -693,7 +706,7 @@ void cart::reserve_products()
 
         database_product.seekg(ptr_product);
         database_product.read((char*)&product, sizeof(Product));
-        product.available-=number_orders;
+        product.set_available(product.get_available()-number_orders);
         database_product.seekp(ptr_product);
         database_product.write((char*)&product, sizeof(Product));
 
@@ -710,7 +723,7 @@ void cart::cansel_reserve_products()
     int number_orders;
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
-    database_cart.seekg((clie.ID-1)*(3*20+1)*sizeof(int));
+    database_cart.seekg((clie.get_ID()-1)*(3*20+1)*sizeof(int));
     database_cart.read((char*)&len_cart, sizeof(int));
 
     fstream database_product(data_product,  ios::in | ios::out | ios::binary);
@@ -722,7 +735,7 @@ void cart::cansel_reserve_products()
 
         database_product.seekg(ptr_product);
         database_product.read((char*)&product, sizeof(Product));
-        product.available+=number_orders;
+        product.set_available(product.get_available()+number_orders);
         database_product.seekp(ptr_product);
         database_product.write((char*)&product, sizeof(Product));
     }
@@ -735,7 +748,7 @@ void cart::transaction_admin()
 {
     Admin admin;
     fstream database_admin("admin.txt",ios::in | ios::out | ios::binary);
-    admin.Wallet_balance+=(sum_buy-sum_sell);
+    admin.set_Wallet_balance(admin.get_Wallet_balance()+(sum_buy-sum_sell));
     database_admin.seekp(0);
     database_admin.write((char*)&admin, sizeof(Admin));
     database_admin.close();
@@ -743,7 +756,7 @@ void cart::transaction_admin()
 
 void cart::on_pushButton_next_clicked()
 {
-    if(get_number_orders()==0){
+    if(flag_cart==0 && get_number_orders()==0){
         save_number_orders();
     }
     next_to_cart(9);
@@ -752,7 +765,7 @@ void cart::on_pushButton_next_clicked()
 
 void cart::on_pushButton_prev_clicked()
 {
-    if(get_number_orders()==0){
+    if(flag_cart==0 && get_number_orders()==0){
         save_number_orders();
     }
     preview_to_cart(9);
@@ -797,7 +810,7 @@ void cart::rec_method(bool method)
     {
         //Show Payment GateWay Page
         PaymentGateWay *directpay = new PaymentGateWay(sum_buy, this);
-        this->hide();
+        //this->hide();
         connect(directpay, SIGNAL(PaymentStatusOnThePaymentGateWayPage(bool)), this, SLOT(status_payment(bool)));
         directpay->show();
     }
@@ -835,72 +848,90 @@ void cart::on_pushButton_filter_4_clicked()
 
 void cart::on_pushButton_16_clicked()
 {
-    int andis = count - (end_part_cart-0);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-0);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_14_clicked()
 {
-    int andis = count - (end_part_cart-1);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-1);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_15_clicked()
 {
-    int andis = count - (end_part_cart-2);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-2);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_13_clicked()
 {
-    int andis = count - (end_part_cart-3);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-3);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_12_clicked()
 {
-    int andis = count - (end_part_cart-4);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-4);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_17_clicked()
 {
-    int andis = count - (end_part_cart-5);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-5);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_18_clicked()
 {
-    int andis = count - (end_part_cart-6);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-6);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_19_clicked()
 {
-    int andis = count - (end_part_cart-7);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-7);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }
 
 void cart::on_pushButton_20_clicked()
 {
-    int andis = count - (end_part_cart-8);
-    delete_product(andis);
-    repet_to_cart(9);
-    show_cart();
+    if(flag_cart==0){
+        int andis = count - (end_part_cart-8);
+        delete_product(andis);
+        repet_to_cart(9);
+        show_cart();
+    }
 }

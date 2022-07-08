@@ -16,8 +16,8 @@ bool MatchingUserAndCellCustomer(string Username,string Number)
     string number;
     while(CustomerFile.read((char*)&Customer, sizeof(customer)))
     {
-        Customer.char_array_to_string(user, 16, Customer.User);
-        Customer.char_array_to_string(number, 31, Customer.PhoneNumber);
+        Customer.char_array_to_string(user, 16, Customer.get_User());
+        Customer.char_array_to_string(number, 31, Customer.get_phoneNumber());
         if(Username == user)
         {
             if(Number == number)
@@ -44,7 +44,7 @@ void ForgetPasCustomer::on_pushButton_clicked()
         fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
         while(cus_tmps.read((char*)&Cus_tmp,sizeof(customer)))
         {
-            Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.User);
+            Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.get_User());
 
             if(username_tmp == User)
             {
@@ -70,15 +70,15 @@ void ForgetPasCustomer::on_pushButton_2_clicked()
 void ForgetPasCustomer::GetNewPasCus(QString m)
 {
     qDebug("Failed to write the data to port");
-    string User = Cus_tmp.User;
+    string User = Cus_tmp.get_User();
     string username_tmp = "";
     fstream cus_tmps("customers.txt", ios::in | ios::out | ios::binary);
     while(cus_tmps.read((char*)&Cus_tmp, sizeof(customer)))
     {
-        Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.User);
+        Cus_tmp.char_array_to_string(username_tmp, 16, Cus_tmp.get_User());
         if(username_tmp == User)
         {
-            Cus_tmp.string_to_char_array(Cus_tmp.Password,16,m.toStdString());
+            Cus_tmp.string_to_char_array(Cus_tmp.get_Password(),16,m.toStdString());
             cus_tmps.seekp(-sizeof(customer),ios::cur);
             cus_tmps.write((char*)&Cus_tmp,sizeof(customer));//جایگزین کردن اطلاعات
             break;

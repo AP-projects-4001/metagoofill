@@ -23,9 +23,9 @@ LoginPage::LoginPage(QWidget *parent)
         database_admin.close();
         database_admin.open("admin.txt",  ios::out | ios::binary);
         Admin admin;
-        admin.string_to_char_array("Admin",16,admin.User);
-        admin.string_to_char_array("Admin",31,admin.Password);
-        admin.Wallet_balance=0;
+        //admin.string_to_char_array("Admin",16,admin.get_User());
+        //admin.string_to_char_array("Admin",31,admin.get_Password());
+        admin.set_Wallet_balance(0);
         database_admin.write((char*)&admin, sizeof(Admin));
     }
     database_admin.close();
@@ -65,7 +65,7 @@ LoginPage::LoginPage(QWidget *parent)
         numbers.close();
         numbers.open("numbers.txt",  ios::out | ios::binary);
         int a=0;
-        for(int i=0; i<4; i++)
+        for(int i=0; i<6; i++)
         {
             numbers.write((char*)&a, sizeof(int));
         }
