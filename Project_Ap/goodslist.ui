@@ -21,7 +21,9 @@
     <widget class="QPushButton" name="pushButton_filter_2">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
      </property>
      <property name="text">
       <string>سبد خرید</string>
@@ -45,7 +47,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
     <widget class="QPushButton" name="pushButton_next">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
      </property>
      <property name="text">
       <string>صفحه بعدی</string>
@@ -1056,7 +1060,9 @@ border-radius: 12px;</string>
     <widget class="QPushButton" name="pushButton_filter_3">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
      </property>
      <property name="text">
       <string>پروفایل</string>
@@ -1067,7 +1073,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
     <widget class="QPushButton" name="pushButton_filter">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
      </property>
      <property name="text">
       <string>فیلتر</string>
@@ -1078,6 +1086,7 @@ font: 12pt &quot;Lalezar&quot;;</string>
     <widget class="QPushButton" name="pushButton_prev">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;
 </string>
      </property>
@@ -1090,7 +1099,9 @@ font: 12pt &quot;Lalezar&quot;;
     <widget class="QPushButton" name="pushButton_filter_4">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
      </property>
      <property name="text">
       <string>دسته بندی</string>

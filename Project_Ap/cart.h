@@ -95,6 +95,8 @@ private slots:
 
     void on_pushButton_20_clicked();
 
+    void on_pushButton_prev_2_clicked();
+
 private:
     Ui::cart *ui;
     customer cust;

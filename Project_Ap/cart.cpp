@@ -1,5 +1,6 @@
 #include "cart.h"
 #include "ui_cart.h"
+#include "goodslist.h"
 #include <fstream>
 #include <QMessageBox>
 
@@ -935,3 +936,13 @@ void cart::on_pushButton_20_clicked()
         show_cart();
     }
 }
+
+void cart::on_pushButton_prev_2_clicked()
+{
+    this->close();
+    goodsList *newlist = new goodsList(clie);
+
+
+    newlist->show();
+}
+

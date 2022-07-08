@@ -39,6 +39,7 @@ clientProf::clientProf(client cli_info, QWidget *parent) :
     cli_info.char_array_to_string(temp, 16, cli_info.get_User());
     ui->plainTextEdit_16->setPlainText(QString::fromStdString(temp));
 
+    ui->label->setText(QString::number(cli_info.get_Wallet_balance()));
 }
 
 clientProf::~clientProf()

@@ -251,7 +251,7 @@ color: rgb(228, 227, 227);
 </string>
         </property>
         <property name="text">
-         <string>کلمات کلیدی:</string>
+         <string>رنگ:                        </string>
         </property>
        </widget>
       </item>

@@ -36,6 +36,8 @@ private slots:
 
     void on_profile_clicked();
 
+    void on_cart_clicked();
+
 private:
     Ui::groupingGoods *ui;
     client clie;

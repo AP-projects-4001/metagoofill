@@ -1143,12 +1143,12 @@ border-radius: 12px;</string>
     </layout>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>540</y>
-     <width>880</width>
+     <width>1002</width>
      <height>51</height>
     </rect>
    </property>
@@ -1157,7 +1157,9 @@ border-radius: 12px;</string>
      <widget class="QPushButton" name="pushButton_prev">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>صفحه قبلی</string>
@@ -1168,7 +1170,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <widget class="QPushButton" name="pushButton_next">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>صفحه بعدی</string>
@@ -1176,10 +1180,25 @@ font: 12pt &quot;Lalezar&quot;;</string>
      </widget>
     </item>
     <item>
+     <widget class="QPushButton" name="pushButton_prev_2">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+      </property>
+      <property name="text">
+       <string>فروشگاه</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QPushButton" name="pushButton_filter_4">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>انصراف از خرید</string>
@@ -1190,7 +1209,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <widget class="QPushButton" name="pushButton_filter_3">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>پرداخت</string>
@@ -1201,7 +1222,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <widget class="QPushButton" name="pushButton_filter_2">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>پرداخت نهایی</string>
@@ -1212,7 +1235,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <widget class="QPushButton" name="pushButton_filter">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 12pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>حذف سبد</string>
@@ -1236,7 +1261,9 @@ font: 12pt &quot;Lalezar&quot;;</string>
      <widget class="QLabel" name="label_type_29">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 10pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>جمع</string>
@@ -1247,7 +1274,9 @@ font: 10pt &quot;Lalezar&quot;;</string>
      <widget class="QLabel" name="label_type_28">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(32, 64, 81);
-font: 10pt &quot;Lalezar&quot;;</string>
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
       </property>
       <property name="text">
        <string>جمع فاکتور پرداخت:</string>

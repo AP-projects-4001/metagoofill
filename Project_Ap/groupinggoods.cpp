@@ -1,6 +1,7 @@
 #include "groupinggoods.h"
 #include "ui_groupinggoods.h"
 #include "clientprof.h"
+#include "cart.h"
 
 
 groupingGoods::groupingGoods(client _clie, QWidget *parent) :
@@ -79,5 +80,13 @@ void groupingGoods::on_profile_clicked()
     this->close();
     clientProf *reprof = new clientProf(clie);
     reprof->show();
+}
+
+
+void groupingGoods::on_cart_clicked()
+{
+    cart *newcart = new cart(clie);
+    this->close();
+    newcart->show();
 }
 

@@ -94,7 +94,7 @@ background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);</string>
        </property>
        <property name="text">
-        <string>بازگشت به عقب</string>
+        <string>بازگشت</string>
        </property>
       </widget>
      </item>

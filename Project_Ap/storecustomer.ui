@@ -372,7 +372,7 @@ color: rgb(228, 227, 227);
 font: 14pt &quot;Lalezar&quot;;</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>439</x>
@@ -409,7 +409,7 @@ font: 11pt &quot;Lalezar&quot;;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>270</x>
@@ -447,7 +447,7 @@ font: 11pt &quot;Lalezar&quot;;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -485,7 +485,7 @@ font: 11pt &quot;Lalezar&quot;;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -518,7 +518,7 @@ font: 11pt &quot;Lalezar&quot;;</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>400</x>
@@ -555,6 +555,19 @@ font: 11pt &quot;Lalezar&quot;;</string>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_store">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>131</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>نام فروشگاه</string>
+    </property>
    </widget>
   </widget>
   <widget class="QLabel" name="label_number">
@@ -599,7 +612,7 @@ font: 14pt &quot;Lalezar&quot;;</string>
      <x>60</x>
      <y>580</y>
      <width>661</width>
-     <height>51</height>
+     <height>57</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">

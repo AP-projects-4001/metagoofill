@@ -105,6 +105,17 @@ font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
       </widget>
      </item>
      <item>
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(32, 64, 81);
+font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
