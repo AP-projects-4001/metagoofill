@@ -836,7 +836,7 @@ void cart::status_payment(bool m)
         delete_cart();
         flag_cart=0;
         show_cart();
-        //کیو مسیج خرید با موفقیت انجام شد
+        QMessageBox::information(this, "توجه", "خرید با موفقیت انجام شد");
     }
 }
 

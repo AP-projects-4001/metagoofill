@@ -80,8 +80,12 @@ void SignUpClient::on_pushButton_clicked()
     }
 
     QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
-
-
+    ui->textEdit_12->clear();
+    ui->textEdit_13->clear();
+    ui->textEdit_14->clear();
+    ui->textEdit_15->clear();
+    ui->textEdit_16->clear();
+    ui->textEdit_17->clear();
     fstream database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
     database_cart.seekp((NewClient.get_ID()-1)*(3*20+1)*sizeof(int));
     int len_cart=0;

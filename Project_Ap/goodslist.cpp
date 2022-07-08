@@ -621,7 +621,7 @@ void goodsList::on_pushButton_16_clicked()
     else if(add_to_cart(andis,ui->spinBox_1->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_14_clicked()
@@ -631,7 +631,7 @@ void goodsList::on_pushButton_14_clicked()
     else if(add_to_cart(andis,ui->spinBox_2->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_15_clicked()
@@ -641,7 +641,7 @@ void goodsList::on_pushButton_15_clicked()
     else if(add_to_cart(andis,ui->spinBox_3->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_13_clicked()
@@ -651,7 +651,7 @@ void goodsList::on_pushButton_13_clicked()
     else if(add_to_cart(andis,ui->spinBox_4->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_12_clicked()
@@ -661,7 +661,7 @@ void goodsList::on_pushButton_12_clicked()
     else if(add_to_cart(andis,ui->spinBox_5->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_17_clicked()
@@ -671,7 +671,7 @@ void goodsList::on_pushButton_17_clicked()
     else if(add_to_cart(andis,ui->spinBox_6->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_18_clicked()
@@ -681,7 +681,7 @@ void goodsList::on_pushButton_18_clicked()
     else if(add_to_cart(andis,ui->spinBox_7->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_19_clicked()
@@ -691,7 +691,7 @@ void goodsList::on_pushButton_19_clicked()
     else if(add_to_cart(andis,ui->spinBox_8->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }
 
 void goodsList::on_pushButton_20_clicked()
@@ -701,5 +701,5 @@ void goodsList::on_pushButton_20_clicked()
     else if(add_to_cart(andis,ui->spinBox_9->value())==0)
         QMessageBox::warning(this,"توجه","سبد محصول پر شده لطفا ابتدا سبد را پرداخت کنید");
     else
-        QMessageBox::warning(this,"توجه","کالا با موفقیت اضافه شد");
+        QMessageBox::information(this,"توجه","کالا با موفقیت اضافه شد");
 }

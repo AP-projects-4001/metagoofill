@@ -8,6 +8,7 @@ AdminPage::AdminPage(QWidget *parent) :
     ui(new Ui::AdminPage)
 {
     ui->setupUi(this);
+    this->setWindowTitle("صفحه ادمین");
 }
 
 AdminPage::~AdminPage()

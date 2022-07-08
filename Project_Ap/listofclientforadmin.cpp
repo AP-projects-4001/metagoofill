@@ -23,7 +23,7 @@ ListOFClientForAdmin::ListOFClientForAdmin(QWidget *parent) :
     fstream cli_tmps2("clients.txt", ios::in | ios::out | ios::binary);
     class customer Cli_Show[Count_Client];
     int i=0;
-    while(cli_tmps2.read((char*)&Cli_Show[i],138))
+    while(cli_tmps2.read((char*)&Cli_Show[i],sizeof(client)))
         i++;
     cli_tmps2.close();
     for(i=0;i<Count_Client;i++)
@@ -69,7 +69,7 @@ void ListOFClientForAdmin::on_pushButton_clicked()
             return;
         }
     }
-    QMessageBox::about(this, "توجه", "کاربر یافت نشد");
+    QMessageBox::warning(this, "توجه", "کاربر یافت نشد");
 
 }
 

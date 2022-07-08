@@ -56,7 +56,7 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          ui->textEdit_11->toPlainText().toStdString()==""||
             CheckRadio())
     {
-        QMessageBox::about(this,"توجه","یکی از فیلدها خالیست");
+        QMessageBox::warning(this,"توجه","یکی از فیلدها خالیست");
         return;
     }
 
@@ -117,7 +117,11 @@ void SignUpCUSTOMER::on_pushButton_clicked()
          }
 
          QMessageBox::about(this, "توجه", "ثبت نام موفقیت آمیز");
-
+         ui->textEdit_7->clear();
+         ui->textEdit_8->clear();
+         ui->textEdit_9->clear();
+         ui->textEdit_10->clear();
+         ui->textEdit_11->clear();
          CustomerFile.write((char*)&NewCustomer, sizeof(customer));
          CustomerFile.close();
 }

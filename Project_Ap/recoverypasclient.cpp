@@ -24,6 +24,6 @@ void RecoveryPasClient::on_pushButton_2_clicked()
 void RecoveryPasClient::on_pushButton_clicked()
 {
     emit passPas(ui->textEdit->toPlainText());
-    QMessageBox::information(this, "توجه", "رمز تغییر یافت");
+    QMessageBox::about(this, "توجه", "رمز تغییر یافت");
     close();
 }

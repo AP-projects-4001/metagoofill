@@ -30,6 +30,7 @@
      <font>
       <family>Lalezar</family>
       <pointsize>20</pointsize>
+      <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
@@ -54,9 +55,20 @@ font: 20pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QPushButton" name="pushButton_8">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(32, 64, 81);
+         <string notr="true">QPushButton#pushButton_8 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
-font: 16pt &quot;Lalezar&quot;;</string>
+font: 16pt &quot;Lalezar&quot;;
+}
+QPushButton#pushButton_8:pressed {
+border-style: solid;
+border-width: 1px;
+	background-color: rgb(25, 69, 105);
+	color: rgb(85, 255, 255);
+}‏</string>
         </property>
         <property name="text">
          <string>ورود</string>
@@ -66,9 +78,20 @@ font: 16pt &quot;Lalezar&quot;;</string>
       <item>
        <widget class="QPushButton" name="pushButton_9">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(32, 64, 81);
+         <string notr="true">QPushButton#pushButton_9 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
-font: 16pt &quot;Lalezar&quot;;</string>
+font: 16pt &quot;Lalezar&quot;;
+}
+QPushButton#pushButton_9:pressed {
+border-style: solid;
+border-width: 1px;
+	background-color: rgb(25, 69, 105);
+	color: rgb(85, 255, 255);
+}‏</string>
         </property>
         <property name="text">
          <string>عضویت</string>
@@ -81,14 +104,26 @@ font: 16pt &quot;Lalezar&quot;;</string>
          <font>
           <family>Lalezar</family>
           <pointsize>16</pointsize>
+          <weight>50</weight>
           <italic>false</italic>
           <bold>false</bold>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(32, 64, 81);
+         <string notr="true">QPushButton#pushButton_7 {
+padding-left: 20px;
+padding-right: 20px;
+border-radius: 5px;
+background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
-font: 16pt &quot;Lalezar&quot;;</string>
+font: 16pt &quot;Lalezar&quot;;
+}
+QPushButton#pushButton_7:pressed {
+border-style: solid;
+border-width: 1px;
+	background-color: rgb(25, 69, 105);
+	color: rgb(85, 255, 255);
+}‏</string>
         </property>
         <property name="text">
          <string>خروج</string>
@@ -96,6 +131,19 @@ font: 16pt &quot;Lalezar&quot;;</string>
        </widget>
       </item>
      </layout>
+    </widget>
+    <widget class="QLabel" name="time">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>30</y>
+       <width>191</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
     </widget>
    </widget>
   </widget>

@@ -3,14 +3,18 @@
 #include "signup.h"
 #include "mainlogin.h"
 #include <fstream>
+#include <QDateTime>
 #include "admin.h"
-
 using namespace std;
 LoginPage::LoginPage(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginPage)
 {
     ui->setupUi(this);
+    timer = new QTimer(this);
+    connect(timer,SIGNAL(timeout()),this,SLOT(myfunction()));
+    timer->start(1000);
+
 
     fstream database_clients("clients.txt",  ios::app | ios::binary);
     database_clients.close();
@@ -96,4 +100,15 @@ void LoginPage::on_pushButton_8_clicked()
     MainLogin *p = new MainLogin(this);
     p->show();
     this->hide();
+}
+void LoginPage::myfunction()
+{
+    QTime time = QTime::currentTime();
+    QString time_text = time.toString("hh - mm -ss");
+    if((time.second()%2)==0)
+    {
+        time_text[3]=' ';
+        time_text[8]=' ';
+    }
+    ui->time->setText(time_text);
 }
