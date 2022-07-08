@@ -8,6 +8,10 @@ PaymentGateWay::PaymentGateWay(int price, QWidget *parent) :
     ui->setupUi(this);
     prc = price;
     ui->label_6->setText(QString::number(prc));
+    ui->spinBox->setMinimum(1000);
+    ui->spinBox->setMaximum(999999999);
+    ui->spinBox_2->setMinimum(100);
+    ui->spinBox_2->setMaximum(9999);
 }
 
 PaymentGateWay::~PaymentGateWay()

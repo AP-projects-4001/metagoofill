@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>897</width>
+    <width>1038</width>
     <height>603</height>
    </rect>
   </property>
@@ -20,8 +20,8 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>13</y>
+     <x>100</x>
+     <y>10</y>
      <width>831</width>
      <height>521</height>
     </rect>
@@ -38,19 +38,6 @@ font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
      <rect>
       <x>531</x>
       <y>430</y>
-      <width>201</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_type_0">
-    <property name="geometry">
-     <rect>
-      <x>531</x>
-      <y>30</y>
       <width>201</width>
       <height>24</height>
      </rect>
@@ -143,19 +130,6 @@ font: 12pt &quot;Lalezar&quot;;color: rgb(228, 227, 227);</string>
       <x>531</x>
       <y>380</y>
       <width>201</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_price_0">
-    <property name="geometry">
-     <rect>
-      <x>283</x>
-      <y>30</y>
-      <width>141</width>
       <height>24</height>
      </rect>
     </property>
@@ -1142,13 +1116,51 @@ border-radius: 12px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>10</y>
+      <width>260</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>قیمت</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>539</x>
+      <y>10</y>
+      <width>241</width>
+      <height>38</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+    </property>
+    <property name="text">
+     <string>نام کالا</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>10</x>
      <y>540</y>
-     <width>831</width>
+     <width>1021</width>
      <height>51</height>
     </rect>
    </property>
@@ -1308,6 +1320,19 @@ font: 12pt &quot;Lalezar&quot;;
        <string>پروفایل</string>
       </property>
      </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_21">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
     </item>
    </layout>
   </widget>

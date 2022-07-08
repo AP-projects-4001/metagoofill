@@ -32,6 +32,8 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void show_prof();
+
 private:
     Ui::clientProf *ui;
     client clie;

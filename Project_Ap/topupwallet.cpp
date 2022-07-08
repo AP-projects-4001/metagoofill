@@ -8,10 +8,11 @@ TopUpWallet::TopUpWallet(client _clie, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::TopUpWallet)
 {
-    clie=_clie;
+
     ui->setupUi(this);
     ui->spinBox->setMinimum(1000);
     ui->spinBox->setMaximum(999999999);
+    clie=_clie;
 
 }
 

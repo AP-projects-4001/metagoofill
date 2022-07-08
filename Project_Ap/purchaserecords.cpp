@@ -65,7 +65,7 @@ void PurchaseRecords::search_in_buys(string &buys)
 
 void PurchaseRecords::show_buys(string &buys)
 {
-    QString content = "ردیف\tاسم کالا\tتعداد\tقیمت\n";
+    QString content = "ردیف\tاسم کالا\tقیمت\tتعداد\tفروشگاه\n";
     content+=QString::fromStdString(buys);
     QListWidgetItem *m_textEdit = new QListWidgetItem(content);
     ui->listWidget->addItem(m_textEdit);

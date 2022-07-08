@@ -69,6 +69,71 @@ font: 12pt &quot;Lalezar&quot;;
      </property>
     </widget>
    </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="pushButton_filter">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>فیلتر</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="5">
+    <widget class="QPushButton" name="pushButton_filter_4">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>دسته بندی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButton_filter_6">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>بروز رسانی</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="6">
+    <widget class="QPushButton" name="pushButton_filter_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>سبد خرید</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton_next">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(32, 64, 81);
+color: rgb(228, 227, 227);
+font: 12pt &quot;Lalezar&quot;;
+</string>
+     </property>
+     <property name="text">
+      <string>صفحه بعدی</string>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0" colspan="10">
     <widget class="QGroupBox" name="groupBox">
      <property name="styleSheet">
@@ -1067,71 +1132,44 @@ border-radius: 12px;</string>
        </item>
       </layout>
      </widget>
-    </widget>
-   </item>
-   <item row="1" column="6">
-    <widget class="QPushButton" name="pushButton_filter_2">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>20</y>
+        <width>531</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;
 </string>
-     </property>
-     <property name="text">
-      <string>سبد خرید</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="pushButton_next">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
+         </property>
+         <property name="text">
+          <string>قیمت</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(32, 64, 81);
 color: rgb(228, 227, 227);
 font: 12pt &quot;Lalezar&quot;;
 </string>
-     </property>
-     <property name="text">
-      <string>صفحه بعدی</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3">
-    <widget class="QPushButton" name="pushButton_filter">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
-color: rgb(228, 227, 227);
-font: 12pt &quot;Lalezar&quot;;
-</string>
-     </property>
-     <property name="text">
-      <string>فیلتر</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="5">
-    <widget class="QPushButton" name="pushButton_filter_4">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
-color: rgb(228, 227, 227);
-font: 12pt &quot;Lalezar&quot;;
-</string>
-     </property>
-     <property name="text">
-      <string>دسته بندی</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="2">
-    <widget class="QPushButton" name="pushButton_filter_6">
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(32, 64, 81);
-color: rgb(228, 227, 227);
-font: 12pt &quot;Lalezar&quot;;
-</string>
-     </property>
-     <property name="text">
-      <string>بروز رسانی</string>
-     </property>
+         </property>
+         <property name="text">
+          <string>نام کالا</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
   </layout>
