@@ -11,7 +11,7 @@
 #include "customer.h"
 #include "admin.h"
 #include "ui_cart.h"
-
+#include "gooddetails.h"
 namespace Ui {
 class cart;
 }
@@ -99,6 +99,24 @@ private slots:
 
     void on_pushButton_prev_3_clicked();
 
+    void on_pushButton_g1_clicked();
+
+    void on_pushButton_g2_clicked();
+
+    void on_pushButton_g3_clicked();
+
+    void on_pushButton_g4_clicked();
+
+    void on_pushButton_g5_clicked();
+
+    void on_pushButton_g6_clicked();
+
+    void on_pushButton_g7_clicked();
+
+    void on_pushButton_g8_clicked();
+
+    void on_pushButton_g9_clicked();
+
 private:
     Ui::cart *ui;
     customer cust;
@@ -117,6 +135,8 @@ private:
     bool flag_cart;
     int sum_sell;
     int sum_buy;
+
+    goodDetails *details;
 };
 
 #endif // CART_H

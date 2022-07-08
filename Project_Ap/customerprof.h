@@ -16,14 +16,14 @@ public:
     explicit customerProf(customer cus_info, QWidget *parent = nullptr);
     ~customerProf();
 
+    void show_prof();
+
 private slots:
     void on_pushButton_4_clicked();
 
     void on_pushButton_2_clicked();
 
     void on_pushButton_clicked();
-
-    void on_pushButton_3_clicked();
 
     void on_pushButton_5_clicked();
 

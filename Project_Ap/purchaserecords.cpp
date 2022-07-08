@@ -83,7 +83,7 @@ void PurchaseRecords::go_to_factor(int radif)
 
     database_clients.seekg((clie.get_ID()-1)*sizeof(client));
     database_clients.read((char*)&clie,sizeof(client));
-    if(radif<=clie.get_number_mybuys()){
+    if(radif>0 && radif<=clie.get_number_mybuys()){
         ptr_next_buy=clie.get_ptr_start_mybuys();
         for(int i=0;i<radif;i++){
             database_buys.seekg(ptr_next_buy);

@@ -260,62 +260,62 @@ bool goodsList::filter()
     if(flag_filter==1){
         if(type==0 || type==1 || type==4){
 
-            if(other_info_2.price_from!=""){
-                if(product.get_price()<stoi(other_info_2.price_from)){return 0;}
+            if(other_info_2.get_price_from()!=""){
+                if(product.get_price()<stoi(other_info_2.get_price_from())){return 0;}
             }
-            if(other_info_2.price_to!=""){
-                if(product.get_price()>stoi(other_info_2.price_to)){return 0;}
+            if(other_info_2.get_price_to()!=""){
+                if(product.get_price()>stoi(other_info_2.get_price_to())){return 0;}
             }
             product.char_array_to_string(str,16,product.get_type());
-            if(other_info_2.name_prod!="" && other_info_2.name_prod!=str){return 0;}
+            if(other_info_2.get_name_prod()!="" && other_info_2.get_name_prod()!=str){return 0;}
 
             product.char_array_to_string(str,16,product.get_color());
-            if(other_info_2.color!="" && (other_info_2.color!=str || product.get_flag_color()==0)){return 0;}
+            if(other_info_2.get_color()!="" && (other_info_2.get_color()!=str || product.get_flag_color()==0)){return 0;}
 
             database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
             database_customers.read((char*)&cust,sizeof(customer));
             cust.char_array_to_string(str,16,cust.get_Name());
-            if(other_info_2.customer_name!="" && other_info_2.customer_name!=str){return 0;}
+            if(other_info_2.get_customer_name()!="" && other_info_2.get_customer_name()!=str){return 0;}
 
         }
         else if(type==3 || type==5){
 
-            if(fruit_info_2.price_from!=""){
-                if(product.get_price()<stoi(fruit_info_2.price_from)){return 0;}
+            if(fruit_info_2.get_price_from()!=""){
+                if(product.get_price()<stoi(fruit_info_2.get_price_from())){return 0;}
             }
-            if(fruit_info_2.price_to!=""){
-                if(product.get_price()>stoi(fruit_info_2.price_to)){return 0;}
+            if(fruit_info_2.get_price_to()!=""){
+                if(product.get_price()>stoi(fruit_info_2.get_price_to())){return 0;}
             }
             product.char_array_to_string(str,16,product.get_type());
-            if(fruit_info_2.name_prod!="" && fruit_info_2.name_prod!=str){return 0;}
+            if(fruit_info_2.get_name_prod()!="" && fruit_info_2.get_name_prod()!=str){return 0;}
 
             product.char_array_to_string(str,16,product.get_color());
-            if(fruit_info_2.color!="" && (fruit_info_2.color!=str || product.get_flag_color()==0 )){return 0;}
+            if(fruit_info_2.get_color()!="" && (fruit_info_2.get_color()!=str || product.get_flag_color()==0 )){return 0;}
 
             database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
             database_customers.read((char*)&cust,sizeof(customer));
             cust.char_array_to_string(str,16,cust.get_Name());
-            if(fruit_info_2.customer_name!="" && fruit_info_2.customer_name!=str){return 0;}
+            if(fruit_info_2.get_customer_name()!="" && fruit_info_2.get_customer_name()!=str){return 0;}
 
         }
         else if(type==2){
 
-            if(clothes_info_2.price_from!=""){
-                if(product.get_price()<stoi(clothes_info_2.price_from)){return 0;}
+            if(clothes_info_2.get_price_from()!=""){
+                if(product.get_price()<stoi(clothes_info_2.get_price_from())){return 0;}
             }
-            if(clothes_info_2.price_to!=""){
-                if(product.get_price()>stoi(clothes_info_2.price_to)){return 0;}
+            if(clothes_info_2.get_price_to()!=""){
+                if(product.get_price()>stoi(clothes_info_2.get_price_to())){return 0;}
             }
             product.char_array_to_string(str,16,product.get_type());
-            if(clothes_info_2.name_prod!="" && clothes_info_2.name_prod!=str){return 0;}
+            if(clothes_info_2.get_name_prod()!="" && clothes_info_2.get_name_prod()!=str){return 0;}
 
             product.char_array_to_string(str,16,product.get_color());
-            if(clothes_info_2.color!="" && (clothes_info_2.color!=str || product.get_flag_color()==0)){return 0;}
+            if(clothes_info_2.get_color()!="" && (clothes_info_2.get_color()!=str || product.get_flag_color()==0)){return 0;}
 
             database_customers.seekg((product.get_ID_customer()-1)*sizeof(customer));
             database_customers.read((char*)&cust,sizeof(customer));
             cust.char_array_to_string(str,16,cust.get_Name());
-            if(clothes_info_2.customer_name!="" && clothes_info_2.customer_name!=str){return 0;}
+            if(clothes_info_2.get_customer_name()!="" && clothes_info_2.get_customer_name()!=str){return 0;}
 
         }
     }

@@ -964,3 +964,57 @@ void cart::on_pushButton_prev_3_clicked()
     reprof->show();
     this->close();
 }
+
+void cart::on_pushButton_g1_clicked()
+{
+    details = new goodDetails(products[0], this);
+    details->show();
+}
+
+void cart::on_pushButton_g2_clicked()
+{
+    details = new goodDetails(products[1], this);
+    details->show();
+}
+
+void cart::on_pushButton_g3_clicked()
+{
+    details = new goodDetails(products[2], this);
+    details->show();
+}
+
+void cart::on_pushButton_g4_clicked()
+{
+    details = new goodDetails(products[3], this);
+    details->show();
+}
+
+void cart::on_pushButton_g5_clicked()
+{
+    details = new goodDetails(products[4], this);
+    details->show();
+}
+
+void cart::on_pushButton_g6_clicked()
+{
+    details = new goodDetails(products[5], this);
+    details->show();
+}
+
+void cart::on_pushButton_g7_clicked()
+{
+    details = new goodDetails(products[6], this);
+    details->show();
+}
+
+void cart::on_pushButton_g8_clicked()
+{
+    details = new goodDetails(products[7], this);
+    details->show();
+}
+
+void cart::on_pushButton_g9_clicked()
+{
+    details = new goodDetails(products[8], this);
+    details->show();
+}

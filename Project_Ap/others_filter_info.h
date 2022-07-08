@@ -22,7 +22,7 @@ public:
     void set_color(string _color);
 
 
-public:
+private:
     string name_prod;
     string price_from;
     string price_to;
