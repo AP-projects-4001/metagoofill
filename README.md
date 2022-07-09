@@ -15,7 +15,7 @@ To run the program, you need a creator (same as qt) or an installation file.
 There is an installation file installed in this project.
 
 
-
+link application.exe: https://imgurl.ir/uploads/z51929_mysetup.zip
 
 And now you can use this program in any graphical embedded system with run following command :
 
