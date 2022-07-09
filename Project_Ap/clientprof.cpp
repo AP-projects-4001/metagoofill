@@ -15,33 +15,6 @@ clientProf::clientProf(client cli_info, QWidget *parent) :
     ui->setupUi(this);
     clie = cli_info;// ذخیره شی در کلاس
     show_prof();
-//    string temp;
-
-//    //set name.
-//    cli_info.char_array_to_string(temp, 16, cli_info.get_Name());
-//    ui->plainTextEdit_13->setPlainText(QString::fromStdString(temp));
-
-//    //set phonenumber.
-//    cli_info.char_array_to_string(temp, 12, cli_info.get_phoneNumber());
-//    ui->plainTextEdit_5->setPlainText(QString::fromStdString(temp));
-
-//    //set city.
-//    cli_info.char_array_to_string(temp, 11, cli_info.get_city());
-//    ui->plainTextEdit_15->setPlainText(QString::fromStdString(temp));
-
-//    //set address.
-//    cli_info.char_array_to_string(temp, 31, cli_info.get_Address());
-//    ui->plainTextEdit_14->setPlainText(QString::fromStdString(temp));
-
-//    //set hidden password.
-//    temp = "*********";//
-//    ui->plainTextEdit_17->setPlainText(QString::fromStdString(temp));
-
-//    //set username.
-//    cli_info.char_array_to_string(temp, 16, cli_info.get_User());
-//    ui->plainTextEdit_16->setPlainText(QString::fromStdString(temp));
-
-//    ui->label->setText(QString::number(cli_info.get_Wallet_balance()));
 }
 
 clientProf::~clientProf()

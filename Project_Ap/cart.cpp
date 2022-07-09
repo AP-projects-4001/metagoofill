@@ -85,6 +85,10 @@ void cart::add_to_buys()
     int ptr_factor;
     int ptr_next_buy;
 
+    fstream database_clients("clients.txt", ios::in | ios::out | ios::binary);
+    database_clients.seekg((clie.get_ID()-1)*sizeof(client));
+    database_clients.read((char*)&clie,sizeof(client));
+
     fstream  database_buys("database_buys.txt",ios::in | ios::out | ios::binary);
 
     fstream  database_cart("database_cart.txt",ios::in | ios::out | ios::binary);
@@ -111,7 +115,7 @@ void cart::add_to_buys()
     }
     clie.set_ptr_end_mybuys( ptr_next_buy-(sizeof(int)*2));
 
-    fstream database_clients("clients.txt", ios::in | ios::out | ios::binary);
+
     database_clients.seekp((clie.get_ID()-1)*sizeof(client));
     database_clients.write((char*)&clie,sizeof(client));
     database_clients.close();

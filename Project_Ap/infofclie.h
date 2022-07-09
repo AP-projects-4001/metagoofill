@@ -16,6 +16,8 @@ public:
     explicit infofclie(client clie, QWidget *parent = nullptr);
     ~infofclie();
 
+    void show_infofclie();
+
 private slots:
     void on_pushButton_4_clicked();
 
@@ -23,7 +25,7 @@ private slots:
 
 private:
     Ui::infofclie *ui;
-    client clie_inf;
+    client clie;
 };
 
 #endif // INFOFCLIE_H

@@ -16,6 +16,8 @@ public:
     explicit infofcus(customer cus, QWidget *parent = nullptr);
     ~infofcus();
 
+    void show_infofcus();
+
 private slots:
     void on_pushButton_4_clicked();
 
@@ -23,7 +25,7 @@ private slots:
 
 private:
     Ui::infofcus *ui;
-    customer cus_info;
+    customer cust;
 };
 
 #endif // INFOFCUS_H

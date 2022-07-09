@@ -41,6 +41,8 @@ void customerProf::show_prof()
 
     cust.char_array_to_string(temp, 16, cust.get_User());
     ui->plainTextEdit_5->setPlainText(QString::fromStdString(temp));
+
+    ui->label->setText(QString::number(cust.get_Wallet_balance()));
 }
 
 void customerProf::on_pushButton_4_clicked()

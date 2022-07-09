@@ -5,45 +5,15 @@
 #include <fstream>
 
 using namespace std;
-infofclie::infofclie(client clie, QWidget *parent) :
+infofclie::infofclie(client _clie, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::infofclie)
 {
     ui->setupUi(this);
 
-    clie_inf = clie;// ذخیره شی در کلاس
-    string temp;
+    clie = _clie;// ذخیره شی در کلاس
 
-    //set name.
-    clie_inf.char_array_to_string(temp, 16, clie_inf.get_Name());
-    ui->plainTextEdit_2->setPlainText(QString::fromStdString(temp));
-
-    //set phonenumber.
-    clie_inf.char_array_to_string(temp, 12, clie_inf.get_phoneNumber());
-    ui->plainTextEdit->setPlainText(QString::fromStdString(temp));
-
-    //set city.
-    clie_inf.char_array_to_string(temp, 11, clie_inf.get_city());
-    ui->plainTextEdit_7->setPlainText(QString::fromStdString(temp));
-
-    //set address.
-    clie_inf.char_array_to_string(temp, 31, clie_inf.get_Address());
-    ui->plainTextEdit_6->setPlainText(QString::fromStdString(temp));
-
-    //access.
-    if(clie_inf.get_access() == '1')
-    {
-        ui->plainTextEdit_8->setPlainText(QString::fromStdString("active"));
-    }
-    else if(clie_inf.get_access() == '0')
-    {
-        ui->plainTextEdit_8->setPlainText(QString::fromStdString("not active"));
-    }
-
-    //set username.
-    clie_inf.char_array_to_string(temp, 16, clie_inf.get_User());
-    ui->plainTextEdit_5->setPlainText(QString::fromStdString(temp));
-
+    show_infofclie();
 }
 
 infofclie::~infofclie()
@@ -51,38 +21,56 @@ infofclie::~infofclie()
     delete ui;
 }
 
+void infofclie::show_infofclie()
+{
+    string temp;
+
+    //set name.
+    clie.char_array_to_string(temp, 16, clie.get_Name());
+    ui->plainTextEdit_2->setPlainText(QString::fromStdString(temp));
+
+    //set phonenumber.
+    clie.char_array_to_string(temp, 12, clie.get_phoneNumber());
+    ui->plainTextEdit->setPlainText(QString::fromStdString(temp));
+
+    //set city.
+    clie.char_array_to_string(temp, 11, clie.get_city());
+    ui->plainTextEdit_7->setPlainText(QString::fromStdString(temp));
+
+    //set address.
+    clie.char_array_to_string(temp, 31, clie.get_Address());
+    ui->plainTextEdit_6->setPlainText(QString::fromStdString(temp));
+
+    //access.
+    if(clie.get_access()=='1'){ui->radioButton->click();}
+    else{ui->radioButton_2->click();}
+
+    //set username.
+    clie.char_array_to_string(temp, 16, clie.get_User());
+    ui->plainTextEdit_5->setPlainText(QString::fromStdString(temp));
+}
+
 void infofclie::on_pushButton_4_clicked()
 {
-    client cli_changes;
-    client tmp;
-    cli_changes.string_to_char_array(cli_changes.get_Name(), 16, ui->plainTextEdit_2->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_phoneNumber(), 12, ui->plainTextEdit->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_city(), 11, ui->plainTextEdit_7->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_Address(), 31, ui->plainTextEdit_6->toPlainText().toStdString());
-    cli_changes.string_to_char_array(cli_changes.get_User(), 16, ui->plainTextEdit_5->toPlainText().toStdString());
-    strcpy(cli_changes.get_Password(), clie_inf.get_Password());
-    cli_changes.set_access( ui->plainTextEdit_8->toPlainText().toStdString()[0]);
+    fstream database_clients("clients.txt", ios::in | ios::out | ios::binary);
+    database_clients.seekg((clie.get_ID()-1)*sizeof(client));
+    database_clients.read((char*)&clie,sizeof(client));
 
-    ifstream oldFile("clients.txt", ios::in | ios::binary);
-    ofstream newChanges("tmpFile.txt", ios::app | ios::binary);
-    while(!oldFile.eof())
-        {
-            oldFile.read((char*)&tmp, sizeof(client));
-            if(oldFile)
-            {
-                if(strcmp(clie_inf.get_User(), tmp.get_User()))
-                {
-                    newChanges.write((char*)&tmp, sizeof(client));
-                }
-            }
-        }
-    newChanges.write((char *)&cli_changes, sizeof(client));
+    clie.string_to_char_array(clie.get_Name(), 16, ui->plainTextEdit_2->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_phoneNumber(), 12, ui->plainTextEdit->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_city(), 11, ui->plainTextEdit_7->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_Address(), 31, ui->plainTextEdit_6->toPlainText().toStdString());
+    clie.string_to_char_array(clie.get_User(), 16, ui->plainTextEdit_5->toPlainText().toStdString());
 
-        newChanges.close();
-        oldFile.close();
+    if(ui->radioButton->isChecked()){clie.set_access('1');}
+    else{clie.set_access('0');}
 
-        remove("clients.txt");
-        rename("tmpFile.txt", "clients.txt");
+    database_clients.seekp((clie.get_ID()-1)*sizeof(client));
+    database_clients.write((char*)&clie,sizeof(client));
+    database_clients.close();
+
+    show_infofclie();
+
 }
 
 
